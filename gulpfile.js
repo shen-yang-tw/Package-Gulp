@@ -256,6 +256,9 @@ gulp.task('watch', function() {
 gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts', 'sass', 'css', 'inject'));
 
 //Preset then watch
+gulp.task('build-inject', gulp.series('inject'));
+
+//Preset then watch
 gulp.task('start', gulp.series('vendors', 'watch'));
 
 // Prepare all assets for production
