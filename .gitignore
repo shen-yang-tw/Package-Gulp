@@ -1,12 +1,7 @@
 ﻿.tmp
-dist
 node_modules
 Assets
 temp
-documentation
-build
-pages
-gulp-cache
 *.psd
 *.ai
 *.zip
