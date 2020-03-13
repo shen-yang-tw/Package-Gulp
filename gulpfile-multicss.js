@@ -21,7 +21,6 @@ const tailwindcss = require("tailwindcss");
 const atimport = require("postcss-import");
 const del = require("del");
 const replace = require('gulp-replace');
-// const webp = require('gulp-webp');
 
 // Paths
 var paths = {
@@ -132,7 +131,49 @@ gulp.task('inject', function() {
       name: 'head',
       relative: true
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.vendors + '/*.css', paths.src.css, paths.src.js], {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.vendors + '/uikit*.css'], {
+      read: false
+    }), {
+      name: 'uk',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.vendors + '/tailwind*.css'], {
+      read: false
+    }), {
+      name: 'tw',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.vendors + '/font*.css'], {
+      read: false
+    }), {
+      name: 'fa',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/main.css'], {
+      read: false
+    }), {
+      name: 'style1',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/colors.css'], {
+      read: false
+    }), {
+      name: 'style2',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style.css'], {
+      read: false
+    }), {
+      name: 'style3',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style-*.css'], {
+      read: false
+    }), {
+      name: 'style4',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.js], {
       read: false
     }), {
       relative: true
@@ -149,7 +190,49 @@ gulp.task('build-inject', function() {
       name: 'head',
       relative: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/*.css', paths.dist.root + paths.dist.css + '/*.css', paths.dist.root + paths.dist.js + '/*.js'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/uikit*.css'], {
+      read: false
+    }), {
+      name: 'uk',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/tailwind*.css'], {
+      read: false
+    }), {
+      name: 'tw',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/font*.css'], {
+      read: false
+    }), {
+      name: 'fa',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/main*.css'], {
+      read: false
+    }), {
+      name: 'style1',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/colors*.css'], {
+      read: false
+    }), {
+      name: 'style2',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style.*.css'], {
+      read: false
+    }), {
+      name: 'style3',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style-*.css'], {
+      read: false
+    }), {
+      name: 'style4',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js'], {
       read: false
     }), {
       relative: true
@@ -165,7 +248,7 @@ gulp.task('sass', function() {
       outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(gulpautoprefixer()) //Cannot use autoprefixer or get err
-    .pipe(replace('@charset "UTF-8";', '')) //remove string
+    .pipe(replace('@charset "UTF-8";', ''))
     .pipe(gulp.dest(paths.src.root + paths.dist.css))
     .pipe(browserSync.stream())
 });
@@ -173,25 +256,13 @@ gulp.task('sass', function() {
 // Minify + Combine CSS
 gulp.task('css', function() {
   return gulp.src(paths.src.css)
-    // .pipe(mode.development(
-    //   postcss([
-    //     atimport(),
-    //     autoprefixer()
-    //   ])
-    // ))
-    // .pipe(mode.production(
-    //   postcss([
-    //     atimport(),
-    //     purgecss({
-    //       content: [paths.src.html, paths.src.js],
-    //       // whitelist: ['opacity-100'],
-    //       defaultExtractor: content =>
-    //         content.match(/[\w-/:!@]+(?<!:)/g) || []
-    //     }),
-    //     autoprefixer()
-    //   ])
-    // ))
-    .pipe(
+    .pipe(mode.development(
+      postcss([
+        atimport(),
+        autoprefixer()
+      ])
+    ))
+    .pipe(mode.production(
       postcss([
         atimport(),
         purgecss({
@@ -202,7 +273,7 @@ gulp.task('css', function() {
         }),
         autoprefixer()
       ])
-    )
+    ))
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
@@ -221,7 +292,7 @@ gulp.task('js', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(paths.dist.root + paths.dist.js))
+    .pipe(gulp.dest(paths.dist.root + 'js'))
     .pipe(browserSync.stream());
 });
 
@@ -236,18 +307,8 @@ gulp.task('img', function() {
       pngQuint(),
       jpgRecompress()
     ]))
-    // .pipe(webp())
     .pipe(gulp.dest(paths.dist.root + paths.dist.img));
 });
-
-// Change img extension to webp (** Not supported for IE & Safari nowadays **)
-// gulp.task('webp', function() {
-//   return gulp.src(['./**/*.html', './js/*.js', './scss/*.scss', './css/*.css'])
-//     .pipe(replace('.png', '.webp'))
-//     .pipe(replace('.jpg', '.webp'))
-//     .pipe(replace('.gif', '.webp'))
-//     .pipe(gulp.dest('./')) //It means the same location
-// });
 
 // ceate dist dir
 gulp.task('dist', function() {
@@ -279,21 +340,15 @@ gulp.task('watch', function() {
   gulp.watch(paths.src.html).on('change', browserSync.reload);
 });
 
-//------------------- First Preset all files ---------------------------------------------------------
-//First Preset all files
-gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts'));
+//------------------- First run 'gulp vendors' ---------------------------------------------------------
+gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts', 'sass', 'css', 'inject'));
 
-//Compile SCSS to CSS and purge & minify css, needed when modify scss
-gulp.task('scss', gulp.series('sass', 'css'));
+//Preset then watch
+gulp.task('build-inject', gulp.series('inject'));
 
-//Inject path to all html files relative to /src and /dist [NO for different injection in html]
-gulp.task('html', gulp.series('inject', 'build-inject'));
+//Preset then watch
+gulp.task('start', gulp.series('vendors', 'watch'));
 
-//0. Preset
-gulp.task('start', gulp.series('vendors', 'scss', 'html'));
-
-//1. Preset then watch
-gulp.task('server', gulp.series('vendors', 'scss', 'html', 'watch'));
-
-//2. Prepare all assets for production
-gulp.task('build', gulp.series('dist', 'clean', 'vendors', 'scss', 'js', 'img', 'html'));
+//Prepare all assets for production
+// gulp.task('build', gulp.series('dist', 'clean', 'vendors', 'sass', 'css', 'js', 'img', 'inject', 'build-inject'));
+gulp.task('build', gulp.series('dist', 'clean', 'sass', 'css', 'js', 'img')); //No inject to html
