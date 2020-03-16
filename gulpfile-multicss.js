@@ -118,12 +118,6 @@ gulp.task('copyfonts', function() {
 
 // inject css & js to html - https://www.npmjs.com/package/gulp-inject#method-2-use-gulp-inject-s-name-option
 gulp.task('inject', function() {
-  // var vendorStream = gulp.src([paths.src.root + paths.dist.vendors + '/*.css'], {
-  //   read: false
-  // });
-  // var appStream = gulp.src([paths.src.root + paths.dist.vendors + '/*.js'], {
-  //   read: false
-  // });
   return gulp.src(paths.src.html)
     .pipe(inject(gulp.src(paths.src.vendors, {
       read: false
@@ -256,13 +250,7 @@ gulp.task('sass', function() {
 // Minify + Combine CSS
 gulp.task('css', function() {
   return gulp.src(paths.src.css)
-    .pipe(mode.development(
-      postcss([
-        atimport(),
-        autoprefixer()
-      ])
-    ))
-    .pipe(mode.production(
+    .pipe(
       postcss([
         atimport(),
         purgecss({
@@ -273,7 +261,7 @@ gulp.task('css', function() {
         }),
         autoprefixer()
       ])
-    ))
+    )
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
@@ -322,10 +310,6 @@ gulp.task('dist', function() {
 gulp.task('clean', function() {
   return del(['dist/**', '!dist']);
 });
-// gulp.task('clean', function() {
-//   return gulp.src(['dist/**', '!dist'])
-//     .pipe(clean());
-// });
 
 // Watch (SASS, CSS, JS, and HTML) reload browser on change
 gulp.task('watch', function() {
@@ -341,14 +325,20 @@ gulp.task('watch', function() {
 });
 
 //------------------- First run 'gulp vendors' ---------------------------------------------------------
-gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts', 'sass', 'css', 'inject'));
+//First Preset all files
+gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts'));
 
-//Preset then watch
-gulp.task('build-inject', gulp.series('inject'));
+//Compile SCSS to CSS and purge & minify css, needed when modify scss
+gulp.task('scss', gulp.series('sass', 'css'));
 
-//Preset then watch
-gulp.task('start', gulp.series('vendors', 'watch'));
+//Inject path to all html files relative to /src and /dist [NO for different injection in html]
+gulp.task('html', gulp.series('inject', 'build-inject'));
 
-//Prepare all assets for production
-// gulp.task('build', gulp.series('dist', 'clean', 'vendors', 'sass', 'css', 'js', 'img', 'inject', 'build-inject'));
-gulp.task('build', gulp.series('dist', 'clean', 'sass', 'css', 'js', 'img')); //No inject to html
+//0. Preset
+gulp.task('start', gulp.series('vendors', 'scss', 'html'));
+
+//1. Preset then watch
+gulp.task('server', gulp.series('vendors', 'scss', 'html', 'watch'));
+
+//2. Prepare all assets for production
+gulp.task('build', gulp.series('dist', 'clean', 'vendors', 'scss', 'js', 'img', 'html'));

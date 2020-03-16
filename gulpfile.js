@@ -17,7 +17,6 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const purgecss = require("@fullhuman/postcss-purgecss");
 const tailwindcss = require("tailwindcss");
-// const series = require("stream-series");
 const atimport = require("postcss-import");
 const del = require("del");
 const replace = require('gulp-replace');
@@ -119,12 +118,6 @@ gulp.task('copyfonts', function() {
 
 // inject css & js to html - https://www.npmjs.com/package/gulp-inject#method-2-use-gulp-inject-s-name-option
 gulp.task('inject', function() {
-  // var vendorStream = gulp.src([paths.src.root + paths.dist.vendors + '/*.css'], {
-  //   read: false
-  // });
-  // var appStream = gulp.src([paths.src.root + paths.dist.vendors + '/*.js'], {
-  //   read: false
-  // });
   return gulp.src(paths.src.html)
     .pipe(inject(gulp.src(paths.src.vendors, {
       read: false
@@ -173,24 +166,6 @@ gulp.task('sass', function() {
 // Minify + Combine CSS
 gulp.task('css', function() {
   return gulp.src(paths.src.css)
-    // .pipe(mode.development(
-    //   postcss([
-    //     atimport(),
-    //     autoprefixer()
-    //   ])
-    // ))
-    // .pipe(mode.production(
-    //   postcss([
-    //     atimport(),
-    //     purgecss({
-    //       content: [paths.src.html, paths.src.js],
-    //       // whitelist: ['opacity-100'],
-    //       defaultExtractor: content =>
-    //         content.match(/[\w-/:!@]+(?<!:)/g) || []
-    //     }),
-    //     autoprefixer()
-    //   ])
-    // ))
     .pipe(
       postcss([
         atimport(),
@@ -261,10 +236,6 @@ gulp.task('dist', function() {
 gulp.task('clean', function() {
   return del(['dist/**', '!dist']);
 });
-// gulp.task('clean', function() {
-//   return gulp.src(['dist/**', '!dist'])
-//     .pipe(clean());
-// });
 
 // Watch (SASS, CSS, JS, and HTML) reload browser on change
 gulp.task('watch', function() {
