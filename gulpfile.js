@@ -254,6 +254,9 @@ gulp.task('watch', function() {
 //First Preset all files
 gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts'));
 
+//Compile Tailwind to CSS and minify css, using 'gulp tailwind' & 'gulp tailwind --production' to purge css on production
+gulp.task('tailwind', gulp.series('sass', 'css'));
+
 //Compile SCSS to CSS and purge & minify css, needed when modify scss
 gulp.task('scss', gulp.series('sass', 'css'));
 
@@ -267,4 +270,5 @@ gulp.task('start', gulp.series('vendors', 'scss', 'html'));
 gulp.task('server', gulp.series('vendors', 'scss', 'html', 'watch'));
 
 //2. Prepare all assets for production
-gulp.task('build', gulp.series('dist', 'clean', 'vendors', 'scss', 'js', 'img', 'html'));
+gulp.task('build', gulp.series('vendors', 'scss', 'js', 'img'));
+gulp.task('build-html', gulp.series('dist', 'clean', 'vendors', 'scss', 'js', 'img', 'html'));

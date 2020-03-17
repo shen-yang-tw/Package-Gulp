@@ -9,7 +9,8 @@
   "scripts": {
     "start": "gulp start",
     "server": "gulp server",
-    "build": "gulp build --production"
+    "build": "gulp build --production",
+    "build-html": "gulp build-html --production"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
