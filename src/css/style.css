@@ -28,9 +28,7 @@ header::after,
   bottom: 0;
   background: url(../img/bg_header.jpg) no-repeat center center;
   background-size: cover;
-  -webkit-transform: scaleX(-1);
-      -ms-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
   opacity: .1;
 }
 
@@ -92,7 +90,6 @@ strong {
   min-height: auto !important;
 } */
 .smallslide .uk-overlay-primary {
-  background: -webkit-linear-gradient(left, black, rgba(0, 0, 0, 0.4) 50%, black 100%);
   background: linear-gradient(to right, black, rgba(0, 0, 0, 0.4) 50%, black 100%);
 }
 
@@ -117,7 +114,6 @@ strong {
   bottom: 0;
   width: 50px;
   height: 18px;
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4), black 65%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), black 65%);
   pointer-events: none;
 }
@@ -386,9 +382,7 @@ div.editor.table {
   position: absolute;
   top: calc(50% - 24px/2);
   left: 0;
-  -webkit-transform: scaleX(0.7) translate(-4px, 0);
-      -ms-transform: scaleX(0.7) translate(-4px, 0);
-          transform: scaleX(0.7) translate(-4px, 0);
+  transform: scaleX(0.7) translate(-4px, 0);
 }
 
 .editor .uk-card h3::before {
@@ -446,10 +440,7 @@ div.editor.table {
 
 @media (min-width: 960px) {
   header > nav .sub_nav {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
 }
 

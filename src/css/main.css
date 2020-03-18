@@ -11112,9 +11112,7 @@ button.bg_white_opacity-95:hover {
 }
 
 .bg_img_gradient {
-  background: -webkit-linear-gradient(left, rgba(213, 227, 230, 0.8) 0%, rgba(213, 227, 230, 0.9) 50%, rgba(213, 227, 230, 0.8) 100%), url(../img/blank.gif) no-repeat center center;
   background: linear-gradient(to right, rgba(213, 227, 230, 0.8) 0%, rgba(213, 227, 230, 0.9) 50%, rgba(213, 227, 230, 0.8) 100%), url(../img/blank.gif) no-repeat center center;
-  background: -webkit-radial-gradient(50% 0%, ellipse, rgba(0, 0, 0, 0) 0%, black 100%), url(../img/blank.gif) no-repeat center center;
   background: radial-gradient(ellipse at 50% 0%, rgba(0, 0, 0, 0) 0%, black 100%), url(../img/blank.gif) no-repeat center center;
   background-size: cover;
   box-shadow: inset 0 2px 50px 2px rgba(74, 123, 134, 0.5);
@@ -12527,15 +12525,8 @@ a, span, label, strong, small {
 }
 
 [class*=list_tabs] {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -ms-flex-direction: column;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
 }
@@ -12632,14 +12623,8 @@ a, span, label, strong, small {
 
 /*---------- Indent ------------------------------*/
 .hanging_indent {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 
 .hanging_indent > * {
@@ -82699,7 +82684,6 @@ a, span, label, strong, small {
   display: block;
   position: absolute;
   content: "";
-  background: -webkit-linear-gradient(bottom, white 50%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(to top, white 50%, rgba(255, 255, 255, 0) 100%);
   left: 0;
   right: 0;
@@ -82718,7 +82702,6 @@ a, span, label, strong, small {
     display: block;
     position: absolute;
     content: "";
-    background: -webkit-linear-gradient(bottom, white 50%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(to top, white 50%, rgba(255, 255, 255, 0) 100%);
     left: 0;
     right: 0;
@@ -82742,7 +82725,6 @@ a, span, label, strong, small {
   right: 0;
   bottom: 0;
   width: 25%;
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), white 100%);
   background: linear-gradient(to right, rgba(255, 255, 255, 0), white 100%);
   pointer-events: none;
 }
@@ -82827,17 +82809,13 @@ a, span, label, strong, small {
   display: inline-block;
   content: "○";
   margin-right: 1px;
-  -webkit-transform: scale(0.6) translate(-5px, 1px);
-      -ms-transform: scale(0.6) translate(-5px, 1px);
-          transform: scale(0.6) translate(-5px, 1px);
+  transform: scale(0.6) translate(-5px, 1px);
 }
 
 .pseudo\:item_dot:before {
   display: inline-block;
   content: "·";
-  -webkit-transform: scale(3) translate(1px, -1px);
-      -ms-transform: scale(3) translate(1px, -1px);
-          transform: scale(3) translate(1px, -1px);
+  transform: scale(3) translate(1px, -1px);
   margin-left: -17px;
   margin-right: 12px;
 }
@@ -82908,9 +82886,7 @@ a, span, label, strong, small {
   content: "·";
   margin-left: 5px;
   margin-right: 5px;
-  -webkit-transform: scale(2) translate(1px, -1px);
-      -ms-transform: scale(2) translate(1px, -1px);
-          transform: scale(2) translate(1px, -1px);
+  transform: scale(2) translate(1px, -1px);
 }
 
 .pseudo\:arrow:not(:last-child):after {
@@ -83113,7 +83089,6 @@ nav.nav_reset {
   background: black !important;
   color: white !important;
   text-decoration: none !important;
-  -webkit-transition: none;
   transition: none;
 }
 
@@ -83257,10 +83232,7 @@ nav.nav_reset {
 }
 
 .logo_control .logo_text_control .logo_position-up .logo_text {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .logo_control .logo_text_control .logo_position-up .logo_text .logo_bg {
@@ -83358,14 +83330,8 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 }
 
 .uk-navbar-nav > li.bg_black, .uk-navbar-nav > li.btn_black {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .uk-navbar-nav > li > span {
@@ -83509,12 +83475,10 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 }
 
 .uk-slideshow:hover.uk-light .uk-slidenav-previous:not([class*=-out]), .uk-slideshow:hover .uk-light .uk-slidenav-previous:not([class*=-out]), .uk-slider:hover.uk-light .uk-slidenav-previous:not([class*=-out]), .uk-slider:hover .uk-light .uk-slidenav-previous:not([class*=-out]) {
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .uk-slideshow:hover.uk-light .uk-slidenav-next:not([class*=-out]), .uk-slideshow:hover .uk-light .uk-slidenav-next:not([class*=-out]), .uk-slider:hover.uk-light .uk-slidenav-next:not([class*=-out]), .uk-slider:hover .uk-light .uk-slidenav-next:not([class*=-out]) {
-  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to left, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -83804,9 +83768,6 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 }
 
 .uk-modal.uk-flex-top.uk-open {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
 
@@ -83843,10 +83804,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 
 @media (min-width: 640px) {
   .uk-width-auto\@s {
-    -webkit-box-flex: inherit;
-    -webkit-flex: inherit;
-        -ms-flex: inherit;
-            flex: inherit;
+    flex: inherit;
   }
   .container_expand.uk-container {
     padding: 0 30px;
@@ -83855,10 +83813,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 
 @media (min-width: 960px) {
   .uk-width-auto\@m {
-    -webkit-box-flex: inherit;
-    -webkit-flex: inherit;
-        -ms-flex: inherit;
-            flex: inherit;
+    flex: inherit;
   }
   .container_expand.uk-container {
     padding: 0 40px;
@@ -83867,19 +83822,13 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 
 @media (min-width: 1200px) {
   .uk-width-auto\@l {
-    -webkit-box-flex: inherit;
-    -webkit-flex: inherit;
-        -ms-flex: inherit;
-            flex: inherit;
+    flex: inherit;
   }
 }
 
 @media (min-width: 1600px) {
   .uk-width-auto\@xl {
-    -webkit-box-flex: inherit;
-    -webkit-flex: inherit;
-        -ms-flex: inherit;
-            flex: inherit;
+    flex: inherit;
   }
 }
 
@@ -83903,26 +83852,18 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 
 @media (max-width: 767px) {
   .fc-toolbar {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .fc-toolbar > * > * {
     margin: 5px 0;
   }
   .fc-list-table tr {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
   .fc-list-table td {
     display: block;
     width: auto;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
+    flex: 1 1 auto;
     white-space: normal;
   }
   .fc-center h2 {
@@ -83940,10 +83881,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 ---------------------------------------------------------------------------------- */
 .select2 {
   height: 40px !important;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .select2 .selection, .select2 .select2-selection--single {
@@ -84005,9 +83943,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
     display: block;
   }
   .uk-table-responsive .uk-grid > td.uk-width-1-1 {
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
+    flex-basis: 100%;
   }
   .uk-dropdown-nav li > * {
     display: block !important;
