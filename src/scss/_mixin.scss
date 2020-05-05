@@ -48,10 +48,9 @@
       line-height:$line-height;
   }
 }
-// @include exclude($line-height-1, ":not([class*=bg_])", ":not([class*=btn_])");
 
 //### Words Wrap ###------------------------------------------------//
-@mixin break-word() {
+@mixin break-word($break) {
   overflow-wrap:break-word;
   word-wrap:break-word;
 }

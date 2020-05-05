@@ -17,10 +17,13 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const purgecss = require("@fullhuman/postcss-purgecss");
 const tailwindcss = require("tailwindcss");
+// const series = require("stream-series");
 const atimport = require("postcss-import");
 const del = require("del");
 const replace = require('gulp-replace');
 // const webp = require('gulp-webp');
+var handlebars = require('gulp-compile-handlebars');
+
 
 // Paths
 var paths = {
@@ -37,6 +40,7 @@ var paths = {
   // template: '',
   src: {
     root: './src/',
+    templates: 'src/templates/*.hbs',
     html: 'src/*.html',
     css: 'src/css/*.css',
     js: 'src/js/*.js',
@@ -46,6 +50,7 @@ var paths = {
   },
   dist: {
     root: './dist/',
+    templates: 'templates',
     css: 'css',
     js: 'js',
     img: 'img',
@@ -53,6 +58,18 @@ var paths = {
     vendors: 'libs'
   }
 }
+
+//Handlebars templates
+gulp.task('templates', async function() { //It must need the 'async' or get error 'Did you forget to signal async completion?'
+  var options = {
+    batch: [paths.src.root + paths.dist.templates + '/partials'],
+  }
+  gulp.src(paths.src.templates)
+    .pipe(handlebars(null, options))
+    // .pipe(rename('hello.html'))
+    .pipe(rename({extname: ".html"}))
+    .pipe(gulp.dest(paths.src.root))
+});
 
 // Output tailwind css
 gulp.task('tailwind', function() {
@@ -125,7 +142,49 @@ gulp.task('inject', function() {
       name: 'head',
       relative: true
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.vendors + '/*.css', paths.src.css, paths.src.js], {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.vendors + '/uikit*.css'], {
+      read: false
+    }), {
+      name: 'uk',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.vendors + '/tailwind*.css'], {
+      read: false
+    }), {
+      name: 'tw',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.vendors + '/font*.css'], {
+      read: false
+    }), {
+      name: 'fa',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/main.css'], {
+      read: false
+    }), {
+      name: 'main',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/colors.css'], {
+      read: false
+    }), {
+      name: 'colors',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style.css'], {
+      read: false
+    }), {
+      name: 'style',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style-*.css'], {
+      read: false
+    }), {
+      name: 'style2',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.src.js], {
       read: false
     }), {
       relative: true
@@ -142,7 +201,49 @@ gulp.task('build-inject', function() {
       name: 'head',
       relative: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/*.css', paths.dist.root + paths.dist.css + '/*.css', paths.dist.root + paths.dist.js + '/*.js'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/uikit*.css'], {
+      read: false
+    }), {
+      name: 'uk',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/tailwind*.css'], {
+      read: false
+    }), {
+      name: 'tw',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/font*.css'], {
+      read: false
+    }), {
+      name: 'fa',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/main*.css'], {
+      read: false
+    }), {
+      name: 'main',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/colors*.css'], {
+      read: false
+    }), {
+      name: 'colors',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style.min.css'], {
+      read: false
+    }), {
+      name: 'style',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style-*.css'], {
+      read: false
+    }), {
+      name: 'style2',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js'], {
       read: false
     }), {
       relative: true
@@ -158,7 +259,7 @@ gulp.task('sass', function() {
       outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(gulpautoprefixer()) //Cannot use autoprefixer or get err
-    .pipe(replace('@charset "UTF-8";', '')) //remove string
+    .pipe(replace('@charset "UTF-8";', ''))
     .pipe(gulp.dest(paths.src.root + paths.dist.css))
     .pipe(browserSync.stream())
 });
@@ -196,7 +297,7 @@ gulp.task('js', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(paths.dist.root + paths.dist.js))
+    .pipe(gulp.dest(paths.dist.root + 'js'))
     .pipe(browserSync.stream());
 });
 
@@ -205,24 +306,14 @@ gulp.task('img', function() {
   return gulp.src(paths.src.img)
     .pipe(imageMin([
       imageMin.gifsicle(),
-      imageMin.jpegtran(),
+      imageMin.mozjpeg(),
       imageMin.optipng(),
       imageMin.svgo(),
       pngQuint(),
       jpgRecompress()
     ]))
-    // .pipe(webp())
     .pipe(gulp.dest(paths.dist.root + paths.dist.img));
 });
-
-// Change img extension to webp (** Not supported for IE & Safari nowadays **)
-// gulp.task('webp', function() {
-//   return gulp.src(['./**/*.html', './js/*.js', './scss/*.scss', './css/*.css'])
-//     .pipe(replace('.png', '.webp'))
-//     .pipe(replace('.jpg', '.webp'))
-//     .pipe(replace('.gif', '.webp'))
-//     .pipe(gulp.dest('./')) //It means the same location
-// });
 
 // ceate dist dir
 gulp.task('dist', function() {
@@ -250,7 +341,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.src.html).on('change', browserSync.reload);
 });
 
-//------------------- First Preset all files ---------------------------------------------------------
+//------------------- First run 'gulp vendors' ---------------------------------------------------------
 //First Preset all files
 gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts'));
 
@@ -261,6 +352,7 @@ gulp.task('tailwind', gulp.series('sass', 'css'));
 gulp.task('scss', gulp.series('sass', 'css'));
 
 //Inject path to all html files relative to /src and /dist [NO for different injection in html]
+// gulp.task('html', gulp.series('templates', 'inject', 'build-inject'));
 gulp.task('html', gulp.series('inject', 'build-inject'));
 
 //0. Preset
@@ -270,5 +362,5 @@ gulp.task('start', gulp.series('vendors', 'scss', 'html'));
 gulp.task('server', gulp.series('vendors', 'scss', 'html', 'watch'));
 
 //2. Prepare all assets for production
-gulp.task('build', gulp.series('vendors', 'scss', 'js', 'img'));
-gulp.task('build-html', gulp.series('dist', 'clean', 'vendors', 'scss', 'js', 'img', 'html'));
+gulp.task('build-nohtml', gulp.series('vendors', 'scss', 'js', 'img'));
+gulp.task('build', gulp.series('dist', 'clean', 'vendors', 'scss', 'js', 'img', 'html'));

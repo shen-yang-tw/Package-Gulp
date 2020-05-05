@@ -183,10 +183,7 @@ function plusHeight(sel, plusSelector) {
 
 //onmouseover="viewHeight('[uk-dropdown]', 'nav.bg_primary')"
 function viewHeight(sel, upperSelector) {
-  if (
-    document.querySelector(sel) != null &&
-    document.querySelector(upperSelector) != null
-  ) {
+  if (allExist(sel, upperSelector)) {
     var topHeight =
       document.querySelector(upperSelector).getBoundingClientRect().top +
       document.querySelector(upperSelector).getBoundingClientRect().height
@@ -200,11 +197,7 @@ function viewHeight(sel, upperSelector) {
 //viewHeightMiddle(".uk-slideshow-items", "header", ".bg_bar") - uk-slideshow height, working with CSS {min-height: auto !important};
 //Subtracts the height of preceding and following element
 function viewHeightMiddle(sel, upperSelector, lowerSelector) {
-  if (
-    document.querySelector(sel) != null &&
-    document.querySelector(upperSelector) != null &&
-    document.querySelector(lowerSelector) != null
-  ) {
+  if (allExist(sel, upperSelector, lowerSelector)) {
     var topHeight =
       document.querySelector(upperSelector).clientTop +
       document.querySelector(upperSelector).clientHeight
@@ -215,11 +208,7 @@ function viewHeightMiddle(sel, upperSelector, lowerSelector) {
 }
 
 function sameHeight(sel, target1, target2) {
-  if (
-    document.querySelector(sel) != null &&
-    document.querySelector(target1) != null &&
-    document.querySelector(target2) != null
-  ) {
+  if (allExist(sel, target1, target2)) {
     document.querySelector(sel).style.height =
       document.querySelector(target1).clientHeight +
       document.querySelector(target2).clientHeight +
@@ -364,12 +353,28 @@ function tableWidth(el) {
 if (oneExist("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty") == true) {
   removeAll("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty")
 }
+
 if (oneExist("#gototop") == true) {
   gotoTop("#gototop", "opacity-100")
   window.onscroll = function() {
     gotoTop("#gototop", "opacity-100")
   };
 }
+
+// if (allExist(".logo_cht, logo_eng") == true) {
+//   var fitText = require("FitText-UMD");
+//   // fitText = window.fitText
+//   window.fitText = fitText
+//   // fitText( document.getElementById("responsive_headline") );
+//   fitText(document.querySelector(".logo_cht"), 2.2, {
+//     minFontSize: '10px',
+//     maxFontSize: '20px'
+//   });
+//   fitText(document.querySelector(".logo_eng"), 3, {
+//     minFontSize: '7px',
+//     maxFontSize: '16px'
+//   });
+// }
 
 if (oneExist(".text_size") == true) {
   fontResize("text-m", "text-l", "text_size", "text_size-s", "text_size-m", "text_size-l", "active");
@@ -388,6 +393,12 @@ if (oneExist(".text_size") == true) {
 //uk-slideshow height, working with CSS {min-height: auto !important}
 window.onload = function() {
   // viewHeightMiddle('#slideshow .uk-slideshow-items', 'header', '.bg_bar')
+  // if (allExist('.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)') == true) {
+  //   sameHeight('.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)')
+  // }
+  // if (oneExist('.editor table')) {
+  //   tableWidth('.editor table')
+  // }
   if (allExist('.list_tabs .uk-open') == true) {
     toggleAllClass(findAll('.list_tabs .uk-open .toggle'), 'hidden')
   }
