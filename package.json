@@ -9,6 +9,7 @@
   "scripts": {
     "start": "gulp start",
     "server": "gulp server",
+    "tailwind": "gulp tailwind --development",
     "build": "gulp build --production",
     "build-nohtml": "gulp build-nohtml --production"
   },
@@ -27,13 +28,12 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "FitText-UMD": "^1.0.0",
-    "handlebars": "^4.7.6",
-    "tailwindcss": "^1.2.0",
-    "uikit": "^3.3.7"
+    "tailwindcss": "^1.4.6",
+    "uikit": "^3.5.3"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0",
-    "autoprefixer": "^9.7.6",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "autoprefixer": "^9.8.0",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -47,7 +47,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^8.0.0",

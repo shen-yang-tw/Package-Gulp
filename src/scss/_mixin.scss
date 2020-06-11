@@ -50,9 +50,9 @@
 }
 
 //### Words Wrap ###------------------------------------------------//
-@mixin break-word($break) {
-  overflow-wrap:break-word;
-  word-wrap:break-word;
+@mixin break-word($break:break-word) {
+  overflow-wrap:$break;
+  word-wrap:$break;
 }
 
 //### Colors & Opacity ###------------------------------------------------//

@@ -102,7 +102,8 @@ gulp.task('tailwind', function() {
       suffix: '.min'
     }))
     .pipe(mode.development(gulp.dest(paths.src.root + paths.dist.vendors)))
-    .pipe(mode.production(gulp.dest(paths.dist.root + paths.dist.vendors)))
+    .pipe(mode.development(gulp.dest(paths.dist.root + paths.dist.css)))
+    .pipe(mode.production(gulp.dest(paths.dist.root + paths.dist.css)))
   // .pipe(gulp.dest(paths.src.root + paths.dist.vendors))
   // .pipe(gulp.dest(paths.dist.root + paths.dist.vendors))
 });
@@ -111,20 +112,20 @@ gulp.task('tailwind', function() {
 gulp.task('copyjs', function() {
   return gulp.src(paths.vendors.js)
     .pipe(gulp.dest(paths.src.root + paths.dist.vendors))
-    .pipe(gulp.dest(paths.dist.root + paths.dist.vendors))
+    .pipe(gulp.dest(paths.dist.root + paths.dist.js))
   // .pipe(mode.production(gulp.dest(paths.dist.vendors)))
 });
 gulp.task('copycss', function() {
   return gulp.src(paths.vendors.css)
     .pipe(gulp.dest(paths.src.root + paths.dist.vendors))
-    .pipe(gulp.dest(paths.dist.root + paths.dist.vendors))
+    .pipe(gulp.dest(paths.dist.root + paths.dist.css))
   // .pipe(gulp.dest(paths.dist.root + paths.dist.css))
 });
 gulp.task('fontawesome', function() {
   return gulp.src(paths.vendors.fontawesome)
     .pipe(rename("fontawesome.min.css"))
     .pipe(gulp.dest(paths.src.root + paths.dist.vendors))
-    .pipe(gulp.dest(paths.dist.root + paths.dist.vendors))
+    .pipe(gulp.dest(paths.dist.root + paths.dist.css))
   // .pipe(gulp.dest(paths.dist.root + paths.dist.css))
 });
 gulp.task('copyfonts', function() {
@@ -195,25 +196,25 @@ gulp.task('inject', function() {
 
 gulp.task('build-inject', function() {
   return gulp.src(paths.src.html)
-    .pipe(inject(gulp.src(paths.dist.root + paths.dist.vendors + '/*', {
+    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/ui*.js', {
       read: false
     }), {
       name: 'head',
       relative: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/uikit*.css'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/uikit*.css'], {
       read: false
     }), {
       name: 'uk',
       relative: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/tailwind*.css'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/tailwind*.css'], {
       read: false
     }), {
       name: 'tw',
       relative: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/font*.css'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/font*.css'], {
       read: false
     }), {
       name: 'fa',
@@ -243,7 +244,7 @@ gulp.task('build-inject', function() {
       name: 'style2',
       relative: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js', '!' + paths.dist.root + paths.dist.js + '/ui*.js'], {
       read: false
     }), {
       relative: true
@@ -297,7 +298,7 @@ gulp.task('js', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(paths.dist.root + 'js'))
+    .pipe(gulp.dest(paths.dist.root + paths.dist.js))
     .pipe(browserSync.stream());
 });
 
@@ -335,9 +336,9 @@ gulp.task('watch', function() {
       baseDir: paths.root.www
     }
   })
-  gulp.watch(paths.src.scss, gulp.series('sass'));
-  gulp.watch(paths.src.css, gulp.series('css'));
-  gulp.watch(paths.src.js, gulp.series('js'));
+  gulp.watch(paths.src.scss, gulp.series('sass')).on('change', browserSync.reload);
+  gulp.watch(paths.src.css, gulp.series('css')).on('change', browserSync.reload);
+  gulp.watch(paths.src.js, gulp.series('js')).on('change', browserSync.reload);
   gulp.watch(paths.src.html).on('change', browserSync.reload);
 });
 
@@ -346,7 +347,7 @@ gulp.task('watch', function() {
 gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts'));
 
 //Compile Tailwind to CSS and minify css, using 'gulp tailwind' & 'gulp tailwind --production' to purge css on production
-gulp.task('tailwind', gulp.series('sass', 'css'));
+gulp.task('tocss', gulp.series('tailwind', 'sass', 'css'));
 
 //Compile SCSS to CSS and purge & minify css, needed when modify scss
 gulp.task('scss', gulp.series('sass', 'css'));
@@ -361,6 +362,6 @@ gulp.task('start', gulp.series('vendors', 'scss', 'html'));
 //1. Preset then watch
 gulp.task('server', gulp.series('vendors', 'scss', 'html', 'watch'));
 
-//2. Prepare all assets for production
+//2. Prepare all assets for production, run: 'yarn build-nohtml' or 'yarn build'
 gulp.task('build-nohtml', gulp.series('vendors', 'scss', 'js', 'img'));
 gulp.task('build', gulp.series('dist', 'clean', 'vendors', 'scss', 'js', 'img', 'html'));
