@@ -395,6 +395,14 @@ if (oneExist(".text_size") == true) {
 //   }
 // }
 
+
+//"DOMContentLoaded" signifies that the HTML body is completely loaded and parsed. The JavaScript inside this block will not run until after that event is fired, therefore the error is avoided
+//In the external case as below, doesn't need to use the "DOMContentLoaded" event because the "defer" attribute solved the problem
+//<script src="script.js" defer></script>
+document.addEventListener("DOMContentLoaded", function() {
+  
+});
+
 //uk-slideshow height, working with CSS {min-height: auto !important}
 window.onload = function() {
   // viewHeightMiddle('#slideshow .uk-slideshow-items', 'header', '.bg_bar')
