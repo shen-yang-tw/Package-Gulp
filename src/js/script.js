@@ -216,6 +216,11 @@ function sameHeight(sel, target1, target2) {
   }
 }
 
+//Triger Click event
+function OnClick(el) {
+  document.querySelector(el).click();
+}
+
 //------------- font resize ------------------------------------------------//
 function fontResize(
   classFontM,

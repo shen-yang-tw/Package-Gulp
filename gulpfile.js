@@ -194,10 +194,18 @@ gulp.task('inject', function() {
       name: 'style2',
       relative: true
     }))
+    // .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/*.js', '!' + paths.src.root + paths.dist.js + '/ui*.js'], {
+    //   read: false
+    // }), {
+    //   relative: true
+    // }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/*.js', '!' + paths.src.root + paths.dist.js + '/ui*.js'], {
       read: false
     }), {
-      relative: true
+      relative: true,
+      transform: function (filepath) {
+        return '<script src="' + filepath + '" defer>' + '</script>';
+      }
     }))
     .pipe(gulp.dest(paths.src.root))
   // .pipe(gulp.dest(paths.dist.root))
@@ -256,7 +264,10 @@ gulp.task('build-inject', function() {
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js', '!' + paths.dist.root + paths.dist.js + '/ui*.js'], {
       read: false
     }), {
-      relative: true
+      relative: true,
+      transform: function (filepath) {
+        return '<script src="' + filepath + '" defer>' + '</script>';
+      }      
     }))
     .pipe(gulp.dest(paths.dist.root))
 });
