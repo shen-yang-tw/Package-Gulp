@@ -67,7 +67,9 @@ gulp.task('templates', async function() { //It must need the 'async' or get erro
   gulp.src(paths.src.templates)
     .pipe(handlebars(null, options))
     // .pipe(rename('hello.html'))
-    .pipe(rename({extname: ".html"}))
+    .pipe(rename({
+      extname: ".html"
+    }))
     .pipe(gulp.dest(paths.src.root))
 });
 
@@ -94,16 +96,17 @@ gulp.task('tailwind', function() {
         autoprefixer()
       ])
     ))
-    .pipe(mode.production(
-      cleanCSS({
-        compatibility: 'ie8'
-      })
-    ))
-    .pipe(mode.production(
-      rename({
-        suffix: '.min'
-      })
-    ))
+    //Minify css
+    // .pipe(mode.development(
+    //   cleanCSS({
+    //     compatibility: 'ie8'
+    //   })
+    // ))
+    // .pipe(mode.development(
+    //   rename({
+    //     suffix: '.min'
+    //   })
+    // ))
     //Minify css
     // .pipe(cleanCSS({
     //   compatibility: 'ie8'
@@ -111,6 +114,14 @@ gulp.task('tailwind', function() {
     // .pipe(rename({
     //   suffix: '.min'
     // }))
+    .pipe(mode.development(
+      cleanCSS({
+        compatibility: 'ie8'
+      })
+      .pipe(rename({
+        suffix: '.min'
+      }))
+    ))
     .pipe(mode.development(gulp.dest(paths.src.root + paths.dist.css)))
     .pipe(mode.production(gulp.dest(paths.dist.root + paths.dist.css)))
   // .pipe(gulp.dest(paths.src.root + paths.dist.vendors))
@@ -203,7 +214,7 @@ gulp.task('inject', function() {
       read: false
     }), {
       relative: true,
-      transform: function (filepath) {
+      transform: function(filepath) {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }
     }))
@@ -265,9 +276,9 @@ gulp.task('build-inject', function() {
       read: false
     }), {
       relative: true,
-      transform: function (filepath) {
+      transform: function(filepath) {
         return '<script src="' + filepath + '" defer>' + '</script>';
-      }      
+      }
     }))
     .pipe(gulp.dest(paths.dist.root))
 });

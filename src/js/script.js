@@ -57,12 +57,29 @@ function RemoveClass(el, className) {
   }
 }
 
-//Remove & Add Class to all
+//Remove & Add Class to all by selector
 function RemoveAddClass(el, classRemove, classAdd) {
   var _el = document.querySelectorAll(el)
   for (var i = 0; i < _el.length; i++) {
-    _el[i].classList.remove(classRemove)
-    _el[i].classList.add(classAdd)
+    if (classRemove != '') {
+      _el[i].classList.remove(classRemove)
+    }
+    if (classAdd != '') {
+      _el[i].classList.add(classAdd)
+    }
+  }
+}
+
+//Remove & Add Class to all by element
+function RemoveAddClassByElement(el, classRemove, classAdd) {
+  // var _el = document.querySelectorAll(el)
+  for (var i = 0; i < el.length; i++) {
+    if (classRemove != '') {
+      el[i].classList.remove(classRemove)
+    }
+    if (classAdd != '') {
+      el[i].classList.add(classAdd)
+    }
   }
 }
 
@@ -74,7 +91,7 @@ function removeAll(sel) {
   }
 }
 
-//Toggle Show/Hide by attribute - onclick="toggleShow(findChildren(findParent(this, 'LI'), '.detail'), 'hidden')"
+//Toggle Show/Hide by attribute - onclick="toggleShow(findChildren(findParent(this, 'LI', ''), '.detail'), 'hidden')"
 function toggleShow(thisElement) {
   //if (elID.getAttribute("aria-hidden") == "true"))
   if (thisElement.hasAttribute('hidden')) {
@@ -97,7 +114,7 @@ function toggleAllShow(allChildren) {
   }
 }
 
-//toggle all class by array - onclick="toggleAllClass(findChildren(findParent(this, 'LI'), '.detail'), 'hidden'); return false;"
+//toggle all class by array - onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.detail'), 'hidden'); return false;"
 //return false - avoid the page jumping straight to the top"
 function toggleAllClass(allChildren, cls1, cls2) {
   for (var i = 0; i < allChildren.length; i++) {
@@ -108,7 +125,7 @@ function toggleAllClass(allChildren, cls1, cls2) {
   }
   // return false; //not working
 }
-//toggle two classes - onmouseover="removeAddClasses(findChildren(findParent(this, 'LI'), 'p'), 'uk-text-truncate', 'flex-wrap')" onmouseout="removeAddClasses(findChildren(findParent(this, 'LI'), 'p'), 'flex-wrap', 'uk-text-truncate')"
+//toggle two classes - onmouseover="removeAddClasses(findChildren(findParent(this, 'LI', ''), 'p'), 'uk-text-truncate', 'flex-wrap')" onmouseout="removeAddClasses(findChildren(findParent(this, 'LI', ''), 'p'), 'flex-wrap', 'uk-text-truncate')"
 function removeAddClasses(allChildren, classRemove, classAdd) {
   for (var i = 0; i < allChildren.length; i++) {
     allChildren[i].classList.remove(classRemove)
@@ -116,13 +133,21 @@ function removeAddClasses(allChildren, classRemove, classAdd) {
   }
 }
 
-function findParent(thisElement, parentTagName) {
-  while (
-    (thisElement = thisElement.parentElement) &&
-    thisElement.tagName != parentTagName
-  );
-  //Searching loop only stop while parent is founded
-  return thisElement //if searching no one will return null
+//findParent(this, thisParentTagName, ''), the last variable is necessary
+function findParent(thisElement, parentTagName, className) {
+  if (className != '') {
+    while (
+      (thisElement = thisElement.parentElement) && !thisElement.classList.contains(className)
+    );
+    return thisElement
+  } else {
+    while (
+      (thisElement = thisElement.parentElement) &&
+      thisElement.tagName != parentTagName
+    );
+    //Searching loop only stop while parent is founded
+    return thisElement //if searching no one will return null
+  }
 }
 
 function findChildren(parentEL, sl) {
@@ -160,7 +185,7 @@ function thisYear(thisSelector) {
   document.querySelector(thisSelector).innerHTML = y
 }
 
-// onclick="plusHeight('.uk-table', findChild(findParent(this, 'DIV'), '[uk-dropdown]'))"
+// onclick="plusHeight('.uk-table', findChild(findParent(this, 'DIV', ''), '[uk-dropdown]'))"
 function plusHeight(sel, plusSelector) {
   var el1 = document.querySelector(sel)
   plusSelector.style.display = 'block'
@@ -400,13 +425,13 @@ if (oneExist(".text_size") == true) {
 //In the external case as below, doesn't need to use the "DOMContentLoaded" event because the "defer" attribute solved the problem
 //<script src="script.js" defer></script>
 document.addEventListener("DOMContentLoaded", function() {
-  
+
 });
 
 //uk-slideshow height, working with CSS {min-height: auto !important}
 window.onload = function() {
   // viewHeightMiddle('#slideshow .uk-slideshow-items', 'header', '.bg_bar')
-  // if (allExist('.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)') == true) {
+  // if (allExist(['.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)']) == true) {
   //   sameHeight('.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)')
   // }
   // if (oneExist('.editor table')) {
@@ -418,7 +443,7 @@ window.onload = function() {
 }
 window.onresize = function() {
   // viewHeightMiddle('#slideshow .uk-slideshow-items', 'header', '.bg_bar')
-  if (allExist('.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)') == true) {
+  if (allExist(['.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)']) == true) {
     sameHeight('.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)')
   }
 }
