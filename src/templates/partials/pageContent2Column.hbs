@@ -1,4 +1,4 @@
-{{!-- {{>pageContent2Column containerXlarge='true' breadcrumbCurrent='查詢列表' userOn='true' user='陳大天' linkLogout='index.html' listMenu1level='true' listMenuMaxHeight='true' pageTitle='查詢列表' linkBackOn='true' linkBack='#' backWhere='回上頁' h2buttonMobile='true' h2buttonName='次選單' h2buttonDropdown='true' content='searchlist' pageSelect='true' pageSum='2'}} --}}
+{{!-- {{>pageContent2Column containerXlarge='true' breadcrumbCurrent='查詢列表' userOn='true' user='陳大天' linkLogout='index.html' listMenu1level='true' listMenuMaxHeight='true' pageTitle='查詢列表' h2linkBack='true' h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile='true' h2buttonName='次選單' h2buttonDropdown='true' content='searchlist' pageSelect='true' pageSum='2'}} --}}
 
 <!-- page main content -->
 <section class="p-0 m:py-2 relative" uk-height-viewport="expand: true">
@@ -56,8 +56,8 @@
           <h2 class="btm_line text-2xl mt-0">
             <div class="uk-flex-middle uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand@m" uk-grid>
               <div class="uk-width-expand@m">{{pageTitle}}</div>
-              {{#if linkBackOn}}
-                <div class="uk-width-auto"><small class="mt-2"><a class="no-underline" href="{{linkBack}}"><i class="mr-1 fas fa-angle-left"></i>{{backWhere}}</a></small></div>
+              {{#if h2linkBack}}
+                <div class="uk-width-auto"><small class="mt-2"><a class="no-underline" href="{{h2linkBackHref}}"><i class="mr-1 fas fa-angle-left"></i>{{h2linkBackTxt}}</a></small></div>
               {{/if}}
               {{#if h2button}}
                 {{!-- h2buttonClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' --}}
