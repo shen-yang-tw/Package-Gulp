@@ -56,23 +56,31 @@
 }
 
 //### Colors & Opacity ###------------------------------------------------//
-@mixin color($selector:&, $important:$boolean, $prefix:"", $suffix:"", $color:$color-primary-text) {
+@mixin color($selector:&, $important:$boolean, $prefix:"", $suffix:"", $color:$color-primary-text, $hover:$boolean) {
   @if $important {
-    #{$selector}#{$suffix}, #{$selector}#{$suffix}>*  {
-      // color:$color !important;
-      @if lightness($color) < 10% {color:change-color($color, $lightness: 15%) !important;}
-      @else if lightness($color) > 90% {color:change-color($color, $lightness: 85%) !important;}
-      @else {color:$color !important;}
+    @if not $hover {
+      #{$selector}#{$suffix}, #{$selector}#{$suffix}>*  {
+        // color:$color !important;
+        @if lightness($color) < 10% {color:change-color($color, $lightness: 15%) !important;}
+        @else if lightness($color) > 90% {color:change-color($color, $lightness: 85%) !important;}
+        @else {color:$color !important;}
+      }
+      #{$prefix}#{$selector}#{$suffix}:hover, #{$prefix}#{$selector}#{$suffix}:hover * {color:darken($color, 10%) !important;}
+    } @else {
+      #{$prefix}#{str-slice($selector, 2, -1)}#{$suffix}:hover, #{$prefix}#{str-slice($selector, 2, -1)}#{$suffix}:hover * {color:$color !important;}
     }
-    #{$prefix}#{$selector}#{$suffix}:hover, #{$prefix}#{$selector}#{$suffix}:hover * {color:darken($color, 10%) !important;}
   } @else {
-    #{$selector}#{$suffix}, #{$selector}#{$suffix}>*  {
-      // color:$color;
-      @if lightness($color) < 10% {color:change-color($color, $lightness: 15%);}
-      @else if lightness($color) > 90% {color:change-color($color, $lightness: 85%);}
-      @else {color:$color;}
+    @if not $hover {
+      #{$selector}#{$suffix}, #{$selector}#{$suffix}>*  {
+        // color:$color;
+        @if lightness($color) < 10% {color:change-color($color, $lightness: 15%);}
+        @else if lightness($color) > 90% {color:change-color($color, $lightness: 85%);}
+        @else {color:$color;}
+      }
+      #{$prefix}#{$selector}#{$suffix}:hover, #{$prefix}#{$selector}#{$suffix}:hover * {color:darken($color, 10%)}
+    } @else {
+      #{$prefix}#{str-slice($selector, 2, -1)}#{$suffix}:hover, #{$prefix}#{str-slice($selector, 2, -1)}#{$suffix}:hover * {color:$color;}
     }
-    #{$prefix}#{$selector}#{$suffix}:hover, #{$prefix}#{$selector}#{$suffix}:hover * {color:darken($color, 10%)}
   }
 }
 @mixin fillcolor($selector:&, $important:$boolean, $prefix:"", $suffix:"", $color:$color-primary-text) {
@@ -104,7 +112,7 @@
       background-color:$bg-color !important;
     }
     #{$selector}#{$important-sign}, #{$selector}#{$important-sign}>*, a#{$selector}#{$important-sign}, a#{$selector}#{$important-sign}>*, button#{$selector}#{$important-sign}, button#{$selector}#{$important-sign}>* {
-      color:text-color($bg-color) !important;
+      color:text-black-white($bg-color) !important;
       // fill:text-color($bg-color);
       // @if lightness($bg-color) > 50% {color:darken(text-color($bg-color), 5%) !important;}
       // @else {color:text-color($bg-color) !important;}
@@ -119,9 +127,12 @@
     }
     a#{$selector}#{$important-sign}:hover, button#{$selector}#{$important-sign}:hover, #{$selector}#{$important-sign}>a:hover {
       &, >* {
-        // color:text-color($bg-color) !important;
-        @if lightness($bg-color) <= 50% {color:lighten(text-color($bg-color), 10%) !important;}
-        @else {color:darken(text-color($bg-color), 10%) !important;}
+        // color:text-black-white($bg-color) !important;
+        @if lightness($bg-color) <= 30% {color:white !important;}
+        @else if lightness($bg-color) >= 70% {color:black !important;}
+        @else {color:text-black-white($bg-color) !important;}
+        // @if lightness($bg-color) <= 50% {color:lighten(text-color($bg-color), 10%) !important;}
+        // @else {color:darken(text-color($bg-color), 10%) !important;}
         // @else {color:darken(text-color($bg-color), 10%) !important; fill:darken(text-color($bg-color), 10%) !important;}
       }
     }
@@ -131,7 +142,7 @@
       background-color:$bg-color;
     }
     #{$selector}, #{$selector}>*, a#{$selector}, a#{$selector}>*, button#{$selector}, button#{$selector}>* {
-      color:text-color($bg-color) !important;
+      color:text-black-white($bg-color);
       // fill:text-color($bg-color);
       // @if lightness($bg-color) > 50% {color:darken(text-color($bg-color), 5%);}
       // @else {color:text-color($bg-color);}
@@ -147,8 +158,9 @@
     a#{$selector}:hover, button#{$selector}:hover, #{$selector}>a:hover {
       &, >* {
         // color:text-color($bg-color) !important;
-        @if lightness($bg-color) <= 50% {color:lighten(text-color($bg-color), 10%) !important;}
-        @else {color:darken(text-color($bg-color), 10%) !important;}
+        @if lightness($bg-color) <= 30% {color:white;}
+        @else if lightness($bg-color) >= 70% {color:black;}
+        @else {color:text-black-white($bg-color);}
         // @else {color:darken(text-color($bg-color), 10%) !important; fill:darken(text-color($bg-color), 10%) !important;}
       }
     }
@@ -223,7 +235,7 @@
     text-transform: none;
     text-decoration: none;
     @if $s {
-      padding: $space-s $space;
+      padding: $space-xs $space;
     } @else if $l {
       padding: $space-m $space-l;
     } @else {
@@ -279,9 +291,9 @@
 //### Border ###------------------------------------------------//
 @mixin focus($important:$boolean) {
   @if $important {
-    & {border: 1px solid $color-border-focus !important; -webkit-box-shadow: 0 0 0.2rem 0.2rem $color-border-focus !important; box-shadow: 0 0 0.2rem 0.2rem $color-border-focus !important; outline-color: $color-border-focus !important; outline-style: dashed !important; outline-width: 4px !important;}
+    & {-webkit-box-shadow: 0 0 0.2rem 0.2rem $color-border-focus !important; box-shadow: 0 0 0.2rem 0.2rem $color-border-focus !important; outline-color: $color-border-focus !important; outline-style: dashed !important; outline-width: 4px !important;}
   } @else {
-    & {border: 1px solid $color-border-focus; -webkit-box-shadow: 0 0 0.2rem 0.2rem $color-border-focus; box-shadow: 0 0 0.2rem 0.2rem $color-border-focus; outline-color: $color-border-focus; outline-style: dashed; outline-width: 4px;}
+    & {-webkit-box-shadow: 0 0 0.2rem 0.2rem $color-border-focus; box-shadow: 0 0 0.2rem 0.2rem $color-border-focus; outline-color: $color-border-focus; outline-style: dashed; outline-width: 4px;}
   }
 }
 @mixin border-opacity($color:white, $val:$opacity, $important:$boolean) {
@@ -332,12 +344,25 @@ $z-index:0 !default;
 }
 
 //### Space ###------------------------------------------------//
-@mixin space($property:margin, $size:$space, $calc:$boolean) {
-  @if $calc {
-    #{$property}:calc(#{strip-unit($size)}rem/16);
+@mixin space($property:margin, $size:$space, $calc:$boolean, $important:$boolean) {
+  @if $important {
+    @if $calc {
+      #{$property}:calc(#{strip-unit($size)}rem/16) !important;
+    } @else {
+      #{$property}:$size !important;
+    }
   } @else {
-    #{$property}:$size;
+    @if $calc {
+      #{$property}:calc(#{strip-unit($size)}rem/16);
+    } @else {
+      #{$property}:$size;
+    }
   }
+  // @if $calc {
+  //   #{$property}:calc(#{strip-unit($size)}rem/16);
+  // } @else {
+  //   #{$property}:$size;
+  // }
 }
 @mixin margin-padding($m:$space, $p:$space, $calc:$boolean) {
   @if $calc {
@@ -445,9 +470,9 @@ $z-index:0 !default;
   overflow:hidden;
   position:relative;
   @if $mask {
-    padding-bottom: calc(10rem/16);
+    padding-bottom: calc(25rem/16);
     &:after {
-      @include pseudo-content($display:block, $pos:absolute, $content:true, $background:true, $bg:$gradient-linear-white-transparent-top,$bg-txt:false, $l:0, $r:0, $b:0, $h:calc(30rem/16), $pointer-off:true);
+      @include pseudo-content($display:block, $pos:absolute, $content:true, $background:true, $bg:$gradient-linear-white-transparent-top,$bg-txt:false, $l:0, $r:0, $b:0, $h:calc(45rem/16), $pointer-off:true);
     }
   }
 }

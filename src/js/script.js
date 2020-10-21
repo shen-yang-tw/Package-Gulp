@@ -1,8 +1,8 @@
 //Check all exist
 function allExist(el) {
   var exist = true
-  k = document.querySelectorAll(el);
-  for (var i = 0; i < k.length; i++) {
+  k = document.querySelectorAll(el)
+  for (var i = 0;i < k.length;i++) {
     if (k[i] == null) {
       exist = false
       return exist
@@ -16,8 +16,8 @@ function allExist(el) {
 //Check one exist
 function oneExist(el) {
   var exist = true
-  k = document.querySelectorAll(el);
-  for (var i = 0; i < k.length; i++) {
+  k = document.querySelectorAll(el)
+  for (var i = 0;i < k.length;i++) {
     if (k[i] != null) {
       return exist
     } else {
@@ -44,7 +44,7 @@ function hide(el) {
 //Add Class to all
 function AddClass(el, className) {
   var _el = document.querySelectorAll(el)
-  for (var i = 0; i < _el.length; i++) {
+  for (var i = 0;i < _el.length;i++) {
     _el[i].classList.add(className)
   }
 }
@@ -52,7 +52,7 @@ function AddClass(el, className) {
 //Remove Class to all
 function RemoveClass(el, className) {
   var _el = document.querySelectorAll(el)
-  for (var i = 0; i < _el.length; i++) {
+  for (var i = 0;i < _el.length;i++) {
     _el[i].classList.remove(className)
   }
 }
@@ -60,7 +60,7 @@ function RemoveClass(el, className) {
 //Remove & Add Class to all by selector
 function RemoveAddClass(el, classRemove, classAdd) {
   var _el = document.querySelectorAll(el)
-  for (var i = 0; i < _el.length; i++) {
+  for (var i = 0;i < _el.length;i++) {
     if (classRemove != '') {
       _el[i].classList.remove(classRemove)
     }
@@ -73,7 +73,7 @@ function RemoveAddClass(el, classRemove, classAdd) {
 //Remove & Add Class to all by element
 function RemoveAddClassByElement(el, classRemove, classAdd) {
   // var _el = document.querySelectorAll(el)
-  for (var i = 0; i < el.length; i++) {
+  for (var i = 0;i < el.length;i++) {
     if (classRemove != '') {
       el[i].classList.remove(classRemove)
     }
@@ -86,7 +86,7 @@ function RemoveAddClassByElement(el, classRemove, classAdd) {
 //Remove all by selector
 function removeAll(sel) {
   var target = document.querySelectorAll(sel)
-  for (var i = 0; i < target.length; i++) {
+  for (var i = 0;i < target.length;i++) {
     target[i].parentNode.removeChild(target[i])
   }
 }
@@ -105,7 +105,7 @@ function toggleShow(thisElement) {
 function toggleAllShow(allChildren) {
   //if (elID.getAttribute("aria-hidden") == "true"))
   console.log(allChildren.length)
-  for (var i = 0; i < allChildren.length; i++) {
+  for (var i = 0;i < allChildren.length;i++) {
     if (allChildren[i].hasAttribute('hidden')) {
       allChildren[i].removeAttribute('hidden')
     } else {
@@ -114,10 +114,18 @@ function toggleAllShow(allChildren) {
   }
 }
 
+//toggle all class by selector
+function toggleClasses(el, cls) {
+  var all = document.querySelectorAll(el)
+  for (var i = 0;i < all.length;i++) {
+    all[i].classList.toggle(cls)
+  }
+}
+
 //toggle all class by array - onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.detail'), 'hidden'); return false;"
 //return false - avoid the page jumping straight to the top"
 function toggleAllClass(allChildren, cls1, cls2) {
-  for (var i = 0; i < allChildren.length; i++) {
+  for (var i = 0;i < allChildren.length;i++) {
     allChildren[i].classList.toggle(cls1)
     if (cls2 != null) {
       allChildren[i].classList.toggle(cls2)
@@ -127,7 +135,7 @@ function toggleAllClass(allChildren, cls1, cls2) {
 }
 //toggle two classes - onmouseover="removeAddClasses(findChildren(findParent(this, 'LI', ''), 'p'), 'uk-text-truncate', 'flex-wrap')" onmouseout="removeAddClasses(findChildren(findParent(this, 'LI', ''), 'p'), 'flex-wrap', 'uk-text-truncate')"
 function removeAddClasses(allChildren, classRemove, classAdd) {
-  for (var i = 0; i < allChildren.length; i++) {
+  for (var i = 0;i < allChildren.length;i++) {
     allChildren[i].classList.remove(classRemove)
     allChildren[i].classList.add(classAdd)
   }
@@ -213,7 +221,7 @@ function viewHeight(sel, upperSelector) {
       document.querySelector(upperSelector).getBoundingClientRect().top +
       document.querySelector(upperSelector).getBoundingClientRect().height
     var target = document.querySelectorAll(sel)
-    for (var i = 0; i < target.length; i++) {
+    for (var i = 0;i < target.length;i++) {
       target[i].style.maxHeight = window.innerHeight - topHeight + 'px'
     }
   }
@@ -243,7 +251,7 @@ function sameHeight(sel, target1, target2) {
 
 //Triger Click event
 function OnClick(el) {
-  document.querySelector(el).click();
+  document.querySelector(el).click()
 }
 
 //------------- font resize ------------------------------------------------//
@@ -258,31 +266,31 @@ function fontResize(
 ) {
   if (
     document
-    .querySelector('.' + classButtonFontS)
-    .classList.contains(classActive)
+      .querySelector('.' + classButtonFontS)
+      .classList.contains(classActive)
   ) {
     document.querySelector('html').classList.remove(classFontM)
     document.querySelector('html').classList.remove(classFontL)
   }
   if (
     document
-    .querySelector('.' + classButtonFontM)
-    .classList.contains(classActive)
+      .querySelector('.' + classButtonFontM)
+      .classList.contains(classActive)
   ) {
     document.querySelector('html').classList.remove(classFontL)
     document.querySelector('html').classList.add(classFontM)
   }
   if (
     document
-    .querySelector('.' + classButtonFontL)
-    .classList.contains(classActive)
+      .querySelector('.' + classButtonFontL)
+      .classList.contains(classActive)
   ) {
     document.querySelector('html').classList.remove(classFontM)
     document.querySelector('html').classList.add(classFontL)
   }
   var btnFont = document.querySelectorAll('.' + classButtonFont)
-  for (var i = 0; i < btnFont.length; i++) {
-    btnFont[i].onclick = function() {
+  for (var i = 0;i < btnFont.length;i++) {
+    btnFont[i].onclick = function () {
       RemoveClass('.' + classButtonFont, classActive) //Outer function
       this.classList.add(classActive) //Error: Cannot use 'btnFont[i]' to replace 'this'
       if (this.classList.contains(classButtonFontS)) {
@@ -311,11 +319,11 @@ function showOption(thisSelect, index, sl) {
   var showEl = document.querySelectorAll(sl)
   var i
   if (thisSelect.selectedIndex == index) {
-    for (i = 0; i < showEl.length; i++) {
+    for (i = 0;i < showEl.length;i++) {
       showEl[i].style.setProperty('display', 'block', 'important')
     }
   } else {
-    for (i = 0; i < showEl.length; i++) {
+    for (i = 0;i < showEl.length;i++) {
       showEl[i].style.setProperty('display', 'none', 'important')
     }
   }
@@ -325,19 +333,18 @@ function showOption(thisSelect, index, sl) {
 function toggleCheckAll(thisClick, inputClass) {
   //thisClick means the "owner" and CANNOT use "this" that means the Global object "Window"
   thisClick.classList.toggle('checked')
-  var i,
-    el = document.querySelectorAll(inputClass)
+  var i, el = document.querySelectorAll(inputClass)
   //--set all input checked & unchecked--
   if (thisClick.classList.contains('checked')) {
     //if 'select all' checked
-    for (i = 0; i < el.length; i++) {
+    for (i = 0;i < el.length;i++) {
       el[i].checked = true
       el[i].offsetParent.classList.add('checked')
       //parent el<li> add class "checked" when input checked
     }
   } else {
     //if 'select all' unchecked
-    for (i = 0; i < el.length; i++) {
+    for (i = 0;i < el.length;i++) {
       el[i].checked = false
       el[i].offsetParent.classList.remove('checked')
       //parent el<li> remove class "checked" when input unchecked
@@ -345,40 +352,170 @@ function toggleCheckAll(thisClick, inputClass) {
   }
 }
 
-//------------- End Form ------------------------------------------------//
+// checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
+function checkedSum(inputCheck, checkAll, resetButton, textSum) {
+  var checkAll = document.querySelectorAll(checkAll)
+  var resetButton = document.querySelectorAll(resetButton)
+  var inputCheck = document.querySelectorAll(inputCheck)
+  var textSum = document.querySelectorAll(textSum)
+  var sum = 0
+  textSum.innerHTML = sum
 
-//Table width in editor
-function tableWidth(el) {
-  var target = document.querySelectorAll(el)
-  if (window.innerWidth <= 959 || document.documentElement.clientWidth <= 959) {
-    for (var i = 0; i < target.length; i++) {
-      target[i].style.setProperty('width', '100%', 'important')
-      if (target[i].getAttribute('width') != null) {
-        target[i].setAttribute('width', 'auto')
+  // function checkAllSum() {
+  //   for (var j = 0; j < inputCheck.length; j++) {
+  //     inputCheck[j].checked = true
+  //     sum = sum + 1
+  //   }
+  //   for (var k = 0; k < textSum.length; k++) {
+  //     textSum.innerHTML = sum
+  //   }
+  // }
+
+  for (var i = 0;i < inputCheck.length;i++) {
+    inputCheck[i].addEventListener('change', (event) => {
+      if (event.target.checked) {
+        sum = sum + 1
+        for (var j = 0;j < textSum.length;j++) {
+          textSum[j].innerHTML = sum
+        }
+      } else {
+        sum = sum - 1
+        for (var k = 0;k < textSum.length;k++) {
+          textSum[k].innerHTML = sum
+        }
       }
-      var th = target[i].querySelectorAll('th')
-      var td = target[i].querySelectorAll('td')
-      for (var j = 0; j < th.length; j++) {
-        if (th[j].style.width != null) {
-          th[j].style.setProperty('width', 'auto', 'important')
+    })
+  }
+  for (var i = 0;i < checkAll.length;i++) {
+    if (checkAll[i].getAttribute('type') == 'checkbox') {
+      checkAll[i].addEventListener('change', (event) => {
+        if (event.target.checked) {
+          for (var i = 0;i < checkAll.length;i++) {
+            checkAll[i].checked = true
+          }
+          for (var j = 0;j < inputCheck.length;j++) {
+            inputCheck[j].checked = true
+            // sum = sum + 1
+          }
+          sum = inputCheck.length
+          for (var k = 0;k < textSum.length;k++) {
+            textSum[k].innerHTML = sum
+          }
+        } else {
+          for (var i = 0;i < checkAll.length;i++) {
+            checkAll[i].checked = false
+          }
+          for (var j = 0;j < inputCheck.length;j++) {
+            inputCheck[j].checked = false
+            // sum = sum - 1
+          }
+          sum = 0
+          for (var k = 0;k < textSum.length;k++) {
+            textSum[k].innerHTML = sum
+          }
         }
-        if (th[j].getAttribute('width') != null) {
-          th[j].setAttribute('width', 'auto')
+      })
+    }
+    if (checkAll[i].getAttribute('type') == 'button') {
+      checkAll[i].onclick = function () {
+        if (checkAll[i].classList.contains('checked')) {
+          for (var i = 0;i < checkAll.length;i++) {
+            checkAll[i].classList.toggle('checked')
+          }
+          for (var j = 0;j < inputCheck.length;j++) {
+            inputCheck[j].checked = true
+            // sum = sum + 1
+          }
+          sum = inputCheck.length
+          for (var k = 0;k < textSum.length;k++) {
+            textSum[k].innerHTML = sum
+          }
+        } else {
+          for (var i = 0;i < checkAll.length;i++) {
+            checkAll[i].classList.toggle('checked')
+          }
+          for (var j = 0;j < inputCheck.length;j++) {
+            inputCheck[j].checked = false
+            // sum = sum - 1
+          }
+          sum = 0
+          for (var k = 0;k < textSum.length;k++) {
+            textSum[k].innerHTML = sum
+          }
         }
       }
-      for (var k = 0; k < td.length; k++) {
-        if (td[k].style.width != null) {
-          td[k].style.setProperty('width', 'auto')
-        }
-        if (td[k].getAttribute('width') != null) {
-          td[k].setAttribute('width', 'auto')
-        }
+    }
+  }
+  for (var i = 0;i < resetButton.length;i++) {
+    resetButton[i].onclick = function () {
+      for (var j = 0;j < checkAll.length;j++) {
+        checkAll[j].checked = false
+      }
+      for (var k = 0;k < inputCheck.length;k++) {
+        inputCheck[k].checked = false
+      }
+      sum = 0
+      for (var l = 0;l < textSum.length;l++) {
+        textSum[l].innerHTML = sum
       }
     }
   }
 }
 
+//------------- End Form ------------------------------------------------//
 
+//Slideshow tab focus
+function slideShowFocus(slideshow, tabsArray, thisFocus) {
+  var slideshow = document.querySelector(slideshow)
+  var tabs = document.querySelectorAll(tabsArray)
+  for (var i = 0;i < tabs.length;i++) {
+    // tabs[i] = UIkit.slideshow(slideshow).show(i)
+    if (thisFocus == tabs[i]) {
+      UIkit.slideshow(slideshow).show(i)
+    }
+  }
+}
+
+//Click 'Enter' to open window by the attribute 'href'
+function enterOpenUrl(targetWindow, thisKeyDown, event) {
+  if (event.keyCode === 13) {
+    window.open(thisKeyDown.getAttribute('href'), targetWindow)
+  }
+}
+
+//Uikit 3 load active tab (or with switcher) from url [[for another page]]. Usage: page.html#3
+//https://www.w3schools.com/JSREF/prop_loc_hash.asp
+function urlShowTab(ukTab) {
+  var hash = document.location.hash
+  if (hash && oneExist(ukTab) == true) {
+    var index = hash.slice(1) - 1 //Extract string from the second position and to the end
+    UIkit.tab(ukTab).show(index)
+    // urlShowTab("#patinfo_tab")
+    // console.log('li' + hash + '>a')
+  }
+}
+
+//Click a link to show a tab by the 'index' [[in the same page]]
+function listShowTab(link, ukTab) {
+  var links = document.querySelectorAll(link)
+  for (var i = 0;i < links.length;i++) {
+    links[i].onclick = function () {
+      // const list = this.parentElement.parentElement.children
+      // const index = list.indexOf(this.parentElement) //It got error
+      //With ES6 destructuring you can do as below:
+      var index = [...this.parentElement.parentElement.children].indexOf(this.parentElement)
+      UIkit.tab(ukTab).show(index)
+    }
+  }
+}
+
+function logoSvg(logoSvg) {
+  var logo = document.querySelector(logoSvg)
+  UIkit.svg(logo).svg.then(function (svg) {
+    svg.setAttribute("preserveAspectRatio", "xMinYMid")
+    // svg.querySelector('path').style.stroke = 'red'
+  })
+}
 
 if (oneExist("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty") == true) {
   removeAll("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty")
@@ -386,9 +523,26 @@ if (oneExist("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empt
 
 if (oneExist("#gototop") == true) {
   gotoTop("#gototop", "opacity-100")
-  window.onscroll = function() {
+  window.onscroll = function () {
     gotoTop("#gototop", "opacity-100")
-  };
+  }
+}
+
+if (oneExist(".text_size") == true) {
+  fontResize("text-m", "text-l", "text_size", "text_size-s", "text_size-m", "text_size-l", "active")
+}
+
+if (allExist([".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber"]) == true) {
+  checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
+}
+
+//The two functions below must be togther
+// urlShowTab(".border2.uk-tab")
+// listShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
+
+if (oneExist('img[data-src*=".svg"]') == true) {
+  // console.log("The logo exists")
+  logoSvg(".logo>img")
 }
 
 // if (allExist(".logo_cht, logo_eng") == true) {
@@ -406,10 +560,6 @@ if (oneExist("#gototop") == true) {
 //   });
 // }
 
-if (oneExist(".text_size") == true) {
-  fontResize("text-m", "text-l", "text_size", "text_size-s", "text_size-m", "text_size-l", "active");
-}
-
 // if (allExist("#slideshow .uk-slideshow-items, header, .bg_bar") == true) {
 //   window.viewHeightMiddle("#slideshow .uk-slideshow-items", "header", ".bg_bar")
 //   window.onload = function() {
@@ -424,12 +574,12 @@ if (oneExist(".text_size") == true) {
 //"DOMContentLoaded" signifies that the HTML body is completely loaded and parsed. The JavaScript inside this block will not run until after that event is fired, therefore the error is avoided
 //In the external case as below, doesn't need to use the "DOMContentLoaded" event because the "defer" attribute solved the problem
 //<script src="script.js" defer></script>
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-});
+})
 
 //uk-slideshow height, working with CSS {min-height: auto !important}
-window.onload = function() {
+window.onload = function () {
   // viewHeightMiddle('#slideshow .uk-slideshow-items', 'header', '.bg_bar')
   // if (allExist(['.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)']) == true) {
   //   sameHeight('.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)')
@@ -437,33 +587,16 @@ window.onload = function() {
   // if (oneExist('.editor table')) {
   //   tableWidth('.editor table')
   // }
-  if (allExist('.list_tabs .uk-open') == true) {
-    toggleAllClass(findAll('.list_tabs .uk-open .toggle'), 'hidden')
-  }
+
+  // if (allExist('.list_tabs .uk-open') == true) {
+  //   toggleAllClass(findAll('.list_tabs .uk-open .toggle'), 'hidden')
+  // }
 }
-window.onresize = function() {
+window.onresize = function () {
   // viewHeightMiddle('#slideshow .uk-slideshow-items', 'header', '.bg_bar')
-  if (allExist(['.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)']) == true) {
-    sameHeight('.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)')
-  }
-}
-
-//Slideshow tab focus
-function slideShowFocus(slideshow, tabsArray, thisFocus) {
-  var slideshow = document.querySelector(slideshow)
-  var tabs = document.querySelectorAll(tabsArray)
-  for (var i = 0; i < tabs.length; i++) {
-    // tabs[i] = UIkit.slideshow(slideshow).show(i)
-    if (thisFocus == tabs[i]) {
-      UIkit.slideshow(slideshow).show(i)
-    }
-  }
-}
-
-function enterOpenUrl(targetWindow, thisKeyDown, event) {
-  if (event.keyCode === 13) {
-    window.open(thisKeyDown.getAttribute('href'), targetWindow)
-  }
+  // if (allExist(['.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)']) == true) {
+  //   sameHeight('.bg_menu', '.bg_menu~section:nth-of-type(1)', '.bg_menu~section:nth-of-type(2)')
+  // }
 }
 
 //--------------- end pure js ----------------------------------------------------------//

@@ -1,0 +1,333 @@
+@import 'functions', 'variables', 'colors-variables', 'color', 'mixin';
+
+/* .editor, #content {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+} */
+div.editor.table {
+  display: block !important;
+}
+
+.editor table {
+  margin: 20px 0;
+  border-collapse: inherit;
+  /* white-space: nowrap; */
+  /* min-width: 600px; */
+}
+
+.editor table[border]:not(.uk-table) {
+  border-collapse: collapse;
+}
+
+.editor table[border]:not([border="0"]):not(.uk-table) th,
+.editor table[border]:not([border="0"]):not(.uk-table) td {
+  padding: 0 5px;
+}
+
+.editor table[border="0"]:not(.uk-table) {
+  border-collapse: inherit;
+}
+
+.editor table:not([border="0"]):not(.uk-table),
+.editor table:not([border="0"]):not(.uk-table) th,
+.editor table:not([border="0"]):not(.uk-table) td {
+  border: 1px solid black;
+}
+
+/* .editor table td * {
+  white-space: normal;
+  word-break: break-all;
+} */
+
+@media (max-width: 959px) {
+  .editor.table table * {
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  .editor.tableblock table,
+  .editor.tableblock table caption,
+  .editor.tableblock table thead,
+  .editor.tableblock table tbody,
+  .editor.tableblock table th,
+  .editor.tableblock table td,
+  .editor.tableblock table tr {
+    display: block;
+    width: 100% !important;
+  }
+
+  .editor.tableblock.table4896 table tr:first-child td:not(:last-child) {
+    display: none;
+  }
+}
+
+@media (max-width: 1119px) {
+  .editor.tablescroll #content {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block !important;
+  }
+
+  .editor.tablescroll table {
+    min-width: 1000px;
+  }
+
+  .editor.tablescroll table:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .editor table {
+    width: 100%;
+  }
+}
+
+/* For stack table */
+/* @media (max-width: 959px) {
+  .editor.table table:not(.uk-table) * {
+    word-break: break-all;
+    white-space: normal;
+  }
+  .editor table:not(.uk-table), .editor table:not(.uk-table) caption, .editor table:not(.uk-table) thead, .editor table:not(.uk-table) tbody, .editor table:not(.uk-table) th, .editor table:not(.uk-table) td, .editor table:not(.uk-table) tr {
+    display: block;
+    width: 100% !important;
+  }
+  .editor table:not(.uk-table) thead, .editor table:not(.uk-table) th, .editor.tableblock.table4896 table tr:first-child td:not(:last-child) {
+    display: none;
+  }
+  .editor table[border]:not([border="0"]):not(.uk-table) {
+    border: none !important;
+    margin: 20px 0;
+  }
+  .editor table:not(.uk-table) * {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+  .editor table[border]:not([border="0"]):not(.uk-table) td {
+    border: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+  }
+  .editor table[border]:not([border="0"]):not(.uk-table) tr th:first-child, .editor table[border]:not([border="0"]):not(.uk-table) tr td:first-child {
+    border-top: 1px solid black;
+  }
+  .editor table:not(.uk-table) span.heading {
+    display: inline-block;
+    color: white;
+    background-color: $color-grey-600;
+    margin-right: 10px;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 1119px) {
+  .editor table {
+      width: 100%;
+  }
+  .editor.tablescroll #content {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block !important;
+  }
+  .editor.tablescroll table {
+    min-width: 1000px;
+  }
+  .editor.tablescroll table:last-of-type {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .editor table:not(.uk-table) span.heading {
+    display: none;
+  }
+} */
+
+.editor ul:not(.list_arrow) {
+  list-style: disc;
+}
+
+.editor ol {
+  list-style: decimal;
+}
+
+.editor ul,
+.editor ol {
+  padding-left: 35px;
+  list-style-position: inside;
+}
+
+.editor ul.list_arrow {
+  padding-left: 0;
+}
+
+.editor ul>li>*,
+.editor ol>li>* {
+  vertical-align: top;
+  /* margin: 0 !important; */
+}
+
+.editor a,
+.editor u,
+.editor u * {
+  text-decoration: underline;
+  /* margin: 5px 0 !important; */
+}
+
+/* .editor a {
+  margin: 5px 0 !important;
+} */
+.editor a:hover,
+.editor a:hover * {
+  color: black !important;
+  text-decoration: underline;
+}
+
+.editor h1,
+.editor h2,
+.editor h3,
+.editor h4,
+.editor h5,
+.editor h6,
+.editor a,
+.editor .h3,
+.editor .h4,
+.editor .h5,
+.editor .h6 {
+  color: $color-secondary !important;
+  /* margin-top: 40px; */
+  /* margin-bottom: 20px; */
+}
+
+.editor .uk-card h1,
+.editor .uk-card h2,
+.editor .uk-card h3,
+.editor .uk-card h4,
+.editor .uk-card h5,
+.editor .uk-card h6 {
+  color: $color-dark !important;
+}
+
+.editor h3,
+.editor .h3 {
+  position: relative;
+  padding-left: 17px;
+}
+.editor .uk-card>h3 {
+  padding: 0;
+}
+.editor h3::before,
+.editor .h3::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0da";
+  padding-right: 10px;
+  content: "▶";
+  font-size: 0.9rem;
+  position: absolute;
+  top: calc(50% - 24px/2);
+  left: 0;
+  transform: scaleX(.7) translate(-4px, 0);
+}
+
+.editor .uk-card h3::before {
+  display: none;
+}
+
+.editor *:not([class*=uk]) {
+  margin: 0;
+}
+
+.editor h1, .editor .h1, .editor h2, .editor .h2, .editor h3, .editor .h3, .editor h4, .editor .h4, .editor h5, .editor .h5, .editor h6, .editor .h6, .editor p {
+  margin: 5px 0;
+}
+.editor h1, .editor .h1, .editor h2, .editor .h2, .editor h3, .editor .h3, .editor h4, .editor .h4, .editor h5, .editor .h5, .editor h6, .editor .h6 {
+  font-weight: bold;
+}
+
+.editor h1, .editor .h1 {
+  font-size: calc(36rem/18);
+}
+.editor h2, .editor .h2 {
+  font-size: calc(32rem/18);
+}
+.editor h3, .editor .h3 {
+  font-size: calc(27rem/18);
+}
+.editor h4, .editor .h4 {
+  font-size: calc(22.5rem/18);
+}
+.editor h5, .editor .h5 {
+  font-size: calc(18rem/18);
+}
+.editor h6, .editor .h6 {
+  font-size: calc(15.75rem/18);
+}
+
+.editor p *:not(span) {
+  display: inline;
+}
+
+.editor img {
+  display: inherit;
+}
+
+.editor table img {
+  display: inline-block;
+}
+
+@media (max-width: 959px) {}
+
+@media (max-width: 1119px) {}
+
+@media (min-width: 480px) {}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 960px) {
+}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1600px) {}
+
+/*---------- Only landscape in mobile ------------------------------*/
+@media screen and (orientation:landscape) and (max-device-width: 959px) {}
+
+/*---------- IE10+ ------------------------------*/
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {}

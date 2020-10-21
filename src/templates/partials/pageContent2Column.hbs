@@ -1,0 +1,106 @@
+{{!-- {{>pageContent2Column containerXlarge='true' breadcrumbCurrent='查詢列表' userOn='true' user='陳大天' linkLogout='index.html' listMenu1level='true' listMenuMaxHeight='true' pageTitle='查詢列表' linkBackOn='true' linkBack='#' backWhere='回上頁' h2buttonMobile='true' h2buttonName='次選單' h2buttonDropdown='true' content='searchlist' pageSelect='true' pageSum='2'}} --}}
+
+<!-- page main content -->
+<section class="p-0 m:py-2 relative" uk-height-viewport="expand: true">
+  <!-- <div class="bg_primary opacity10 uk-position-cover"></div> -->
+  <div class="container_responsive@s uk-container{{#if containerXlarge}} uk-container-xlarge{{/if}}">
+    {{!-- <div class="uk-clearfix">
+      {{>breadcrumb}}
+      {{#if userOn}}
+      <small class="uk-float-right">帳號：{{user}}<a class="ml-2 color_primary-text!" href="{{linkLogout}}">登出</a></small>
+      {{/if}}
+    </div> --}}
+
+    <!-- Breadcrumb & User -->
+    <div class="px-2 mb-2 justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle{{#if BreadcrumbUserVisibleOnDesk}} uk-visible@m{{/if}}" uk-grid>
+      {{!-- <!-- Child <div> Default to class="uk-width-auto" --> --}}
+      <div class="m-0">
+        {{>breadcrumb}}
+      </div>
+      {{#if userOn}}
+        <div class="text-xs m:text-sm content-center m-0">
+          <span class="mr-2 uk-width-auto">帳號：{{user}}</span>
+          <a class="color_primary-text! uk-width-auto" href="{{linkLogout}}">登出</a>
+        </div>
+      {{/if}}
+    </div>
+    <!-- Breadcrumb & User -->
+
+    {{!-- <div class="s:mb-2 uk-card uk-card-small uk-card-default uk-card-body" uk-height-viewport="min-height: 200"> --}}
+    <div class="min_height-550 s:mb-2 uk-card uk-card-small uk-card-default uk-card-body">
+      <div class="uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
+        <div class="uk-width-1-4@m uk-width-1-5@l">
+          {{#if sideMenuTop}}
+          <div class="uk-visible@m" style="{{sideMenuTopStyle}}"></div>
+          {{/if}}
+          {{#if tab}}
+            <ul class="border2 border_primary-dark mb-3 uk-tab" uk-tab>
+              <li class="uk-active"><a href="#">依科部</a></li>
+              <li><a href="#">依病症</a></li>
+            </ul>
+          {{/if}}
+          {{#if navMenuTitle}}
+            <p class="btm_line{{navMenuTitleClasses}}">{{navMenuTitleName}}</p>
+          {{/if}}
+          {{#if listMenu1level}}
+            {{>listMenu 1level='true'}}
+          {{/if}}
+          {{#if listMenu2level}}
+            {{>listMenu 2level='true'}}
+          {{/if}}
+          {{#if listMenu3level}}
+            {{>listMenu 3level='true'}}
+          {{/if}}
+        </div>
+        <div class="uk-width-expand@m">
+          <h2 class="btm_line text-2xl mt-0">
+            <div class="uk-flex-middle uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand@m" uk-grid>
+              <div class="uk-width-expand@m">{{pageTitle}}</div>
+              {{#if linkBackOn}}
+                <div class="uk-width-auto"><small class="mt-2"><a class="no-underline" href="{{linkBack}}"><i class="mr-1 fas fa-angle-left"></i>{{backWhere}}</a></small></div>
+              {{/if}}
+              {{#if h2button}}
+                {{!-- h2buttonClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' --}}
+                {{!-- h2buttonFaiconClasses='far fa-envelope' --}}
+                <div class="uk-width-auto"><a class="{{h2buttonClasses}}" href="{{h2buttonLink}}">{{#if h2buttonFaicon}}<i class="mr-2 {{h2buttonFaiconClasses}}"></i>{{/if}}{{h2buttonName}}</a></div>
+              {{/if}}
+              {{#if h2buttonModal}}
+                <div class="uk-width-auto"><a class="{{h2buttonModalClasses}}" href="#{{h2buttonModalID}}" uk-toggle>{{#if h2buttonModalFaicon}}<i class="mr-2 {{h2buttonModalFaiconClasses}}"></i>{{/if}}{{h2buttonNameModal}}</a></div>
+              {{/if}}
+              {{#if h2buttonMobile}}
+                <div class="uk-width-auto uk-hidden@m">
+                  <button class="{{h2buttonMobileClasses}}" type="button">{{#if h2buttonMobileFaicon}}<i class="mr-2 {{h2buttonMobileFaiconClasses}}"></i>{{/if}}{{h2buttonNameMobile}}</button>
+                  {{#if h2buttonDropdown}}
+                    {{>dropdown}}
+                  {{/if}}
+                  {{#if h2buttonDropdownSum}}
+                    {{>dropdown optionSum='true'}}
+                  {{/if}}
+                  {{#if h2buttonDropdownCheckbox}}
+                    {{>dropdownCheckbox}}
+                  {{/if}}
+                </div>
+              {{/if}}
+            </div>
+          </h2>
+          {{#if form}}
+            <div id="content">
+              <form onsubmit="return false;">
+                {{> (lookup . 'content') }}
+                {{!-- <!-- Look up partial:content='' --> --}}
+              </form>
+            </div>
+          {{else}}
+            <div id="content">
+              {{> (lookup . 'content') }}
+              {{!-- <!-- Look up partial:content='' --> --}}
+            </div>
+          {{/if}}
+          <!-- End #content -->
+        </div>
+      </div>
+    </div>
+    <!-- End uk-card -->
+  </div>
+</section>
+<!-- page main content -->

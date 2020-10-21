@@ -1482,39 +1482,39 @@ footer, small {
   font-size: 6rem !important;
 }
 
-.fontweight-100 {
+.font_weight-100 {
   font-weight: 100;
 }
 
-.fontweight-200 {
+.font_weight-200 {
   font-weight: 200;
 }
 
-.fontweight-300 {
+.font_weight-300 {
   font-weight: 300;
 }
 
-.fontweight-400 {
+.font_weight-400 {
   font-weight: 400;
 }
 
-.fontweight-500 {
+.font_weight-500 {
   font-weight: 500;
 }
 
-.fontweight-600 {
+.font_weight-600 {
   font-weight: 600;
 }
 
-.fontweight-700 {
+.font_weight-700 {
   font-weight: 700;
 }
 
-.fontweight-800 {
+.font_weight-800 {
   font-weight: 800;
 }
 
-.fontweight-900 {
+.font_weight-900 {
   font-weight: 900;
 }
 
@@ -2032,31 +2032,31 @@ footer, small {
   .font_size-60\@s {
     font-size: 6rem;
   }
-  .fontweight-100\@s {
+  .font_weight-100\@s {
     font-weight: 100;
   }
-  .fontweight-200\@s {
+  .font_weight-200\@s {
     font-weight: 200;
   }
-  .fontweight-300\@s {
+  .font_weight-300\@s {
     font-weight: 300;
   }
-  .fontweight-400\@s {
+  .font_weight-400\@s {
     font-weight: 400;
   }
-  .fontweight-500\@s {
+  .font_weight-500\@s {
     font-weight: 500;
   }
-  .fontweight-600\@s {
+  .font_weight-600\@s {
     font-weight: 600;
   }
-  .fontweight-700\@s {
+  .font_weight-700\@s {
     font-weight: 700;
   }
-  .fontweight-800\@s {
+  .font_weight-800\@s {
     font-weight: 800;
   }
-  .fontweight-900\@s {
+  .font_weight-900\@s {
     font-weight: 900;
   }
   .line-normal\@s {
@@ -2369,31 +2369,31 @@ footer, small {
   .font_size-60\@m {
     font-size: 6rem;
   }
-  .fontweight-100\@m {
+  .font_weight-100\@m {
     font-weight: 100;
   }
-  .fontweight-200\@m {
+  .font_weight-200\@m {
     font-weight: 200;
   }
-  .fontweight-300\@m {
+  .font_weight-300\@m {
     font-weight: 300;
   }
-  .fontweight-400\@m {
+  .font_weight-400\@m {
     font-weight: 400;
   }
-  .fontweight-500\@m {
+  .font_weight-500\@m {
     font-weight: 500;
   }
-  .fontweight-600\@m {
+  .font_weight-600\@m {
     font-weight: 600;
   }
-  .fontweight-700\@m {
+  .font_weight-700\@m {
     font-weight: 700;
   }
-  .fontweight-800\@m {
+  .font_weight-800\@m {
     font-weight: 800;
   }
-  .fontweight-900\@m {
+  .font_weight-900\@m {
     font-weight: 900;
   }
   .line-normal\@m {
@@ -2706,31 +2706,31 @@ footer, small {
   .font_size-60\@l {
     font-size: 6rem;
   }
-  .fontweight-100\@l {
+  .font_weight-100\@l {
     font-weight: 100;
   }
-  .fontweight-200\@l {
+  .font_weight-200\@l {
     font-weight: 200;
   }
-  .fontweight-300\@l {
+  .font_weight-300\@l {
     font-weight: 300;
   }
-  .fontweight-400\@l {
+  .font_weight-400\@l {
     font-weight: 400;
   }
-  .fontweight-500\@l {
+  .font_weight-500\@l {
     font-weight: 500;
   }
-  .fontweight-600\@l {
+  .font_weight-600\@l {
     font-weight: 600;
   }
-  .fontweight-700\@l {
+  .font_weight-700\@l {
     font-weight: 700;
   }
-  .fontweight-800\@l {
+  .font_weight-800\@l {
     font-weight: 800;
   }
-  .fontweight-900\@l {
+  .font_weight-900\@l {
     font-weight: 900;
   }
   .line-normal\@l {
@@ -3043,31 +3043,31 @@ footer, small {
   .font_size-60\@xl {
     font-size: 6rem;
   }
-  .fontweight-100\@xl {
+  .font_weight-100\@xl {
     font-weight: 100;
   }
-  .fontweight-200\@xl {
+  .font_weight-200\@xl {
     font-weight: 200;
   }
-  .fontweight-300\@xl {
+  .font_weight-300\@xl {
     font-weight: 300;
   }
-  .fontweight-400\@xl {
+  .font_weight-400\@xl {
     font-weight: 400;
   }
-  .fontweight-500\@xl {
+  .font_weight-500\@xl {
     font-weight: 500;
   }
-  .fontweight-600\@xl {
+  .font_weight-600\@xl {
     font-weight: 600;
   }
-  .fontweight-700\@xl {
+  .font_weight-700\@xl {
     font-weight: 700;
   }
-  .fontweight-800\@xl {
+  .font_weight-800\@xl {
     font-weight: 800;
   }
-  .fontweight-900\@xl {
+  .font_weight-900\@xl {
     font-weight: 900;
   }
   .line-normal\@xl {
@@ -3223,7 +3223,6 @@ button:focus {
 
 /* Optional: Customize Class .focus-visible */
 .focus-visible, a:focus, button:focus {
-  border: 1px solid rgba(30, 135, 240, 0.85) !important;
   box-shadow: 0 0 0.2rem 0.2rem rgba(30, 135, 240, 0.85) !important;
   outline-color: rgba(30, 135, 240, 0.85) !important;
   outline-style: dashed !important;
@@ -3268,6 +3267,14 @@ button:focus {
 
 .color_black, .color_black > *, .hover\:color_black:hover, .hover\:color_black:hover * {
   color: black;
+}
+
+.color_white\!, .color_white\! > *, .hover\:color_white\!:hover, .hover\:color_white\!:hover * {
+  color: white !important;
+}
+
+.color_black\!, .color_black\! > *, .hover\:color_black\!:hover, .hover\:color_black\!:hover * {
+  color: black !important;
 }
 
 .color_default, .color_default > * {
@@ -3702,624 +3709,12 @@ button:focus {
   color: #702459;
 }
 
-.bg_primary, a.bg_primary, button.bg_primary {
-  background-color: #326295;
-}
-
-.bg_primary, .bg_primary > *, a.bg_primary, a.bg_primary > *, button.bg_primary, button.bg_primary > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary:hover, button.bg_primary:hover {
-  background-color: #25496f;
-  text-decoration: none;
-}
-
-a.bg_primary:hover, a.bg_primary:hover > *, button.bg_primary:hover, button.bg_primary:hover > *, .bg_primary > a:hover, .bg_primary > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-text, a.bg_primary-text, button.bg_primary-text {
-  background-color: #183049;
-}
-
-.bg_primary-text, .bg_primary-text > *, a.bg_primary-text, a.bg_primary-text > *, button.bg_primary-text, button.bg_primary-text > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-text:hover, button.bg_primary-text:hover {
-  background-color: #0c1722;
-  text-decoration: none;
-}
-
-a.bg_primary-text:hover, a.bg_primary-text:hover > *, button.bg_primary-text:hover, button.bg_primary-text:hover > *, .bg_primary-text > a:hover, .bg_primary-text > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-light, a.bg_primary-light, button.bg_primary-light {
-  background-color: #4f88c4;
-}
-
-.bg_primary-light, .bg_primary-light > *, a.bg_primary-light, a.bg_primary-light > *, button.bg_primary-light, button.bg_primary-light > * {
-  color: #0e1c2a !important;
-}
-
-a.bg_primary-light:hover, button.bg_primary-light:hover {
-  background-color: #386fa8;
-  text-decoration: none;
-}
-
-a.bg_primary-light:hover, a.bg_primary-light:hover > *, button.bg_primary-light:hover, button.bg_primary-light:hover > *, .bg_primary-light > a:hover, .bg_primary-light > a:hover > * {
-  color: #010304 !important;
-}
-
-.bg_primary-lighter, a.bg_primary-lighter, button.bg_primary-lighter {
-  background-color: #76a2d1;
-}
-
-.bg_primary-lighter, .bg_primary-lighter > *, a.bg_primary-lighter, a.bg_primary-lighter > *, button.bg_primary-lighter, button.bg_primary-lighter > * {
-  color: #1c3754 !important;
-}
-
-a.bg_primary-lighter:hover, button.bg_primary-lighter:hover {
-  background-color: #4f88c4;
-  text-decoration: none;
-}
-
-a.bg_primary-lighter:hover, a.bg_primary-lighter:hover > *, button.bg_primary-lighter:hover, button.bg_primary-lighter:hover > *, .bg_primary-lighter > a:hover, .bg_primary-lighter > a:hover > * {
-  color: #0f1e2e !important;
-}
-
-.bg_primary-dark, a.bg_primary-dark, button.bg_primary-dark {
-  background-color: #1f3c5c;
-}
-
-.bg_primary-dark, .bg_primary-dark > *, a.bg_primary-dark, a.bg_primary-dark > *, button.bg_primary-dark, button.bg_primary-dark > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-dark:hover, button.bg_primary-dark:hover {
-  background-color: #122336;
-  text-decoration: none;
-}
-
-a.bg_primary-dark:hover, a.bg_primary-dark:hover > *, button.bg_primary-dark:hover, button.bg_primary-dark:hover > *, .bg_primary-dark > a:hover, .bg_primary-dark > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-darker, a.bg_primary-darker, button.bg_primary-darker {
-  background-color: #122336;
-}
-
-.bg_primary-darker, .bg_primary-darker > *, a.bg_primary-darker, a.bg_primary-darker > *, button.bg_primary-darker, button.bg_primary-darker > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-darker:hover, button.bg_primary-darker:hover {
-  background-color: #050a0f;
-  text-decoration: none;
-}
-
-a.bg_primary-darker:hover, a.bg_primary-darker:hover > *, button.bg_primary-darker:hover, button.bg_primary-darker:hover > *, .bg_primary-darker > a:hover, .bg_primary-darker > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-darkest, a.bg_primary-darkest, button.bg_primary-darkest {
-  background-color: #0c1722;
-}
-
-.bg_primary-darkest, .bg_primary-darkest > *, a.bg_primary-darkest, a.bg_primary-darkest > *, button.bg_primary-darkest, button.bg_primary-darkest > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-darkest:hover, button.bg_primary-darkest:hover {
-  background-color: black;
-  text-decoration: none;
-}
-
-a.bg_primary-darkest:hover, a.bg_primary-darkest:hover > *, button.bg_primary-darkest:hover, button.bg_primary-darkest:hover > *, .bg_primary-darkest > a:hover, .bg_primary-darkest > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-hover, a.bg_primary-hover, button.bg_primary-hover {
-  background-color: #25496f;
-}
-
-.bg_primary-hover, .bg_primary-hover > *, a.bg_primary-hover, a.bg_primary-hover > *, button.bg_primary-hover, button.bg_primary-hover > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-hover:hover, button.bg_primary-hover:hover {
-  background-color: #183049;
-  text-decoration: none;
-}
-
-a.bg_primary-hover:hover, a.bg_primary-hover:hover > *, button.bg_primary-hover:hover, button.bg_primary-hover:hover > *, .bg_primary-hover > a:hover, .bg_primary-hover > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-black, a.bg_primary-black, button.bg_primary-black {
-  background-color: #132639;
-}
-
-.bg_primary-black, .bg_primary-black > *, a.bg_primary-black, a.bg_primary-black > *, button.bg_primary-black, button.bg_primary-black > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-black:hover, button.bg_primary-black:hover {
-  background-color: #060d13;
-  text-decoration: none;
-}
-
-a.bg_primary-black:hover, a.bg_primary-black:hover > *, button.bg_primary-black:hover, button.bg_primary-black:hover > *, .bg_primary-black > a:hover, .bg_primary-black > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary, a.bg_secondary, button.bg_secondary {
-  background-color: #2b86b1;
-}
-
-.bg_secondary, .bg_secondary > *, a.bg_secondary, a.bg_secondary > *, button.bg_secondary, button.bg_secondary > * {
-  color: #07161d !important;
-}
-
-a.bg_secondary:hover, button.bg_secondary:hover {
-  background-color: #216788;
-  text-decoration: none;
-}
-
-a.bg_secondary:hover, a.bg_secondary:hover > *, button.bg_secondary:hover, button.bg_secondary:hover > *, .bg_secondary > a:hover, .bg_secondary > a:hover > * {
-  color: #113546 !important;
-}
-
-.bg_secondary-text, a.bg_secondary-text, button.bg_secondary-text {
-  background-color: #17485f;
-}
-
-.bg_secondary-text, .bg_secondary-text > *, a.bg_secondary-text, a.bg_secondary-text > *, button.bg_secondary-text, button.bg_secondary-text > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-text:hover, button.bg_secondary-text:hover {
-  background-color: #0d2936;
-  text-decoration: none;
-}
-
-a.bg_secondary-text:hover, a.bg_secondary-text:hover > *, button.bg_secondary-text:hover, button.bg_secondary-text:hover > *, .bg_secondary-text > a:hover, .bg_secondary-text > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-light, a.bg_secondary-light, button.bg_secondary-light {
-  background-color: #53acd5;
-}
-
-.bg_secondary-light, .bg_secondary-light > *, a.bg_secondary-light, a.bg_secondary-light > *, button.bg_secondary-light, button.bg_secondary-light > * {
-  color: #133b4e !important;
-}
-
-a.bg_secondary-light:hover, button.bg_secondary-light:hover {
-  background-color: #3096c6;
-  text-decoration: none;
-}
-
-a.bg_secondary-light:hover, a.bg_secondary-light:hover > *, button.bg_secondary-light:hover, button.bg_secondary-light:hover > *, .bg_secondary-light > a:hover, .bg_secondary-light > a:hover > * {
-  color: #091c25 !important;
-}
-
-.bg_secondary-lighter, a.bg_secondary-lighter, button.bg_secondary-lighter {
-  background-color: #7cbfdf;
-}
-
-.bg_secondary-lighter, .bg_secondary-lighter > *, a.bg_secondary-lighter, a.bg_secondary-lighter > *, button.bg_secondary-lighter, button.bg_secondary-lighter > * {
-  color: #194e67 !important;
-}
-
-a.bg_secondary-lighter:hover, button.bg_secondary-lighter:hover {
-  background-color: #53acd5;
-  text-decoration: none;
-}
-
-a.bg_secondary-lighter:hover, a.bg_secondary-lighter:hover > *, button.bg_secondary-lighter:hover, button.bg_secondary-lighter:hover > *, .bg_secondary-lighter > a:hover, .bg_secondary-lighter > a:hover > * {
-  color: #0f2f3e !important;
-}
-
-.bg_secondary-dark, a.bg_secondary-dark, button.bg_secondary-dark {
-  background-color: #1c5773;
-}
-
-.bg_secondary-dark, .bg_secondary-dark > *, a.bg_secondary-dark, a.bg_secondary-dark > *, button.bg_secondary-dark, button.bg_secondary-dark > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-dark:hover, button.bg_secondary-dark:hover {
-  background-color: #12384a;
-  text-decoration: none;
-}
-
-a.bg_secondary-dark:hover, a.bg_secondary-dark:hover > *, button.bg_secondary-dark:hover, button.bg_secondary-dark:hover > *, .bg_secondary-dark > a:hover, .bg_secondary-dark > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-darker, a.bg_secondary-darker, button.bg_secondary-darker {
-  background-color: #12384a;
-}
-
-.bg_secondary-darker, .bg_secondary-darker > *, a.bg_secondary-darker, a.bg_secondary-darker > *, button.bg_secondary-darker, button.bg_secondary-darker > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-darker:hover, button.bg_secondary-darker:hover {
-  background-color: #081921;
-  text-decoration: none;
-}
-
-a.bg_secondary-darker:hover, a.bg_secondary-darker:hover > *, button.bg_secondary-darker:hover, button.bg_secondary-darker:hover > *, .bg_secondary-darker > a:hover, .bg_secondary-darker > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-darkest, a.bg_secondary-darkest, button.bg_secondary-darkest {
-  background-color: #0d2936;
-}
-
-.bg_secondary-darkest, .bg_secondary-darkest > *, a.bg_secondary-darkest, a.bg_secondary-darkest > *, button.bg_secondary-darkest, button.bg_secondary-darkest > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-darkest:hover, button.bg_secondary-darkest:hover {
-  background-color: #030a0d;
-  text-decoration: none;
-}
-
-a.bg_secondary-darkest:hover, a.bg_secondary-darkest:hover > *, button.bg_secondary-darkest:hover, button.bg_secondary-darkest:hover > *, .bg_secondary-darkest > a:hover, .bg_secondary-darkest > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-hover, a.bg_secondary-hover, button.bg_secondary-hover {
-  background-color: #216788;
-}
-
-.bg_secondary-hover, .bg_secondary-hover > *, a.bg_secondary-hover, a.bg_secondary-hover > *, button.bg_secondary-hover, button.bg_secondary-hover > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-hover:hover, button.bg_secondary-hover:hover {
-  background-color: #17485f;
-  text-decoration: none;
-}
-
-a.bg_secondary-hover:hover, a.bg_secondary-hover:hover > *, button.bg_secondary-hover:hover, button.bg_secondary-hover:hover > *, .bg_secondary-hover > a:hover, .bg_secondary-hover > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-black, a.bg_secondary-black, button.bg_secondary-black {
-  background-color: #0f2f3e;
-}
-
-.bg_secondary-black, .bg_secondary-black > *, a.bg_secondary-black, a.bg_secondary-black > *, button.bg_secondary-black, button.bg_secondary-black > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-black:hover, button.bg_secondary-black:hover {
-  background-color: #051015;
-  text-decoration: none;
-}
-
-a.bg_secondary-black:hover, a.bg_secondary-black:hover > *, button.bg_secondary-black:hover, button.bg_secondary-black:hover > *, .bg_secondary-black > a:hover, .bg_secondary-black > a:hover > * {
-  color: white !important;
-}
-
-.color3, a.color3, button.color3 {
-  background-color: #89c441;
-}
-
-.color3, .color3 > *, a.color3, a.color3 > *, button.color3, button.color3 > * {
-  color: #364e18 !important;
-}
-
-a.color3:hover, button.color3:hover {
-  background-color: #6ea032;
-  text-decoration: none;
-}
-
-a.color3:hover, a.color3:hover > *, button.color3:hover, button.color3:hover > *, .color3 > a:hover, .color3 > a:hover > * {
-  color: #1b270c !important;
-}
-
-.color3-text, a.color3-text, button.color3-text {
-  background-color: #547926;
-}
-
-.color3-text, .color3-text > *, a.color3-text, a.color3-text > *, button.color3-text, button.color3-text > * {
-  color: #ecf5e0 !important;
-}
-
-a.color3-text:hover, button.color3-text:hover {
-  background-color: #39521a;
-  text-decoration: none;
-}
-
-a.color3-text:hover, a.color3-text:hover > *, button.color3-text:hover, button.color3-text:hover > *, .color3-text > a:hover, .color3-text > a:hover > * {
-  color: white !important;
-}
-
-.color3-light, a.color3-light, button.color3-light {
-  background-color: #add67b;
-}
-
-.color3-light, .color3-light > *, a.color3-light, a.color3-light > *, button.color3-light, button.color3-light > * {
-  color: #405d1d !important;
-}
-
-a.color3-light:hover, button.color3-light:hover {
-  background-color: #95ca54;
-  text-decoration: none;
-}
-
-a.color3-light:hover, a.color3-light:hover > *, button.color3-light:hover, button.color3-light:hover > *, .color3-light > a:hover, .color3-light > a:hover > * {
-  color: #263611 !important;
-}
-
-.color3-lighter, a.color3-lighter, button.color3-lighter {
-  background-color: #c5e2a2;
-}
-
-.color3-lighter, .color3-lighter > *, a.color3-lighter, a.color3-lighter > *, button.color3-lighter, button.color3-lighter > * {
-  color: #46651f !important;
-}
-
-a.color3-lighter:hover, button.color3-lighter:hover {
-  background-color: #add67b;
-  text-decoration: none;
-}
-
-a.color3-lighter:hover, a.color3-lighter:hover > *, button.color3-lighter:hover, button.color3-lighter:hover > *, .color3-lighter > a:hover, .color3-lighter > a:hover > * {
-  color: #2b3e13 !important;
-}
-
-.color3-dark, a.color3-dark, button.color3-dark {
-  background-color: #618d2c;
-}
-
-.color3-dark, .color3-dark > *, a.color3-dark, a.color3-dark > *, button.color3-dark, button.color3-dark > * {
-  color: #101707 !important;
-}
-
-a.color3-dark:hover, button.color3-dark:hover {
-  background-color: #466620;
-  text-decoration: none;
-}
-
-a.color3-dark:hover, a.color3-dark:hover > *, button.color3-dark:hover, button.color3-dark:hover > *, .color3-dark > a:hover, .color3-dark > a:hover > * {
-  color: #2b3e13 !important;
-}
-
-.color3-darker, a.color3-darker, button.color3-darker {
-  background-color: #466620;
-}
-
-.color3-darker, .color3-darker > *, a.color3-darker, a.color3-darker > *, button.color3-darker, button.color3-darker > * {
-  color: #f2f2f2 !important;
-}
-
-a.color3-darker:hover, button.color3-darker:hover {
-  background-color: #2b3f14;
-  text-decoration: none;
-}
-
-a.color3-darker:hover, a.color3-darker:hover > *, button.color3-darker:hover, button.color3-darker:hover > *, .color3-darker > a:hover, .color3-darker > a:hover > * {
-  color: white !important;
-}
-
-.color3-darkest, a.color3-darkest, button.color3-darkest {
-  background-color: #39521a;
-}
-
-.color3-darkest, .color3-darkest > *, a.color3-darkest, a.color3-darkest > *, button.color3-darkest, button.color3-darkest > * {
-  color: #f2f2f2 !important;
-}
-
-a.color3-darkest:hover, button.color3-darkest:hover {
-  background-color: #1e2b0e;
-  text-decoration: none;
-}
-
-a.color3-darkest:hover, a.color3-darkest:hover > *, button.color3-darkest:hover, button.color3-darkest:hover > *, .color3-darkest > a:hover, .color3-darkest > a:hover > * {
-  color: white !important;
-}
-
-.color3-hover, a.color3-hover, button.color3-hover {
-  background-color: #6ea032;
-}
-
-.color3-hover, .color3-hover > *, a.color3-hover, a.color3-hover > *, button.color3-hover, button.color3-hover > * {
-  color: #202f0f !important;
-}
-
-a.color3-hover:hover, button.color3-hover:hover {
-  background-color: #547926;
-  text-decoration: none;
-}
-
-a.color3-hover:hover, a.color3-hover:hover > *, button.color3-hover:hover, button.color3-hover:hover > *, .color3-hover > a:hover, .color3-hover > a:hover > * {
-  color: #3b561b !important;
-}
-
-.color3-black, a.color3-black, button.color3-black {
-  background-color: #283a12;
-}
-
-.color3-black, .color3-black > *, a.color3-black, a.color3-black > *, button.color3-black, button.color3-black > * {
-  color: #f2f2f2 !important;
-}
-
-a.color3-black:hover, button.color3-black:hover {
-  background-color: #0d1306;
-  text-decoration: none;
-}
-
-a.color3-black:hover, a.color3-black:hover > *, button.color3-black:hover, button.color3-black:hover > *, .color3-black > a:hover, .color3-black > a:hover > * {
-  color: white !important;
-}
-
-.color4, a.color4, button.color4 {
-  background-color: #60b947;
-}
-
-.color4, .color4 > *, a.color4, a.color4 > *, button.color4, button.color4 > * {
-  color: #224319 !important;
-}
-
-a.color4:hover, button.color4:hover {
-  background-color: #4d9538;
-  text-decoration: none;
-}
-
-a.color4:hover, a.color4:hover > *, button.color4:hover, button.color4:hover > *, .color4 > a:hover, .color4 > a:hover > * {
-  color: #0f1e0b !important;
-}
-
-.color4-text, a.color4-text, button.color4-text {
-  background-color: #3a702a;
-}
-
-.color4-text, .color4-text > *, a.color4-text, a.color4-text > *, button.color4-text, button.color4-text > * {
-  color: #f2f2f2 !important;
-}
-
-a.color4-text:hover, button.color4-text:hover {
-  background-color: #274b1c;
-  text-decoration: none;
-}
-
-a.color4-text:hover, a.color4-text:hover > *, button.color4-text:hover, button.color4-text:hover > *, .color4-text > a:hover, .color4-text > a:hover > * {
-  color: white !important;
-}
-
-.color4-light, a.color4-light, button.color4-light {
-  background-color: #90ce7e;
-}
-
-.color4-light, .color4-light > *, a.color4-light, a.color4-light > *, button.color4-light, button.color4-light > * {
-  color: #2c5520 !important;
-}
-
-a.color4-light:hover, button.color4-light:hover {
-  background-color: #70c059;
-  text-decoration: none;
-}
-
-a.color4-light:hover, a.color4-light:hover > *, button.color4-light:hover, button.color4-light:hover > *, .color4-light > a:hover, .color4-light > a:hover > * {
-  color: #193012 !important;
-}
-
-.color4-lighter, a.color4-lighter, button.color4-lighter {
-  background-color: #b0dca3;
-}
-
-.color4-lighter, .color4-lighter > *, a.color4-lighter, a.color4-lighter > *, button.color4-lighter, button.color4-lighter > * {
-  color: #346426 !important;
-}
-
-a.color4-lighter:hover, button.color4-lighter:hover {
-  background-color: #90ce7e;
-  text-decoration: none;
-}
-
-a.color4-lighter:hover, a.color4-lighter:hover > *, button.color4-lighter:hover, button.color4-lighter:hover > *, .color4-lighter > a:hover, .color4-lighter > a:hover > * {
-  color: #203f18 !important;
-}
-
-.color4-dark, a.color4-dark, button.color4-dark {
-  background-color: #438231;
-}
-
-.color4-dark, .color4-dark > *, a.color4-dark, a.color4-dark > *, button.color4-dark, button.color4-dark > * {
-  color: #f9fcf8 !important;
-}
-
-a.color4-dark:hover, button.color4-dark:hover {
-  background-color: #305d23;
-  text-decoration: none;
-}
-
-a.color4-dark:hover, a.color4-dark:hover > *, button.color4-dark:hover, button.color4-dark:hover > *, .color4-dark > a:hover, .color4-dark > a:hover > * {
-  color: white !important;
-}
-
-.color4-darker, a.color4-darker, button.color4-darker {
-  background-color: #305d23;
-}
-
-.color4-darker, .color4-darker > *, a.color4-darker, a.color4-darker > *, button.color4-darker, button.color4-darker > * {
-  color: #f2f2f2 !important;
-}
-
-a.color4-darker:hover, button.color4-darker:hover {
-  background-color: #1d3815;
-  text-decoration: none;
-}
-
-a.color4-darker:hover, a.color4-darker:hover > *, button.color4-darker:hover, button.color4-darker:hover > *, .color4-darker > a:hover, .color4-darker > a:hover > * {
-  color: white !important;
-}
-
-.color4-darkest, a.color4-darkest, button.color4-darkest {
-  background-color: #274b1c;
-}
-
-.color4-darkest, .color4-darkest > *, a.color4-darkest, a.color4-darkest > *, button.color4-darkest, button.color4-darkest > * {
-  color: #f2f2f2 !important;
-}
-
-a.color4-darkest:hover, button.color4-darkest:hover {
-  background-color: #13260e;
-  text-decoration: none;
-}
-
-a.color4-darkest:hover, a.color4-darkest:hover > *, button.color4-darkest:hover, button.color4-darkest:hover > *, .color4-darkest > a:hover, .color4-darkest > a:hover > * {
-  color: white !important;
-}
-
-.color4-hover, a.color4-hover, button.color4-hover {
-  background-color: #4d9538;
-}
-
-.color4-hover, .color4-hover > *, a.color4-hover, a.color4-hover > *, button.color4-hover, button.color4-hover > * {
-  color: #0f1e0b !important;
-}
-
-a.color4-hover:hover, button.color4-hover:hover {
-  background-color: #3a702a;
-  text-decoration: none;
-}
-
-a.color4-hover:hover, a.color4-hover:hover > *, button.color4-hover:hover, button.color4-hover:hover > *, .color4-hover > a:hover, .color4-hover > a:hover > * {
-  color: #224319 !important;
-}
-
-.color4-black, a.color4-black, button.color4-black {
-  background-color: #1d3715;
-}
-
-.color4-black, .color4-black > *, a.color4-black, a.color4-black > *, button.color4-black, button.color4-black > * {
-  color: #f2f2f2 !important;
-}
-
-a.color4-black:hover, button.color4-black:hover {
-  background-color: #0a1207;
-  text-decoration: none;
-}
-
-a.color4-black:hover, a.color4-black:hover > *, button.color4-black:hover, button.color4-black:hover > *, .color4-black > a:hover, .color4-black > a:hover > * {
-  color: white !important;
-}
-
 .bg_white, .btn_white, a.bg_white, a.btn_white, button.bg_white, button.btn_white {
   background-color: white;
 }
 
 .bg_white, .btn_white, .bg_white > *, .btn_white > *, a.bg_white, a.btn_white, a.bg_white > *, a.btn_white > *, button.bg_white, button.btn_white, button.bg_white > *, button.btn_white > * {
-  color: #757575 !important;
+  color: #757575;
 }
 
 a.bg_white:hover, a.btn_white:hover, button.bg_white:hover, button.btn_white:hover {
@@ -4336,7 +3731,7 @@ a.bg_white:hover, a.btn_white:hover, a.bg_white:hover > *, a.btn_white:hover > *
 }
 
 .bg_black, .btn_black, .bg_black > *, .btn_black > *, a.bg_black, a.btn_black, a.bg_black > *, a.btn_black > *, button.bg_black, button.btn_black, button.bg_black > *, button.btn_black > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_black:hover, a.btn_black:hover, button.bg_black:hover, button.btn_black:hover {
@@ -4345,7 +3740,7 @@ a.bg_black:hover, a.btn_black:hover, button.bg_black:hover, button.btn_black:hov
 }
 
 a.bg_black:hover, a.btn_black:hover, a.bg_black:hover > *, a.btn_black:hover > *, button.bg_black:hover, button.btn_black:hover, button.bg_black:hover > *, button.btn_black:hover > *, .bg_black > a:hover, .btn_black > a:hover, .bg_black > a:hover > *, .btn_black > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_dark, .btn_dark, a.bg_dark, a.btn_dark, button.bg_dark, button.btn_dark {
@@ -4353,7 +3748,7 @@ a.bg_black:hover, a.btn_black:hover, a.bg_black:hover > *, a.btn_black:hover > *
 }
 
 .bg_dark, .btn_dark, .bg_dark > *, .btn_dark > *, a.bg_dark, a.btn_dark, a.bg_dark > *, a.btn_dark > *, button.bg_dark, button.btn_dark, button.bg_dark > *, button.btn_dark > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_dark:hover, a.btn_dark:hover, button.bg_dark:hover, button.btn_dark:hover {
@@ -4362,7 +3757,7 @@ a.bg_dark:hover, a.btn_dark:hover, button.bg_dark:hover, button.btn_dark:hover {
 }
 
 a.bg_dark:hover, a.btn_dark:hover, a.bg_dark:hover > *, a.btn_dark:hover > *, button.bg_dark:hover, button.btn_dark:hover, button.bg_dark:hover > *, button.btn_dark:hover > *, .bg_dark > a:hover, .btn_dark > a:hover, .bg_dark > a:hover > *, .btn_dark > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_grey, .btn_grey, a.bg_grey, a.btn_grey, button.bg_grey, button.btn_grey {
@@ -4370,7 +3765,7 @@ a.bg_dark:hover, a.btn_dark:hover, a.bg_dark:hover > *, a.btn_dark:hover > *, bu
 }
 
 .bg_grey, .btn_grey, .bg_grey > *, .btn_grey > *, a.bg_grey, a.btn_grey, a.bg_grey > *, a.btn_grey > *, button.bg_grey, button.btn_grey, button.bg_grey > *, button.btn_grey > * {
-  color: #363636 !important;
+  color: #363636;
 }
 
 a.bg_grey:hover, a.btn_grey:hover, button.bg_grey:hover, button.btn_grey:hover {
@@ -4387,7 +3782,7 @@ a.bg_grey:hover, a.btn_grey:hover, a.bg_grey:hover > *, a.btn_grey:hover > *, bu
 }
 
 .bg_grey-100, .btn_grey-100, .bg_grey-100 > *, .btn_grey-100 > *, a.bg_grey-100, a.btn_grey-100, a.bg_grey-100 > *, a.btn_grey-100 > *, button.bg_grey-100, button.btn_grey-100, button.bg_grey-100 > *, button.btn_grey-100 > * {
-  color: #707070 !important;
+  color: #707070;
 }
 
 a.bg_grey-100:hover, a.btn_grey-100:hover, button.bg_grey-100:hover, button.btn_grey-100:hover {
@@ -4404,7 +3799,7 @@ a.bg_grey-100:hover, a.btn_grey-100:hover, a.bg_grey-100:hover > *, a.btn_grey-1
 }
 
 .bg_grey-200, .btn_grey-200, .bg_grey-200 > *, .btn_grey-200 > *, a.bg_grey-200, a.btn_grey-200, a.bg_grey-200 > *, a.btn_grey-200 > *, button.bg_grey-200, button.btn_grey-200, button.bg_grey-200 > *, button.btn_grey-200 > * {
-  color: #6b6b6b !important;
+  color: #6b6b6b;
 }
 
 a.bg_grey-200:hover, a.btn_grey-200:hover, button.bg_grey-200:hover, button.btn_grey-200:hover {
@@ -4421,7 +3816,7 @@ a.bg_grey-200:hover, a.btn_grey-200:hover, a.bg_grey-200:hover > *, a.btn_grey-2
 }
 
 .bg_grey-300, .btn_grey-300, .bg_grey-300 > *, .btn_grey-300 > *, a.bg_grey-300, a.btn_grey-300, a.bg_grey-300 > *, a.btn_grey-300 > *, button.bg_grey-300, button.btn_grey-300, button.bg_grey-300 > *, button.btn_grey-300 > * {
-  color: #636363 !important;
+  color: #636363;
 }
 
 a.bg_grey-300:hover, a.btn_grey-300:hover, button.bg_grey-300:hover, button.btn_grey-300:hover {
@@ -4438,7 +3833,7 @@ a.bg_grey-300:hover, a.btn_grey-300:hover, a.bg_grey-300:hover > *, a.btn_grey-3
 }
 
 .bg_grey-400, .btn_grey-400, .bg_grey-400 > *, .btn_grey-400 > *, a.bg_grey-400, a.btn_grey-400, a.bg_grey-400 > *, a.btn_grey-400 > *, button.bg_grey-400, button.btn_grey-400, button.bg_grey-400 > *, button.btn_grey-400 > * {
-  color: #4d4d4d !important;
+  color: #4d4d4d;
 }
 
 a.bg_grey-400:hover, a.btn_grey-400:hover, button.bg_grey-400:hover, button.btn_grey-400:hover {
@@ -4455,7 +3850,7 @@ a.bg_grey-400:hover, a.btn_grey-400:hover, a.bg_grey-400:hover > *, a.btn_grey-4
 }
 
 .bg_grey-500, .btn_grey-500, .bg_grey-500 > *, .btn_grey-500 > *, a.bg_grey-500, a.btn_grey-500, a.bg_grey-500 > *, a.btn_grey-500 > *, button.bg_grey-500, button.btn_grey-500, button.bg_grey-500 > *, button.btn_grey-500 > * {
-  color: #363636 !important;
+  color: #363636;
 }
 
 a.bg_grey-500:hover, a.btn_grey-500:hover, button.bg_grey-500:hover, button.btn_grey-500:hover {
@@ -4472,7 +3867,7 @@ a.bg_grey-500:hover, a.btn_grey-500:hover, a.bg_grey-500:hover > *, a.btn_grey-5
 }
 
 .bg_grey-600, .btn_grey-600, .bg_grey-600 > *, .btn_grey-600 > *, a.bg_grey-600, a.btn_grey-600, a.bg_grey-600 > *, a.btn_grey-600 > *, button.bg_grey-600, button.btn_grey-600, button.bg_grey-600 > *, button.btn_grey-600 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_grey-600:hover, a.btn_grey-600:hover, button.bg_grey-600:hover, button.btn_grey-600:hover {
@@ -4481,7 +3876,7 @@ a.bg_grey-600:hover, a.btn_grey-600:hover, button.bg_grey-600:hover, button.btn_
 }
 
 a.bg_grey-600:hover, a.btn_grey-600:hover, a.bg_grey-600:hover > *, a.btn_grey-600:hover > *, button.bg_grey-600:hover, button.btn_grey-600:hover, button.bg_grey-600:hover > *, button.btn_grey-600:hover > *, .bg_grey-600 > a:hover, .btn_grey-600 > a:hover, .bg_grey-600 > a:hover > *, .btn_grey-600 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_grey-700, .btn_grey-700, a.bg_grey-700, a.btn_grey-700, button.bg_grey-700, button.btn_grey-700 {
@@ -4489,7 +3884,7 @@ a.bg_grey-600:hover, a.btn_grey-600:hover, a.bg_grey-600:hover > *, a.btn_grey-6
 }
 
 .bg_grey-700, .btn_grey-700, .bg_grey-700 > *, .btn_grey-700 > *, a.bg_grey-700, a.btn_grey-700, a.bg_grey-700 > *, a.btn_grey-700 > *, button.bg_grey-700, button.btn_grey-700, button.bg_grey-700 > *, button.btn_grey-700 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_grey-700:hover, a.btn_grey-700:hover, button.bg_grey-700:hover, button.btn_grey-700:hover {
@@ -4498,7 +3893,7 @@ a.bg_grey-700:hover, a.btn_grey-700:hover, button.bg_grey-700:hover, button.btn_
 }
 
 a.bg_grey-700:hover, a.btn_grey-700:hover, a.bg_grey-700:hover > *, a.btn_grey-700:hover > *, button.bg_grey-700:hover, button.btn_grey-700:hover, button.bg_grey-700:hover > *, button.btn_grey-700:hover > *, .bg_grey-700 > a:hover, .btn_grey-700 > a:hover, .bg_grey-700 > a:hover > *, .btn_grey-700 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_grey-800, .btn_grey-800, a.bg_grey-800, a.btn_grey-800, button.bg_grey-800, button.btn_grey-800 {
@@ -4506,7 +3901,7 @@ a.bg_grey-700:hover, a.btn_grey-700:hover, a.bg_grey-700:hover > *, a.btn_grey-7
 }
 
 .bg_grey-800, .btn_grey-800, .bg_grey-800 > *, .btn_grey-800 > *, a.bg_grey-800, a.btn_grey-800, a.bg_grey-800 > *, a.btn_grey-800 > *, button.bg_grey-800, button.btn_grey-800, button.bg_grey-800 > *, button.btn_grey-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_grey-800:hover, a.btn_grey-800:hover, button.bg_grey-800:hover, button.btn_grey-800:hover {
@@ -4515,7 +3910,7 @@ a.bg_grey-800:hover, a.btn_grey-800:hover, button.bg_grey-800:hover, button.btn_
 }
 
 a.bg_grey-800:hover, a.btn_grey-800:hover, a.bg_grey-800:hover > *, a.btn_grey-800:hover > *, button.bg_grey-800:hover, button.btn_grey-800:hover, button.bg_grey-800:hover > *, button.btn_grey-800:hover > *, .bg_grey-800 > a:hover, .btn_grey-800 > a:hover, .bg_grey-800 > a:hover > *, .btn_grey-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_grey-900, .btn_grey-900, a.bg_grey-900, a.btn_grey-900, button.bg_grey-900, button.btn_grey-900 {
@@ -4523,7 +3918,7 @@ a.bg_grey-800:hover, a.btn_grey-800:hover, a.bg_grey-800:hover > *, a.btn_grey-8
 }
 
 .bg_grey-900, .btn_grey-900, .bg_grey-900 > *, .btn_grey-900 > *, a.bg_grey-900, a.btn_grey-900, a.bg_grey-900 > *, a.btn_grey-900 > *, button.bg_grey-900, button.btn_grey-900, button.bg_grey-900 > *, button.btn_grey-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_grey-900:hover, a.btn_grey-900:hover, button.bg_grey-900:hover, button.btn_grey-900:hover {
@@ -4532,7 +3927,7 @@ a.bg_grey-900:hover, a.btn_grey-900:hover, button.bg_grey-900:hover, button.btn_
 }
 
 a.bg_grey-900:hover, a.btn_grey-900:hover, a.bg_grey-900:hover > *, a.btn_grey-900:hover > *, button.bg_grey-900:hover, button.btn_grey-900:hover, button.bg_grey-900:hover > *, button.btn_grey-900:hover > *, .bg_grey-900 > a:hover, .btn_grey-900 > a:hover, .bg_grey-900 > a:hover > *, .btn_grey-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_bluegrey-100, .btn_bluegrey-100, a.bg_bluegrey-100, a.btn_bluegrey-100, button.bg_bluegrey-100, button.btn_bluegrey-100 {
@@ -4540,7 +3935,7 @@ a.bg_grey-900:hover, a.btn_grey-900:hover, a.bg_grey-900:hover > *, a.btn_grey-9
 }
 
 .bg_bluegrey-100, .btn_bluegrey-100, .bg_bluegrey-100 > *, .btn_bluegrey-100 > *, a.bg_bluegrey-100, a.btn_bluegrey-100, a.bg_bluegrey-100 > *, a.btn_bluegrey-100 > *, button.bg_bluegrey-100, button.btn_bluegrey-100, button.bg_bluegrey-100 > *, button.btn_bluegrey-100 > * {
-  color: #3c789f !important;
+  color: #3c789f;
 }
 
 a.bg_bluegrey-100:hover, a.btn_bluegrey-100:hover, button.bg_bluegrey-100:hover, button.btn_bluegrey-100:hover {
@@ -4557,7 +3952,7 @@ a.bg_bluegrey-100:hover, a.btn_bluegrey-100:hover, a.bg_bluegrey-100:hover > *, 
 }
 
 .bg_bluegrey-200, .btn_bluegrey-200, .bg_bluegrey-200 > *, .btn_bluegrey-200 > *, a.bg_bluegrey-200, a.btn_bluegrey-200, a.bg_bluegrey-200 > *, a.btn_bluegrey-200 > *, button.bg_bluegrey-200, button.btn_bluegrey-200, button.bg_bluegrey-200 > *, button.btn_bluegrey-200 > * {
-  color: #45709b !important;
+  color: #45709b;
 }
 
 a.bg_bluegrey-200:hover, a.btn_bluegrey-200:hover, button.bg_bluegrey-200:hover, button.btn_bluegrey-200:hover {
@@ -4574,7 +3969,7 @@ a.bg_bluegrey-200:hover, a.btn_bluegrey-200:hover, a.bg_bluegrey-200:hover > *, 
 }
 
 .bg_bluegrey-300, .btn_bluegrey-300, .bg_bluegrey-300 > *, .btn_bluegrey-300 > *, a.bg_bluegrey-300, a.btn_bluegrey-300, a.bg_bluegrey-300 > *, a.btn_bluegrey-300 > *, button.bg_bluegrey-300, button.btn_bluegrey-300, button.bg_bluegrey-300 > *, button.btn_bluegrey-300 > * {
-  color: #4b6991 !important;
+  color: #4b6991;
 }
 
 a.bg_bluegrey-300:hover, a.btn_bluegrey-300:hover, button.bg_bluegrey-300:hover, button.btn_bluegrey-300:hover {
@@ -4591,7 +3986,7 @@ a.bg_bluegrey-300:hover, a.btn_bluegrey-300:hover, a.bg_bluegrey-300:hover > *, 
 }
 
 .bg_bluegrey-400, .btn_bluegrey-400, .bg_bluegrey-400 > *, .btn_bluegrey-400 > *, a.bg_bluegrey-400, a.btn_bluegrey-400, a.bg_bluegrey-400 > *, a.btn_bluegrey-400 > *, button.bg_bluegrey-400, button.btn_bluegrey-400, button.bg_bluegrey-400 > *, button.btn_bluegrey-400 > * {
-  color: #465d76 !important;
+  color: #465d76;
 }
 
 a.bg_bluegrey-400:hover, a.btn_bluegrey-400:hover, button.bg_bluegrey-400:hover, button.btn_bluegrey-400:hover {
@@ -4608,7 +4003,7 @@ a.bg_bluegrey-400:hover, a.btn_bluegrey-400:hover, a.bg_bluegrey-400:hover > *, 
 }
 
 .bg_bluegrey-500, .btn_bluegrey-500, .bg_bluegrey-500 > *, .btn_bluegrey-500 > *, a.bg_bluegrey-500, a.btn_bluegrey-500, a.bg_bluegrey-500 > *, a.btn_bluegrey-500 > *, button.bg_bluegrey-500, button.btn_bluegrey-500, button.bg_bluegrey-500 > *, button.btn_bluegrey-500 > * {
-  color: #354150 !important;
+  color: #354150;
 }
 
 a.bg_bluegrey-500:hover, a.btn_bluegrey-500:hover, button.bg_bluegrey-500:hover, button.btn_bluegrey-500:hover {
@@ -4625,7 +4020,7 @@ a.bg_bluegrey-500:hover, a.btn_bluegrey-500:hover, a.bg_bluegrey-500:hover > *, 
 }
 
 .bg_bluegrey-600, .btn_bluegrey-600, .bg_bluegrey-600 > *, .btn_bluegrey-600 > *, a.bg_bluegrey-600, a.btn_bluegrey-600, a.bg_bluegrey-600 > *, a.btn_bluegrey-600 > *, button.bg_bluegrey-600, button.btn_bluegrey-600, button.bg_bluegrey-600 > *, button.btn_bluegrey-600 > * {
-  color: #14161a !important;
+  color: #14161a;
 }
 
 a.bg_bluegrey-600:hover, a.btn_bluegrey-600:hover, button.bg_bluegrey-600:hover, button.btn_bluegrey-600:hover {
@@ -4642,7 +4037,7 @@ a.bg_bluegrey-600:hover, a.btn_bluegrey-600:hover, a.bg_bluegrey-600:hover > *, 
 }
 
 .bg_bluegrey-700, .btn_bluegrey-700, .bg_bluegrey-700 > *, .btn_bluegrey-700 > *, a.bg_bluegrey-700, a.btn_bluegrey-700, a.bg_bluegrey-700 > *, a.btn_bluegrey-700 > *, button.bg_bluegrey-700, button.btn_bluegrey-700, button.bg_bluegrey-700 > *, button.btn_bluegrey-700 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_bluegrey-700:hover, a.btn_bluegrey-700:hover, button.bg_bluegrey-700:hover, button.btn_bluegrey-700:hover {
@@ -4651,7 +4046,7 @@ a.bg_bluegrey-700:hover, a.btn_bluegrey-700:hover, button.bg_bluegrey-700:hover,
 }
 
 a.bg_bluegrey-700:hover, a.btn_bluegrey-700:hover, a.bg_bluegrey-700:hover > *, a.btn_bluegrey-700:hover > *, button.bg_bluegrey-700:hover, button.btn_bluegrey-700:hover, button.bg_bluegrey-700:hover > *, button.btn_bluegrey-700:hover > *, .bg_bluegrey-700 > a:hover, .btn_bluegrey-700 > a:hover, .bg_bluegrey-700 > a:hover > *, .btn_bluegrey-700 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_bluegrey-800, .btn_bluegrey-800, a.bg_bluegrey-800, a.btn_bluegrey-800, button.bg_bluegrey-800, button.btn_bluegrey-800 {
@@ -4659,7 +4054,7 @@ a.bg_bluegrey-700:hover, a.btn_bluegrey-700:hover, a.bg_bluegrey-700:hover > *, 
 }
 
 .bg_bluegrey-800, .btn_bluegrey-800, .bg_bluegrey-800 > *, .btn_bluegrey-800 > *, a.bg_bluegrey-800, a.btn_bluegrey-800, a.bg_bluegrey-800 > *, a.btn_bluegrey-800 > *, button.bg_bluegrey-800, button.btn_bluegrey-800, button.bg_bluegrey-800 > *, button.btn_bluegrey-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_bluegrey-800:hover, a.btn_bluegrey-800:hover, button.bg_bluegrey-800:hover, button.btn_bluegrey-800:hover {
@@ -4668,7 +4063,7 @@ a.bg_bluegrey-800:hover, a.btn_bluegrey-800:hover, button.bg_bluegrey-800:hover,
 }
 
 a.bg_bluegrey-800:hover, a.btn_bluegrey-800:hover, a.bg_bluegrey-800:hover > *, a.btn_bluegrey-800:hover > *, button.bg_bluegrey-800:hover, button.btn_bluegrey-800:hover, button.bg_bluegrey-800:hover > *, button.btn_bluegrey-800:hover > *, .bg_bluegrey-800 > a:hover, .btn_bluegrey-800 > a:hover, .bg_bluegrey-800 > a:hover > *, .btn_bluegrey-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_bluegrey-900, .btn_bluegrey-900, a.bg_bluegrey-900, a.btn_bluegrey-900, button.bg_bluegrey-900, button.btn_bluegrey-900 {
@@ -4676,7 +4071,7 @@ a.bg_bluegrey-800:hover, a.btn_bluegrey-800:hover, a.bg_bluegrey-800:hover > *, 
 }
 
 .bg_bluegrey-900, .btn_bluegrey-900, .bg_bluegrey-900 > *, .btn_bluegrey-900 > *, a.bg_bluegrey-900, a.btn_bluegrey-900, a.bg_bluegrey-900 > *, a.btn_bluegrey-900 > *, button.bg_bluegrey-900, button.btn_bluegrey-900, button.bg_bluegrey-900 > *, button.btn_bluegrey-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_bluegrey-900:hover, a.btn_bluegrey-900:hover, button.bg_bluegrey-900:hover, button.btn_bluegrey-900:hover {
@@ -4685,7 +4080,7 @@ a.bg_bluegrey-900:hover, a.btn_bluegrey-900:hover, button.bg_bluegrey-900:hover,
 }
 
 a.bg_bluegrey-900:hover, a.btn_bluegrey-900:hover, a.bg_bluegrey-900:hover > *, a.btn_bluegrey-900:hover > *, button.bg_bluegrey-900:hover, button.btn_bluegrey-900:hover, button.bg_bluegrey-900:hover > *, button.btn_bluegrey-900:hover > *, .bg_bluegrey-900 > a:hover, .btn_bluegrey-900 > a:hover, .bg_bluegrey-900 > a:hover > *, .btn_bluegrey-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_red-100, .btn_red-100, a.bg_red-100, a.btn_red-100, button.bg_red-100, button.btn_red-100 {
@@ -4693,7 +4088,7 @@ a.bg_bluegrey-900:hover, a.btn_bluegrey-900:hover, a.bg_bluegrey-900:hover > *, 
 }
 
 .bg_red-100, .btn_red-100, .bg_red-100 > *, .btn_red-100 > *, a.bg_red-100, a.btn_red-100, a.bg_red-100 > *, a.btn_red-100 > *, button.bg_red-100, button.btn_red-100, button.bg_red-100 > *, button.btn_red-100 > * {
-  color: #e60000 !important;
+  color: #e60000;
 }
 
 a.bg_red-100:hover, a.btn_red-100:hover, button.bg_red-100:hover, button.btn_red-100:hover {
@@ -4710,7 +4105,7 @@ a.bg_red-100:hover, a.btn_red-100:hover, a.bg_red-100:hover > *, a.btn_red-100:h
 }
 
 .bg_red-200, .btn_red-200, .bg_red-200 > *, .btn_red-200 > *, a.bg_red-200, a.btn_red-200, a.bg_red-200 > *, a.btn_red-200 > *, button.bg_red-200, button.btn_red-200, button.bg_red-200 > *, button.btn_red-200 > * {
-  color: #c70505 !important;
+  color: #c70505;
 }
 
 a.bg_red-200:hover, a.btn_red-200:hover, button.bg_red-200:hover, button.btn_red-200:hover {
@@ -4727,7 +4122,7 @@ a.bg_red-200:hover, a.btn_red-200:hover, a.bg_red-200:hover > *, a.btn_red-200:h
 }
 
 .bg_red-300, .btn_red-300, .bg_red-300 > *, .btn_red-300 > *, a.bg_red-300, a.btn_red-300, a.bg_red-300 > *, a.btn_red-300 > *, button.bg_red-300, button.btn_red-300, button.bg_red-300 > *, button.btn_red-300 > * {
-  color: #a60202 !important;
+  color: #a60202;
 }
 
 a.bg_red-300:hover, a.btn_red-300:hover, button.bg_red-300:hover, button.btn_red-300:hover {
@@ -4744,7 +4139,7 @@ a.bg_red-300:hover, a.btn_red-300:hover, a.bg_red-300:hover > *, a.btn_red-300:h
 }
 
 .bg_red-400, .btn_red-400, .bg_red-400 > *, .btn_red-400 > *, a.bg_red-400, a.btn_red-400, a.bg_red-400 > *, a.btn_red-400 > *, button.bg_red-400, button.btn_red-400, button.bg_red-400 > *, button.btn_red-400 > * {
-  color: #7d0303 !important;
+  color: #7d0303;
 }
 
 a.bg_red-400:hover, a.btn_red-400:hover, button.bg_red-400:hover, button.btn_red-400:hover {
@@ -4761,7 +4156,7 @@ a.bg_red-400:hover, a.btn_red-400:hover, a.bg_red-400:hover > *, a.btn_red-400:h
 }
 
 .bg_red-500, .btn_red-500, .bg_red-500 > *, .btn_red-500 > *, a.bg_red-500, a.btn_red-500, a.bg_red-500 > *, a.btn_red-500 > *, button.bg_red-500, button.btn_red-500, button.bg_red-500 > *, button.btn_red-500 > * {
-  color: #600606 !important;
+  color: #600606;
 }
 
 a.bg_red-500:hover, a.btn_red-500:hover, button.bg_red-500:hover, button.btn_red-500:hover {
@@ -4778,7 +4173,7 @@ a.bg_red-500:hover, a.btn_red-500:hover, a.bg_red-500:hover > *, a.btn_red-500:h
 }
 
 .bg_red-600, .btn_red-600, .bg_red-600 > *, .btn_red-600 > *, a.bg_red-600, a.btn_red-600, a.bg_red-600 > *, a.btn_red-600 > *, button.bg_red-600, button.btn_red-600, button.bg_red-600 > *, button.btn_red-600 > * {
-  color: #280505 !important;
+  color: #280505;
 }
 
 a.bg_red-600:hover, a.btn_red-600:hover, button.bg_red-600:hover, button.btn_red-600:hover {
@@ -4795,7 +4190,7 @@ a.bg_red-600:hover, a.btn_red-600:hover, a.bg_red-600:hover > *, a.btn_red-600:h
 }
 
 .bg_red-700, .btn_red-700, .bg_red-700 > *, .btn_red-700 > *, a.bg_red-700, a.btn_red-700, a.bg_red-700 > *, a.btn_red-700 > *, button.bg_red-700, button.btn_red-700, button.bg_red-700 > *, button.btn_red-700 > * {
-  color: #f9e6e6 !important;
+  color: #f9e6e6;
 }
 
 a.bg_red-700:hover, a.btn_red-700:hover, button.bg_red-700:hover, button.btn_red-700:hover {
@@ -4804,7 +4199,7 @@ a.bg_red-700:hover, a.btn_red-700:hover, button.bg_red-700:hover, button.btn_red
 }
 
 a.bg_red-700:hover, a.btn_red-700:hover, a.bg_red-700:hover > *, a.btn_red-700:hover > *, button.bg_red-700:hover, button.btn_red-700:hover, button.bg_red-700:hover > *, button.btn_red-700:hover > *, .bg_red-700 > a:hover, .btn_red-700 > a:hover, .bg_red-700 > a:hover > *, .btn_red-700 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_red-800, .btn_red-800, a.bg_red-800, a.btn_red-800, button.bg_red-800, button.btn_red-800 {
@@ -4812,7 +4207,7 @@ a.bg_red-700:hover, a.btn_red-700:hover, a.bg_red-700:hover > *, a.btn_red-700:h
 }
 
 .bg_red-800, .btn_red-800, .bg_red-800 > *, .btn_red-800 > *, a.bg_red-800, a.btn_red-800, a.bg_red-800 > *, a.btn_red-800 > *, button.bg_red-800, button.btn_red-800, button.bg_red-800 > *, button.btn_red-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_red-800:hover, a.btn_red-800:hover, button.bg_red-800:hover, button.btn_red-800:hover {
@@ -4821,7 +4216,7 @@ a.bg_red-800:hover, a.btn_red-800:hover, button.bg_red-800:hover, button.btn_red
 }
 
 a.bg_red-800:hover, a.btn_red-800:hover, a.bg_red-800:hover > *, a.btn_red-800:hover > *, button.bg_red-800:hover, button.btn_red-800:hover, button.bg_red-800:hover > *, button.btn_red-800:hover > *, .bg_red-800 > a:hover, .btn_red-800 > a:hover, .bg_red-800 > a:hover > *, .btn_red-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_red-900, .btn_red-900, a.bg_red-900, a.btn_red-900, button.bg_red-900, button.btn_red-900 {
@@ -4829,7 +4224,7 @@ a.bg_red-800:hover, a.btn_red-800:hover, a.bg_red-800:hover > *, a.btn_red-800:h
 }
 
 .bg_red-900, .btn_red-900, .bg_red-900 > *, .btn_red-900 > *, a.bg_red-900, a.btn_red-900, a.bg_red-900 > *, a.btn_red-900 > *, button.bg_red-900, button.btn_red-900, button.bg_red-900 > *, button.btn_red-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_red-900:hover, a.btn_red-900:hover, button.bg_red-900:hover, button.btn_red-900:hover {
@@ -4838,7 +4233,7 @@ a.bg_red-900:hover, a.btn_red-900:hover, button.bg_red-900:hover, button.btn_red
 }
 
 a.bg_red-900:hover, a.btn_red-900:hover, a.bg_red-900:hover > *, a.btn_red-900:hover > *, button.bg_red-900:hover, button.btn_red-900:hover, button.bg_red-900:hover > *, button.btn_red-900:hover > *, .bg_red-900 > a:hover, .btn_red-900 > a:hover, .bg_red-900 > a:hover > *, .btn_red-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_orange-100, .btn_orange-100, a.bg_orange-100, a.btn_orange-100, button.bg_orange-100, button.btn_orange-100 {
@@ -4846,7 +4241,7 @@ a.bg_red-900:hover, a.btn_red-900:hover, a.bg_red-900:hover > *, a.btn_red-900:h
 }
 
 .bg_orange-100, .btn_orange-100, .bg_orange-100 > *, .btn_orange-100 > *, a.bg_orange-100, a.btn_orange-100, a.bg_orange-100 > *, a.btn_orange-100 > *, button.bg_orange-100, button.btn_orange-100, button.bg_orange-100 > *, button.btn_orange-100 > * {
-  color: #9e6900 !important;
+  color: #9e6900;
 }
 
 a.bg_orange-100:hover, a.btn_orange-100:hover, button.bg_orange-100:hover, button.btn_orange-100:hover {
@@ -4863,7 +4258,7 @@ a.bg_orange-100:hover, a.btn_orange-100:hover, a.bg_orange-100:hover > *, a.btn_
 }
 
 .bg_orange-200, .btn_orange-200, .bg_orange-200 > *, .btn_orange-200 > *, a.bg_orange-200, a.btn_orange-200, a.bg_orange-200 > *, a.btn_orange-200 > *, button.bg_orange-200, button.btn_orange-200, button.bg_orange-200 > *, button.btn_orange-200 > * {
-  color: #915f03 !important;
+  color: #915f03;
 }
 
 a.bg_orange-200:hover, a.btn_orange-200:hover, button.bg_orange-200:hover, button.btn_orange-200:hover {
@@ -4880,7 +4275,7 @@ a.bg_orange-200:hover, a.btn_orange-200:hover, a.bg_orange-200:hover > *, a.btn_
 }
 
 .bg_orange-300, .btn_orange-300, .bg_orange-300 > *, .btn_orange-300 > *, a.bg_orange-300, a.btn_orange-300, a.bg_orange-300 > *, a.btn_orange-300 > *, button.bg_orange-300, button.btn_orange-300, button.bg_orange-300 > *, button.btn_orange-300 > * {
-  color: #805304 !important;
+  color: #805304;
 }
 
 a.bg_orange-300:hover, a.btn_orange-300:hover, button.bg_orange-300:hover, button.btn_orange-300:hover {
@@ -4897,7 +4292,7 @@ a.bg_orange-300:hover, a.btn_orange-300:hover, a.bg_orange-300:hover > *, a.btn_
 }
 
 .bg_orange-400, .btn_orange-400, .bg_orange-400 > *, .btn_orange-400 > *, a.bg_orange-400, a.btn_orange-400, a.bg_orange-400 > *, a.btn_orange-400 > *, button.bg_orange-400, button.btn_orange-400, button.bg_orange-400 > *, button.btn_orange-400 > * {
-  color: #6f4006 !important;
+  color: #6f4006;
 }
 
 a.bg_orange-400:hover, a.btn_orange-400:hover, button.bg_orange-400:hover, button.btn_orange-400:hover {
@@ -4914,7 +4309,7 @@ a.bg_orange-400:hover, a.btn_orange-400:hover, a.bg_orange-400:hover > *, a.btn_
 }
 
 .bg_orange-500, .btn_orange-500, .bg_orange-500 > *, .btn_orange-500 > *, a.bg_orange-500, a.btn_orange-500, a.bg_orange-500 > *, a.btn_orange-500 > *, button.bg_orange-500, button.btn_orange-500, button.bg_orange-500 > *, button.btn_orange-500 > * {
-  color: #592d08 !important;
+  color: #592d08;
 }
 
 a.bg_orange-500:hover, a.btn_orange-500:hover, button.bg_orange-500:hover, button.btn_orange-500:hover {
@@ -4931,7 +4326,7 @@ a.bg_orange-500:hover, a.btn_orange-500:hover, a.bg_orange-500:hover > *, a.btn_
 }
 
 .bg_orange-600, .btn_orange-600, .bg_orange-600 > *, .btn_orange-600 > *, a.bg_orange-600, a.btn_orange-600, a.bg_orange-600 > *, a.btn_orange-600 > *, button.bg_orange-600, button.btn_orange-600, button.bg_orange-600 > *, button.btn_orange-600 > * {
-  color: #3a1c08 !important;
+  color: #3a1c08;
 }
 
 a.bg_orange-600:hover, a.btn_orange-600:hover, button.bg_orange-600:hover, button.btn_orange-600:hover {
@@ -4940,7 +4335,7 @@ a.bg_orange-600:hover, a.btn_orange-600:hover, button.bg_orange-600:hover, butto
 }
 
 a.bg_orange-600:hover, a.btn_orange-600:hover, a.bg_orange-600:hover > *, a.btn_orange-600:hover > *, button.bg_orange-600:hover, button.btn_orange-600:hover, button.bg_orange-600:hover > *, button.btn_orange-600:hover > *, .bg_orange-600 > a:hover, .btn_orange-600 > a:hover, .bg_orange-600 > a:hover > *, .btn_orange-600 > a:hover > * {
-  color: #66320f !important;
+  color: #66320f;
 }
 
 .bg_orange-700, .btn_orange-700, a.bg_orange-700, a.btn_orange-700, button.bg_orange-700, button.btn_orange-700 {
@@ -4948,7 +4343,7 @@ a.bg_orange-600:hover, a.btn_orange-600:hover, a.bg_orange-600:hover > *, a.btn_
 }
 
 .bg_orange-700, .btn_orange-700, .bg_orange-700 > *, .btn_orange-700 > *, a.bg_orange-700, a.btn_orange-700, a.bg_orange-700 > *, a.btn_orange-700 > *, button.bg_orange-700, button.btn_orange-700, button.bg_orange-700 > *, button.btn_orange-700 > * {
-  color: #0d0d0d !important;
+  color: #0d0d0d;
 }
 
 a.bg_orange-700:hover, a.btn_orange-700:hover, button.bg_orange-700:hover, button.btn_orange-700:hover {
@@ -4957,7 +4352,7 @@ a.bg_orange-700:hover, a.btn_orange-700:hover, button.bg_orange-700:hover, butto
 }
 
 a.bg_orange-700:hover, a.btn_orange-700:hover, a.bg_orange-700:hover > *, a.btn_orange-700:hover > *, button.bg_orange-700:hover, button.btn_orange-700:hover, button.bg_orange-700:hover > *, button.btn_orange-700:hover > *, .bg_orange-700 > a:hover, .btn_orange-700 > a:hover, .bg_orange-700 > a:hover > *, .btn_orange-700 > a:hover > * {
-  color: #262626 !important;
+  color: #262626;
 }
 
 .bg_orange-800, .btn_orange-800, a.bg_orange-800, a.btn_orange-800, button.bg_orange-800, button.btn_orange-800 {
@@ -4965,7 +4360,7 @@ a.bg_orange-700:hover, a.btn_orange-700:hover, a.bg_orange-700:hover > *, a.btn_
 }
 
 .bg_orange-800, .btn_orange-800, .bg_orange-800 > *, .btn_orange-800 > *, a.bg_orange-800, a.btn_orange-800, a.bg_orange-800 > *, a.btn_orange-800 > *, button.bg_orange-800, button.btn_orange-800, button.bg_orange-800 > *, button.btn_orange-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_orange-800:hover, a.btn_orange-800:hover, button.bg_orange-800:hover, button.btn_orange-800:hover {
@@ -4974,7 +4369,7 @@ a.bg_orange-800:hover, a.btn_orange-800:hover, button.bg_orange-800:hover, butto
 }
 
 a.bg_orange-800:hover, a.btn_orange-800:hover, a.bg_orange-800:hover > *, a.btn_orange-800:hover > *, button.bg_orange-800:hover, button.btn_orange-800:hover, button.bg_orange-800:hover > *, button.btn_orange-800:hover > *, .bg_orange-800 > a:hover, .btn_orange-800 > a:hover, .bg_orange-800 > a:hover > *, .btn_orange-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_orange-900, .btn_orange-900, a.bg_orange-900, a.btn_orange-900, button.bg_orange-900, button.btn_orange-900 {
@@ -4982,7 +4377,7 @@ a.bg_orange-800:hover, a.btn_orange-800:hover, a.bg_orange-800:hover > *, a.btn_
 }
 
 .bg_orange-900, .btn_orange-900, .bg_orange-900 > *, .btn_orange-900 > *, a.bg_orange-900, a.btn_orange-900, a.bg_orange-900 > *, a.btn_orange-900 > *, button.bg_orange-900, button.btn_orange-900, button.bg_orange-900 > *, button.btn_orange-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_orange-900:hover, a.btn_orange-900:hover, button.bg_orange-900:hover, button.btn_orange-900:hover {
@@ -4991,7 +4386,7 @@ a.bg_orange-900:hover, a.btn_orange-900:hover, button.bg_orange-900:hover, butto
 }
 
 a.bg_orange-900:hover, a.btn_orange-900:hover, a.bg_orange-900:hover > *, a.btn_orange-900:hover > *, button.bg_orange-900:hover, button.btn_orange-900:hover, button.bg_orange-900:hover > *, button.btn_orange-900:hover > *, .bg_orange-900 > a:hover, .btn_orange-900 > a:hover, .bg_orange-900 > a:hover > *, .btn_orange-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_yellow-100, .btn_yellow-100, a.bg_yellow-100, a.btn_yellow-100, button.bg_yellow-100, button.btn_yellow-100 {
@@ -4999,7 +4394,7 @@ a.bg_orange-900:hover, a.btn_orange-900:hover, a.bg_orange-900:hover > *, a.btn_
 }
 
 .bg_yellow-100, .btn_yellow-100, .bg_yellow-100 > *, .btn_yellow-100 > *, a.bg_yellow-100, a.btn_yellow-100, a.bg_yellow-100 > *, a.btn_yellow-100 > *, button.bg_yellow-100, button.btn_yellow-100, button.bg_yellow-100 > *, button.btn_yellow-100 > * {
-  color: #7a7a00 !important;
+  color: #7a7a00;
 }
 
 a.bg_yellow-100:hover, a.btn_yellow-100:hover, button.bg_yellow-100:hover, button.btn_yellow-100:hover {
@@ -5016,7 +4411,7 @@ a.bg_yellow-100:hover, a.btn_yellow-100:hover, a.bg_yellow-100:hover > *, a.btn_
 }
 
 .bg_yellow-200, .btn_yellow-200, .bg_yellow-200 > *, .btn_yellow-200 > *, a.bg_yellow-200, a.btn_yellow-200, a.bg_yellow-200 > *, a.btn_yellow-200 > *, button.bg_yellow-200, button.btn_yellow-200, button.bg_yellow-200 > *, button.btn_yellow-200 > * {
-  color: #797502 !important;
+  color: #797502;
 }
 
 a.bg_yellow-200:hover, a.btn_yellow-200:hover, button.bg_yellow-200:hover, button.btn_yellow-200:hover {
@@ -5033,7 +4428,7 @@ a.bg_yellow-200:hover, a.btn_yellow-200:hover, a.bg_yellow-200:hover > *, a.btn_
 }
 
 .bg_yellow-300, .btn_yellow-300, .bg_yellow-300 > *, .btn_yellow-300 > *, a.bg_yellow-300, a.btn_yellow-300, a.bg_yellow-300 > *, a.btn_yellow-300 > *, button.bg_yellow-300, button.btn_yellow-300, button.bg_yellow-300 > *, button.btn_yellow-300 > * {
-  color: #756b05 !important;
+  color: #756b05;
 }
 
 a.bg_yellow-300:hover, a.btn_yellow-300:hover, button.bg_yellow-300:hover, button.btn_yellow-300:hover {
@@ -5050,7 +4445,7 @@ a.bg_yellow-300:hover, a.btn_yellow-300:hover, a.bg_yellow-300:hover > *, a.btn_
 }
 
 .bg_yellow-400, .btn_yellow-400, .bg_yellow-400 > *, .btn_yellow-400 > *, a.bg_yellow-400, a.btn_yellow-400, a.bg_yellow-400 > *, a.btn_yellow-400 > *, button.bg_yellow-400, button.btn_yellow-400, button.bg_yellow-400 > *, button.btn_yellow-400 > * {
-  color: #6f6006 !important;
+  color: #6f6006;
 }
 
 a.bg_yellow-400:hover, a.btn_yellow-400:hover, button.bg_yellow-400:hover, button.btn_yellow-400:hover {
@@ -5067,7 +4462,7 @@ a.bg_yellow-400:hover, a.btn_yellow-400:hover, a.bg_yellow-400:hover > *, a.btn_
 }
 
 .bg_yellow-500, .btn_yellow-500, .bg_yellow-500 > *, .btn_yellow-500 > *, a.bg_yellow-500, a.btn_yellow-500, a.bg_yellow-500 > *, a.btn_yellow-500 > *, button.bg_yellow-500, button.btn_yellow-500, button.bg_yellow-500 > *, button.btn_yellow-500 > * {
-  color: #65520b !important;
+  color: #65520b;
 }
 
 a.bg_yellow-500:hover, a.btn_yellow-500:hover, button.bg_yellow-500:hover, button.btn_yellow-500:hover {
@@ -5084,7 +4479,7 @@ a.bg_yellow-500:hover, a.btn_yellow-500:hover, a.bg_yellow-500:hover > *, a.btn_
 }
 
 .bg_yellow-600, .btn_yellow-600, .bg_yellow-600 > *, .btn_yellow-600 > *, a.bg_yellow-600, a.btn_yellow-600, a.bg_yellow-600 > *, a.btn_yellow-600 > *, button.bg_yellow-600, button.btn_yellow-600, button.bg_yellow-600 > *, button.btn_yellow-600 > * {
-  color: #4d380f !important;
+  color: #4d380f;
 }
 
 a.bg_yellow-600:hover, a.btn_yellow-600:hover, button.bg_yellow-600:hover, button.btn_yellow-600:hover {
@@ -5101,7 +4496,7 @@ a.bg_yellow-600:hover, a.btn_yellow-600:hover, a.bg_yellow-600:hover > *, a.btn_
 }
 
 .bg_yellow-700, .btn_yellow-700, .bg_yellow-700 > *, .btn_yellow-700 > *, a.bg_yellow-700, a.btn_yellow-700, a.bg_yellow-700 > *, a.btn_yellow-700 > *, button.bg_yellow-700, button.btn_yellow-700, button.bg_yellow-700 > *, button.btn_yellow-700 > * {
-  color: #2c1d07 !important;
+  color: #2c1d07;
 }
 
 a.bg_yellow-700:hover, a.btn_yellow-700:hover, button.bg_yellow-700:hover, button.btn_yellow-700:hover {
@@ -5110,7 +4505,7 @@ a.bg_yellow-700:hover, a.btn_yellow-700:hover, button.bg_yellow-700:hover, butto
 }
 
 a.bg_yellow-700:hover, a.btn_yellow-700:hover, a.bg_yellow-700:hover > *, a.btn_yellow-700:hover > *, button.bg_yellow-700:hover, button.btn_yellow-700:hover, button.bg_yellow-700:hover > *, button.btn_yellow-700:hover > *, .bg_yellow-700 > a:hover, .btn_yellow-700 > a:hover, .bg_yellow-700 > a:hover > *, .btn_yellow-700 > a:hover > * {
-  color: #573a0f !important;
+  color: #573a0f;
 }
 
 .bg_yellow-800, .btn_yellow-800, a.bg_yellow-800, a.btn_yellow-800, button.bg_yellow-800, button.btn_yellow-800 {
@@ -5118,7 +4513,7 @@ a.bg_yellow-700:hover, a.btn_yellow-700:hover, a.bg_yellow-700:hover > *, a.btn_
 }
 
 .bg_yellow-800, .btn_yellow-800, .bg_yellow-800 > *, .btn_yellow-800 > *, a.bg_yellow-800, a.btn_yellow-800, a.bg_yellow-800 > *, a.btn_yellow-800 > *, button.bg_yellow-800, button.btn_yellow-800, button.bg_yellow-800 > *, button.btn_yellow-800 > * {
-  color: #f9e7d2 !important;
+  color: #f9e7d2;
 }
 
 a.bg_yellow-800:hover, a.btn_yellow-800:hover, button.bg_yellow-800:hover, button.btn_yellow-800:hover {
@@ -5127,7 +4522,7 @@ a.bg_yellow-800:hover, a.btn_yellow-800:hover, button.bg_yellow-800:hover, butto
 }
 
 a.bg_yellow-800:hover, a.btn_yellow-800:hover, a.bg_yellow-800:hover > *, a.btn_yellow-800:hover > *, button.bg_yellow-800:hover, button.btn_yellow-800:hover, button.bg_yellow-800:hover > *, button.btn_yellow-800:hover > *, .bg_yellow-800 > a:hover, .btn_yellow-800 > a:hover, .bg_yellow-800 > a:hover > *, .btn_yellow-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_yellow-900, .btn_yellow-900, a.bg_yellow-900, a.btn_yellow-900, button.bg_yellow-900, button.btn_yellow-900 {
@@ -5135,7 +4530,7 @@ a.bg_yellow-800:hover, a.btn_yellow-800:hover, a.bg_yellow-800:hover > *, a.btn_
 }
 
 .bg_yellow-900, .btn_yellow-900, .bg_yellow-900 > *, .btn_yellow-900 > *, a.bg_yellow-900, a.btn_yellow-900, a.bg_yellow-900 > *, a.btn_yellow-900 > *, button.bg_yellow-900, button.btn_yellow-900, button.bg_yellow-900 > *, button.btn_yellow-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_yellow-900:hover, a.btn_yellow-900:hover, button.bg_yellow-900:hover, button.btn_yellow-900:hover {
@@ -5144,7 +4539,7 @@ a.bg_yellow-900:hover, a.btn_yellow-900:hover, button.bg_yellow-900:hover, butto
 }
 
 a.bg_yellow-900:hover, a.btn_yellow-900:hover, a.bg_yellow-900:hover > *, a.btn_yellow-900:hover > *, button.bg_yellow-900:hover, button.btn_yellow-900:hover, button.bg_yellow-900:hover > *, button.btn_yellow-900:hover > *, .bg_yellow-900 > a:hover, .btn_yellow-900 > a:hover, .bg_yellow-900 > a:hover > *, .btn_yellow-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_green-100, .btn_green-100, a.bg_green-100, a.btn_green-100, button.bg_green-100, button.btn_green-100 {
@@ -5152,7 +4547,7 @@ a.bg_yellow-900:hover, a.btn_yellow-900:hover, a.bg_yellow-900:hover > *, a.btn_
 }
 
 .bg_green-100, .btn_green-100, .bg_green-100 > *, .btn_green-100 > *, a.bg_green-100, a.btn_green-100, a.bg_green-100 > *, a.btn_green-100 > *, button.bg_green-100, button.btn_green-100, button.bg_green-100 > *, button.btn_green-100 > * {
-  color: #008523 !important;
+  color: #008523;
 }
 
 a.bg_green-100:hover, a.btn_green-100:hover, button.bg_green-100:hover, button.btn_green-100:hover {
@@ -5169,7 +4564,7 @@ a.bg_green-100:hover, a.btn_green-100:hover, a.bg_green-100:hover > *, a.btn_gre
 }
 
 .bg_green-200, .btn_green-200, .bg_green-200 > *, .btn_green-200 > *, a.bg_green-200, a.btn_green-200, a.bg_green-200 > *, a.btn_green-200 > *, button.bg_green-200, button.btn_green-200, button.bg_green-200 > *, button.btn_green-200 > * {
-  color: #137732 !important;
+  color: #137732;
 }
 
 a.bg_green-200:hover, a.btn_green-200:hover, button.bg_green-200:hover, button.btn_green-200:hover {
@@ -5186,7 +4581,7 @@ a.bg_green-200:hover, a.btn_green-200:hover, a.bg_green-200:hover > *, a.btn_gre
 }
 
 .bg_green-300, .btn_green-300, .bg_green-300 > *, .btn_green-300 > *, a.bg_green-300, a.btn_green-300, a.bg_green-300 > *, a.btn_green-300 > *, button.bg_green-300, button.btn_green-300, button.bg_green-300 > *, button.btn_green-300 > * {
-  color: #1a6a36 !important;
+  color: #1a6a36;
 }
 
 a.bg_green-300:hover, a.btn_green-300:hover, button.bg_green-300:hover, button.btn_green-300:hover {
@@ -5203,7 +4598,7 @@ a.bg_green-300:hover, a.btn_green-300:hover, a.bg_green-300:hover > *, a.btn_gre
 }
 
 .bg_green-400, .btn_green-400, .bg_green-400 > *, .btn_green-400 > *, a.bg_green-400, a.btn_green-400, a.bg_green-400 > *, a.btn_green-400 > *, button.bg_green-400, button.btn_green-400, button.bg_green-400 > *, button.btn_green-400 > * {
-  color: #195731 !important;
+  color: #195731;
 }
 
 a.bg_green-400:hover, a.btn_green-400:hover, button.bg_green-400:hover, button.btn_green-400:hover {
@@ -5220,7 +4615,7 @@ a.bg_green-400:hover, a.btn_green-400:hover, a.bg_green-400:hover > *, a.btn_gre
 }
 
 .bg_green-500, .btn_green-500, .bg_green-500 > *, .btn_green-500 > *, a.bg_green-500, a.btn_green-500, a.bg_green-500 > *, a.btn_green-500 > *, button.bg_green-500, button.btn_green-500, button.bg_green-500 > *, button.btn_green-500 > * {
-  color: #19432a !important;
+  color: #19432a;
 }
 
 a.bg_green-500:hover, a.btn_green-500:hover, button.bg_green-500:hover, button.btn_green-500:hover {
@@ -5237,7 +4632,7 @@ a.bg_green-500:hover, a.btn_green-500:hover, a.bg_green-500:hover > *, a.btn_gre
 }
 
 .bg_green-600, .btn_green-600, .bg_green-600 > *, .btn_green-600 > *, a.bg_green-600, a.btn_green-600, a.bg_green-600 > *, a.btn_green-600 > *, button.bg_green-600, button.btn_green-600, button.bg_green-600 > *, button.btn_green-600 > * {
-  color: #102d1e !important;
+  color: #102d1e;
 }
 
 a.bg_green-600:hover, a.btn_green-600:hover, button.bg_green-600:hover, button.btn_green-600:hover {
@@ -5246,7 +4641,7 @@ a.bg_green-600:hover, a.btn_green-600:hover, button.bg_green-600:hover, button.b
 }
 
 a.bg_green-600:hover, a.btn_green-600:hover, a.bg_green-600:hover > *, a.btn_green-600:hover > *, button.bg_green-600:hover, button.btn_green-600:hover, button.bg_green-600:hover > *, button.btn_green-600:hover > *, .bg_green-600 > a:hover, .btn_green-600 > a:hover, .bg_green-600 > a:hover > *, .btn_green-600 > a:hover > * {
-  color: #1d5336 !important;
+  color: #1d5336;
 }
 
 .bg_green-700, .btn_green-700, a.bg_green-700, a.btn_green-700, button.bg_green-700, button.btn_green-700 {
@@ -5254,7 +4649,7 @@ a.bg_green-600:hover, a.btn_green-600:hover, a.bg_green-600:hover > *, a.btn_gre
 }
 
 .bg_green-700, .btn_green-700, .bg_green-700 > *, .btn_green-700 > *, a.bg_green-700, a.btn_green-700, a.bg_green-700 > *, a.btn_green-700 > *, button.bg_green-700, button.btn_green-700, button.bg_green-700 > *, button.btn_green-700 > * {
-  color: #0d0d0d !important;
+  color: #0d0d0d;
 }
 
 a.bg_green-700:hover, a.btn_green-700:hover, button.bg_green-700:hover, button.btn_green-700:hover {
@@ -5263,7 +4658,7 @@ a.bg_green-700:hover, a.btn_green-700:hover, button.bg_green-700:hover, button.b
 }
 
 a.bg_green-700:hover, a.btn_green-700:hover, a.bg_green-700:hover > *, a.btn_green-700:hover > *, button.bg_green-700:hover, button.btn_green-700:hover, button.bg_green-700:hover > *, button.btn_green-700:hover > *, .bg_green-700 > a:hover, .btn_green-700 > a:hover, .bg_green-700 > a:hover > *, .btn_green-700 > a:hover > * {
-  color: #262626 !important;
+  color: #262626;
 }
 
 .bg_green-800, .btn_green-800, a.bg_green-800, a.btn_green-800, button.bg_green-800, button.btn_green-800 {
@@ -5271,7 +4666,7 @@ a.bg_green-700:hover, a.btn_green-700:hover, a.bg_green-700:hover > *, a.btn_gre
 }
 
 .bg_green-800, .btn_green-800, .bg_green-800 > *, .btn_green-800 > *, a.bg_green-800, a.btn_green-800, a.bg_green-800 > *, a.btn_green-800 > *, button.bg_green-800, button.btn_green-800, button.bg_green-800 > *, button.btn_green-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_green-800:hover, a.btn_green-800:hover, button.bg_green-800:hover, button.btn_green-800:hover {
@@ -5280,7 +4675,7 @@ a.bg_green-800:hover, a.btn_green-800:hover, button.bg_green-800:hover, button.b
 }
 
 a.bg_green-800:hover, a.btn_green-800:hover, a.bg_green-800:hover > *, a.btn_green-800:hover > *, button.bg_green-800:hover, button.btn_green-800:hover, button.bg_green-800:hover > *, button.btn_green-800:hover > *, .bg_green-800 > a:hover, .btn_green-800 > a:hover, .bg_green-800 > a:hover > *, .btn_green-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_green-900, .btn_green-900, a.bg_green-900, a.btn_green-900, button.bg_green-900, button.btn_green-900 {
@@ -5288,7 +4683,7 @@ a.bg_green-800:hover, a.btn_green-800:hover, a.bg_green-800:hover > *, a.btn_gre
 }
 
 .bg_green-900, .btn_green-900, .bg_green-900 > *, .btn_green-900 > *, a.bg_green-900, a.btn_green-900, a.bg_green-900 > *, a.btn_green-900 > *, button.bg_green-900, button.btn_green-900, button.bg_green-900 > *, button.btn_green-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_green-900:hover, a.btn_green-900:hover, button.bg_green-900:hover, button.btn_green-900:hover {
@@ -5297,7 +4692,7 @@ a.bg_green-900:hover, a.btn_green-900:hover, button.bg_green-900:hover, button.b
 }
 
 a.bg_green-900:hover, a.btn_green-900:hover, a.bg_green-900:hover > *, a.btn_green-900:hover > *, button.bg_green-900:hover, button.btn_green-900:hover, button.bg_green-900:hover > *, button.btn_green-900:hover > *, .bg_green-900 > a:hover, .btn_green-900 > a:hover, .bg_green-900 > a:hover > *, .btn_green-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_teal-100, .btn_teal-100, a.bg_teal-100, a.btn_teal-100, button.bg_teal-100, button.btn_teal-100 {
@@ -5305,7 +4700,7 @@ a.bg_green-900:hover, a.btn_green-900:hover, a.bg_green-900:hover > *, a.btn_gre
 }
 
 .bg_teal-100, .btn_teal-100, .bg_teal-100 > *, .btn_teal-100 > *, a.bg_teal-100, a.btn_teal-100, a.bg_teal-100 > *, a.btn_teal-100 > *, button.bg_teal-100, button.btn_teal-100, button.bg_teal-100 > *, button.btn_teal-100 > * {
-  color: #008066 !important;
+  color: #008066;
 }
 
 a.bg_teal-100:hover, a.btn_teal-100:hover, button.bg_teal-100:hover, button.btn_teal-100:hover {
@@ -5322,7 +4717,7 @@ a.bg_teal-100:hover, a.btn_teal-100:hover, a.bg_teal-100:hover > *, a.btn_teal-1
 }
 
 .bg_teal-200, .btn_teal-200, .bg_teal-200 > *, .btn_teal-200 > *, a.bg_teal-200, a.btn_teal-200, a.bg_teal-200 > *, a.btn_teal-200 > *, button.bg_teal-200, button.btn_teal-200, button.bg_teal-200 > *, button.btn_teal-200 > * {
-  color: #0f7565 !important;
+  color: #0f7565;
 }
 
 a.bg_teal-200:hover, a.btn_teal-200:hover, button.bg_teal-200:hover, button.btn_teal-200:hover {
@@ -5339,7 +4734,7 @@ a.bg_teal-200:hover, a.btn_teal-200:hover, a.bg_teal-200:hover > *, a.btn_teal-2
 }
 
 .bg_teal-300, .btn_teal-300, .bg_teal-300 > *, .btn_teal-300 > *, a.bg_teal-300, a.btn_teal-300, a.bg_teal-300 > *, a.btn_teal-300 > *, button.bg_teal-300, button.btn_teal-300, button.bg_teal-300 > *, button.btn_teal-300 > * {
-  color: #14665c !important;
+  color: #14665c;
 }
 
 a.bg_teal-300:hover, a.btn_teal-300:hover, button.bg_teal-300:hover, button.btn_teal-300:hover {
@@ -5356,7 +4751,7 @@ a.bg_teal-300:hover, a.btn_teal-300:hover, a.bg_teal-300:hover > *, a.btn_teal-3
 }
 
 .bg_teal-400, .btn_teal-400, .bg_teal-400 > *, .btn_teal-400 > *, a.bg_teal-400, a.btn_teal-400, a.bg_teal-400 > *, a.btn_teal-400 > *, button.bg_teal-400, button.btn_teal-400, button.bg_teal-400 > *, button.btn_teal-400 > * {
-  color: #16554f !important;
+  color: #16554f;
 }
 
 a.bg_teal-400:hover, a.btn_teal-400:hover, button.bg_teal-400:hover, button.btn_teal-400:hover {
@@ -5373,7 +4768,7 @@ a.bg_teal-400:hover, a.btn_teal-400:hover, a.bg_teal-400:hover > *, a.btn_teal-4
 }
 
 .bg_teal-500, .btn_teal-500, .bg_teal-500 > *, .btn_teal-500 > *, a.bg_teal-500, a.btn_teal-500, a.bg_teal-500 > *, a.btn_teal-500 > *, button.bg_teal-500, button.btn_teal-500, button.bg_teal-500 > *, button.btn_teal-500 > * {
-  color: #143e3c !important;
+  color: #143e3c;
 }
 
 a.bg_teal-500:hover, a.btn_teal-500:hover, button.bg_teal-500:hover, button.btn_teal-500:hover {
@@ -5382,7 +4777,7 @@ a.bg_teal-500:hover, a.btn_teal-500:hover, button.bg_teal-500:hover, button.btn_
 }
 
 a.bg_teal-500:hover, a.btn_teal-500:hover, a.bg_teal-500:hover > *, a.btn_teal-500:hover > *, button.bg_teal-500:hover, button.btn_teal-500:hover, button.bg_teal-500:hover > *, button.btn_teal-500:hover > *, .bg_teal-500 > a:hover, .btn_teal-500 > a:hover, .bg_teal-500 > a:hover > *, .btn_teal-500 > a:hover > * {
-  color: #206561 !important;
+  color: #206561;
 }
 
 .bg_teal-600, .btn_teal-600, a.bg_teal-600, a.btn_teal-600, button.bg_teal-600, button.btn_teal-600 {
@@ -5390,7 +4785,7 @@ a.bg_teal-500:hover, a.btn_teal-500:hover, a.bg_teal-500:hover > *, a.btn_teal-5
 }
 
 .bg_teal-600, .btn_teal-600, .bg_teal-600 > *, .btn_teal-600 > *, a.bg_teal-600, a.btn_teal-600, a.bg_teal-600 > *, a.btn_teal-600 > *, button.bg_teal-600, button.btn_teal-600, button.bg_teal-600 > *, button.btn_teal-600 > * {
-  color: #0c2726 !important;
+  color: #0c2726;
 }
 
 a.bg_teal-600:hover, a.btn_teal-600:hover, button.bg_teal-600:hover, button.btn_teal-600:hover {
@@ -5399,7 +4794,7 @@ a.bg_teal-600:hover, a.btn_teal-600:hover, button.bg_teal-600:hover, button.btn_
 }
 
 a.bg_teal-600:hover, a.btn_teal-600:hover, a.bg_teal-600:hover > *, a.btn_teal-600:hover > *, button.bg_teal-600:hover, button.btn_teal-600:hover, button.bg_teal-600:hover > *, button.btn_teal-600:hover > *, .bg_teal-600 > a:hover, .btn_teal-600 > a:hover, .bg_teal-600 > a:hover > *, .btn_teal-600 > a:hover > * {
-  color: #194d4c !important;
+  color: #194d4c;
 }
 
 .bg_teal-700, .btn_teal-700, a.bg_teal-700, a.btn_teal-700, button.bg_teal-700, button.btn_teal-700 {
@@ -5407,7 +4802,7 @@ a.bg_teal-600:hover, a.btn_teal-600:hover, a.bg_teal-600:hover > *, a.btn_teal-6
 }
 
 .bg_teal-700, .btn_teal-700, .bg_teal-700 > *, .btn_teal-700 > *, a.bg_teal-700, a.btn_teal-700, a.bg_teal-700 > *, a.btn_teal-700 > *, button.bg_teal-700, button.btn_teal-700, button.bg_teal-700 > *, button.btn_teal-700 > * {
-  color: #e8f7f7 !important;
+  color: #e8f7f7;
 }
 
 a.bg_teal-700:hover, a.btn_teal-700:hover, button.bg_teal-700:hover, button.btn_teal-700:hover {
@@ -5416,7 +4811,7 @@ a.bg_teal-700:hover, a.btn_teal-700:hover, button.bg_teal-700:hover, button.btn_
 }
 
 a.bg_teal-700:hover, a.btn_teal-700:hover, a.bg_teal-700:hover > *, a.btn_teal-700:hover > *, button.bg_teal-700:hover, button.btn_teal-700:hover, button.bg_teal-700:hover > *, button.btn_teal-700:hover > *, .bg_teal-700 > a:hover, .btn_teal-700 > a:hover, .bg_teal-700 > a:hover > *, .btn_teal-700 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_teal-800, .btn_teal-800, a.bg_teal-800, a.btn_teal-800, button.bg_teal-800, button.btn_teal-800 {
@@ -5424,7 +4819,7 @@ a.bg_teal-700:hover, a.btn_teal-700:hover, a.bg_teal-700:hover > *, a.btn_teal-7
 }
 
 .bg_teal-800, .btn_teal-800, .bg_teal-800 > *, .btn_teal-800 > *, a.bg_teal-800, a.btn_teal-800, a.bg_teal-800 > *, a.btn_teal-800 > *, button.bg_teal-800, button.btn_teal-800, button.bg_teal-800 > *, button.btn_teal-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_teal-800:hover, a.btn_teal-800:hover, button.bg_teal-800:hover, button.btn_teal-800:hover {
@@ -5433,7 +4828,7 @@ a.bg_teal-800:hover, a.btn_teal-800:hover, button.bg_teal-800:hover, button.btn_
 }
 
 a.bg_teal-800:hover, a.btn_teal-800:hover, a.bg_teal-800:hover > *, a.btn_teal-800:hover > *, button.bg_teal-800:hover, button.btn_teal-800:hover, button.bg_teal-800:hover > *, button.btn_teal-800:hover > *, .bg_teal-800 > a:hover, .btn_teal-800 > a:hover, .bg_teal-800 > a:hover > *, .btn_teal-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_teal-900, .btn_teal-900, a.bg_teal-900, a.btn_teal-900, button.bg_teal-900, button.btn_teal-900 {
@@ -5441,7 +4836,7 @@ a.bg_teal-800:hover, a.btn_teal-800:hover, a.bg_teal-800:hover > *, a.btn_teal-8
 }
 
 .bg_teal-900, .btn_teal-900, .bg_teal-900 > *, .btn_teal-900 > *, a.bg_teal-900, a.btn_teal-900, a.bg_teal-900 > *, a.btn_teal-900 > *, button.bg_teal-900, button.btn_teal-900, button.bg_teal-900 > *, button.btn_teal-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_teal-900:hover, a.btn_teal-900:hover, button.bg_teal-900:hover, button.btn_teal-900:hover {
@@ -5450,7 +4845,7 @@ a.bg_teal-900:hover, a.btn_teal-900:hover, button.bg_teal-900:hover, button.btn_
 }
 
 a.bg_teal-900:hover, a.btn_teal-900:hover, a.bg_teal-900:hover > *, a.btn_teal-900:hover > *, button.bg_teal-900:hover, button.btn_teal-900:hover, button.bg_teal-900:hover > *, button.btn_teal-900:hover > *, .bg_teal-900 > a:hover, .btn_teal-900 > a:hover, .bg_teal-900 > a:hover > *, .btn_teal-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_blue-100, .btn_blue-100, a.bg_blue-100, a.btn_blue-100, button.bg_blue-100, button.btn_blue-100 {
@@ -5458,7 +4853,7 @@ a.bg_teal-900:hover, a.btn_teal-900:hover, a.bg_teal-900:hover > *, a.btn_teal-9
 }
 
 .bg_blue-100, .btn_blue-100, .bg_blue-100 > *, .btn_blue-100 > *, a.bg_blue-100, a.btn_blue-100, a.bg_blue-100 > *, a.btn_blue-100 > *, button.bg_blue-100, button.btn_blue-100, button.bg_blue-100 > *, button.btn_blue-100 > * {
-  color: #0074b3 !important;
+  color: #0074b3;
 }
 
 a.bg_blue-100:hover, a.btn_blue-100:hover, button.bg_blue-100:hover, button.btn_blue-100:hover {
@@ -5475,7 +4870,7 @@ a.bg_blue-100:hover, a.btn_blue-100:hover, a.bg_blue-100:hover > *, a.btn_blue-1
 }
 
 .bg_blue-200, .btn_blue-200, .bg_blue-200 > *, .btn_blue-200 > *, a.bg_blue-200, a.btn_blue-200, a.bg_blue-200 > *, a.btn_blue-200 > *, button.bg_blue-200, button.btn_blue-200, button.bg_blue-200 > *, button.btn_blue-200 > * {
-  color: #106798 !important;
+  color: #106798;
 }
 
 a.bg_blue-200:hover, a.btn_blue-200:hover, button.bg_blue-200:hover, button.btn_blue-200:hover {
@@ -5492,7 +4887,7 @@ a.bg_blue-200:hover, a.btn_blue-200:hover, a.bg_blue-200:hover > *, a.btn_blue-2
 }
 
 .bg_blue-300, .btn_blue-300, .bg_blue-300 > *, .btn_blue-300 > *, a.bg_blue-300, a.btn_blue-300, a.bg_blue-300 > *, a.btn_blue-300 > *, button.bg_blue-300, button.btn_blue-300, button.bg_blue-300 > *, button.btn_blue-300 > * {
-  color: #0d5482 !important;
+  color: #0d5482;
 }
 
 a.bg_blue-300:hover, a.btn_blue-300:hover, button.bg_blue-300:hover, button.btn_blue-300:hover {
@@ -5509,7 +4904,7 @@ a.bg_blue-300:hover, a.btn_blue-300:hover, a.bg_blue-300:hover > *, a.btn_blue-3
 }
 
 .bg_blue-400, .btn_blue-400, .bg_blue-400 > *, .btn_blue-400 > *, a.bg_blue-400, a.btn_blue-400, a.bg_blue-400 > *, a.btn_blue-400 > *, button.bg_blue-400, button.btn_blue-400, button.bg_blue-400 > *, button.btn_blue-400 > * {
-  color: #0c4269 !important;
+  color: #0c4269;
 }
 
 a.bg_blue-400:hover, a.btn_blue-400:hover, button.bg_blue-400:hover, button.btn_blue-400:hover {
@@ -5526,7 +4921,7 @@ a.bg_blue-400:hover, a.btn_blue-400:hover, a.bg_blue-400:hover > *, a.btn_blue-4
 }
 
 .bg_blue-500, .btn_blue-500, .bg_blue-500 > *, .btn_blue-500 > *, a.bg_blue-500, a.btn_blue-500, a.bg_blue-500 > *, a.btn_blue-500 > *, button.bg_blue-500, button.btn_blue-500, button.bg_blue-500 > *, button.btn_blue-500 > * {
-  color: #0c2e4b !important;
+  color: #0c2e4b;
 }
 
 a.bg_blue-500:hover, a.btn_blue-500:hover, button.bg_blue-500:hover, button.btn_blue-500:hover {
@@ -5543,7 +4938,7 @@ a.bg_blue-500:hover, a.btn_blue-500:hover, a.bg_blue-500:hover > *, a.btn_blue-5
 }
 
 .bg_blue-600, .btn_blue-600, .bg_blue-600 > *, .btn_blue-600 > *, a.bg_blue-600, a.btn_blue-600, a.bg_blue-600 > *, a.btn_blue-600 > *, button.bg_blue-600, button.btn_blue-600, button.bg_blue-600 > *, button.btn_blue-600 > * {
-  color: #081521 !important;
+  color: #081521;
 }
 
 a.bg_blue-600:hover, a.btn_blue-600:hover, button.bg_blue-600:hover, button.btn_blue-600:hover {
@@ -5552,7 +4947,7 @@ a.bg_blue-600:hover, a.btn_blue-600:hover, button.bg_blue-600:hover, button.btn_
 }
 
 a.bg_blue-600:hover, a.btn_blue-600:hover, a.bg_blue-600:hover > *, a.btn_blue-600:hover > *, button.bg_blue-600:hover, button.btn_blue-600:hover, button.bg_blue-600:hover > *, button.btn_blue-600:hover > *, .bg_blue-600 > a:hover, .btn_blue-600 > a:hover, .bg_blue-600 > a:hover > *, .btn_blue-600 > a:hover > * {
-  color: #122f4a !important;
+  color: #122f4a;
 }
 
 .bg_blue-700, .btn_blue-700, a.bg_blue-700, a.btn_blue-700, button.bg_blue-700, button.btn_blue-700 {
@@ -5560,7 +4955,7 @@ a.bg_blue-600:hover, a.btn_blue-600:hover, a.bg_blue-600:hover > *, a.btn_blue-6
 }
 
 .bg_blue-700, .btn_blue-700, .bg_blue-700 > *, .btn_blue-700 > *, a.bg_blue-700, a.btn_blue-700, a.bg_blue-700 > *, a.btn_blue-700 > *, button.bg_blue-700, button.btn_blue-700, button.bg_blue-700 > *, button.btn_blue-700 > * {
-  color: #e2edf8 !important;
+  color: #e2edf8;
 }
 
 a.bg_blue-700:hover, a.btn_blue-700:hover, button.bg_blue-700:hover, button.btn_blue-700:hover {
@@ -5569,7 +4964,7 @@ a.bg_blue-700:hover, a.btn_blue-700:hover, button.bg_blue-700:hover, button.btn_
 }
 
 a.bg_blue-700:hover, a.btn_blue-700:hover, a.bg_blue-700:hover > *, a.btn_blue-700:hover > *, button.bg_blue-700:hover, button.btn_blue-700:hover, button.bg_blue-700:hover > *, button.btn_blue-700:hover > *, .bg_blue-700 > a:hover, .btn_blue-700 > a:hover, .bg_blue-700 > a:hover > *, .btn_blue-700 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_blue-800, .btn_blue-800, a.bg_blue-800, a.btn_blue-800, button.bg_blue-800, button.btn_blue-800 {
@@ -5577,7 +4972,7 @@ a.bg_blue-700:hover, a.btn_blue-700:hover, a.bg_blue-700:hover > *, a.btn_blue-7
 }
 
 .bg_blue-800, .btn_blue-800, .bg_blue-800 > *, .btn_blue-800 > *, a.bg_blue-800, a.btn_blue-800, a.bg_blue-800 > *, a.btn_blue-800 > *, button.bg_blue-800, button.btn_blue-800, button.bg_blue-800 > *, button.btn_blue-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_blue-800:hover, a.btn_blue-800:hover, button.bg_blue-800:hover, button.btn_blue-800:hover {
@@ -5586,7 +4981,7 @@ a.bg_blue-800:hover, a.btn_blue-800:hover, button.bg_blue-800:hover, button.btn_
 }
 
 a.bg_blue-800:hover, a.btn_blue-800:hover, a.bg_blue-800:hover > *, a.btn_blue-800:hover > *, button.bg_blue-800:hover, button.btn_blue-800:hover, button.bg_blue-800:hover > *, button.btn_blue-800:hover > *, .bg_blue-800 > a:hover, .btn_blue-800 > a:hover, .bg_blue-800 > a:hover > *, .btn_blue-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_blue-900, .btn_blue-900, a.bg_blue-900, a.btn_blue-900, button.bg_blue-900, button.btn_blue-900 {
@@ -5594,7 +4989,7 @@ a.bg_blue-800:hover, a.btn_blue-800:hover, a.bg_blue-800:hover > *, a.btn_blue-8
 }
 
 .bg_blue-900, .btn_blue-900, .bg_blue-900 > *, .btn_blue-900 > *, a.bg_blue-900, a.btn_blue-900, a.bg_blue-900 > *, a.btn_blue-900 > *, button.bg_blue-900, button.btn_blue-900, button.bg_blue-900 > *, button.btn_blue-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_blue-900:hover, a.btn_blue-900:hover, button.bg_blue-900:hover, button.btn_blue-900:hover {
@@ -5603,7 +4998,7 @@ a.bg_blue-900:hover, a.btn_blue-900:hover, button.bg_blue-900:hover, button.btn_
 }
 
 a.bg_blue-900:hover, a.btn_blue-900:hover, a.bg_blue-900:hover > *, a.btn_blue-900:hover > *, button.bg_blue-900:hover, button.btn_blue-900:hover, button.bg_blue-900:hover > *, button.btn_blue-900:hover > *, .bg_blue-900 > a:hover, .btn_blue-900 > a:hover, .bg_blue-900 > a:hover > *, .btn_blue-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_indigo-100, .btn_indigo-100, a.bg_indigo-100, a.btn_indigo-100, button.bg_indigo-100, button.btn_indigo-100 {
@@ -5611,7 +5006,7 @@ a.bg_blue-900:hover, a.btn_blue-900:hover, a.bg_blue-900:hover > *, a.btn_blue-9
 }
 
 .bg_indigo-100, .btn_indigo-100, .bg_indigo-100 > *, .btn_indigo-100 > *, a.bg_indigo-100, a.btn_indigo-100, a.bg_indigo-100 > *, a.btn_indigo-100 > *, button.bg_indigo-100, button.btn_indigo-100, button.bg_indigo-100 > *, button.btn_indigo-100 > * {
-  color: #0067e6 !important;
+  color: #0067e6;
 }
 
 a.bg_indigo-100:hover, a.btn_indigo-100:hover, button.bg_indigo-100:hover, button.btn_indigo-100:hover {
@@ -5628,7 +5023,7 @@ a.bg_indigo-100:hover, a.btn_indigo-100:hover, a.bg_indigo-100:hover > *, a.btn_
 }
 
 .bg_indigo-200, .btn_indigo-200, .bg_indigo-200 > *, .btn_indigo-200 > *, a.bg_indigo-200, a.btn_indigo-200, a.bg_indigo-200 > *, a.btn_indigo-200 > *, button.bg_indigo-200, button.btn_indigo-200, button.bg_indigo-200 > *, button.btn_indigo-200 > * {
-  color: #0454d3 !important;
+  color: #0454d3;
 }
 
 a.bg_indigo-200:hover, a.btn_indigo-200:hover, button.bg_indigo-200:hover, button.btn_indigo-200:hover {
@@ -5645,7 +5040,7 @@ a.bg_indigo-200:hover, a.btn_indigo-200:hover, a.bg_indigo-200:hover > *, a.btn_
 }
 
 .bg_indigo-300, .btn_indigo-300, .bg_indigo-300 > *, .btn_indigo-300 > *, a.bg_indigo-300, a.btn_indigo-300, a.bg_indigo-300 > *, a.btn_indigo-300 > *, button.bg_indigo-300, button.btn_indigo-300, button.bg_indigo-300 > *, button.btn_indigo-300 > * {
-  color: #0a42b8 !important;
+  color: #0a42b8;
 }
 
 a.bg_indigo-300:hover, a.btn_indigo-300:hover, button.bg_indigo-300:hover, button.btn_indigo-300:hover {
@@ -5662,7 +5057,7 @@ a.bg_indigo-300:hover, a.btn_indigo-300:hover, a.bg_indigo-300:hover > *, a.btn_
 }
 
 .bg_indigo-400, .btn_indigo-400, .bg_indigo-400 > *, .btn_indigo-400 > *, a.bg_indigo-400, a.btn_indigo-400, a.bg_indigo-400 > *, a.btn_indigo-400 > *, button.bg_indigo-400, button.btn_indigo-400, button.bg_indigo-400 > *, button.btn_indigo-400 > * {
-  color: #0b2b8e !important;
+  color: #0b2b8e;
 }
 
 a.bg_indigo-400:hover, a.btn_indigo-400:hover, button.bg_indigo-400:hover, button.btn_indigo-400:hover {
@@ -5679,7 +5074,7 @@ a.bg_indigo-400:hover, a.btn_indigo-400:hover, a.bg_indigo-400:hover > *, a.btn_
 }
 
 .bg_indigo-500, .btn_indigo-500, .bg_indigo-500 > *, .btn_indigo-500 > *, a.bg_indigo-500, a.btn_indigo-500, a.bg_indigo-500 > *, a.btn_indigo-500 > *, button.bg_indigo-500, button.btn_indigo-500, button.bg_indigo-500 > *, button.btn_indigo-500 > * {
-  color: #0b1851 !important;
+  color: #0b1851;
 }
 
 a.bg_indigo-500:hover, a.btn_indigo-500:hover, button.bg_indigo-500:hover, button.btn_indigo-500:hover {
@@ -5696,7 +5091,7 @@ a.bg_indigo-500:hover, a.btn_indigo-500:hover, a.bg_indigo-500:hover > *, a.btn_
 }
 
 .bg_indigo-600, .btn_indigo-600, .bg_indigo-600 > *, .btn_indigo-600 > *, a.bg_indigo-600, a.btn_indigo-600, a.bg_indigo-600 > *, a.btn_indigo-600 > *, button.bg_indigo-600, button.btn_indigo-600, button.bg_indigo-600 > *, button.btn_indigo-600 > * {
-  color: #fbfbfe !important;
+  color: #fbfbfe;
 }
 
 a.bg_indigo-600:hover, a.btn_indigo-600:hover, button.bg_indigo-600:hover, button.btn_indigo-600:hover {
@@ -5713,7 +5108,7 @@ a.bg_indigo-600:hover, a.btn_indigo-600:hover, a.bg_indigo-600:hover > *, a.btn_
 }
 
 .bg_indigo-700, .btn_indigo-700, .bg_indigo-700 > *, .btn_indigo-700 > *, a.bg_indigo-700, a.btn_indigo-700, a.bg_indigo-700 > *, a.btn_indigo-700 > *, button.bg_indigo-700, button.btn_indigo-700, button.bg_indigo-700 > *, button.btn_indigo-700 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_indigo-700:hover, a.btn_indigo-700:hover, button.bg_indigo-700:hover, button.btn_indigo-700:hover {
@@ -5730,7 +5125,7 @@ a.bg_indigo-700:hover, a.btn_indigo-700:hover, a.bg_indigo-700:hover > *, a.btn_
 }
 
 .bg_indigo-800, .btn_indigo-800, .bg_indigo-800 > *, .btn_indigo-800 > *, a.bg_indigo-800, a.btn_indigo-800, a.bg_indigo-800 > *, a.btn_indigo-800 > *, button.bg_indigo-800, button.btn_indigo-800, button.bg_indigo-800 > *, button.btn_indigo-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_indigo-800:hover, a.btn_indigo-800:hover, button.bg_indigo-800:hover, button.btn_indigo-800:hover {
@@ -5739,7 +5134,7 @@ a.bg_indigo-800:hover, a.btn_indigo-800:hover, button.bg_indigo-800:hover, butto
 }
 
 a.bg_indigo-800:hover, a.btn_indigo-800:hover, a.bg_indigo-800:hover > *, a.btn_indigo-800:hover > *, button.bg_indigo-800:hover, button.btn_indigo-800:hover, button.bg_indigo-800:hover > *, button.btn_indigo-800:hover > *, .bg_indigo-800 > a:hover, .btn_indigo-800 > a:hover, .bg_indigo-800 > a:hover > *, .btn_indigo-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_indigo-900, .btn_indigo-900, a.bg_indigo-900, a.btn_indigo-900, button.bg_indigo-900, button.btn_indigo-900 {
@@ -5747,7 +5142,7 @@ a.bg_indigo-800:hover, a.btn_indigo-800:hover, a.bg_indigo-800:hover > *, a.btn_
 }
 
 .bg_indigo-900, .btn_indigo-900, .bg_indigo-900 > *, .btn_indigo-900 > *, a.bg_indigo-900, a.btn_indigo-900, a.bg_indigo-900 > *, a.btn_indigo-900 > *, button.bg_indigo-900, button.btn_indigo-900, button.bg_indigo-900 > *, button.btn_indigo-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_indigo-900:hover, a.btn_indigo-900:hover, button.bg_indigo-900:hover, button.btn_indigo-900:hover {
@@ -5756,7 +5151,7 @@ a.bg_indigo-900:hover, a.btn_indigo-900:hover, button.bg_indigo-900:hover, butto
 }
 
 a.bg_indigo-900:hover, a.btn_indigo-900:hover, a.bg_indigo-900:hover > *, a.btn_indigo-900:hover > *, button.bg_indigo-900:hover, button.btn_indigo-900:hover, button.bg_indigo-900:hover > *, button.btn_indigo-900:hover > *, .bg_indigo-900 > a:hover, .btn_indigo-900 > a:hover, .bg_indigo-900 > a:hover > *, .btn_indigo-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_purple-100, .btn_purple-100, a.bg_purple-100, a.btn_purple-100, button.bg_purple-100, button.btn_purple-100 {
@@ -5764,7 +5159,7 @@ a.bg_indigo-900:hover, a.btn_indigo-900:hover, a.bg_indigo-900:hover > *, a.btn_
 }
 
 .bg_purple-100, .btn_purple-100, .bg_purple-100 > *, .btn_purple-100 > *, a.bg_purple-100, a.btn_purple-100, a.bg_purple-100 > *, a.btn_purple-100 > *, button.bg_purple-100, button.btn_purple-100, button.bg_purple-100 > *, button.btn_purple-100 > * {
-  color: #9933ff !important;
+  color: #9933ff;
 }
 
 a.bg_purple-100:hover, a.btn_purple-100:hover, button.bg_purple-100:hover, button.btn_purple-100:hover {
@@ -5781,7 +5176,7 @@ a.bg_purple-100:hover, a.btn_purple-100:hover, a.bg_purple-100:hover > *, a.btn_
 }
 
 .bg_purple-200, .btn_purple-200, .bg_purple-200 > *, .btn_purple-200 > *, a.bg_purple-200, a.btn_purple-200, a.bg_purple-200 > *, a.btn_purple-200 > *, button.bg_purple-200, button.btn_purple-200, button.bg_purple-200 > *, button.btn_purple-200 > * {
-  color: #8120f4 !important;
+  color: #8120f4;
 }
 
 a.bg_purple-200:hover, a.btn_purple-200:hover, button.bg_purple-200:hover, button.btn_purple-200:hover {
@@ -5798,7 +5193,7 @@ a.bg_purple-200:hover, a.btn_purple-200:hover, a.bg_purple-200:hover > *, a.btn_
 }
 
 .bg_purple-300, .btn_purple-300, .bg_purple-300 > *, .btn_purple-300 > *, a.bg_purple-300, a.btn_purple-300, a.bg_purple-300 > *, a.btn_purple-300 > *, button.bg_purple-300, button.btn_purple-300, button.bg_purple-300 > *, button.btn_purple-300 > * {
-  color: #6711df !important;
+  color: #6711df;
 }
 
 a.bg_purple-300:hover, a.btn_purple-300:hover, button.bg_purple-300:hover, button.btn_purple-300:hover {
@@ -5815,7 +5210,7 @@ a.bg_purple-300:hover, a.btn_purple-300:hover, a.bg_purple-300:hover > *, a.btn_
 }
 
 .bg_purple-400, .btn_purple-400, .bg_purple-400 > *, .btn_purple-400 > *, a.bg_purple-400, a.btn_purple-400, a.bg_purple-400 > *, a.btn_purple-400 > *, button.bg_purple-400, button.btn_purple-400, button.bg_purple-400 > *, button.btn_purple-400 > * {
-  color: #4811a6 !important;
+  color: #4811a6;
 }
 
 a.bg_purple-400:hover, a.btn_purple-400:hover, button.bg_purple-400:hover, button.btn_purple-400:hover {
@@ -5832,7 +5227,7 @@ a.bg_purple-400:hover, a.btn_purple-400:hover, a.bg_purple-400:hover > *, a.btn_
 }
 
 .bg_purple-500, .btn_purple-500, .bg_purple-500 > *, .btn_purple-500 > *, a.bg_purple-500, a.btn_purple-500, a.bg_purple-500 > *, a.btn_purple-500 > *, button.bg_purple-500, button.btn_purple-500, button.bg_purple-500 > *, button.btn_purple-500 > * {
-  color: #30116e !important;
+  color: #30116e;
 }
 
 a.bg_purple-500:hover, a.btn_purple-500:hover, button.bg_purple-500:hover, button.btn_purple-500:hover {
@@ -5849,7 +5244,7 @@ a.bg_purple-500:hover, a.btn_purple-500:hover, a.bg_purple-500:hover > *, a.btn_
 }
 
 .bg_purple-600, .btn_purple-600, .bg_purple-600 > *, .btn_purple-600 > *, a.bg_purple-600, a.btn_purple-600, a.bg_purple-600 > *, a.btn_purple-600 > *, button.bg_purple-600, button.btn_purple-600, button.bg_purple-600 > *, button.btn_purple-600 > * {
-  color: #f9f7fd !important;
+  color: #f9f7fd;
 }
 
 a.bg_purple-600:hover, a.btn_purple-600:hover, button.bg_purple-600:hover, button.btn_purple-600:hover {
@@ -5866,7 +5261,7 @@ a.bg_purple-600:hover, a.btn_purple-600:hover, a.bg_purple-600:hover > *, a.btn_
 }
 
 .bg_purple-700, .btn_purple-700, .bg_purple-700 > *, .btn_purple-700 > *, a.bg_purple-700, a.btn_purple-700, a.bg_purple-700 > *, a.btn_purple-700 > *, button.bg_purple-700, button.btn_purple-700, button.bg_purple-700 > *, button.btn_purple-700 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_purple-700:hover, a.btn_purple-700:hover, button.bg_purple-700:hover, button.btn_purple-700:hover {
@@ -5883,7 +5278,7 @@ a.bg_purple-700:hover, a.btn_purple-700:hover, a.bg_purple-700:hover > *, a.btn_
 }
 
 .bg_purple-800, .btn_purple-800, .bg_purple-800 > *, .btn_purple-800 > *, a.bg_purple-800, a.btn_purple-800, a.bg_purple-800 > *, a.btn_purple-800 > *, button.bg_purple-800, button.btn_purple-800, button.bg_purple-800 > *, button.btn_purple-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_purple-800:hover, a.btn_purple-800:hover, button.bg_purple-800:hover, button.btn_purple-800:hover {
@@ -5892,7 +5287,7 @@ a.bg_purple-800:hover, a.btn_purple-800:hover, button.bg_purple-800:hover, butto
 }
 
 a.bg_purple-800:hover, a.btn_purple-800:hover, a.bg_purple-800:hover > *, a.btn_purple-800:hover > *, button.bg_purple-800:hover, button.btn_purple-800:hover, button.bg_purple-800:hover > *, button.btn_purple-800:hover > *, .bg_purple-800 > a:hover, .btn_purple-800 > a:hover, .bg_purple-800 > a:hover > *, .btn_purple-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_purple-900, .btn_purple-900, a.bg_purple-900, a.btn_purple-900, button.bg_purple-900, button.btn_purple-900 {
@@ -5900,7 +5295,7 @@ a.bg_purple-800:hover, a.btn_purple-800:hover, a.bg_purple-800:hover > *, a.btn_
 }
 
 .bg_purple-900, .btn_purple-900, .bg_purple-900 > *, .btn_purple-900 > *, a.bg_purple-900, a.btn_purple-900, a.bg_purple-900 > *, a.btn_purple-900 > *, button.bg_purple-900, button.btn_purple-900, button.bg_purple-900 > *, button.btn_purple-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_purple-900:hover, a.btn_purple-900:hover, button.bg_purple-900:hover, button.btn_purple-900:hover {
@@ -5909,7 +5304,7 @@ a.bg_purple-900:hover, a.btn_purple-900:hover, button.bg_purple-900:hover, butto
 }
 
 a.bg_purple-900:hover, a.btn_purple-900:hover, a.bg_purple-900:hover > *, a.btn_purple-900:hover > *, button.bg_purple-900:hover, button.btn_purple-900:hover, button.bg_purple-900:hover > *, button.btn_purple-900:hover > *, .bg_purple-900 > a:hover, .btn_purple-900 > a:hover, .bg_purple-900 > a:hover > *, .btn_purple-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_pink-100, .btn_pink-100, a.bg_pink-100, a.btn_pink-100, button.bg_pink-100, button.btn_pink-100 {
@@ -5917,7 +5312,7 @@ a.bg_purple-900:hover, a.btn_purple-900:hover, a.bg_purple-900:hover > *, a.btn_
 }
 
 .bg_pink-100, .btn_pink-100, .bg_pink-100 > *, .btn_pink-100 > *, a.bg_pink-100, a.btn_pink-100, a.bg_pink-100 > *, a.btn_pink-100 > *, button.bg_pink-100, button.btn_pink-100, button.bg_pink-100 > *, button.btn_pink-100 > * {
-  color: #e0002d !important;
+  color: #e0002d;
 }
 
 a.bg_pink-100:hover, a.btn_pink-100:hover, button.bg_pink-100:hover, button.btn_pink-100:hover {
@@ -5934,7 +5329,7 @@ a.bg_pink-100:hover, a.btn_pink-100:hover, a.bg_pink-100:hover > *, a.btn_pink-1
 }
 
 .bg_pink-200, .btn_pink-200, .bg_pink-200 > *, .btn_pink-200 > *, a.bg_pink-200, a.btn_pink-200, a.bg_pink-200 > *, a.btn_pink-200 > *, button.bg_pink-200, button.btn_pink-200, button.bg_pink-200 > *, button.btn_pink-200 > * {
-  color: #c7053c !important;
+  color: #c7053c;
 }
 
 a.bg_pink-200:hover, a.btn_pink-200:hover, button.bg_pink-200:hover, button.btn_pink-200:hover {
@@ -5951,7 +5346,7 @@ a.bg_pink-200:hover, a.btn_pink-200:hover, a.bg_pink-200:hover > *, a.btn_pink-2
 }
 
 .bg_pink-300, .btn_pink-300, .bg_pink-300 > *, .btn_pink-300 > *, a.bg_pink-300, a.btn_pink-300, a.bg_pink-300 > *, a.btn_pink-300 > *, button.bg_pink-300, button.btn_pink-300, button.bg_pink-300 > *, button.btn_pink-300 > * {
-  color: #a90941 !important;
+  color: #a90941;
 }
 
 a.bg_pink-300:hover, a.btn_pink-300:hover, button.bg_pink-300:hover, button.btn_pink-300:hover {
@@ -5968,7 +5363,7 @@ a.bg_pink-300:hover, a.btn_pink-300:hover, a.bg_pink-300:hover > *, a.btn_pink-3
 }
 
 .bg_pink-400, .btn_pink-400, .bg_pink-400 > *, .btn_pink-400 > *, a.bg_pink-400, a.btn_pink-400, a.bg_pink-400 > *, a.btn_pink-400 > *, button.bg_pink-400, button.btn_pink-400, button.bg_pink-400 > *, button.btn_pink-400 > * {
-  color: #7b0936 !important;
+  color: #7b0936;
 }
 
 a.bg_pink-400:hover, a.btn_pink-400:hover, button.bg_pink-400:hover, button.btn_pink-400:hover {
@@ -5985,7 +5380,7 @@ a.bg_pink-400:hover, a.btn_pink-400:hover, a.bg_pink-400:hover > *, a.btn_pink-4
 }
 
 .bg_pink-500, .btn_pink-500, .bg_pink-500 > *, .btn_pink-500 > *, a.bg_pink-500, a.btn_pink-500, a.bg_pink-500 > *, a.btn_pink-500 > *, button.bg_pink-500, button.btn_pink-500, button.bg_pink-500 > *, button.btn_pink-500 > * {
-  color: #5b0b32 !important;
+  color: #5b0b32;
 }
 
 a.bg_pink-500:hover, a.btn_pink-500:hover, button.bg_pink-500:hover, button.btn_pink-500:hover {
@@ -6002,7 +5397,7 @@ a.bg_pink-500:hover, a.btn_pink-500:hover, a.bg_pink-500:hover > *, a.btn_pink-5
 }
 
 .bg_pink-600, .btn_pink-600, .bg_pink-600 > *, .btn_pink-600 > *, a.bg_pink-600, a.btn_pink-600, a.bg_pink-600 > *, a.btn_pink-600 > *, button.bg_pink-600, button.btn_pink-600, button.bg_pink-600 > *, button.btn_pink-600 > * {
-  color: #1d0612 !important;
+  color: #1d0612;
 }
 
 a.bg_pink-600:hover, a.btn_pink-600:hover, button.bg_pink-600:hover, button.btn_pink-600:hover {
@@ -6019,7 +5414,7 @@ a.bg_pink-600:hover, a.btn_pink-600:hover, a.bg_pink-600:hover > *, a.btn_pink-6
 }
 
 .bg_pink-700, .btn_pink-700, .bg_pink-700 > *, .btn_pink-700 > *, a.bg_pink-700, a.btn_pink-700, a.bg_pink-700 > *, a.btn_pink-700 > *, button.bg_pink-700, button.btn_pink-700, button.bg_pink-700 > *, button.btn_pink-700 > * {
-  color: #f8e7f1 !important;
+  color: #f8e7f1;
 }
 
 a.bg_pink-700:hover, a.btn_pink-700:hover, button.bg_pink-700:hover, button.btn_pink-700:hover {
@@ -6028,7 +5423,7 @@ a.bg_pink-700:hover, a.btn_pink-700:hover, button.bg_pink-700:hover, button.btn_
 }
 
 a.bg_pink-700:hover, a.btn_pink-700:hover, a.bg_pink-700:hover > *, a.btn_pink-700:hover > *, button.bg_pink-700:hover, button.btn_pink-700:hover, button.bg_pink-700:hover > *, button.btn_pink-700:hover > *, .bg_pink-700 > a:hover, .btn_pink-700 > a:hover, .bg_pink-700 > a:hover > *, .btn_pink-700 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_pink-800, .btn_pink-800, a.bg_pink-800, a.btn_pink-800, button.bg_pink-800, button.btn_pink-800 {
@@ -6036,7 +5431,7 @@ a.bg_pink-700:hover, a.btn_pink-700:hover, a.bg_pink-700:hover > *, a.btn_pink-7
 }
 
 .bg_pink-800, .btn_pink-800, .bg_pink-800 > *, .btn_pink-800 > *, a.bg_pink-800, a.btn_pink-800, a.bg_pink-800 > *, a.btn_pink-800 > *, button.bg_pink-800, button.btn_pink-800, button.bg_pink-800 > *, button.btn_pink-800 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_pink-800:hover, a.btn_pink-800:hover, button.bg_pink-800:hover, button.btn_pink-800:hover {
@@ -6045,7 +5440,7 @@ a.bg_pink-800:hover, a.btn_pink-800:hover, button.bg_pink-800:hover, button.btn_
 }
 
 a.bg_pink-800:hover, a.btn_pink-800:hover, a.bg_pink-800:hover > *, a.btn_pink-800:hover > *, button.bg_pink-800:hover, button.btn_pink-800:hover, button.bg_pink-800:hover > *, button.btn_pink-800:hover > *, .bg_pink-800 > a:hover, .btn_pink-800 > a:hover, .bg_pink-800 > a:hover > *, .btn_pink-800 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_pink-900, .btn_pink-900, a.bg_pink-900, a.btn_pink-900, button.bg_pink-900, button.btn_pink-900 {
@@ -6053,7 +5448,7 @@ a.bg_pink-800:hover, a.btn_pink-800:hover, a.bg_pink-800:hover > *, a.btn_pink-8
 }
 
 .bg_pink-900, .btn_pink-900, .bg_pink-900 > *, .btn_pink-900 > *, a.bg_pink-900, a.btn_pink-900, a.bg_pink-900 > *, a.btn_pink-900 > *, button.bg_pink-900, button.btn_pink-900, button.bg_pink-900 > *, button.btn_pink-900 > * {
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
 }
 
 a.bg_pink-900:hover, a.btn_pink-900:hover, button.bg_pink-900:hover, button.btn_pink-900:hover {
@@ -6062,7 +5457,7 @@ a.bg_pink-900:hover, a.btn_pink-900:hover, button.bg_pink-900:hover, button.btn_
 }
 
 a.bg_pink-900:hover, a.btn_pink-900:hover, a.bg_pink-900:hover > *, a.btn_pink-900:hover > *, button.bg_pink-900:hover, button.btn_pink-900:hover, button.bg_pink-900:hover > *, button.btn_pink-900:hover > *, .bg_pink-900 > a:hover, .btn_pink-900 > a:hover, .bg_pink-900 > a:hover > *, .btn_pink-900 > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .btn_white.active, .btn_white:hover, .btn_white:focus {
@@ -7697,618 +7092,6 @@ a.bg_pink-900:hover, a.btn_pink-900:hover, a.bg_pink-900:hover > *, a.btn_pink-9
   color: #702459 !important;
 }
 
-.bg_primary\!, a.bg_primary\!, button.bg_primary\! {
-  background-color: #326295 !important;
-}
-
-.bg_primary\!, .bg_primary\! > *, a.bg_primary\!, a.bg_primary\! > *, button.bg_primary\!, button.bg_primary\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary\!:hover, button.bg_primary\!:hover {
-  background-color: #25496f !important;
-  text-decoration: none;
-}
-
-a.bg_primary\!:hover, a.bg_primary\!:hover > *, button.bg_primary\!:hover, button.bg_primary\!:hover > *, .bg_primary\! > a:hover, .bg_primary\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-text\!, a.bg_primary-text\!, button.bg_primary-text\! {
-  background-color: #183049 !important;
-}
-
-.bg_primary-text\!, .bg_primary-text\! > *, a.bg_primary-text\!, a.bg_primary-text\! > *, button.bg_primary-text\!, button.bg_primary-text\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-text\!:hover, button.bg_primary-text\!:hover {
-  background-color: #0c1722 !important;
-  text-decoration: none;
-}
-
-a.bg_primary-text\!:hover, a.bg_primary-text\!:hover > *, button.bg_primary-text\!:hover, button.bg_primary-text\!:hover > *, .bg_primary-text\! > a:hover, .bg_primary-text\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-light\!, a.bg_primary-light\!, button.bg_primary-light\! {
-  background-color: #4f88c4 !important;
-}
-
-.bg_primary-light\!, .bg_primary-light\! > *, a.bg_primary-light\!, a.bg_primary-light\! > *, button.bg_primary-light\!, button.bg_primary-light\! > * {
-  color: #0e1c2a !important;
-}
-
-a.bg_primary-light\!:hover, button.bg_primary-light\!:hover {
-  background-color: #386fa8 !important;
-  text-decoration: none;
-}
-
-a.bg_primary-light\!:hover, a.bg_primary-light\!:hover > *, button.bg_primary-light\!:hover, button.bg_primary-light\!:hover > *, .bg_primary-light\! > a:hover, .bg_primary-light\! > a:hover > * {
-  color: #010304 !important;
-}
-
-.bg_primary-lighter\!, a.bg_primary-lighter\!, button.bg_primary-lighter\! {
-  background-color: #76a2d1 !important;
-}
-
-.bg_primary-lighter\!, .bg_primary-lighter\! > *, a.bg_primary-lighter\!, a.bg_primary-lighter\! > *, button.bg_primary-lighter\!, button.bg_primary-lighter\! > * {
-  color: #1c3754 !important;
-}
-
-a.bg_primary-lighter\!:hover, button.bg_primary-lighter\!:hover {
-  background-color: #4f88c4 !important;
-  text-decoration: none;
-}
-
-a.bg_primary-lighter\!:hover, a.bg_primary-lighter\!:hover > *, button.bg_primary-lighter\!:hover, button.bg_primary-lighter\!:hover > *, .bg_primary-lighter\! > a:hover, .bg_primary-lighter\! > a:hover > * {
-  color: #0f1e2e !important;
-}
-
-.bg_primary-dark\!, a.bg_primary-dark\!, button.bg_primary-dark\! {
-  background-color: #1f3c5c !important;
-}
-
-.bg_primary-dark\!, .bg_primary-dark\! > *, a.bg_primary-dark\!, a.bg_primary-dark\! > *, button.bg_primary-dark\!, button.bg_primary-dark\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-dark\!:hover, button.bg_primary-dark\!:hover {
-  background-color: #122336 !important;
-  text-decoration: none;
-}
-
-a.bg_primary-dark\!:hover, a.bg_primary-dark\!:hover > *, button.bg_primary-dark\!:hover, button.bg_primary-dark\!:hover > *, .bg_primary-dark\! > a:hover, .bg_primary-dark\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-darker\!, a.bg_primary-darker\!, button.bg_primary-darker\! {
-  background-color: #122336 !important;
-}
-
-.bg_primary-darker\!, .bg_primary-darker\! > *, a.bg_primary-darker\!, a.bg_primary-darker\! > *, button.bg_primary-darker\!, button.bg_primary-darker\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-darker\!:hover, button.bg_primary-darker\!:hover {
-  background-color: #050a0f !important;
-  text-decoration: none;
-}
-
-a.bg_primary-darker\!:hover, a.bg_primary-darker\!:hover > *, button.bg_primary-darker\!:hover, button.bg_primary-darker\!:hover > *, .bg_primary-darker\! > a:hover, .bg_primary-darker\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-darkest\!, a.bg_primary-darkest\!, button.bg_primary-darkest\! {
-  background-color: #0c1722 !important;
-}
-
-.bg_primary-darkest\!, .bg_primary-darkest\! > *, a.bg_primary-darkest\!, a.bg_primary-darkest\! > *, button.bg_primary-darkest\!, button.bg_primary-darkest\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-darkest\!:hover, button.bg_primary-darkest\!:hover {
-  background-color: black !important;
-  text-decoration: none;
-}
-
-a.bg_primary-darkest\!:hover, a.bg_primary-darkest\!:hover > *, button.bg_primary-darkest\!:hover, button.bg_primary-darkest\!:hover > *, .bg_primary-darkest\! > a:hover, .bg_primary-darkest\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-hover\!, a.bg_primary-hover\!, button.bg_primary-hover\! {
-  background-color: #25496f !important;
-}
-
-.bg_primary-hover\!, .bg_primary-hover\! > *, a.bg_primary-hover\!, a.bg_primary-hover\! > *, button.bg_primary-hover\!, button.bg_primary-hover\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-hover\!:hover, button.bg_primary-hover\!:hover {
-  background-color: #183049 !important;
-  text-decoration: none;
-}
-
-a.bg_primary-hover\!:hover, a.bg_primary-hover\!:hover > *, button.bg_primary-hover\!:hover, button.bg_primary-hover\!:hover > *, .bg_primary-hover\! > a:hover, .bg_primary-hover\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_primary-black\!, a.bg_primary-black\!, button.bg_primary-black\! {
-  background-color: #132639 !important;
-}
-
-.bg_primary-black\!, .bg_primary-black\! > *, a.bg_primary-black\!, a.bg_primary-black\! > *, button.bg_primary-black\!, button.bg_primary-black\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_primary-black\!:hover, button.bg_primary-black\!:hover {
-  background-color: #060d13 !important;
-  text-decoration: none;
-}
-
-a.bg_primary-black\!:hover, a.bg_primary-black\!:hover > *, button.bg_primary-black\!:hover, button.bg_primary-black\!:hover > *, .bg_primary-black\! > a:hover, .bg_primary-black\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary\!, a.bg_secondary\!, button.bg_secondary\! {
-  background-color: #2b86b1 !important;
-}
-
-.bg_secondary\!, .bg_secondary\! > *, a.bg_secondary\!, a.bg_secondary\! > *, button.bg_secondary\!, button.bg_secondary\! > * {
-  color: #07161d !important;
-}
-
-a.bg_secondary\!:hover, button.bg_secondary\!:hover {
-  background-color: #216788 !important;
-  text-decoration: none;
-}
-
-a.bg_secondary\!:hover, a.bg_secondary\!:hover > *, button.bg_secondary\!:hover, button.bg_secondary\!:hover > *, .bg_secondary\! > a:hover, .bg_secondary\! > a:hover > * {
-  color: #113546 !important;
-}
-
-.bg_secondary-text\!, a.bg_secondary-text\!, button.bg_secondary-text\! {
-  background-color: #17485f !important;
-}
-
-.bg_secondary-text\!, .bg_secondary-text\! > *, a.bg_secondary-text\!, a.bg_secondary-text\! > *, button.bg_secondary-text\!, button.bg_secondary-text\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-text\!:hover, button.bg_secondary-text\!:hover {
-  background-color: #0d2936 !important;
-  text-decoration: none;
-}
-
-a.bg_secondary-text\!:hover, a.bg_secondary-text\!:hover > *, button.bg_secondary-text\!:hover, button.bg_secondary-text\!:hover > *, .bg_secondary-text\! > a:hover, .bg_secondary-text\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-light\!, a.bg_secondary-light\!, button.bg_secondary-light\! {
-  background-color: #53acd5 !important;
-}
-
-.bg_secondary-light\!, .bg_secondary-light\! > *, a.bg_secondary-light\!, a.bg_secondary-light\! > *, button.bg_secondary-light\!, button.bg_secondary-light\! > * {
-  color: #133b4e !important;
-}
-
-a.bg_secondary-light\!:hover, button.bg_secondary-light\!:hover {
-  background-color: #3096c6 !important;
-  text-decoration: none;
-}
-
-a.bg_secondary-light\!:hover, a.bg_secondary-light\!:hover > *, button.bg_secondary-light\!:hover, button.bg_secondary-light\!:hover > *, .bg_secondary-light\! > a:hover, .bg_secondary-light\! > a:hover > * {
-  color: #091c25 !important;
-}
-
-.bg_secondary-lighter\!, a.bg_secondary-lighter\!, button.bg_secondary-lighter\! {
-  background-color: #7cbfdf !important;
-}
-
-.bg_secondary-lighter\!, .bg_secondary-lighter\! > *, a.bg_secondary-lighter\!, a.bg_secondary-lighter\! > *, button.bg_secondary-lighter\!, button.bg_secondary-lighter\! > * {
-  color: #194e67 !important;
-}
-
-a.bg_secondary-lighter\!:hover, button.bg_secondary-lighter\!:hover {
-  background-color: #53acd5 !important;
-  text-decoration: none;
-}
-
-a.bg_secondary-lighter\!:hover, a.bg_secondary-lighter\!:hover > *, button.bg_secondary-lighter\!:hover, button.bg_secondary-lighter\!:hover > *, .bg_secondary-lighter\! > a:hover, .bg_secondary-lighter\! > a:hover > * {
-  color: #0f2f3e !important;
-}
-
-.bg_secondary-dark\!, a.bg_secondary-dark\!, button.bg_secondary-dark\! {
-  background-color: #1c5773 !important;
-}
-
-.bg_secondary-dark\!, .bg_secondary-dark\! > *, a.bg_secondary-dark\!, a.bg_secondary-dark\! > *, button.bg_secondary-dark\!, button.bg_secondary-dark\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-dark\!:hover, button.bg_secondary-dark\!:hover {
-  background-color: #12384a !important;
-  text-decoration: none;
-}
-
-a.bg_secondary-dark\!:hover, a.bg_secondary-dark\!:hover > *, button.bg_secondary-dark\!:hover, button.bg_secondary-dark\!:hover > *, .bg_secondary-dark\! > a:hover, .bg_secondary-dark\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-darker\!, a.bg_secondary-darker\!, button.bg_secondary-darker\! {
-  background-color: #12384a !important;
-}
-
-.bg_secondary-darker\!, .bg_secondary-darker\! > *, a.bg_secondary-darker\!, a.bg_secondary-darker\! > *, button.bg_secondary-darker\!, button.bg_secondary-darker\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-darker\!:hover, button.bg_secondary-darker\!:hover {
-  background-color: #081921 !important;
-  text-decoration: none;
-}
-
-a.bg_secondary-darker\!:hover, a.bg_secondary-darker\!:hover > *, button.bg_secondary-darker\!:hover, button.bg_secondary-darker\!:hover > *, .bg_secondary-darker\! > a:hover, .bg_secondary-darker\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-darkest\!, a.bg_secondary-darkest\!, button.bg_secondary-darkest\! {
-  background-color: #0d2936 !important;
-}
-
-.bg_secondary-darkest\!, .bg_secondary-darkest\! > *, a.bg_secondary-darkest\!, a.bg_secondary-darkest\! > *, button.bg_secondary-darkest\!, button.bg_secondary-darkest\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-darkest\!:hover, button.bg_secondary-darkest\!:hover {
-  background-color: #030a0d !important;
-  text-decoration: none;
-}
-
-a.bg_secondary-darkest\!:hover, a.bg_secondary-darkest\!:hover > *, button.bg_secondary-darkest\!:hover, button.bg_secondary-darkest\!:hover > *, .bg_secondary-darkest\! > a:hover, .bg_secondary-darkest\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-hover\!, a.bg_secondary-hover\!, button.bg_secondary-hover\! {
-  background-color: #216788 !important;
-}
-
-.bg_secondary-hover\!, .bg_secondary-hover\! > *, a.bg_secondary-hover\!, a.bg_secondary-hover\! > *, button.bg_secondary-hover\!, button.bg_secondary-hover\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-hover\!:hover, button.bg_secondary-hover\!:hover {
-  background-color: #17485f !important;
-  text-decoration: none;
-}
-
-a.bg_secondary-hover\!:hover, a.bg_secondary-hover\!:hover > *, button.bg_secondary-hover\!:hover, button.bg_secondary-hover\!:hover > *, .bg_secondary-hover\! > a:hover, .bg_secondary-hover\! > a:hover > * {
-  color: white !important;
-}
-
-.bg_secondary-black\!, a.bg_secondary-black\!, button.bg_secondary-black\! {
-  background-color: #0f2f3e !important;
-}
-
-.bg_secondary-black\!, .bg_secondary-black\! > *, a.bg_secondary-black\!, a.bg_secondary-black\! > *, button.bg_secondary-black\!, button.bg_secondary-black\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.bg_secondary-black\!:hover, button.bg_secondary-black\!:hover {
-  background-color: #051015 !important;
-  text-decoration: none;
-}
-
-a.bg_secondary-black\!:hover, a.bg_secondary-black\!:hover > *, button.bg_secondary-black\!:hover, button.bg_secondary-black\!:hover > *, .bg_secondary-black\! > a:hover, .bg_secondary-black\! > a:hover > * {
-  color: white !important;
-}
-
-.color3\!, a.color3\!, button.color3\! {
-  background-color: #89c441 !important;
-}
-
-.color3\!, .color3\! > *, a.color3\!, a.color3\! > *, button.color3\!, button.color3\! > * {
-  color: #364e18 !important;
-}
-
-a.color3\!:hover, button.color3\!:hover {
-  background-color: #6ea032 !important;
-  text-decoration: none;
-}
-
-a.color3\!:hover, a.color3\!:hover > *, button.color3\!:hover, button.color3\!:hover > *, .color3\! > a:hover, .color3\! > a:hover > * {
-  color: #1b270c !important;
-}
-
-.color3-text\!, a.color3-text\!, button.color3-text\! {
-  background-color: #547926 !important;
-}
-
-.color3-text\!, .color3-text\! > *, a.color3-text\!, a.color3-text\! > *, button.color3-text\!, button.color3-text\! > * {
-  color: #ecf5e0 !important;
-}
-
-a.color3-text\!:hover, button.color3-text\!:hover {
-  background-color: #39521a !important;
-  text-decoration: none;
-}
-
-a.color3-text\!:hover, a.color3-text\!:hover > *, button.color3-text\!:hover, button.color3-text\!:hover > *, .color3-text\! > a:hover, .color3-text\! > a:hover > * {
-  color: white !important;
-}
-
-.color3-light\!, a.color3-light\!, button.color3-light\! {
-  background-color: #add67b !important;
-}
-
-.color3-light\!, .color3-light\! > *, a.color3-light\!, a.color3-light\! > *, button.color3-light\!, button.color3-light\! > * {
-  color: #405d1d !important;
-}
-
-a.color3-light\!:hover, button.color3-light\!:hover {
-  background-color: #95ca54 !important;
-  text-decoration: none;
-}
-
-a.color3-light\!:hover, a.color3-light\!:hover > *, button.color3-light\!:hover, button.color3-light\!:hover > *, .color3-light\! > a:hover, .color3-light\! > a:hover > * {
-  color: #263611 !important;
-}
-
-.color3-lighter\!, a.color3-lighter\!, button.color3-lighter\! {
-  background-color: #c5e2a2 !important;
-}
-
-.color3-lighter\!, .color3-lighter\! > *, a.color3-lighter\!, a.color3-lighter\! > *, button.color3-lighter\!, button.color3-lighter\! > * {
-  color: #46651f !important;
-}
-
-a.color3-lighter\!:hover, button.color3-lighter\!:hover {
-  background-color: #add67b !important;
-  text-decoration: none;
-}
-
-a.color3-lighter\!:hover, a.color3-lighter\!:hover > *, button.color3-lighter\!:hover, button.color3-lighter\!:hover > *, .color3-lighter\! > a:hover, .color3-lighter\! > a:hover > * {
-  color: #2b3e13 !important;
-}
-
-.color3-dark\!, a.color3-dark\!, button.color3-dark\! {
-  background-color: #618d2c !important;
-}
-
-.color3-dark\!, .color3-dark\! > *, a.color3-dark\!, a.color3-dark\! > *, button.color3-dark\!, button.color3-dark\! > * {
-  color: #101707 !important;
-}
-
-a.color3-dark\!:hover, button.color3-dark\!:hover {
-  background-color: #466620 !important;
-  text-decoration: none;
-}
-
-a.color3-dark\!:hover, a.color3-dark\!:hover > *, button.color3-dark\!:hover, button.color3-dark\!:hover > *, .color3-dark\! > a:hover, .color3-dark\! > a:hover > * {
-  color: #2b3e13 !important;
-}
-
-.color3-darker\!, a.color3-darker\!, button.color3-darker\! {
-  background-color: #466620 !important;
-}
-
-.color3-darker\!, .color3-darker\! > *, a.color3-darker\!, a.color3-darker\! > *, button.color3-darker\!, button.color3-darker\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.color3-darker\!:hover, button.color3-darker\!:hover {
-  background-color: #2b3f14 !important;
-  text-decoration: none;
-}
-
-a.color3-darker\!:hover, a.color3-darker\!:hover > *, button.color3-darker\!:hover, button.color3-darker\!:hover > *, .color3-darker\! > a:hover, .color3-darker\! > a:hover > * {
-  color: white !important;
-}
-
-.color3-darkest\!, a.color3-darkest\!, button.color3-darkest\! {
-  background-color: #39521a !important;
-}
-
-.color3-darkest\!, .color3-darkest\! > *, a.color3-darkest\!, a.color3-darkest\! > *, button.color3-darkest\!, button.color3-darkest\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.color3-darkest\!:hover, button.color3-darkest\!:hover {
-  background-color: #1e2b0e !important;
-  text-decoration: none;
-}
-
-a.color3-darkest\!:hover, a.color3-darkest\!:hover > *, button.color3-darkest\!:hover, button.color3-darkest\!:hover > *, .color3-darkest\! > a:hover, .color3-darkest\! > a:hover > * {
-  color: white !important;
-}
-
-.color3-hover\!, a.color3-hover\!, button.color3-hover\! {
-  background-color: #6ea032 !important;
-}
-
-.color3-hover\!, .color3-hover\! > *, a.color3-hover\!, a.color3-hover\! > *, button.color3-hover\!, button.color3-hover\! > * {
-  color: #202f0f !important;
-}
-
-a.color3-hover\!:hover, button.color3-hover\!:hover {
-  background-color: #547926 !important;
-  text-decoration: none;
-}
-
-a.color3-hover\!:hover, a.color3-hover\!:hover > *, button.color3-hover\!:hover, button.color3-hover\!:hover > *, .color3-hover\! > a:hover, .color3-hover\! > a:hover > * {
-  color: #3b561b !important;
-}
-
-.color3-black\!, a.color3-black\!, button.color3-black\! {
-  background-color: #283a12 !important;
-}
-
-.color3-black\!, .color3-black\! > *, a.color3-black\!, a.color3-black\! > *, button.color3-black\!, button.color3-black\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.color3-black\!:hover, button.color3-black\!:hover {
-  background-color: #0d1306 !important;
-  text-decoration: none;
-}
-
-a.color3-black\!:hover, a.color3-black\!:hover > *, button.color3-black\!:hover, button.color3-black\!:hover > *, .color3-black\! > a:hover, .color3-black\! > a:hover > * {
-  color: white !important;
-}
-
-.color4\!, a.color4\!, button.color4\! {
-  background-color: #60b947 !important;
-}
-
-.color4\!, .color4\! > *, a.color4\!, a.color4\! > *, button.color4\!, button.color4\! > * {
-  color: #224319 !important;
-}
-
-a.color4\!:hover, button.color4\!:hover {
-  background-color: #4d9538 !important;
-  text-decoration: none;
-}
-
-a.color4\!:hover, a.color4\!:hover > *, button.color4\!:hover, button.color4\!:hover > *, .color4\! > a:hover, .color4\! > a:hover > * {
-  color: #0f1e0b !important;
-}
-
-.color4-text\!, a.color4-text\!, button.color4-text\! {
-  background-color: #3a702a !important;
-}
-
-.color4-text\!, .color4-text\! > *, a.color4-text\!, a.color4-text\! > *, button.color4-text\!, button.color4-text\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.color4-text\!:hover, button.color4-text\!:hover {
-  background-color: #274b1c !important;
-  text-decoration: none;
-}
-
-a.color4-text\!:hover, a.color4-text\!:hover > *, button.color4-text\!:hover, button.color4-text\!:hover > *, .color4-text\! > a:hover, .color4-text\! > a:hover > * {
-  color: white !important;
-}
-
-.color4-light\!, a.color4-light\!, button.color4-light\! {
-  background-color: #90ce7e !important;
-}
-
-.color4-light\!, .color4-light\! > *, a.color4-light\!, a.color4-light\! > *, button.color4-light\!, button.color4-light\! > * {
-  color: #2c5520 !important;
-}
-
-a.color4-light\!:hover, button.color4-light\!:hover {
-  background-color: #70c059 !important;
-  text-decoration: none;
-}
-
-a.color4-light\!:hover, a.color4-light\!:hover > *, button.color4-light\!:hover, button.color4-light\!:hover > *, .color4-light\! > a:hover, .color4-light\! > a:hover > * {
-  color: #193012 !important;
-}
-
-.color4-lighter\!, a.color4-lighter\!, button.color4-lighter\! {
-  background-color: #b0dca3 !important;
-}
-
-.color4-lighter\!, .color4-lighter\! > *, a.color4-lighter\!, a.color4-lighter\! > *, button.color4-lighter\!, button.color4-lighter\! > * {
-  color: #346426 !important;
-}
-
-a.color4-lighter\!:hover, button.color4-lighter\!:hover {
-  background-color: #90ce7e !important;
-  text-decoration: none;
-}
-
-a.color4-lighter\!:hover, a.color4-lighter\!:hover > *, button.color4-lighter\!:hover, button.color4-lighter\!:hover > *, .color4-lighter\! > a:hover, .color4-lighter\! > a:hover > * {
-  color: #203f18 !important;
-}
-
-.color4-dark\!, a.color4-dark\!, button.color4-dark\! {
-  background-color: #438231 !important;
-}
-
-.color4-dark\!, .color4-dark\! > *, a.color4-dark\!, a.color4-dark\! > *, button.color4-dark\!, button.color4-dark\! > * {
-  color: #f9fcf8 !important;
-}
-
-a.color4-dark\!:hover, button.color4-dark\!:hover {
-  background-color: #305d23 !important;
-  text-decoration: none;
-}
-
-a.color4-dark\!:hover, a.color4-dark\!:hover > *, button.color4-dark\!:hover, button.color4-dark\!:hover > *, .color4-dark\! > a:hover, .color4-dark\! > a:hover > * {
-  color: white !important;
-}
-
-.color4-darker\!, a.color4-darker\!, button.color4-darker\! {
-  background-color: #305d23 !important;
-}
-
-.color4-darker\!, .color4-darker\! > *, a.color4-darker\!, a.color4-darker\! > *, button.color4-darker\!, button.color4-darker\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.color4-darker\!:hover, button.color4-darker\!:hover {
-  background-color: #1d3815 !important;
-  text-decoration: none;
-}
-
-a.color4-darker\!:hover, a.color4-darker\!:hover > *, button.color4-darker\!:hover, button.color4-darker\!:hover > *, .color4-darker\! > a:hover, .color4-darker\! > a:hover > * {
-  color: white !important;
-}
-
-.color4-darkest\!, a.color4-darkest\!, button.color4-darkest\! {
-  background-color: #274b1c !important;
-}
-
-.color4-darkest\!, .color4-darkest\! > *, a.color4-darkest\!, a.color4-darkest\! > *, button.color4-darkest\!, button.color4-darkest\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.color4-darkest\!:hover, button.color4-darkest\!:hover {
-  background-color: #13260e !important;
-  text-decoration: none;
-}
-
-a.color4-darkest\!:hover, a.color4-darkest\!:hover > *, button.color4-darkest\!:hover, button.color4-darkest\!:hover > *, .color4-darkest\! > a:hover, .color4-darkest\! > a:hover > * {
-  color: white !important;
-}
-
-.color4-hover\!, a.color4-hover\!, button.color4-hover\! {
-  background-color: #4d9538 !important;
-}
-
-.color4-hover\!, .color4-hover\! > *, a.color4-hover\!, a.color4-hover\! > *, button.color4-hover\!, button.color4-hover\! > * {
-  color: #0f1e0b !important;
-}
-
-a.color4-hover\!:hover, button.color4-hover\!:hover {
-  background-color: #3a702a !important;
-  text-decoration: none;
-}
-
-a.color4-hover\!:hover, a.color4-hover\!:hover > *, button.color4-hover\!:hover, button.color4-hover\!:hover > *, .color4-hover\! > a:hover, .color4-hover\! > a:hover > * {
-  color: #224319 !important;
-}
-
-.color4-black\!, a.color4-black\!, button.color4-black\! {
-  background-color: #1d3715 !important;
-}
-
-.color4-black\!, .color4-black\! > *, a.color4-black\!, a.color4-black\! > *, button.color4-black\!, button.color4-black\! > * {
-  color: #f2f2f2 !important;
-}
-
-a.color4-black\!:hover, button.color4-black\!:hover {
-  background-color: #0a1207 !important;
-  text-decoration: none;
-}
-
-a.color4-black\!:hover, a.color4-black\!:hover > *, button.color4-black\!:hover, button.color4-black\!:hover > *, .color4-black\! > a:hover, .color4-black\! > a:hover > * {
-  color: white !important;
-}
-
 .bg_white\!, .btn_white\!, a.bg_white\!, a.btn_white\!, button.bg_white\!, button.btn_white\! {
   background-color: white !important;
 }
@@ -8323,7 +7106,7 @@ a.bg_white\!:hover, a.btn_white\!:hover, button.bg_white\!:hover, button.btn_whi
 }
 
 a.bg_white\!:hover, a.btn_white\!:hover, a.bg_white\!:hover > *, a.btn_white\!:hover > *, button.bg_white\!:hover, button.btn_white\!:hover, button.bg_white\!:hover > *, button.btn_white\!:hover > *, .bg_white\! > a:hover, .btn_white\! > a:hover, .bg_white\! > a:hover > *, .btn_white\! > a:hover > * {
-  color: #5c5c5c !important;
+  color: black !important;
 }
 
 .bg_black\!, .btn_black\!, a.bg_black\!, a.btn_black\!, button.bg_black\!, button.btn_black\! {
@@ -8374,7 +7157,7 @@ a.bg_grey\!:hover, a.btn_grey\!:hover, button.bg_grey\!:hover, button.btn_grey\!
 }
 
 a.bg_grey\!:hover, a.btn_grey\!:hover, a.bg_grey\!:hover > *, a.btn_grey\!:hover > *, button.bg_grey\!:hover, button.btn_grey\!:hover, button.bg_grey\!:hover > *, button.btn_grey\!:hover > *, .bg_grey\! > a:hover, .btn_grey\! > a:hover, .bg_grey\! > a:hover > *, .btn_grey\! > a:hover > * {
-  color: #1c1c1c !important;
+  color: black !important;
 }
 
 .bg_grey-100\!, .btn_grey-100\!, a.bg_grey-100\!, a.btn_grey-100\!, button.bg_grey-100\!, button.btn_grey-100\! {
@@ -8391,7 +7174,7 @@ a.bg_grey-100\!:hover, a.btn_grey-100\!:hover, button.bg_grey-100\!:hover, butto
 }
 
 a.bg_grey-100\!:hover, a.btn_grey-100\!:hover, a.bg_grey-100\!:hover > *, a.btn_grey-100\!:hover > *, button.bg_grey-100\!:hover, button.btn_grey-100\!:hover, button.bg_grey-100\!:hover > *, button.btn_grey-100\!:hover > *, .bg_grey-100\! > a:hover, .btn_grey-100\! > a:hover, .bg_grey-100\! > a:hover > *, .btn_grey-100\! > a:hover > * {
-  color: #575757 !important;
+  color: black !important;
 }
 
 .bg_grey-200\!, .btn_grey-200\!, a.bg_grey-200\!, a.btn_grey-200\!, button.bg_grey-200\!, button.btn_grey-200\! {
@@ -8408,7 +7191,7 @@ a.bg_grey-200\!:hover, a.btn_grey-200\!:hover, button.bg_grey-200\!:hover, butto
 }
 
 a.bg_grey-200\!:hover, a.btn_grey-200\!:hover, a.bg_grey-200\!:hover > *, a.btn_grey-200\!:hover > *, button.bg_grey-200\!:hover, button.btn_grey-200\!:hover, button.bg_grey-200\!:hover > *, button.btn_grey-200\!:hover > *, .bg_grey-200\! > a:hover, .btn_grey-200\! > a:hover, .bg_grey-200\! > a:hover > *, .btn_grey-200\! > a:hover > * {
-  color: #525252 !important;
+  color: black !important;
 }
 
 .bg_grey-300\!, .btn_grey-300\!, a.bg_grey-300\!, a.btn_grey-300\!, button.bg_grey-300\!, button.btn_grey-300\! {
@@ -8425,7 +7208,7 @@ a.bg_grey-300\!:hover, a.btn_grey-300\!:hover, button.bg_grey-300\!:hover, butto
 }
 
 a.bg_grey-300\!:hover, a.btn_grey-300\!:hover, a.bg_grey-300\!:hover > *, a.btn_grey-300\!:hover > *, button.bg_grey-300\!:hover, button.btn_grey-300\!:hover, button.bg_grey-300\!:hover > *, button.btn_grey-300\!:hover > *, .bg_grey-300\! > a:hover, .btn_grey-300\! > a:hover, .bg_grey-300\! > a:hover > *, .btn_grey-300\! > a:hover > * {
-  color: #4a4a4a !important;
+  color: black !important;
 }
 
 .bg_grey-400\!, .btn_grey-400\!, a.bg_grey-400\!, a.btn_grey-400\!, button.bg_grey-400\!, button.btn_grey-400\! {
@@ -8442,7 +7225,7 @@ a.bg_grey-400\!:hover, a.btn_grey-400\!:hover, button.bg_grey-400\!:hover, butto
 }
 
 a.bg_grey-400\!:hover, a.btn_grey-400\!:hover, a.bg_grey-400\!:hover > *, a.btn_grey-400\!:hover > *, button.bg_grey-400\!:hover, button.btn_grey-400\!:hover, button.bg_grey-400\!:hover > *, button.btn_grey-400\!:hover > *, .bg_grey-400\! > a:hover, .btn_grey-400\! > a:hover, .bg_grey-400\! > a:hover > *, .btn_grey-400\! > a:hover > * {
-  color: #333333 !important;
+  color: black !important;
 }
 
 .bg_grey-500\!, .btn_grey-500\!, a.bg_grey-500\!, a.btn_grey-500\!, button.bg_grey-500\!, button.btn_grey-500\! {
@@ -8459,7 +7242,7 @@ a.bg_grey-500\!:hover, a.btn_grey-500\!:hover, button.bg_grey-500\!:hover, butto
 }
 
 a.bg_grey-500\!:hover, a.btn_grey-500\!:hover, a.bg_grey-500\!:hover > *, a.btn_grey-500\!:hover > *, button.bg_grey-500\!:hover, button.btn_grey-500\!:hover, button.bg_grey-500\!:hover > *, button.btn_grey-500\!:hover > *, .bg_grey-500\! > a:hover, .btn_grey-500\! > a:hover, .bg_grey-500\! > a:hover > *, .btn_grey-500\! > a:hover > * {
-  color: #1c1c1c !important;
+  color: black !important;
 }
 
 .bg_grey-600\!, .btn_grey-600\!, a.bg_grey-600\!, a.btn_grey-600\!, button.bg_grey-600\!, button.btn_grey-600\! {
@@ -8544,7 +7327,7 @@ a.bg_bluegrey-100\!:hover, a.btn_bluegrey-100\!:hover, button.bg_bluegrey-100\!:
 }
 
 a.bg_bluegrey-100\!:hover, a.btn_bluegrey-100\!:hover, a.bg_bluegrey-100\!:hover > *, a.btn_bluegrey-100\!:hover > *, button.bg_bluegrey-100\!:hover, button.btn_bluegrey-100\!:hover, button.bg_bluegrey-100\!:hover > *, button.btn_bluegrey-100\!:hover > *, .bg_bluegrey-100\! > a:hover, .btn_bluegrey-100\! > a:hover, .bg_bluegrey-100\! > a:hover > *, .btn_bluegrey-100\! > a:hover > * {
-  color: #2e5c7a !important;
+  color: black !important;
 }
 
 .bg_bluegrey-200\!, .btn_bluegrey-200\!, a.bg_bluegrey-200\!, a.btn_bluegrey-200\!, button.bg_bluegrey-200\!, button.btn_bluegrey-200\! {
@@ -8561,7 +7344,7 @@ a.bg_bluegrey-200\!:hover, a.btn_bluegrey-200\!:hover, button.bg_bluegrey-200\!:
 }
 
 a.bg_bluegrey-200\!:hover, a.btn_bluegrey-200\!:hover, a.bg_bluegrey-200\!:hover > *, a.btn_bluegrey-200\!:hover > *, button.bg_bluegrey-200\!:hover, button.btn_bluegrey-200\!:hover, button.bg_bluegrey-200\!:hover > *, button.btn_bluegrey-200\!:hover > *, .bg_bluegrey-200\! > a:hover, .btn_bluegrey-200\! > a:hover, .bg_bluegrey-200\! > a:hover > *, .btn_bluegrey-200\! > a:hover > * {
-  color: #355778 !important;
+  color: black !important;
 }
 
 .bg_bluegrey-300\!, .btn_bluegrey-300\!, a.bg_bluegrey-300\!, a.btn_bluegrey-300\!, button.bg_bluegrey-300\!, button.btn_bluegrey-300\! {
@@ -8578,7 +7361,7 @@ a.bg_bluegrey-300\!:hover, a.btn_bluegrey-300\!:hover, button.bg_bluegrey-300\!:
 }
 
 a.bg_bluegrey-300\!:hover, a.btn_bluegrey-300\!:hover, a.bg_bluegrey-300\!:hover > *, a.btn_bluegrey-300\!:hover > *, button.bg_bluegrey-300\!:hover, button.btn_bluegrey-300\!:hover, button.bg_bluegrey-300\!:hover > *, button.btn_bluegrey-300\!:hover > *, .bg_bluegrey-300\! > a:hover, .btn_bluegrey-300\! > a:hover, .bg_bluegrey-300\! > a:hover > *, .btn_bluegrey-300\! > a:hover > * {
-  color: #39506f !important;
+  color: black !important;
 }
 
 .bg_bluegrey-400\!, .btn_bluegrey-400\!, a.bg_bluegrey-400\!, a.btn_bluegrey-400\!, button.bg_bluegrey-400\!, button.btn_bluegrey-400\! {
@@ -8595,7 +7378,7 @@ a.bg_bluegrey-400\!:hover, a.btn_bluegrey-400\!:hover, button.bg_bluegrey-400\!:
 }
 
 a.bg_bluegrey-400\!:hover, a.btn_bluegrey-400\!:hover, a.bg_bluegrey-400\!:hover > *, a.btn_bluegrey-400\!:hover > *, button.bg_bluegrey-400\!:hover, button.btn_bluegrey-400\!:hover, button.bg_bluegrey-400\!:hover > *, button.btn_bluegrey-400\!:hover > *, .bg_bluegrey-400\! > a:hover, .btn_bluegrey-400\! > a:hover, .bg_bluegrey-400\! > a:hover > *, .btn_bluegrey-400\! > a:hover > * {
-  color: #334456 !important;
+  color: black !important;
 }
 
 .bg_bluegrey-500\!, .btn_bluegrey-500\!, a.bg_bluegrey-500\!, a.btn_bluegrey-500\!, button.bg_bluegrey-500\!, button.btn_bluegrey-500\! {
@@ -8612,7 +7395,7 @@ a.bg_bluegrey-500\!:hover, a.btn_bluegrey-500\!:hover, button.bg_bluegrey-500\!:
 }
 
 a.bg_bluegrey-500\!:hover, a.btn_bluegrey-500\!:hover, a.bg_bluegrey-500\!:hover > *, a.btn_bluegrey-500\!:hover > *, button.bg_bluegrey-500\!:hover, button.btn_bluegrey-500\!:hover, button.bg_bluegrey-500\!:hover > *, button.btn_bluegrey-500\!:hover > *, .bg_bluegrey-500\! > a:hover, .btn_bluegrey-500\! > a:hover, .bg_bluegrey-500\! > a:hover > *, .btn_bluegrey-500\! > a:hover > * {
-  color: #212831 !important;
+  color: black !important;
 }
 
 .bg_bluegrey-600\!, .btn_bluegrey-600\!, a.bg_bluegrey-600\!, a.btn_bluegrey-600\!, button.bg_bluegrey-600\!, button.btn_bluegrey-600\! {
@@ -8697,7 +7480,7 @@ a.bg_red-100\!:hover, a.btn_red-100\!:hover, button.bg_red-100\!:hover, button.b
 }
 
 a.bg_red-100\!:hover, a.btn_red-100\!:hover, a.bg_red-100\!:hover > *, a.btn_red-100\!:hover > *, button.bg_red-100\!:hover, button.btn_red-100\!:hover, button.bg_red-100\!:hover > *, button.btn_red-100\!:hover > *, .bg_red-100\! > a:hover, .btn_red-100\! > a:hover, .bg_red-100\! > a:hover > *, .btn_red-100\! > a:hover > * {
-  color: #b30000 !important;
+  color: black !important;
 }
 
 .bg_red-200\!, .btn_red-200\!, a.bg_red-200\!, a.btn_red-200\!, button.bg_red-200\!, button.btn_red-200\! {
@@ -8714,7 +7497,7 @@ a.bg_red-200\!:hover, a.btn_red-200\!:hover, button.bg_red-200\!:hover, button.b
 }
 
 a.bg_red-200\!:hover, a.btn_red-200\!:hover, a.bg_red-200\!:hover > *, a.btn_red-200\!:hover > *, button.bg_red-200\!:hover, button.btn_red-200\!:hover, button.bg_red-200\!:hover > *, button.btn_red-200\!:hover > *, .bg_red-200\! > a:hover, .btn_red-200\! > a:hover, .bg_red-200\! > a:hover > *, .btn_red-200\! > a:hover > * {
-  color: #950404 !important;
+  color: black !important;
 }
 
 .bg_red-300\!, .btn_red-300\!, a.bg_red-300\!, a.btn_red-300\!, button.bg_red-300\!, button.btn_red-300\! {
@@ -8731,7 +7514,7 @@ a.bg_red-300\!:hover, a.btn_red-300\!:hover, button.bg_red-300\!:hover, button.b
 }
 
 a.bg_red-300\!:hover, a.btn_red-300\!:hover, a.bg_red-300\!:hover > *, a.btn_red-300\!:hover > *, button.bg_red-300\!:hover, button.btn_red-300\!:hover, button.bg_red-300\!:hover > *, button.btn_red-300\!:hover > *, .bg_red-300\! > a:hover, .btn_red-300\! > a:hover, .bg_red-300\! > a:hover > *, .btn_red-300\! > a:hover > * {
-  color: #740202 !important;
+  color: black !important;
 }
 
 .bg_red-400\!, .btn_red-400\!, a.bg_red-400\!, a.btn_red-400\!, button.bg_red-400\!, button.btn_red-400\! {
@@ -8748,7 +7531,7 @@ a.bg_red-400\!:hover, a.btn_red-400\!:hover, button.bg_red-400\!:hover, button.b
 }
 
 a.bg_red-400\!:hover, a.btn_red-400\!:hover, a.bg_red-400\!:hover > *, a.btn_red-400\!:hover > *, button.bg_red-400\!:hover, button.btn_red-400\!:hover, button.bg_red-400\!:hover > *, button.btn_red-400\!:hover > *, .bg_red-400\! > a:hover, .btn_red-400\! > a:hover, .bg_red-400\! > a:hover > *, .btn_red-400\! > a:hover > * {
-  color: #4b0202 !important;
+  color: black !important;
 }
 
 .bg_red-500\!, .btn_red-500\!, a.bg_red-500\!, a.btn_red-500\!, button.bg_red-500\!, button.btn_red-500\! {
@@ -8765,7 +7548,7 @@ a.bg_red-500\!:hover, a.btn_red-500\!:hover, button.bg_red-500\!:hover, button.b
 }
 
 a.bg_red-500\!:hover, a.btn_red-500\!:hover, a.bg_red-500\!:hover > *, a.btn_red-500\!:hover > *, button.bg_red-500\!:hover, button.btn_red-500\!:hover, button.bg_red-500\!:hover > *, button.btn_red-500\!:hover > *, .bg_red-500\! > a:hover, .btn_red-500\! > a:hover, .bg_red-500\! > a:hover > *, .btn_red-500\! > a:hover > * {
-  color: #300303 !important;
+  color: black !important;
 }
 
 .bg_red-600\!, .btn_red-600\!, a.bg_red-600\!, a.btn_red-600\!, button.bg_red-600\!, button.btn_red-600\! {
@@ -8850,7 +7633,7 @@ a.bg_orange-100\!:hover, a.btn_orange-100\!:hover, button.bg_orange-100\!:hover,
 }
 
 a.bg_orange-100\!:hover, a.btn_orange-100\!:hover, a.bg_orange-100\!:hover > *, a.btn_orange-100\!:hover > *, button.bg_orange-100\!:hover, button.btn_orange-100\!:hover, button.bg_orange-100\!:hover > *, button.btn_orange-100\!:hover > *, .bg_orange-100\! > a:hover, .btn_orange-100\! > a:hover, .bg_orange-100\! > a:hover > *, .btn_orange-100\! > a:hover > * {
-  color: #6b4700 !important;
+  color: black !important;
 }
 
 .bg_orange-200\!, .btn_orange-200\!, a.bg_orange-200\!, a.btn_orange-200\!, button.bg_orange-200\!, button.btn_orange-200\! {
@@ -8867,7 +7650,7 @@ a.bg_orange-200\!:hover, a.btn_orange-200\!:hover, button.bg_orange-200\!:hover,
 }
 
 a.bg_orange-200\!:hover, a.btn_orange-200\!:hover, a.bg_orange-200\!:hover > *, a.btn_orange-200\!:hover > *, button.bg_orange-200\!:hover, button.btn_orange-200\!:hover, button.bg_orange-200\!:hover > *, button.btn_orange-200\!:hover > *, .bg_orange-200\! > a:hover, .btn_orange-200\! > a:hover, .bg_orange-200\! > a:hover > *, .btn_orange-200\! > a:hover > * {
-  color: #5f3e02 !important;
+  color: black !important;
 }
 
 .bg_orange-300\!, .btn_orange-300\!, a.bg_orange-300\!, a.btn_orange-300\!, button.bg_orange-300\!, button.btn_orange-300\! {
@@ -8884,7 +7667,7 @@ a.bg_orange-300\!:hover, a.btn_orange-300\!:hover, button.bg_orange-300\!:hover,
 }
 
 a.bg_orange-300\!:hover, a.btn_orange-300\!:hover, a.bg_orange-300\!:hover > *, a.btn_orange-300\!:hover > *, button.bg_orange-300\!:hover, button.btn_orange-300\!:hover, button.bg_orange-300\!:hover > *, button.btn_orange-300\!:hover > *, .bg_orange-300\! > a:hover, .btn_orange-300\! > a:hover, .bg_orange-300\! > a:hover > *, .btn_orange-300\! > a:hover > * {
-  color: #4f3303 !important;
+  color: black !important;
 }
 
 .bg_orange-400\!, .btn_orange-400\!, a.bg_orange-400\!, a.btn_orange-400\!, button.bg_orange-400\!, button.btn_orange-400\! {
@@ -8901,7 +7684,7 @@ a.bg_orange-400\!:hover, a.btn_orange-400\!:hover, button.bg_orange-400\!:hover,
 }
 
 a.bg_orange-400\!:hover, a.btn_orange-400\!:hover, a.bg_orange-400\!:hover > *, a.btn_orange-400\!:hover > *, button.bg_orange-400\!:hover, button.btn_orange-400\!:hover, button.bg_orange-400\!:hover > *, button.btn_orange-400\!:hover > *, .bg_orange-400\! > a:hover, .btn_orange-400\! > a:hover, .bg_orange-400\! > a:hover > *, .btn_orange-400\! > a:hover > * {
-  color: #3f2403 !important;
+  color: black !important;
 }
 
 .bg_orange-500\!, .btn_orange-500\!, a.bg_orange-500\!, a.btn_orange-500\!, button.bg_orange-500\!, button.btn_orange-500\! {
@@ -8918,7 +7701,7 @@ a.bg_orange-500\!:hover, a.btn_orange-500\!:hover, button.bg_orange-500\!:hover,
 }
 
 a.bg_orange-500\!:hover, a.btn_orange-500\!:hover, a.bg_orange-500\!:hover > *, a.btn_orange-500\!:hover > *, button.bg_orange-500\!:hover, button.btn_orange-500\!:hover, button.bg_orange-500\!:hover > *, button.btn_orange-500\!:hover > *, .bg_orange-500\! > a:hover, .btn_orange-500\! > a:hover, .bg_orange-500\! > a:hover > *, .btn_orange-500\! > a:hover > * {
-  color: #2a1504 !important;
+  color: black !important;
 }
 
 .bg_orange-600\!, .btn_orange-600\!, a.bg_orange-600\!, a.btn_orange-600\!, button.bg_orange-600\!, button.btn_orange-600\! {
@@ -8935,7 +7718,7 @@ a.bg_orange-600\!:hover, a.btn_orange-600\!:hover, button.bg_orange-600\!:hover,
 }
 
 a.bg_orange-600\!:hover, a.btn_orange-600\!:hover, a.bg_orange-600\!:hover > *, a.btn_orange-600\!:hover > *, button.bg_orange-600\!:hover, button.btn_orange-600\!:hover, button.bg_orange-600\!:hover > *, button.btn_orange-600\!:hover > *, .bg_orange-600\! > a:hover, .btn_orange-600\! > a:hover, .bg_orange-600\! > a:hover > *, .btn_orange-600\! > a:hover > * {
-  color: #66320f !important;
+  color: black !important;
 }
 
 .bg_orange-700\!, .btn_orange-700\!, a.bg_orange-700\!, a.btn_orange-700\!, button.bg_orange-700\!, button.btn_orange-700\! {
@@ -8952,7 +7735,7 @@ a.bg_orange-700\!:hover, a.btn_orange-700\!:hover, button.bg_orange-700\!:hover,
 }
 
 a.bg_orange-700\!:hover, a.btn_orange-700\!:hover, a.bg_orange-700\!:hover > *, a.btn_orange-700\!:hover > *, button.bg_orange-700\!:hover, button.btn_orange-700\!:hover, button.bg_orange-700\!:hover > *, button.btn_orange-700\!:hover > *, .bg_orange-700\! > a:hover, .btn_orange-700\! > a:hover, .bg_orange-700\! > a:hover > *, .btn_orange-700\! > a:hover > * {
-  color: #262626 !important;
+  color: black !important;
 }
 
 .bg_orange-800\!, .btn_orange-800\!, a.bg_orange-800\!, a.btn_orange-800\!, button.bg_orange-800\!, button.btn_orange-800\! {
@@ -9003,7 +7786,7 @@ a.bg_yellow-100\!:hover, a.btn_yellow-100\!:hover, button.bg_yellow-100\!:hover,
 }
 
 a.bg_yellow-100\!:hover, a.btn_yellow-100\!:hover, a.bg_yellow-100\!:hover > *, a.btn_yellow-100\!:hover > *, button.bg_yellow-100\!:hover, button.btn_yellow-100\!:hover, button.bg_yellow-100\!:hover > *, button.btn_yellow-100\!:hover > *, .bg_yellow-100\! > a:hover, .btn_yellow-100\! > a:hover, .bg_yellow-100\! > a:hover > *, .btn_yellow-100\! > a:hover > * {
-  color: #474700 !important;
+  color: black !important;
 }
 
 .bg_yellow-200\!, .btn_yellow-200\!, a.bg_yellow-200\!, a.btn_yellow-200\!, button.bg_yellow-200\!, button.btn_yellow-200\! {
@@ -9020,7 +7803,7 @@ a.bg_yellow-200\!:hover, a.btn_yellow-200\!:hover, button.bg_yellow-200\!:hover,
 }
 
 a.bg_yellow-200\!:hover, a.btn_yellow-200\!:hover, a.bg_yellow-200\!:hover > *, a.btn_yellow-200\!:hover > *, button.bg_yellow-200\!:hover, button.btn_yellow-200\!:hover, button.bg_yellow-200\!:hover > *, button.btn_yellow-200\!:hover > *, .bg_yellow-200\! > a:hover, .btn_yellow-200\! > a:hover, .bg_yellow-200\! > a:hover > *, .btn_yellow-200\! > a:hover > * {
-  color: #464401 !important;
+  color: black !important;
 }
 
 .bg_yellow-300\!, .btn_yellow-300\!, a.bg_yellow-300\!, a.btn_yellow-300\!, button.bg_yellow-300\!, button.btn_yellow-300\! {
@@ -9037,7 +7820,7 @@ a.bg_yellow-300\!:hover, a.btn_yellow-300\!:hover, button.bg_yellow-300\!:hover,
 }
 
 a.bg_yellow-300\!:hover, a.btn_yellow-300\!:hover, a.bg_yellow-300\!:hover > *, a.btn_yellow-300\!:hover > *, button.bg_yellow-300\!:hover, button.btn_yellow-300\!:hover, button.bg_yellow-300\!:hover > *, button.btn_yellow-300\!:hover > *, .bg_yellow-300\! > a:hover, .btn_yellow-300\! > a:hover, .bg_yellow-300\! > a:hover > *, .btn_yellow-300\! > a:hover > * {
-  color: #443f03 !important;
+  color: black !important;
 }
 
 .bg_yellow-400\!, .btn_yellow-400\!, a.bg_yellow-400\!, a.btn_yellow-400\!, button.bg_yellow-400\!, button.btn_yellow-400\! {
@@ -9054,7 +7837,7 @@ a.bg_yellow-400\!:hover, a.btn_yellow-400\!:hover, button.bg_yellow-400\!:hover,
 }
 
 a.bg_yellow-400\!:hover, a.btn_yellow-400\!:hover, a.bg_yellow-400\!:hover > *, a.btn_yellow-400\!:hover > *, button.bg_yellow-400\!:hover, button.btn_yellow-400\!:hover, button.bg_yellow-400\!:hover > *, button.btn_yellow-400\!:hover > *, .bg_yellow-400\! > a:hover, .btn_yellow-400\! > a:hover, .bg_yellow-400\! > a:hover > *, .btn_yellow-400\! > a:hover > * {
-  color: #3f3604 !important;
+  color: black !important;
 }
 
 .bg_yellow-500\!, .btn_yellow-500\!, a.bg_yellow-500\!, a.btn_yellow-500\!, button.bg_yellow-500\!, button.btn_yellow-500\! {
@@ -9071,7 +7854,7 @@ a.bg_yellow-500\!:hover, a.btn_yellow-500\!:hover, button.bg_yellow-500\!:hover,
 }
 
 a.bg_yellow-500\!:hover, a.btn_yellow-500\!:hover, a.bg_yellow-500\!:hover > *, a.btn_yellow-500\!:hover > *, button.bg_yellow-500\!:hover, button.btn_yellow-500\!:hover, button.bg_yellow-500\!:hover > *, button.btn_yellow-500\!:hover > *, .bg_yellow-500\! > a:hover, .btn_yellow-500\! > a:hover, .bg_yellow-500\! > a:hover > *, .btn_yellow-500\! > a:hover > * {
-  color: #372d06 !important;
+  color: black !important;
 }
 
 .bg_yellow-600\!, .btn_yellow-600\!, a.bg_yellow-600\!, a.btn_yellow-600\!, button.bg_yellow-600\!, button.btn_yellow-600\! {
@@ -9088,7 +7871,7 @@ a.bg_yellow-600\!:hover, a.btn_yellow-600\!:hover, button.bg_yellow-600\!:hover,
 }
 
 a.bg_yellow-600\!:hover, a.btn_yellow-600\!:hover, a.bg_yellow-600\!:hover > *, a.btn_yellow-600\!:hover > *, button.bg_yellow-600\!:hover, button.btn_yellow-600\!:hover, button.bg_yellow-600\!:hover > *, button.btn_yellow-600\!:hover > *, .bg_yellow-600\! > a:hover, .btn_yellow-600\! > a:hover, .bg_yellow-600\! > a:hover > *, .btn_yellow-600\! > a:hover > * {
-  color: #221907 !important;
+  color: black !important;
 }
 
 .bg_yellow-700\!, .btn_yellow-700\!, a.bg_yellow-700\!, a.btn_yellow-700\!, button.bg_yellow-700\!, button.btn_yellow-700\! {
@@ -9105,7 +7888,7 @@ a.bg_yellow-700\!:hover, a.btn_yellow-700\!:hover, button.bg_yellow-700\!:hover,
 }
 
 a.bg_yellow-700\!:hover, a.btn_yellow-700\!:hover, a.bg_yellow-700\!:hover > *, a.btn_yellow-700\!:hover > *, button.bg_yellow-700\!:hover, button.btn_yellow-700\!:hover, button.bg_yellow-700\!:hover > *, button.btn_yellow-700\!:hover > *, .bg_yellow-700\! > a:hover, .btn_yellow-700\! > a:hover, .bg_yellow-700\! > a:hover > *, .btn_yellow-700\! > a:hover > * {
-  color: #573a0f !important;
+  color: black !important;
 }
 
 .bg_yellow-800\!, .btn_yellow-800\!, a.bg_yellow-800\!, a.btn_yellow-800\!, button.bg_yellow-800\!, button.btn_yellow-800\! {
@@ -9156,7 +7939,7 @@ a.bg_green-100\!:hover, a.btn_green-100\!:hover, button.bg_green-100\!:hover, bu
 }
 
 a.bg_green-100\!:hover, a.btn_green-100\!:hover, a.bg_green-100\!:hover > *, a.btn_green-100\!:hover > *, button.bg_green-100\!:hover, button.btn_green-100\!:hover, button.bg_green-100\!:hover > *, button.btn_green-100\!:hover > *, .bg_green-100\! > a:hover, .btn_green-100\! > a:hover, .bg_green-100\! > a:hover > *, .btn_green-100\! > a:hover > * {
-  color: #005216 !important;
+  color: black !important;
 }
 
 .bg_green-200\!, .btn_green-200\!, a.bg_green-200\!, a.btn_green-200\!, button.bg_green-200\!, button.btn_green-200\! {
@@ -9173,7 +7956,7 @@ a.bg_green-200\!:hover, a.btn_green-200\!:hover, button.bg_green-200\!:hover, bu
 }
 
 a.bg_green-200\!:hover, a.btn_green-200\!:hover, a.bg_green-200\!:hover > *, a.btn_green-200\!:hover > *, button.bg_green-200\!:hover, button.btn_green-200\!:hover, button.bg_green-200\!:hover > *, button.btn_green-200\!:hover > *, .bg_green-200\! > a:hover, .btn_green-200\! > a:hover, .bg_green-200\! > a:hover > *, .btn_green-200\! > a:hover > * {
-  color: #0c4b20 !important;
+  color: black !important;
 }
 
 .bg_green-300\!, .btn_green-300\!, a.bg_green-300\!, a.btn_green-300\!, button.bg_green-300\!, button.btn_green-300\! {
@@ -9190,7 +7973,7 @@ a.bg_green-300\!:hover, a.btn_green-300\!:hover, button.bg_green-300\!:hover, bu
 }
 
 a.bg_green-300\!:hover, a.btn_green-300\!:hover, a.bg_green-300\!:hover > *, a.btn_green-300\!:hover > *, button.bg_green-300\!:hover, button.btn_green-300\!:hover, button.bg_green-300\!:hover > *, button.btn_green-300\!:hover > *, .bg_green-300\! > a:hover, .btn_green-300\! > a:hover, .bg_green-300\! > a:hover > *, .btn_green-300\! > a:hover > * {
-  color: #104121 !important;
+  color: black !important;
 }
 
 .bg_green-400\!, .btn_green-400\!, a.bg_green-400\!, a.btn_green-400\!, button.bg_green-400\!, button.btn_green-400\! {
@@ -9207,7 +7990,7 @@ a.bg_green-400\!:hover, a.btn_green-400\!:hover, button.bg_green-400\!:hover, bu
 }
 
 a.bg_green-400\!:hover, a.btn_green-400\!:hover, a.bg_green-400\!:hover > *, a.btn_green-400\!:hover > *, button.bg_green-400\!:hover, button.btn_green-400\!:hover, button.bg_green-400\!:hover > *, button.btn_green-400\!:hover > *, .bg_green-400\! > a:hover, .btn_green-400\! > a:hover, .bg_green-400\! > a:hover > *, .btn_green-400\! > a:hover > * {
-  color: #0e2f1b !important;
+  color: black !important;
 }
 
 .bg_green-500\!, .btn_green-500\!, a.bg_green-500\!, a.btn_green-500\!, button.bg_green-500\!, button.btn_green-500\! {
@@ -9224,7 +8007,7 @@ a.bg_green-500\!:hover, a.btn_green-500\!:hover, button.bg_green-500\!:hover, bu
 }
 
 a.bg_green-500\!:hover, a.btn_green-500\!:hover, a.bg_green-500\!:hover > *, a.btn_green-500\!:hover > *, button.bg_green-500\!:hover, button.btn_green-500\!:hover, button.bg_green-500\!:hover > *, button.btn_green-500\!:hover > *, .bg_green-500\! > a:hover, .btn_green-500\! > a:hover, .bg_green-500\! > a:hover > *, .btn_green-500\! > a:hover > * {
-  color: #0b1e13 !important;
+  color: black !important;
 }
 
 .bg_green-600\!, .btn_green-600\!, a.bg_green-600\!, a.btn_green-600\!, button.bg_green-600\!, button.btn_green-600\! {
@@ -9241,7 +8024,7 @@ a.bg_green-600\!:hover, a.btn_green-600\!:hover, button.bg_green-600\!:hover, bu
 }
 
 a.bg_green-600\!:hover, a.btn_green-600\!:hover, a.bg_green-600\!:hover > *, a.btn_green-600\!:hover > *, button.bg_green-600\!:hover, button.btn_green-600\!:hover, button.bg_green-600\!:hover > *, button.btn_green-600\!:hover > *, .bg_green-600\! > a:hover, .btn_green-600\! > a:hover, .bg_green-600\! > a:hover > *, .btn_green-600\! > a:hover > * {
-  color: #1d5336 !important;
+  color: black !important;
 }
 
 .bg_green-700\!, .btn_green-700\!, a.bg_green-700\!, a.btn_green-700\!, button.bg_green-700\!, button.btn_green-700\! {
@@ -9258,7 +8041,7 @@ a.bg_green-700\!:hover, a.btn_green-700\!:hover, button.bg_green-700\!:hover, bu
 }
 
 a.bg_green-700\!:hover, a.btn_green-700\!:hover, a.bg_green-700\!:hover > *, a.btn_green-700\!:hover > *, button.bg_green-700\!:hover, button.btn_green-700\!:hover, button.bg_green-700\!:hover > *, button.btn_green-700\!:hover > *, .bg_green-700\! > a:hover, .btn_green-700\! > a:hover, .bg_green-700\! > a:hover > *, .btn_green-700\! > a:hover > * {
-  color: #262626 !important;
+  color: black !important;
 }
 
 .bg_green-800\!, .btn_green-800\!, a.bg_green-800\!, a.btn_green-800\!, button.bg_green-800\!, button.btn_green-800\! {
@@ -9309,7 +8092,7 @@ a.bg_teal-100\!:hover, a.btn_teal-100\!:hover, button.bg_teal-100\!:hover, butto
 }
 
 a.bg_teal-100\!:hover, a.btn_teal-100\!:hover, a.bg_teal-100\!:hover > *, a.btn_teal-100\!:hover > *, button.bg_teal-100\!:hover, button.btn_teal-100\!:hover, button.bg_teal-100\!:hover > *, button.btn_teal-100\!:hover > *, .bg_teal-100\! > a:hover, .btn_teal-100\! > a:hover, .bg_teal-100\! > a:hover > *, .btn_teal-100\! > a:hover > * {
-  color: #004d3d !important;
+  color: black !important;
 }
 
 .bg_teal-200\!, .btn_teal-200\!, a.bg_teal-200\!, a.btn_teal-200\!, button.bg_teal-200\!, button.btn_teal-200\! {
@@ -9326,7 +8109,7 @@ a.bg_teal-200\!:hover, a.btn_teal-200\!:hover, button.bg_teal-200\!:hover, butto
 }
 
 a.bg_teal-200\!:hover, a.btn_teal-200\!:hover, a.bg_teal-200\!:hover > *, a.btn_teal-200\!:hover > *, button.bg_teal-200\!:hover, button.btn_teal-200\!:hover, button.bg_teal-200\!:hover > *, button.btn_teal-200\!:hover > *, .bg_teal-200\! > a:hover, .btn_teal-200\! > a:hover, .bg_teal-200\! > a:hover > *, .btn_teal-200\! > a:hover > * {
-  color: #09483e !important;
+  color: black !important;
 }
 
 .bg_teal-300\!, .btn_teal-300\!, a.bg_teal-300\!, a.btn_teal-300\!, button.bg_teal-300\!, button.btn_teal-300\! {
@@ -9343,7 +8126,7 @@ a.bg_teal-300\!:hover, a.btn_teal-300\!:hover, button.bg_teal-300\!:hover, butto
 }
 
 a.bg_teal-300\!:hover, a.btn_teal-300\!:hover, a.bg_teal-300\!:hover > *, a.btn_teal-300\!:hover > *, button.bg_teal-300\!:hover, button.btn_teal-300\!:hover, button.bg_teal-300\!:hover > *, button.btn_teal-300\!:hover > *, .bg_teal-300\! > a:hover, .btn_teal-300\! > a:hover, .bg_teal-300\! > a:hover > *, .btn_teal-300\! > a:hover > * {
-  color: #0c3c35 !important;
+  color: black !important;
 }
 
 .bg_teal-400\!, .btn_teal-400\!, a.bg_teal-400\!, a.btn_teal-400\!, button.bg_teal-400\!, button.btn_teal-400\! {
@@ -9360,7 +8143,7 @@ a.bg_teal-400\!:hover, a.btn_teal-400\!:hover, button.bg_teal-400\!:hover, butto
 }
 
 a.bg_teal-400\!:hover, a.btn_teal-400\!:hover, a.bg_teal-400\!:hover > *, a.btn_teal-400\!:hover > *, button.bg_teal-400\!:hover, button.btn_teal-400\!:hover, button.bg_teal-400\!:hover > *, button.btn_teal-400\!:hover > *, .bg_teal-400\! > a:hover, .btn_teal-400\! > a:hover, .bg_teal-400\! > a:hover > *, .btn_teal-400\! > a:hover > * {
-  color: #0c2c29 !important;
+  color: black !important;
 }
 
 .bg_teal-500\!, .btn_teal-500\!, a.bg_teal-500\!, a.btn_teal-500\!, button.bg_teal-500\!, button.btn_teal-500\! {
@@ -9377,7 +8160,7 @@ a.bg_teal-500\!:hover, a.btn_teal-500\!:hover, button.bg_teal-500\!:hover, butto
 }
 
 a.bg_teal-500\!:hover, a.btn_teal-500\!:hover, a.bg_teal-500\!:hover > *, a.btn_teal-500\!:hover > *, button.bg_teal-500\!:hover, button.btn_teal-500\!:hover, button.bg_teal-500\!:hover > *, button.btn_teal-500\!:hover > *, .bg_teal-500\! > a:hover, .btn_teal-500\! > a:hover, .bg_teal-500\! > a:hover > *, .btn_teal-500\! > a:hover > * {
-  color: #206561 !important;
+  color: black !important;
 }
 
 .bg_teal-600\!, .btn_teal-600\!, a.bg_teal-600\!, a.btn_teal-600\!, button.bg_teal-600\!, button.btn_teal-600\! {
@@ -9394,7 +8177,7 @@ a.bg_teal-600\!:hover, a.btn_teal-600\!:hover, button.bg_teal-600\!:hover, butto
 }
 
 a.bg_teal-600\!:hover, a.btn_teal-600\!:hover, a.bg_teal-600\!:hover > *, a.btn_teal-600\!:hover > *, button.bg_teal-600\!:hover, button.btn_teal-600\!:hover, button.bg_teal-600\!:hover > *, button.btn_teal-600\!:hover > *, .bg_teal-600\! > a:hover, .btn_teal-600\! > a:hover, .bg_teal-600\! > a:hover > *, .btn_teal-600\! > a:hover > * {
-  color: #194d4c !important;
+  color: black !important;
 }
 
 .bg_teal-700\!, .btn_teal-700\!, a.bg_teal-700\!, a.btn_teal-700\!, button.bg_teal-700\!, button.btn_teal-700\! {
@@ -9462,7 +8245,7 @@ a.bg_blue-100\!:hover, a.btn_blue-100\!:hover, button.bg_blue-100\!:hover, butto
 }
 
 a.bg_blue-100\!:hover, a.btn_blue-100\!:hover, a.bg_blue-100\!:hover > *, a.btn_blue-100\!:hover > *, button.bg_blue-100\!:hover, button.btn_blue-100\!:hover, button.bg_blue-100\!:hover > *, button.btn_blue-100\!:hover > *, .bg_blue-100\! > a:hover, .btn_blue-100\! > a:hover, .bg_blue-100\! > a:hover > *, .btn_blue-100\! > a:hover > * {
-  color: #005380 !important;
+  color: black !important;
 }
 
 .bg_blue-200\!, .btn_blue-200\!, a.bg_blue-200\!, a.btn_blue-200\!, button.bg_blue-200\!, button.btn_blue-200\! {
@@ -9479,7 +8262,7 @@ a.bg_blue-200\!:hover, a.btn_blue-200\!:hover, button.bg_blue-200\!:hover, butto
 }
 
 a.bg_blue-200\!:hover, a.btn_blue-200\!:hover, a.bg_blue-200\!:hover > *, a.btn_blue-200\!:hover > *, button.bg_blue-200\!:hover, button.btn_blue-200\!:hover, button.bg_blue-200\!:hover > *, button.btn_blue-200\!:hover > *, .bg_blue-200\! > a:hover, .btn_blue-200\! > a:hover, .bg_blue-200\! > a:hover > *, .btn_blue-200\! > a:hover > * {
-  color: #0b486a !important;
+  color: black !important;
 }
 
 .bg_blue-300\!, .btn_blue-300\!, a.bg_blue-300\!, a.btn_blue-300\!, button.bg_blue-300\!, button.btn_blue-300\! {
@@ -9496,7 +8279,7 @@ a.bg_blue-300\!:hover, a.btn_blue-300\!:hover, button.bg_blue-300\!:hover, butto
 }
 
 a.bg_blue-300\!:hover, a.btn_blue-300\!:hover, a.bg_blue-300\!:hover > *, a.btn_blue-300\!:hover > *, button.bg_blue-300\!:hover, button.btn_blue-300\!:hover, button.bg_blue-300\!:hover > *, button.btn_blue-300\!:hover > *, .bg_blue-300\! > a:hover, .btn_blue-300\! > a:hover, .bg_blue-300\! > a:hover > *, .btn_blue-300\! > a:hover > * {
-  color: #083654 !important;
+  color: black !important;
 }
 
 .bg_blue-400\!, .btn_blue-400\!, a.bg_blue-400\!, a.btn_blue-400\!, button.bg_blue-400\!, button.btn_blue-400\! {
@@ -9513,7 +8296,7 @@ a.bg_blue-400\!:hover, a.btn_blue-400\!:hover, button.bg_blue-400\!:hover, butto
 }
 
 a.bg_blue-400\!:hover, a.btn_blue-400\!:hover, a.bg_blue-400\!:hover > *, a.btn_blue-400\!:hover > *, button.bg_blue-400\!:hover, button.btn_blue-400\!:hover, button.bg_blue-400\!:hover > *, button.btn_blue-400\!:hover > *, .bg_blue-400\! > a:hover, .btn_blue-400\! > a:hover, .bg_blue-400\! > a:hover > *, .btn_blue-400\! > a:hover > * {
-  color: #07253b !important;
+  color: black !important;
 }
 
 .bg_blue-500\!, .btn_blue-500\!, a.bg_blue-500\!, a.btn_blue-500\!, button.bg_blue-500\!, button.btn_blue-500\! {
@@ -9530,7 +8313,7 @@ a.bg_blue-500\!:hover, a.btn_blue-500\!:hover, button.bg_blue-500\!:hover, butto
 }
 
 a.bg_blue-500\!:hover, a.btn_blue-500\!:hover, a.bg_blue-500\!:hover > *, a.btn_blue-500\!:hover > *, button.bg_blue-500\!:hover, button.btn_blue-500\!:hover, button.bg_blue-500\!:hover > *, button.btn_blue-500\!:hover > *, .bg_blue-500\! > a:hover, .btn_blue-500\! > a:hover, .bg_blue-500\! > a:hover > *, .btn_blue-500\! > a:hover > * {
-  color: #05131f !important;
+  color: black !important;
 }
 
 .bg_blue-600\!, .btn_blue-600\!, a.bg_blue-600\!, a.btn_blue-600\!, button.bg_blue-600\!, button.btn_blue-600\! {
@@ -9547,7 +8330,7 @@ a.bg_blue-600\!:hover, a.btn_blue-600\!:hover, button.bg_blue-600\!:hover, butto
 }
 
 a.bg_blue-600\!:hover, a.btn_blue-600\!:hover, a.bg_blue-600\!:hover > *, a.btn_blue-600\!:hover > *, button.bg_blue-600\!:hover, button.btn_blue-600\!:hover, button.bg_blue-600\!:hover > *, button.btn_blue-600\!:hover > *, .bg_blue-600\! > a:hover, .btn_blue-600\! > a:hover, .bg_blue-600\! > a:hover > *, .btn_blue-600\! > a:hover > * {
-  color: #122f4a !important;
+  color: black !important;
 }
 
 .bg_blue-700\!, .btn_blue-700\!, a.bg_blue-700\!, a.btn_blue-700\!, button.bg_blue-700\!, button.btn_blue-700\! {
@@ -9615,7 +8398,7 @@ a.bg_indigo-100\!:hover, a.btn_indigo-100\!:hover, button.bg_indigo-100\!:hover,
 }
 
 a.bg_indigo-100\!:hover, a.btn_indigo-100\!:hover, a.bg_indigo-100\!:hover > *, a.btn_indigo-100\!:hover > *, button.bg_indigo-100\!:hover, button.btn_indigo-100\!:hover, button.bg_indigo-100\!:hover > *, button.btn_indigo-100\!:hover > *, .bg_indigo-100\! > a:hover, .btn_indigo-100\! > a:hover, .bg_indigo-100\! > a:hover > *, .btn_indigo-100\! > a:hover > * {
-  color: #0050b3 !important;
+  color: black !important;
 }
 
 .bg_indigo-200\!, .btn_indigo-200\!, a.bg_indigo-200\!, a.btn_indigo-200\!, button.bg_indigo-200\!, button.btn_indigo-200\! {
@@ -9632,7 +8415,7 @@ a.bg_indigo-200\!:hover, a.btn_indigo-200\!:hover, button.bg_indigo-200\!:hover,
 }
 
 a.bg_indigo-200\!:hover, a.btn_indigo-200\!:hover, a.bg_indigo-200\!:hover > *, a.btn_indigo-200\!:hover > *, button.bg_indigo-200\!:hover, button.btn_indigo-200\!:hover, button.bg_indigo-200\!:hover > *, button.btn_indigo-200\!:hover > *, .bg_indigo-200\! > a:hover, .btn_indigo-200\! > a:hover, .bg_indigo-200\! > a:hover > *, .btn_indigo-200\! > a:hover > * {
-  color: #0340a1 !important;
+  color: black !important;
 }
 
 .bg_indigo-300\!, .btn_indigo-300\!, a.bg_indigo-300\!, a.btn_indigo-300\!, button.bg_indigo-300\!, button.btn_indigo-300\! {
@@ -9649,7 +8432,7 @@ a.bg_indigo-300\!:hover, a.btn_indigo-300\!:hover, button.bg_indigo-300\!:hover,
 }
 
 a.bg_indigo-300\!:hover, a.btn_indigo-300\!:hover, a.bg_indigo-300\!:hover > *, a.btn_indigo-300\!:hover > *, button.bg_indigo-300\!:hover, button.btn_indigo-300\!:hover, button.bg_indigo-300\!:hover > *, button.btn_indigo-300\!:hover > *, .bg_indigo-300\! > a:hover, .btn_indigo-300\! > a:hover, .bg_indigo-300\! > a:hover > *, .btn_indigo-300\! > a:hover > * {
-  color: #073187 !important;
+  color: black !important;
 }
 
 .bg_indigo-400\!, .btn_indigo-400\!, a.bg_indigo-400\!, a.btn_indigo-400\!, button.bg_indigo-400\!, button.btn_indigo-400\! {
@@ -9666,7 +8449,7 @@ a.bg_indigo-400\!:hover, a.btn_indigo-400\!:hover, button.bg_indigo-400\!:hover,
 }
 
 a.bg_indigo-400\!:hover, a.btn_indigo-400\!:hover, a.bg_indigo-400\!:hover > *, a.btn_indigo-400\!:hover > *, button.bg_indigo-400\!:hover, button.btn_indigo-400\!:hover, button.bg_indigo-400\!:hover > *, button.btn_indigo-400\!:hover > *, .bg_indigo-400\! > a:hover, .btn_indigo-400\! > a:hover, .bg_indigo-400\! > a:hover > *, .btn_indigo-400\! > a:hover > * {
-  color: #071d5f !important;
+  color: black !important;
 }
 
 .bg_indigo-500\!, .btn_indigo-500\!, a.bg_indigo-500\!, a.btn_indigo-500\!, button.bg_indigo-500\!, button.btn_indigo-500\! {
@@ -9683,7 +8466,7 @@ a.bg_indigo-500\!:hover, a.btn_indigo-500\!:hover, button.bg_indigo-500\!:hover,
 }
 
 a.bg_indigo-500\!:hover, a.btn_indigo-500\!:hover, a.bg_indigo-500\!:hover > *, a.btn_indigo-500\!:hover > *, button.bg_indigo-500\!:hover, button.btn_indigo-500\!:hover, button.bg_indigo-500\!:hover > *, button.btn_indigo-500\!:hover > *, .bg_indigo-500\! > a:hover, .btn_indigo-500\! > a:hover, .bg_indigo-500\! > a:hover > *, .btn_indigo-500\! > a:hover > * {
-  color: #050b24 !important;
+  color: black !important;
 }
 
 .bg_indigo-600\!, .btn_indigo-600\!, a.bg_indigo-600\!, a.btn_indigo-600\!, button.bg_indigo-600\!, button.btn_indigo-600\! {
@@ -9700,7 +8483,7 @@ a.bg_indigo-600\!:hover, a.btn_indigo-600\!:hover, button.bg_indigo-600\!:hover,
 }
 
 a.bg_indigo-600\!:hover, a.btn_indigo-600\!:hover, a.bg_indigo-600\!:hover > *, a.btn_indigo-600\!:hover > *, button.bg_indigo-600\!:hover, button.btn_indigo-600\!:hover, button.bg_indigo-600\!:hover > *, button.btn_indigo-600\!:hover > *, .bg_indigo-600\! > a:hover, .btn_indigo-600\! > a:hover, .bg_indigo-600\! > a:hover > *, .btn_indigo-600\! > a:hover > * {
-  color: #d2d5f4 !important;
+  color: white !important;
 }
 
 .bg_indigo-700\!, .btn_indigo-700\!, a.bg_indigo-700\!, a.btn_indigo-700\!, button.bg_indigo-700\!, button.btn_indigo-700\! {
@@ -9717,7 +8500,7 @@ a.bg_indigo-700\!:hover, a.btn_indigo-700\!:hover, button.bg_indigo-700\!:hover,
 }
 
 a.bg_indigo-700\!:hover, a.btn_indigo-700\!:hover, a.bg_indigo-700\!:hover > *, a.btn_indigo-700\!:hover > *, button.bg_indigo-700\!:hover, button.btn_indigo-700\!:hover, button.bg_indigo-700\!:hover > *, button.btn_indigo-700\!:hover > *, .bg_indigo-700\! > a:hover, .btn_indigo-700\! > a:hover, .bg_indigo-700\! > a:hover > *, .btn_indigo-700\! > a:hover > * {
-  color: #d9d9d9 !important;
+  color: white !important;
 }
 
 .bg_indigo-800\!, .btn_indigo-800\!, a.bg_indigo-800\!, a.btn_indigo-800\!, button.bg_indigo-800\!, button.btn_indigo-800\! {
@@ -9768,7 +8551,7 @@ a.bg_purple-100\!:hover, a.btn_purple-100\!:hover, button.bg_purple-100\!:hover,
 }
 
 a.bg_purple-100\!:hover, a.btn_purple-100\!:hover, a.bg_purple-100\!:hover > *, a.btn_purple-100\!:hover > *, button.bg_purple-100\!:hover, button.btn_purple-100\!:hover, button.bg_purple-100\!:hover > *, button.btn_purple-100\!:hover > *, .bg_purple-100\! > a:hover, .btn_purple-100\! > a:hover, .bg_purple-100\! > a:hover > *, .btn_purple-100\! > a:hover > * {
-  color: #8000ff !important;
+  color: black !important;
 }
 
 .bg_purple-200\!, .btn_purple-200\!, a.bg_purple-200\!, a.btn_purple-200\!, button.bg_purple-200\!, button.btn_purple-200\! {
@@ -9785,7 +8568,7 @@ a.bg_purple-200\!:hover, a.btn_purple-200\!:hover, button.bg_purple-200\!:hover,
 }
 
 a.bg_purple-200\!:hover, a.btn_purple-200\!:hover, a.bg_purple-200\!:hover > *, a.btn_purple-200\!:hover > *, button.bg_purple-200\!:hover, button.btn_purple-200\!:hover, button.bg_purple-200\!:hover > *, button.btn_purple-200\!:hover > *, .bg_purple-200\! > a:hover, .btn_purple-200\! > a:hover, .bg_purple-200\! > a:hover > *, .btn_purple-200\! > a:hover > * {
-  color: #680bd5 !important;
+  color: black !important;
 }
 
 .bg_purple-300\!, .btn_purple-300\!, a.bg_purple-300\!, a.btn_purple-300\!, button.bg_purple-300\!, button.btn_purple-300\! {
@@ -9802,7 +8585,7 @@ a.bg_purple-300\!:hover, a.btn_purple-300\!:hover, button.bg_purple-300\!:hover,
 }
 
 a.bg_purple-300\!:hover, a.btn_purple-300\!:hover, a.bg_purple-300\!:hover > *, a.btn_purple-300\!:hover > *, button.bg_purple-300\!:hover, button.btn_purple-300\!:hover, button.bg_purple-300\!:hover > *, button.btn_purple-300\!:hover > *, .bg_purple-300\! > a:hover, .btn_purple-300\! > a:hover, .bg_purple-300\! > a:hover > *, .btn_purple-300\! > a:hover > * {
-  color: #510db0 !important;
+  color: black !important;
 }
 
 .bg_purple-400\!, .btn_purple-400\!, a.bg_purple-400\!, a.btn_purple-400\!, button.bg_purple-400\!, button.btn_purple-400\! {
@@ -9819,7 +8602,7 @@ a.bg_purple-400\!:hover, a.btn_purple-400\!:hover, button.bg_purple-400\!:hover,
 }
 
 a.bg_purple-400\!:hover, a.btn_purple-400\!:hover, a.bg_purple-400\!:hover > *, a.btn_purple-400\!:hover > *, button.bg_purple-400\!:hover, button.btn_purple-400\!:hover, button.bg_purple-400\!:hover > *, button.btn_purple-400\!:hover > *, .bg_purple-400\! > a:hover, .btn_purple-400\! > a:hover, .bg_purple-400\! > a:hover > *, .btn_purple-400\! > a:hover > * {
-  color: #340c78 !important;
+  color: black !important;
 }
 
 .bg_purple-500\!, .btn_purple-500\!, a.bg_purple-500\!, a.btn_purple-500\!, button.bg_purple-500\!, button.btn_purple-500\! {
@@ -9836,7 +8619,7 @@ a.bg_purple-500\!:hover, a.btn_purple-500\!:hover, button.bg_purple-500\!:hover,
 }
 
 a.bg_purple-500\!:hover, a.btn_purple-500\!:hover, a.bg_purple-500\!:hover > *, a.btn_purple-500\!:hover > *, button.bg_purple-500\!:hover, button.btn_purple-500\!:hover, button.bg_purple-500\!:hover > *, button.btn_purple-500\!:hover > *, .bg_purple-500\! > a:hover, .btn_purple-500\! > a:hover, .bg_purple-500\! > a:hover > *, .btn_purple-500\! > a:hover > * {
-  color: #1d0a42 !important;
+  color: black !important;
 }
 
 .bg_purple-600\!, .btn_purple-600\!, a.bg_purple-600\!, a.btn_purple-600\!, button.bg_purple-600\!, button.btn_purple-600\! {
@@ -9853,7 +8636,7 @@ a.bg_purple-600\!:hover, a.btn_purple-600\!:hover, button.bg_purple-600\!:hover,
 }
 
 a.bg_purple-600\!:hover, a.btn_purple-600\!:hover, a.bg_purple-600\!:hover > *, a.btn_purple-600\!:hover > *, button.bg_purple-600\!:hover, button.btn_purple-600\!:hover, button.bg_purple-600\!:hover > *, button.btn_purple-600\!:hover > *, .bg_purple-600\! > a:hover, .btn_purple-600\! > a:hover, .bg_purple-600\! > a:hover > *, .btn_purple-600\! > a:hover > * {
-  color: #d9cef3 !important;
+  color: white !important;
 }
 
 .bg_purple-700\!, .btn_purple-700\!, a.bg_purple-700\!, a.btn_purple-700\!, button.bg_purple-700\!, button.btn_purple-700\! {
@@ -9870,7 +8653,7 @@ a.bg_purple-700\!:hover, a.btn_purple-700\!:hover, button.bg_purple-700\!:hover,
 }
 
 a.bg_purple-700\!:hover, a.btn_purple-700\!:hover, a.bg_purple-700\!:hover > *, a.btn_purple-700\!:hover > *, button.bg_purple-700\!:hover, button.btn_purple-700\!:hover, button.bg_purple-700\!:hover > *, button.btn_purple-700\!:hover > *, .bg_purple-700\! > a:hover, .btn_purple-700\! > a:hover, .bg_purple-700\! > a:hover > *, .btn_purple-700\! > a:hover > * {
-  color: #d9d9d9 !important;
+  color: white !important;
 }
 
 .bg_purple-800\!, .btn_purple-800\!, a.bg_purple-800\!, a.btn_purple-800\!, button.bg_purple-800\!, button.btn_purple-800\! {
@@ -9921,7 +8704,7 @@ a.bg_pink-100\!:hover, a.btn_pink-100\!:hover, button.bg_pink-100\!:hover, butto
 }
 
 a.bg_pink-100\!:hover, a.btn_pink-100\!:hover, a.bg_pink-100\!:hover > *, a.btn_pink-100\!:hover > *, button.bg_pink-100\!:hover, button.btn_pink-100\!:hover, button.bg_pink-100\!:hover > *, button.btn_pink-100\!:hover > *, .bg_pink-100\! > a:hover, .btn_pink-100\! > a:hover, .bg_pink-100\! > a:hover > *, .btn_pink-100\! > a:hover > * {
-  color: #ad0023 !important;
+  color: black !important;
 }
 
 .bg_pink-200\!, .btn_pink-200\!, a.bg_pink-200\!, a.btn_pink-200\!, button.bg_pink-200\!, button.btn_pink-200\! {
@@ -9938,7 +8721,7 @@ a.bg_pink-200\!:hover, a.btn_pink-200\!:hover, button.bg_pink-200\!:hover, butto
 }
 
 a.bg_pink-200\!:hover, a.btn_pink-200\!:hover, a.bg_pink-200\!:hover > *, a.btn_pink-200\!:hover > *, button.bg_pink-200\!:hover, button.btn_pink-200\!:hover, button.bg_pink-200\!:hover > *, button.btn_pink-200\!:hover > *, .bg_pink-200\! > a:hover, .btn_pink-200\! > a:hover, .bg_pink-200\! > a:hover > *, .btn_pink-200\! > a:hover > * {
-  color: #95042d !important;
+  color: black !important;
 }
 
 .bg_pink-300\!, .btn_pink-300\!, a.bg_pink-300\!, a.btn_pink-300\!, button.bg_pink-300\!, button.btn_pink-300\! {
@@ -9955,7 +8738,7 @@ a.bg_pink-300\!:hover, a.btn_pink-300\!:hover, button.bg_pink-300\!:hover, butto
 }
 
 a.bg_pink-300\!:hover, a.btn_pink-300\!:hover, a.bg_pink-300\!:hover > *, a.btn_pink-300\!:hover > *, button.bg_pink-300\!:hover, button.btn_pink-300\!:hover, button.bg_pink-300\!:hover > *, button.btn_pink-300\!:hover > *, .bg_pink-300\! > a:hover, .btn_pink-300\! > a:hover, .bg_pink-300\! > a:hover > *, .btn_pink-300\! > a:hover > * {
-  color: #79072e !important;
+  color: black !important;
 }
 
 .bg_pink-400\!, .btn_pink-400\!, a.bg_pink-400\!, a.btn_pink-400\!, button.bg_pink-400\!, button.btn_pink-400\! {
@@ -9972,7 +8755,7 @@ a.bg_pink-400\!:hover, a.btn_pink-400\!:hover, button.bg_pink-400\!:hover, butto
 }
 
 a.bg_pink-400\!:hover, a.btn_pink-400\!:hover, a.bg_pink-400\!:hover > *, a.btn_pink-400\!:hover > *, button.bg_pink-400\!:hover, button.btn_pink-400\!:hover, button.bg_pink-400\!:hover > *, button.btn_pink-400\!:hover > *, .bg_pink-400\! > a:hover, .btn_pink-400\! > a:hover, .bg_pink-400\! > a:hover > *, .btn_pink-400\! > a:hover > * {
-  color: #4c0622 !important;
+  color: black !important;
 }
 
 .bg_pink-500\!, .btn_pink-500\!, a.bg_pink-500\!, a.btn_pink-500\!, button.bg_pink-500\!, button.btn_pink-500\! {
@@ -9989,7 +8772,7 @@ a.bg_pink-500\!:hover, a.btn_pink-500\!:hover, button.bg_pink-500\!:hover, butto
 }
 
 a.bg_pink-500\!:hover, a.btn_pink-500\!:hover, a.bg_pink-500\!:hover > *, a.btn_pink-500\!:hover > *, button.bg_pink-500\!:hover, button.btn_pink-500\!:hover, button.bg_pink-500\!:hover > *, button.btn_pink-500\!:hover > *, .bg_pink-500\! > a:hover, .btn_pink-500\! > a:hover, .bg_pink-500\! > a:hover > *, .btn_pink-500\! > a:hover > * {
-  color: #2e0519 !important;
+  color: black !important;
 }
 
 .bg_pink-600\!, .btn_pink-600\!, a.bg_pink-600\!, a.btn_pink-600\!, button.bg_pink-600\!, button.btn_pink-600\! {
@@ -10146,7 +8929,7 @@ a.color_line\!:hover, a.color_line\!:hover * {
 }
 
 .bg_facebook, .bg_facebook > *, a.bg_facebook, a.bg_facebook > *, button.bg_facebook, button.bg_facebook > * {
-  color: #021022 !important;
+  color: #021022;
 }
 
 a.bg_facebook:hover, button.bg_facebook:hover {
@@ -10163,7 +8946,7 @@ a.bg_facebook:hover, a.bg_facebook:hover > *, button.bg_facebook:hover, button.b
 }
 
 .bg_twitter, .bg_twitter > *, a.bg_twitter, a.bg_twitter > *, button.bg_twitter, button.bg_twitter > * {
-  color: #053452 !important;
+  color: #053452;
 }
 
 a.bg_twitter:hover, button.bg_twitter:hover {
@@ -10180,7 +8963,7 @@ a.bg_twitter:hover, a.bg_twitter:hover > *, button.bg_twitter:hover, button.bg_t
 }
 
 .bg_googleplus, .bg_googleplus > *, a.bg_googleplus, a.bg_googleplus > *, button.bg_googleplus, button.bg_googleplus > * {
-  color: #1a0605 !important;
+  color: #1a0605;
 }
 
 a.bg_googleplus:hover, button.bg_googleplus:hover {
@@ -10197,7 +8980,7 @@ a.bg_googleplus:hover, a.bg_googleplus:hover > *, button.bg_googleplus:hover, bu
 }
 
 .bg_linkedin, .bg_linkedin > *, a.bg_linkedin, a.bg_linkedin > *, button.bg_linkedin, button.bg_linkedin > * {
-  color: #fafdff !important;
+  color: #fafdff;
 }
 
 a.bg_linkedin:hover, button.bg_linkedin:hover {
@@ -10206,7 +8989,7 @@ a.bg_linkedin:hover, button.bg_linkedin:hover {
 }
 
 a.bg_linkedin:hover, a.bg_linkedin:hover > *, button.bg_linkedin:hover, button.bg_linkedin:hover > *, .bg_linkedin > a:hover, .bg_linkedin > a:hover > * {
-  color: white !important;
+  color: white;
 }
 
 .bg_line, a.bg_line, button.bg_line {
@@ -10214,7 +8997,7 @@ a.bg_linkedin:hover, a.bg_linkedin:hover > *, button.bg_linkedin:hover, button.b
 }
 
 .bg_line, .bg_line > *, a.bg_line, a.bg_line > *, button.bg_line, button.bg_line > * {
-  color: #003d00 !important;
+  color: #003d00;
 }
 
 a.bg_line:hover, button.bg_line:hover {
@@ -10223,7 +9006,7 @@ a.bg_line:hover, button.bg_line:hover {
 }
 
 a.bg_line:hover, a.bg_line:hover > *, button.bg_line:hover, button.bg_line:hover > *, .bg_line > a:hover, .bg_line > a:hover > * {
-  color: #007000 !important;
+  color: #007000;
 }
 
 .bg_facebook\!, a.bg_facebook\!, button.bg_facebook\! {
@@ -10257,7 +9040,7 @@ a.bg_twitter\!:hover, button.bg_twitter\!:hover {
 }
 
 a.bg_twitter\!:hover, a.bg_twitter\!:hover > *, button.bg_twitter\!:hover, button.bg_twitter\!:hover > *, .bg_twitter\! > a:hover, .bg_twitter\! > a:hover > * {
-  color: #021622 !important;
+  color: black !important;
 }
 
 .bg_googleplus\!, a.bg_googleplus\!, button.bg_googleplus\! {
@@ -10308,7 +9091,7 @@ a.bg_line\!:hover, button.bg_line\!:hover {
 }
 
 a.bg_line\!:hover, a.bg_line\!:hover > *, button.bg_line\!:hover, button.bg_line\!:hover > *, .bg_line\! > a:hover, .bg_line\! > a:hover > * {
-  color: #007000 !important;
+  color: black !important;
 }
 
 a.hover\:bg_facebook:hover, a.hover\:bg_facebook:hover * {
@@ -11161,32 +9944,64 @@ button.bg_white_opacity-95:hover {
   opacity: 0.1;
 }
 
+.opacity-15 {
+  opacity: 0.15;
+}
+
 .opacity-20 {
   opacity: 0.2;
+}
+
+.opacity-25 {
+  opacity: 0.25;
 }
 
 .opacity-30 {
   opacity: 0.3;
 }
 
+.opacity-35 {
+  opacity: 0.35;
+}
+
 .opacity-40 {
   opacity: 0.4;
+}
+
+.opacity-45 {
+  opacity: 0.45;
 }
 
 .opacity-50 {
   opacity: 0.5;
 }
 
+.opacity-55 {
+  opacity: 0.55;
+}
+
 .opacity-60 {
   opacity: 0.6;
+}
+
+.opacity-65 {
+  opacity: 0.65;
 }
 
 .opacity-70 {
   opacity: 0.7;
 }
 
+.opacity-75 {
+  opacity: 0.75;
+}
+
 .opacity-80 {
   opacity: 0.8;
+}
+
+.opacity-85 {
+  opacity: 0.85;
 }
 
 .opacity-90 {
@@ -11499,6 +10314,30 @@ a, span, label, strong, small {
   border-color: rgba(0, 0, 0, 0.9) !important;
 }
 
+.border_dashed, .border_dashed-before.uk-tab::before {
+  border-style: dashed;
+}
+
+.border_dashed\!, .border_dashed-before\!.uk-tab::before {
+  border-style: dashed !important;
+}
+
+.border_dotted, .border_dotted-before.uk-tab::before {
+  border-style: dotted;
+}
+
+.border_dotted\!, .border_dotted-before\!.uk-tab::before {
+  border-style: dotted !important;
+}
+
+.border_double, .border_double-before.uk-tab::before {
+  border-style: double;
+}
+
+.border_double\!, .border_double-before\!.uk-tab::before {
+  border-style: double !important;
+}
+
 .border2, .border2 li a {
   border-width: 2px;
 }
@@ -11532,8 +10371,12 @@ a, span, label, strong, small {
 }
 
 /*---------- Space ------------------------------*/
-*:last-child:not([class*=mb]):not([class*=\:mb]):not([class*=my]):not([class*=\:my]):not([class*=uk-position]):not([class*=uk-margin]) {
+*:last-child:not([class*=mb]):not([class*=\:mb]):not([class*=my]):not([class*=\:my]):not([class*=uk-position]):not([class*=uk-margin]), .margin_y_child-0 > * {
   margin-bottom: 0;
+}
+
+.margin_y_child-0\! > * {
+  margin-bottom: 0 !important;
 }
 
 .margin_x_child > :not(:last-child) {
@@ -11569,6 +10412,42 @@ a, span, label, strong, small {
 }
 
 .margin_y_all_child-l > :not(#footer), .margin_y_all_child-even-l > :nth-child(even):not(#footer) {
+  margin-bottom: 15px;
+}
+
+.margin_x_child\! > :not(:last-child) {
+  margin-right: 5px;
+}
+
+.margin_x_child-m\! > :not(:last-child) {
+  margin-right: 10px;
+}
+
+.margin_x_child-l\! > :not(:last-child) {
+  margin-right: 15px;
+}
+
+.margin_y_child\! > :not(:last-child):not(#footer), .margin_y_child-even\! > :nth-child(even):not(:last-child):not(#footer) {
+  margin-bottom: 5px;
+}
+
+.margin_y_child-m\! > :not(:last-child):not(#footer), .margin_y_child-even-m\! > :nth-child(even):not(:last-child):not(#footer) {
+  margin-bottom: 10px;
+}
+
+.margin_y_child-l\! > :not(:last-child):not(#footer), .margin_y_child-even-l\! > :nth-child(even):not(:last-child):not(#footer) {
+  margin-bottom: 15px;
+}
+
+.margin_y_all_child\! > :not(#footer), .margin_y_all_child-even\! > :nth-child(even):not(#footer) {
+  margin-bottom: 5px;
+}
+
+.margin_y_all_child-m\! > :not(#footer), .margin_y_all_child-even-m\! > :nth-child(even):not(#footer) {
+  margin-bottom: 10px;
+}
+
+.margin_y_all_child-l\! > :not(#footer), .margin_y_all_child-even-l\! > :nth-child(even):not(#footer) {
   margin-bottom: 15px;
 }
 
@@ -11732,8 +10611,44 @@ a, span, label, strong, small {
   bottom: 50;
 }
 
+.padding_x_child-0 > * {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.padding_x_child-0\! > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.padding_x_child-m > * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.padding_x_child-m\! > * {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.padding_x_child-l > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.padding_x_child-l\! > * {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
 /*uk-@s*/
 @media (min-width: 640px) {
+  .margin_y_child-0\@s > * {
+    margin-bottom: 0;
+  }
+  .margin_y_child-0\!\@s > * {
+    margin-bottom: 0 !important;
+  }
   .margin_x_child\@s > :not(:last-child) {
     margin-right: 5px;
   }
@@ -11759,6 +10674,33 @@ a, span, label, strong, small {
     margin-bottom: 10px;
   }
   .margin_y_all_child-l\@s > :not(#footer), .margin_y_all_child-even-l\@s > :nth-child(even):not(#footer) {
+    margin-bottom: 15px;
+  }
+  .margin_x_child\!\@s > :not(:last-child) {
+    margin-right: 5px;
+  }
+  .margin_x_child-m\!\@s > :not(:last-child) {
+    margin-right: 10px;
+  }
+  .margin_x_child-l\!\@s > :not(:last-child) {
+    margin-right: 15px;
+  }
+  .margin_y_child\!\@s > :not(:last-child):not(#footer), .margin_y_child-even\!\@s > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 5px;
+  }
+  .margin_y_child-m\!\@s > :not(:last-child):not(#footer), .margin_y_child-even-m\!\@s > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 10px;
+  }
+  .margin_y_child-l\!\@s > :not(:last-child):not(#footer), .margin_y_child-even-l\!\@s > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 15px;
+  }
+  .margin_y_all_child\!\@s > :not(#footer), .margin_y_all_child-even\!\@s > :nth-child(even):not(#footer) {
+    margin-bottom: 5px;
+  }
+  .margin_y_all_child-m\!\@s > :not(#footer), .margin_y_all_child-even-m\!\@s > :nth-child(even):not(#footer) {
+    margin-bottom: 10px;
+  }
+  .margin_y_all_child-l\!\@s > :not(#footer), .margin_y_all_child-even-l\!\@s > :nth-child(even):not(#footer) {
     margin-bottom: 15px;
   }
   .left-5\@s {
@@ -11881,10 +10823,40 @@ a, span, label, strong, small {
   .bottom-50\@s {
     bottom: 50;
   }
+  .padding_x_child-0\@s > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .padding_x_child-0\!\@s > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .padding_x_child-m\@s > * {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .padding_x_child-m\!\@s > * {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .padding_x_child-l\@s > * {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .padding_x_child-l\!\@s > * {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }
 
 /*uk-@m*/
 @media (min-width: 960px) {
+  .margin_y_child-0\@m > * {
+    margin-bottom: 0;
+  }
+  .margin_y_child-0\!\@m > * {
+    margin-bottom: 0 !important;
+  }
   .margin_x_child\@m > :not(:last-child) {
     margin-right: 5px;
   }
@@ -11910,6 +10882,33 @@ a, span, label, strong, small {
     margin-bottom: 10px;
   }
   .margin_y_all_child-l\@m > :not(#footer), .margin_y_all_child-even-l\@m > :nth-child(even):not(#footer) {
+    margin-bottom: 15px;
+  }
+  .margin_x_child\!\@m > :not(:last-child) {
+    margin-right: 5px;
+  }
+  .margin_x_child-m\!\@m > :not(:last-child) {
+    margin-right: 10px;
+  }
+  .margin_x_child-l\!\@m > :not(:last-child) {
+    margin-right: 15px;
+  }
+  .margin_y_child\!\@m > :not(:last-child):not(#footer), .margin_y_child-even\!\@m > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 5px;
+  }
+  .margin_y_child-m\!\@m > :not(:last-child):not(#footer), .margin_y_child-even-m\!\@m > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 10px;
+  }
+  .margin_y_child-l\!\@m > :not(:last-child):not(#footer), .margin_y_child-even-l\!\@m > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 15px;
+  }
+  .margin_y_all_child\!\@m > :not(#footer), .margin_y_all_child-even\!\@m > :nth-child(even):not(#footer) {
+    margin-bottom: 5px;
+  }
+  .margin_y_all_child-m\!\@m > :not(#footer), .margin_y_all_child-even-m\!\@m > :nth-child(even):not(#footer) {
+    margin-bottom: 10px;
+  }
+  .margin_y_all_child-l\!\@m > :not(#footer), .margin_y_all_child-even-l\!\@m > :nth-child(even):not(#footer) {
     margin-bottom: 15px;
   }
   .left-5\@m {
@@ -12032,10 +11031,40 @@ a, span, label, strong, small {
   .bottom-50\@m {
     bottom: 50;
   }
+  .padding_x_child-0\@m > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .padding_x_child-0\!\@m > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .padding_x_child-m\@m > * {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .padding_x_child-m\!\@m > * {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .padding_x_child-l\@m > * {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .padding_x_child-l\!\@m > * {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }
 
 /*uk-@l*/
 @media (min-width: 1200px) {
+  .margin_y_child-0\@l > * {
+    margin-bottom: 0;
+  }
+  .margin_y_child-0\!\@l > * {
+    margin-bottom: 0 !important;
+  }
   .margin_x_child\@l > :not(:last-child) {
     margin-right: 5px;
   }
@@ -12061,6 +11090,33 @@ a, span, label, strong, small {
     margin-bottom: 10px;
   }
   .margin_y_all_child-l\@l > :not(#footer), .margin_y_all_child-even-l\@l > :nth-child(even):not(#footer) {
+    margin-bottom: 15px;
+  }
+  .margin_x_child\!\@l > :not(:last-child) {
+    margin-right: 5px;
+  }
+  .margin_x_child-m\!\@l > :not(:last-child) {
+    margin-right: 10px;
+  }
+  .margin_x_child-l\!\@l > :not(:last-child) {
+    margin-right: 15px;
+  }
+  .margin_y_child\!\@l > :not(:last-child):not(#footer), .margin_y_child-even\!\@l > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 5px;
+  }
+  .margin_y_child-m\!\@l > :not(:last-child):not(#footer), .margin_y_child-even-m\!\@l > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 10px;
+  }
+  .margin_y_child-l\!\@l > :not(:last-child):not(#footer), .margin_y_child-even-l\!\@l > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 15px;
+  }
+  .margin_y_all_child\!\@l > :not(#footer), .margin_y_all_child-even\!\@l > :nth-child(even):not(#footer) {
+    margin-bottom: 5px;
+  }
+  .margin_y_all_child-m\!\@l > :not(#footer), .margin_y_all_child-even-m\!\@l > :nth-child(even):not(#footer) {
+    margin-bottom: 10px;
+  }
+  .margin_y_all_child-l\!\@l > :not(#footer), .margin_y_all_child-even-l\!\@l > :nth-child(even):not(#footer) {
     margin-bottom: 15px;
   }
   .left-5\@l {
@@ -12183,10 +11239,40 @@ a, span, label, strong, small {
   .bottom-50\@l {
     bottom: 50;
   }
+  .padding_x_child-0\@l > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .padding_x_child-0\!\@l > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .padding_x_child-m\@l > * {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .padding_x_child-m\!\@l > * {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .padding_x_child-l\@l > * {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .padding_x_child-l\!\@l > * {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }
 
 /*uk-@xl*/
 @media (min-width: 1600px) {
+  .margin_y_child-0\@xl > * {
+    margin-bottom: 0;
+  }
+  .margin_y_child-0\!\@xl > * {
+    margin-bottom: 0 !important;
+  }
   .margin_x_child\@xl > :not(:last-child) {
     margin-right: 5px;
   }
@@ -12209,6 +11295,33 @@ a, span, label, strong, small {
     margin-bottom: 5px;
   }
   .margin_y_all_child-m\@xl > :not(#footer), .margin_y_all_child-even-m\@xl > :nth-child(even):not(#footer) {
+    margin-bottom: 10px;
+  }
+  .margin_y_all_child-l\@xl > :not(#footer), .margin_y_all_child-even-l\@xl > :nth-child(even):not(#footer) {
+    margin-bottom: 15px;
+  }
+  .margin_x_child\!\@xl > :not(:last-child) {
+    margin-right: 5px;
+  }
+  .margin_x_child-m\!\@xl > :not(:last-child) {
+    margin-right: 10px;
+  }
+  .margin_x_child-l\!\@xl > :not(:last-child) {
+    margin-right: 15px;
+  }
+  .margin_y_child\!\@xl > :not(:last-child):not(#footer), .margin_y_child-even\!\@xl > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 5px;
+  }
+  .margin_y_child-m\!\@xl > :not(:last-child):not(#footer), .margin_y_child-even-m\!\@xl > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 10px;
+  }
+  .margin_y_child-l\!\@xl > :not(:last-child):not(#footer), .margin_y_child-even-l\!\@xl > :nth-child(even):not(:last-child):not(#footer) {
+    margin-bottom: 15px;
+  }
+  .margin_y_all_child\!\@xl > :not(#footer), .margin_y_all_child-even\!\@xl > :nth-child(even):not(#footer) {
+    margin-bottom: 5px;
+  }
+  .margin_y_all_child-m\!\@xl > :not(#footer), .margin_y_all_child-even-m\!\@xl > :nth-child(even):not(#footer) {
     margin-bottom: 10px;
   }
   .margin_y_all_child-l\@xl > :not(#footer), .margin_y_all_child-even-l\@xl > :nth-child(even):not(#footer) {
@@ -12334,9 +11447,55 @@ a, span, label, strong, small {
   .bottom-50\@xl {
     bottom: 50;
   }
+  .padding_x_child-0\@xl > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .padding_x_child-0\!\@xl > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .padding_x_child-m\@xl > * {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .padding_x_child-m\!\@xl > * {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .padding_x_child-l\@xl > * {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .padding_x_child-l\!\@xl > * {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }
 
 /*---------- List ------------------------------*/
+.list > li::before {
+  position: absolute;
+  margin-left: -4rem;
+  padding-right: 0.5rem;
+  padding-left: 1rem;
+  text-align: right;
+  width: 4rem;
+}
+
+.list > li {
+  position: relative;
+  margin-bottom: 10px;
+  left: 4rem;
+  width: calc(100% - 4rem);
+  text-align: justify;
+}
+
+.list > li > * {
+  display: inline-block;
+  margin: 0;
+}
+
 .list_striped > li {
   position: relative;
   z-index: 1;
@@ -12379,13 +11538,9 @@ a, span, label, strong, small {
 }
 
 .list_decimal > li:before {
-  display: inherit;
+  display: inline-block;
   counter-increment: dot-counter;
   content: "" counter(dot-counter) ". ";
-}
-
-.list_decimal > li {
-  margin-bottom: 10px;
 }
 
 .list_decimal_ch {
@@ -12478,17 +11633,17 @@ a, span, label, strong, small {
   background: #fafafa;
 }
 
-.list_dot, .list_arrow {
-  list-style: none;
+.list_dot > li:before, .list_arrow > li:before {
+  margin-left: -2rem;
+  width: 2rem;
 }
 
 .list_dot > li, .list_arrow > li {
-  position: relative;
-  padding-left: 20px;
+  left: 2rem;
+  width: calc(100% - 2rem);
 }
 
 .list_dot > li:before {
-  position: absolute;
   content: "•";
   display: inline-block;
   font-style: normal;
@@ -12497,12 +11652,9 @@ a, span, label, strong, small {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
-  left: 0;
-  padding: 0;
 }
 
 .list_arrow > li:before {
-  position: absolute;
   content: "▸";
   display: inline-block;
   font-style: normal;
@@ -12511,8 +11663,6 @@ a, span, label, strong, small {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
-  left: 0;
-  padding: 0;
 }
 
 .list_vline > li:not(:last-child):after {
@@ -12524,6 +11674,48 @@ a, span, label, strong, small {
 .list_btmline > li:not(:last-child) {
   margin-bottom: 5px;
   padding: 10px 0 10px 5px;
+}
+
+.list_initial {
+  list-style: initial;
+  list-style-position: outside;
+}
+
+.list_initial > li {
+  width: calc(100% - 2.5rem);
+  position: relative;
+  left: 2.5rem;
+  text-align: justify;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .list_initial {
+    list-style: disc;
+  }
+}
+
+.list_decimal-leading-zero {
+  list-style: decimal-leading-zero;
+}
+
+.list_cjk-ideographic {
+  list-style: cjk-ideographic;
+}
+
+.list_upper-latin {
+  list-style: upper-latin;
+}
+
+.list_lower-latin {
+  list-style: lower-latin;
+}
+
+.list_upper-roman {
+  list-style: upper-roman;
+}
+
+.list_lower-roman {
+  list-style: lower-roman;
 }
 
 [class*=list_tabs] {
@@ -82692,7 +81884,7 @@ a, span, label, strong, small {
 .overflow_hidden {
   overflow: hidden;
   position: relative;
-  padding-bottom: calc(10rem/16);
+  padding-bottom: calc(25rem/16);
 }
 
 .overflow_hidden:after {
@@ -82704,7 +81896,7 @@ a, span, label, strong, small {
   left: 0;
   right: 0;
   bottom: 0;
-  height: calc(30rem/16);
+  height: calc(45rem/16);
   pointer-events: none;
 }
 
@@ -82712,7 +81904,7 @@ a, span, label, strong, small {
   .overflow_hidden\@m {
     overflow: hidden;
     position: relative;
-    padding-bottom: calc(10rem/16);
+    padding-bottom: calc(25rem/16);
   }
   .overflow_hidden\@m:after {
     display: block;
@@ -82723,7 +81915,7 @@ a, span, label, strong, small {
     left: 0;
     right: 0;
     bottom: 0;
-    height: calc(30rem/16);
+    height: calc(45rem/16);
     pointer-events: none;
   }
 }
@@ -82775,6 +81967,10 @@ a, span, label, strong, small {
 }
 
 /*---------- Aspect Ratio - padding-top:calc(100%*height/width) ------------------------------*/
+.aspect {
+  position: relative;
+}
+
 .aspect:not([class*=uk-width]) {
   width: 100%;
   padding-top: 100%;
@@ -83064,6 +82260,120 @@ section {
   .container_responsive\@m > .uk-card.card .card-content {
     padding: 24px;
     border-radius: 0 0 2px 2px;
+  }
+}
+
+/*---------- Tab ------------------------------*/
+.tab_btn.uk-tab::before, .tab_btn-secondary.uk-tab::before {
+  display: none;
+}
+
+.tab_btn.uk-tab > li:first-child, .tab_btn-secondary.uk-tab > li:first-child {
+  padding-left: 0;
+}
+
+.tab_btn.uk-tab > * > a, .tab_btn-secondary.uk-tab > * > a {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.tab_btn.uk-tab > .uk-active > a {
+  background-color: #E6CC62;
+  color: black !important;
+}
+
+.tab_btn-secondary.uk-tab > .uk-active > a {
+  background-color: #C15254;
+  color: black !important;
+}
+
+.tab_btn.uk-tab > * > a:hover, .tab_btn.uk-tab > * > a:focus {
+  background-color: #E6CC62;
+  color: white !important;
+}
+
+.tab_btn-secondary.uk-tab > * > a:hover, .tab_btn-secondary.uk-tab > * > a:focus {
+  background-color: #C15254;
+  color: white !important;
+}
+
+.tab_btn-active-white.uk-tab > .uk-active > a {
+  color: white !important;
+}
+
+.tab_btn-space-xs > *:not(:first-child) {
+  padding-left: 5px;
+}
+
+.tab_btn-space-xs\! > *:not(:first-child) {
+  padding-left: 5px !important;
+}
+
+.tab_btn-space-s > *:not(:first-child) {
+  padding-left: 10px;
+}
+
+.tab_btn-space-s\! > *:not(:first-child) {
+  padding-left: 10px !important;
+}
+
+@media (min-width: 640px) {
+  .tab_btn-space-xs\@s > *:not(:first-child) {
+    padding-left: 5px;
+  }
+  .tab_btn-space-xs\!\@s > *:not(:first-child) {
+    padding-left: 5px !important;
+  }
+  .tab_btn-space-s\@s > *:not(:first-child) {
+    padding-left: 10px;
+  }
+  .tab_btn-space-s\!\@s > *:not(:first-child) {
+    padding-left: 10px !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .tab_btn-space-xs\@m > *:not(:first-child) {
+    padding-left: 5px;
+  }
+  .tab_btn-space-xs\!\@m > *:not(:first-child) {
+    padding-left: 5px !important;
+  }
+  .tab_btn-space-s\@m > *:not(:first-child) {
+    padding-left: 10px;
+  }
+  .tab_btn-space-s\!\@m > *:not(:first-child) {
+    padding-left: 10px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tab_btn-space-xs\@l > *:not(:first-child) {
+    padding-left: 5px;
+  }
+  .tab_btn-space-xs\!\@l > *:not(:first-child) {
+    padding-left: 5px !important;
+  }
+  .tab_btn-space-s\@l > *:not(:first-child) {
+    padding-left: 10px;
+  }
+  .tab_btn-space-s\!\@l > *:not(:first-child) {
+    padding-left: 10px !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .tab_btn-space-xs\@xl > *:not(:first-child) {
+    padding-left: 5px;
+  }
+  .tab_btn-space-xs\!\@xl > *:not(:first-child) {
+    padding-left: 5px !important;
+  }
+  .tab_btn-space-s\@xl > *:not(:first-child) {
+    padding-left: 10px;
+  }
+  .tab_btn-space-s\!\@xl > *:not(:first-child) {
+    padding-left: 10px !important;
   }
 }
 
@@ -83406,11 +82716,11 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 }
 
 .nav_bar.nav_bar-primary a.uk-open, .nav_bar.nav_bar-primary > .uk-active > a, .nav_bar.nav_bar-primary > .active > a, .nav_bar.nav_bar-primary > li > a:focus, .nav_bar.nav_bar-primary > li > a:hover {
-  border-color: #326295 !important;
+  border-color: #E6CC62 !important;
 }
 
 .nav_bar.nav_bar-secondary a.uk-open, .nav_bar.nav_bar-secondary > .uk-active > a, .nav_bar.nav_bar-secondary > .active > a, .nav_bar.nav_bar-secondary > li > a:focus, .nav_bar.nav_bar-secondary > li > a:hover {
-  border-color: #2b86b1 !important;
+  border-color: #C15254 !important;
 }
 
 .uk-dropdown-nav li a, .uk-dropdown-nav .uk-nav-sub a {
@@ -83681,7 +82991,8 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 }
 
 .uk-table th {
-  color: #666;
+  color: #2e2e2e;
+  font-weight: 700;
 }
 
 @media (max-width: 1119px) {
@@ -84009,7 +83320,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
   }
-  .uk-dropdown-nav li > * {
+  .uk-dropdown-nav li > *:not(.hidden_ie) {
     display: block !important;
   }
   .height_ie {
@@ -84038,5 +83349,8 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   [uk-height-viewport] {
     height: auto !important;
+  }
+  .hidden_ie {
+    display: none !important;
   }
 }

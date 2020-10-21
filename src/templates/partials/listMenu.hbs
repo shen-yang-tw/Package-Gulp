@@ -1,0 +1,98 @@
+{{!-- {{>listMenu listMenuMaxHeight='true' 1level='true'}} --}}
+
+<!-- listMenu -->
+<div class="listMenu {{#if listMenuMaxHeight}}max_height-200 max_height-700@m {{/if}}uk-overflow-auto">
+	<ul class="list_tabs uk-nav uk-nav-default">
+		{{#if 1level}}
+			<li class="py-1 uk-parent">
+				<a class="p-0" href="#"><span class="text-white">Item</span></a>
+			</li>
+			<li class="py-1 uk-parent">
+				<a class="p-0" href="#"><span class="text-white">Item</span></a>
+			</li>
+		{{/if}}
+		{{#if 2level}}
+			<li class="py-1 uk-parent">
+				<a class="p-0" href="#"><span class="text-white">Item</span></a>
+			</li>
+			<li class="py-1 uk-parent">
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+				</div>
+				<ul class="toggle hidden uk-nav-sub">
+					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">subItem</span></a>
+					</li>
+					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">subItem</span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="py-1 uk-parent">
+				<a class="p-0" href="#"><span class="text-white">Item</span></a>
+			</li>
+		{{/if}}
+		{{#if 3level}}
+			<li class="py-1 uk-parent">
+				<a class="p-0" href="#"><span class="text-white">Item</span></a>
+			</li>
+			<li class="py-1 uk-parent">
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+				</div>
+				<ul class="toggle hidden uk-nav-sub">
+					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="py-1 uk-parent">
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+				</div>
+				<ul class="toggle hidden uk-nav-sub">
+					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+					<li class="mt-0 uk-nav-header uk-parent">
+						<div class="flex justify-between">
+							<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
+							<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+						</div>
+						<ul class="toggle hidden uk-nav-sub">
+							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+							</li>
+							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+							</li>
+							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="py-1 uk-parent">
+				<a class="p-0" href="#"><span class="text-white">Item</span></a>
+			</li>
+		{{/if}}
+	</ul>
+	{{!-- <ul class="list_tabs uk-nav-parent-icon uk-nav" uk-nav="multiple: true; animation: false">
+		<li class="active uk-nav-header uk-parent">
+			<a href="#content">內科部<small class="pseudo:parentheses">123</small></a>
+			<ul>
+				<li><a href="#content">Level2-Item<small class="pseudo:parentheses">123</small></a></li>
+				<li><a href="#content">Level2-Item<small class="pseudo:parentheses">123</small></a></li>
+			</ul>
+		</li>
+		<li class="uk-nav-header uk-parent">
+			<a href="#content">Level2<small class="pseudo:parentheses">123</small></a>
+			<ul>
+				<li><a href="#content">Level2-Item<small class="pseudo:parentheses">123</small></a></li>
+				<li><a href="#content">Level2-Item<small class="pseudo:parentheses">123</small></a></li>
+			</ul>
+		</li>
+	</ul> --}}
+</div>
+<!-- listMenu -->

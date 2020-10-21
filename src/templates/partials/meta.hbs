@@ -5,19 +5,52 @@
 <!-- Fix phone number style for MS Edge -->
 <meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
 <title>{{title}}</title>
-  <!-- uk:css -->
-  <!-- endinject -->
-  <!-- tw:css -->
-  <!-- endinject -->
-  <!-- fa:css -->
-  <!-- endinject -->
-  <!-- main:css -->
-  <!-- endinject -->
-  <!-- colors:css -->
-  <!-- endinject -->
-  <!-- style:css -->
-  <!-- endinject -->
-  <!-- style2:css -->
-  <!-- endinject -->
-  <!-- head:js -->
-  <!-- endinject -->
+<!-- uk:css -->
+<link rel="stylesheet" href="css/uikit.min.css">
+<!-- endinject -->
+<!-- tw:css -->
+<link rel="stylesheet" href="css/tailwind.css">
+<!-- endinject -->
+<!-- fa:css -->
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<!-- endinject -->
+{{#if headStyle}}
+<!-- head:css -->
+<!-- endinject -->
+{{/if}}
+<!-- main:css -->
+<link rel="stylesheet" href="css/main.css">
+<!-- endinject -->
+<!-- colors:css -->
+<link rel="stylesheet" href="css/colors.css">
+<!-- endinject -->
+<!-- style:css -->
+<link rel="stylesheet" href="css/style.css">
+<!-- endinject -->
+{{#if moreStyle}}
+<!-- inject:css -->
+<!-- endinject -->
+{{/if}}
+{{#if editor}}
+<!-- inject:css -->
+<link rel="stylesheet" href="css/editor.css">
+<!-- endinject -->
+{{/if}}
+<!-- uk:js -->
+<script src="js/uikit-icons.min.js"></script>
+<script src="js/uikit.min.js"></script>
+<!-- endinject -->
+<!-- head:js -->
+{{#if jquery}}
+<script src="js/jquery.min.js"></script>
+{{else}}
+<script src="js/script.js" defer></script>
+{{/if}}
+<!-- endinject -->
+<!-- inject:js -->
+{{#if navMenu}}
+<script src="js/nav-menu.js" defer></script>
+{{else}}
+<script src="js/nav-menu-basic.js" defer></script>
+{{/if}}
+<!-- endinject -->

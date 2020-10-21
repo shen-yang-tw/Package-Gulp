@@ -1,0 +1,58 @@
+{
+  "name": "200928-recmd.lib.cgu.edu",
+  "version": "1.0.0",
+  "description": "Using Gulp pack the website with Uikit, Fontawesome, Tailwindcss, and Handlebars",
+  "main": "gulpfile.js",
+  "author": "Shen Yang",
+  "license": "MIT",
+  "url": "https://github.com/shen-yang-tw/200928-recmd.lib.cgu.edu.git",
+  "scripts": {
+    "start": "gulp start",
+    "server": "gulp server",
+    "tailwind": "gulp tailwind --development",
+    "temp": "gulp temp --development",
+    "build": "gulp build --production",
+    "build-purge": "gulp build-purge --purge",
+    "build-nohtml": "gulp build-nohtml --production"
+  },
+  "browserslist": [
+    "> 1%",
+    "ie >= 9",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4"
+  ],
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "tailwindcss": "^1.8.10",
+    "uikit": "^3.5.8"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-inject": "^5.0.5",
+    "gulp-mode": "^1.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^2.0.0",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "postcss-import": "^12.0.1"
+  }
+}

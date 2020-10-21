@@ -1,0 +1,25 @@
+{{!-- {{>dropdownCheckbox optionSum='true'}} --}}
+
+<!-- Dropdown Checkbox -->
+<div class="min_width-100" uk-dropdown>
+	<ul class="uk-nav uk-dropdown-nav uk-text-left">
+		<li class="m-0 uk-nav-header">
+			<label class="m-0 w-full"><input class="checkAll mr-1 uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck')">全選</label>
+		</li>
+		<li class="m-0 uk-nav-header"><span>Type</span></li>
+		<li class="px-2 py-1">
+			<label class="m-0 w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</label>
+		</li>
+		<li class="px-2 py-1">
+			<label class="m-0 w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</label>
+		</li>
+		<li class="m-0 uk-nav-header"><span>Type</span></li>
+		<li class="px-2 py-1">
+			<label class="m-0 w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</label>
+		</li>
+		<li class="px-2 py-1">
+			<span class="w-full"><a class="btn_primary text-white w-full uk-button uk-button-small uk-dropdown-close" href="" role="button">套用篩選</a></span>
+		</li>
+	</ul>
+</div>
+<!-- Dropdown Checkbox -->

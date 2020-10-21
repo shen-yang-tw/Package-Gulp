@@ -1,0 +1,187 @@
+<!-- header -->
+<header class="shadow">
+	{{!-- <nav class="bg_primary py-1 text-center relative uk-visible@m" uk-margin>
+		<div class="px-4 py-1 uk-container">
+			<div class="sub_nav margin_x_child text-sm h-full uk-flex uk-flex-center uk-flex-middle" uk-margin>
+				<span class="uk-visible@m"><a class="px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U"
+						style="padding-bottom: 3px;">:::</a></span>
+				<span><a class="px-2" href="index.html">回首頁</a></span>
+				<span><a class="px-2" href="#">常見問題</a></span>
+				<span><a class="px-2" href="#">聯絡我們</a></span>
+			</div>
+		</div>
+	</nav> --}}
+	<div class="shadow-xl uk-sticky" uk-sticky="media: (max-width: 959px)">
+		<nav>
+			<div class="relative">
+				<div class="bg-white opacity-85 uk-position-cover"></div>
+				<div class="px-4 py-1 uk-container">
+					<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+						<div class="uk-position-z-index">
+							<h1 class="m-0 uk-flex uk-flex-middle">
+								<a class="logo" href="index.html" title="{{title}}">
+									<img class="uk-preserve" data-src="img/logo.svg" data-width data-height alt="{{title}}" uk-img uk-svg>
+								</a>
+							</h1>
+						</div>
+						<div class="m-0 relative uk-width-auto uk-visible@m">
+							<div class="sub_nav text-sm uk-flex uk-flex-middle">
+								<div>
+									<span><a class="px-2" href="index.html">首頁</a></span>
+									<span><a class="px-2" href="#">我要推薦</a></span>
+									<div class="min_width-50 uk-dropdown" uk-dropdown>
+										<ul class="uk-nav uk-dropdown-nav">
+											<li><a class="hover:underline py-2" href="#search" uk-toggle>推薦資料</a></li>
+											<li><a class="hover:underline py-2" href="06recommend.html">推薦資料總覽</a></li>
+										</ul>
+									</div>
+									<span><a class="px-2" href="06person.html">個人推薦資料</a></span>
+									<span><a class="px-2" href="#">English</a></span>
+								</div>
+								{{!-- <span class="text-white">|</span> --}}
+								<span><button class="color_primary border-none l:pr-0 uk-button uk-button-default" type="button" title="註冊/登入/登出"><i
+											class="-mb-1 fas fa-user-circle fa-lg"></i></button></span>
+								<div class="min_width-50 uk-dropdown" uk-dropdown>
+									<ul class="uk-nav uk-dropdown-nav">
+										<li><a class="hover:underline py-2" href="#register" uk-toggle>註冊</a></li>
+										<li><a class="hover:underline py-2" href="#login" uk-toggle>登入</a></li>
+										<li><a class="hover:underline py-2" href="index.html">登出</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="uk-flex-nowrap uk-width-auto uk-hidden@m">
+							<div class="uk-inline">
+								<button class="color_primary border-none h-full uk-button uk-button-default" type="button"
+									title="註冊/登入/登出"><i class="-mb-1 fas fa-user-circle fa-lg"></i></button>
+								<div class="min_width-50 uk-dropdown" uk-dropdown="pos: bottom-right">
+									<ul class="uk-nav uk-dropdown-nav">
+										<li><a class="hover:underline py-2" href="#register" uk-toggle>註冊</a></li>
+										<li><a class="hover:underline py-2" href="#login" uk-toggle>登入</a></li>
+										<li><a class="hover:underline py-2" href="index.html">登出</a></li>
+									</ul>
+								</div>
+							</div>
+							<button class="min_width-30! color_primary px-0 uk-flex uk-flex-right uk-navbar-toggle"
+								uk-navbar-toggle-icon uk-toggle="target: #offcanvas"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<hr class="border_black_opacity-20 m-0">
+	</div>
+	<div id="offcanvas" class="uk-offcanvas" uk-offcanvas>
+		<div class="bg_primary py-5 uk-offcanvas-bar">
+			<button class="uk-offcanvas-close" type="button" title="刪除" uk-close></button>
+			<ul class="pt-6 uk-nav uk-nav-default">
+				<li class="py-1 uk-parent">
+					<a class="p-0" href="index.html"><span class="text-white">首頁</span></a>
+				</li>
+				<li class="py-1 uk-parent">
+					<div class="flex justify-between">
+						<a class="flex flex-1 items-center" href="#"><span class="text-white">我要推薦</span></a>
+						<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
+								class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
+								uk-icon="icon: chevron-down"></span class="toggle"></a>
+					</div>
+					<ul class="toggle hidden uk-nav-sub">
+						<li class="pr-5"><a class="uk-toggle" href="#search" uk-toggle><span
+									class="text-white text-opacity-50">推薦資料</span></a>
+						</li>
+						<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">推薦資料總覽</span></a>
+						</li>
+					</ul>
+				</li>
+				<li class="py-1 uk-parent">
+					<a class="p-0" href="#"><span class="text-white">個人推薦資料</span></a>
+				</li>
+				<li class="uk-nav-divider"></li>
+				<li><a href="#">English</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+{{>login-modal id='login' modal-title='會員登入' errorOn='true' error='驗證提示語'}}
+
+{{>register-modal id='register' modal-title='會員註冊'}}
+
+<!-- uk-modal-search -->
+<div id="search" class="uk-flex-top uk-modal" uk-modal>
+	<div class="uk-modal-dialog uk-margin-auto-vertical uk-width-2-3@l uk-width-1-2@xl">
+		<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+		<div class="uk-modal-header">
+			<h2 class="uk-modal-title">推薦搜尋</h2>
+		</div>
+		<div class="uk-modal-body">
+			<form onsubmit="return false;">
+				<ul class="tab_buttons tab_buttons-txt-white mb-8 uk-tab" uk-tab uk-margin>
+					<li class="uk-active"><a href="#">圖書資料</a></li>
+					<li><a href="#">視聽資料</a></li>
+					<li><a href="#">期刊雜誌</a></li>
+					<li><a href="#">資料庫</a></li>
+				</ul>
+
+				<div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-flex-middle uk-child-width-expand@s"
+					uk-grid uk-height-match="target: .match">
+					<div class="match min_width-1/5!@s flex uk-flex-middle"><label class="font_size-10 font-bold uk-form-label" for="form_lan">出版語文</label>
+					</div>
+					<div class="min_width-4/5!@s">
+						<div class="uk-margin uk-grid-small uk-child-width-expand@m" uk-margin uk-grid>
+							<div class="min_width1_2!@m">
+								<select id="form_lan" class="match uk-select">
+									<option>-請選擇語文-</option>
+									<option>正體中文</option>
+									<option>簡體中文</option>
+									<option>英文</option>
+									<option>日文</option>
+									<option>韓文</option>
+									<option>其它</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="match min_width-1/5!@s flex uk-flex-middle">
+						<label class="font_size-10 font-bold uk-form-label" for="form_title">題名</label>
+					</div>
+					<div class="min_width-4/5!@s">
+						<input id="form_title" class="match uk-input" type="text" placeholder="">
+					</div>
+					<div class="match min_width-1/5!@s flex uk-flex-middle">
+						<label class="font_size-10 font-bold uk-form-label" for="form_name">作者</label>
+					</div>
+					<div class="min_width-4/5!@s">
+						<input id="form_name" class="match uk-input" type="text" placeholder="">
+					</div>
+					<div class="match min_width-1/5!@s flex uk-flex-middle">
+						<label class="font_size-10 font-bold uk-form-label" for="form_isbn">ISBN</label>
+					</div>
+					<div class="min_width-4/5!@s">
+						<input id="form_isbn" class="match uk-input" type="text" placeholder="">
+					</div>
+				</div>
+				<div class="text-right mt-3"><a href="#" class="min_width-100 uk-button uk-button-default"><i class="mr-2 fas fa-edit"></i>手動建立資料</a></div>
+			</form>
+		</div>
+		<div class="uk-margin uk-modal-footer" uk-margin>
+			<div class="justify-between uk-grid uk-grid-small" uk-grid uk-margin>
+				<div uk-margin>
+					<a href="#" class="btn_primary min_width-100 uk-button uk-button-primary"><i
+							class="mr-2 fas fa-search"></i>博客來網路書店</a>
+					<a href="#" class="btn_primary min_width-100 uk-button uk-button-primary"><i
+							class="mr-2 fas fa-search"></i>Amazon Books</a>
+					<a href="#" class="btn_primary min_width-100 uk-button uk-button-primary"><i
+							class="mr-2 fas fa-search"></i>三民網路書店</a>
+					<a href="#" class="btn_primary min_width-100 uk-button uk-button-primary"><i
+							class="mr-2 fas fa-search"></i>紀伊國屋書店</a>
+				</div>
+				<div><button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button></div>
+			</div>
+			{{!-- <a href="#login" class="uk-button uk-button-default" uk-toggle>返回登入</a> --}}
+		</div>
+	</div>
+</div>
+<!-- uk-modal-search -->
+
+<!-- header -->

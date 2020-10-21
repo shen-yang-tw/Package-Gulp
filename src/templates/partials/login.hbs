@@ -1,0 +1,51 @@
+<form onsubmit="return false;">
+  {{#if formTitleOn}}
+  <h3>{{formTitle}}</h3>
+  {{/if}}
+  <div class="uk-grid-small uk-child-width-expand@m uk-grid" uk-grid>
+    <div class="space-y-1 min_width-1/2!@m">
+      <label class="w-full" for="#acc">帳 號</label>
+      <input id="acc" class="uk-input" type="email" placeholder="">
+      <p class="color_secondary-text uk-text-small">{{error1}}</p>
+      <p class="color_secondary-text uk-text-small">{{error2}}</p>
+    </div>
+    <div class="space-y-1 min_width-1/2!@m">
+      <label class="w-full" for="#pas">密 碼</label>
+      <input id="pas" class="uk-input" type="password" placeholder="">
+      <p class="color_secondary-text uk-text-small">驗證提示語</p>
+    </div>
+    {{!-- <div class="space-y-1 min_width-1/2!@m">
+      <label class="w-full" for="#cap">驗證碼</label>
+      <input id="cap" class="uk-input" type="text" placeholder="">
+    </div>
+    <div class="space-y-1 min_width-1/2!@m">
+      <span class="w-full uk-visible@m"></span>
+      <img class="inline-block mr-2" data-src="http://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼" uk-img>
+      <a href="#" title="重新換圖"><i class="fas fa-redo"></i></a>
+    </div> --}}
+    <div class="m:mt-8 uk-width-1-1">
+      <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
+        <div class="space-y-1 min_width-1/2!@m">
+          <a href="{{submit}}" class="btn_primary w-full rounded-full uk-button uk-button-primary">登入</a>
+        </div>
+        {{!-- <div class="space-y-1 min_width-1/2!@m">
+          <a href="#" class="w-full rounded-full uk-button uk-button-default" type="reset">取消</a>
+        </div>
+        <div class="space-y-1 min_width-1/2!@m">
+          <a href="#register" class="w-full rounded-full uk-button uk-button-default uk-toggle" uk-toggle>註冊</a>
+        </div> --}}
+      </div>
+      {{#if btnRegisterOn}}
+      <small class="mt-2 text-center block">
+        沒有帳戶？<a class="color_primary link_line ml-2" href="#register" uk-toggle>註冊</a>
+      </small>
+      {{/if}}
+      {{#if formContactOn}}
+      <small class="w-full text-center mt-10">忘記帳戶資訊，請聯絡系統管理員<br><a class="color_primary link_line"
+          href="mailto:sherry5473@tmu.edu.tw">sherry5473@tmu.edu.tw</a><br>02-6638-2736 分機 1219</small>
+      {{/if}}
+    </div>
+  </div>
+</form>
+
+{{>register-modal id='register' modal-title='會員註冊'}}

@@ -1,4 +1,4 @@
-@import 'functions', 'variables', 'mixin';
+@import 'functions', 'variables', 'colors-variables', 'color', 'mixin';
 
 /*---------- Text ------------------------------*/
 // @include google-font("Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif+TC|Poppins|Material+Icons"); //It's too slow on loading
@@ -106,6 +106,8 @@ button:focus {background-color: inherit;} //fix Materialize
 #{$text-shadow-black} {text-shadow: 0px 1px 2px #000000;}
 #{$text-color-white}, #{$text-color-white}>*, #{$hover}\:#{str-slice($text-color-white, 2, -1)}:hover, #{$hover}\:#{str-slice($text-color-white, 2, -1)}:hover * {color:white;}
 #{$text-color-black}, #{$text-color-black}>*, #{$hover}\:#{str-slice($text-color-black, 2, -1)}:hover, #{$hover}\:#{str-slice($text-color-black, 2, -1)}:hover * {color:black;}
+#{$text-color-white}\!, #{$text-color-white}\!>*, #{$hover}\:#{str-slice($text-color-white, 2, -1)}\!:hover, #{$hover}\:#{str-slice($text-color-white, 2, -1)}\!:hover * {color:white !important;}
+#{$text-color-black}\!, #{$text-color-black}\!>*, #{$hover}\:#{str-slice($text-color-black, 2, -1)}\!:hover, #{$hover}\:#{str-slice($text-color-black, 2, -1)}\!:hover * {color:black !important;}
 #{$text-color-default}, #{$text-color-default}>* {color:$color-text;}
 #{$text-color-dark}, #{$text-color-dark}>* {color:$color-text-dark;}
 #{$text-color-grey}, #{$text-color-grey}>* {color:$color-text-grey;}
@@ -215,42 +217,6 @@ button:focus {background-color: inherit;} //fix Materialize
 #{$text-pink-800} {color:$color-pink-800;}
 #{$text-pink-900} {color:$color-pink-900;}
 
-@include bg-color($selector:$bg-primary, $bg-color:$color-primary);
-@include bg-color($selector:$bg-primary-text, $bg-color:$color-primary-text);
-@include bg-color($selector:$bg-primary-light, $bg-color:$color-primary-light);
-@include bg-color($selector:$bg-primary-lighter, $bg-color:$color-primary-lighter);
-@include bg-color($selector:$bg-primary-dark, $bg-color:$color-primary-dark);
-@include bg-color($selector:$bg-primary-darker, $bg-color:$color-primary-darker);
-@include bg-color($selector:$bg-primary-darkest, $bg-color:$color-primary-darkest);
-@include bg-color($selector:$bg-primary-hover, $bg-color:$color-primary-hover);
-@include bg-color($selector:$bg-primary-black, $bg-color:$color-primary-black);
-@include bg-color($selector:$bg-secondary, $bg-color:$color-secondary);
-@include bg-color($selector:$bg-secondary-text, $bg-color:$color-secondary-text);
-@include bg-color($selector:$bg-secondary-light, $bg-color:$color-secondary-light);
-@include bg-color($selector:$bg-secondary-lighter, $bg-color:$color-secondary-lighter);
-@include bg-color($selector:$bg-secondary-dark, $bg-color:$color-secondary-dark);
-@include bg-color($selector:$bg-secondary-darker, $bg-color:$color-secondary-darker);
-@include bg-color($selector:$bg-secondary-darkest, $bg-color:$color-secondary-darkest);
-@include bg-color($selector:$bg-secondary-hover, $bg-color:$color-secondary-hover);
-@include bg-color($selector:$bg-secondary-black, $bg-color:$color-secondary-black);
-@include bg-color($selector:$bg-color3, $bg-color:$color3);
-@include bg-color($selector:$bg-color3-text, $bg-color:$color3-text);
-@include bg-color($selector:$bg-color3-light, $bg-color:$color3-light);
-@include bg-color($selector:$bg-color3-lighter, $bg-color:$color3-lighter);
-@include bg-color($selector:$bg-color3-dark, $bg-color:$color3-dark);
-@include bg-color($selector:$bg-color3-darker, $bg-color:$color3-darker);
-@include bg-color($selector:$bg-color3-darkest, $bg-color:$color3-darkest);
-@include bg-color($selector:$bg-color3-hover, $bg-color:$color3-hover);
-@include bg-color($selector:$bg-color3-black, $bg-color:$color3-black);
-@include bg-color($selector:$bg-color4, $bg-color:$color4);
-@include bg-color($selector:$bg-color4-text, $bg-color:$color4-text);
-@include bg-color($selector:$bg-color4-light, $bg-color:$color4-light);
-@include bg-color($selector:$bg-color4-lighter, $bg-color:$color4-lighter);
-@include bg-color($selector:$bg-color4-dark, $bg-color:$color4-dark);
-@include bg-color($selector:$bg-color4-darker, $bg-color:$color4-darker);
-@include bg-color($selector:$bg-color4-darkest, $bg-color:$color4-darkest);
-@include bg-color($selector:$bg-color4-hover, $bg-color:$color4-hover);
-@include bg-color($selector:$bg-color4-black, $bg-color:$color4-black);
 @include bg-color($selector:$bg-white, $bg-color:$color-white);
 @include bg-color($selector:$bg-black, $bg-color:$color-black);
 @include bg-color($selector:$bg-dark, $bg-color:$color-dark);
@@ -2104,43 +2070,6 @@ button:focus {background-color: inherit;} //fix Materialize
 #{$text-pink-800}\! {color:$color-pink-800 !important;}
 #{$text-pink-900}\! {color:$color-pink-900 !important;}
 
-@include bg-color($selector:$bg-primary, $bg-color:$color-primary, $important:true);
-@include bg-color($selector:$bg-primary-text, $bg-color:$color-primary-text, $important:true);
-@include bg-color($selector:$bg-primary-light, $bg-color:$color-primary-light, $important:true);
-@include bg-color($selector:$bg-primary-lighter, $bg-color:$color-primary-lighter, $important:true);
-@include bg-color($selector:$bg-primary-dark, $bg-color:$color-primary-dark, $important:true);
-@include bg-color($selector:$bg-primary-darker, $bg-color:$color-primary-darker, $important:true);
-@include bg-color($selector:$bg-primary-darkest, $bg-color:$color-primary-darkest, $important:true);
-@include bg-color($selector:$bg-primary-hover, $bg-color:$color-primary-hover, $important:true);
-@include bg-color($selector:$bg-primary-black, $bg-color:$color-primary-black, $important:true);
-@include bg-color($selector:$bg-secondary, $bg-color:$color-secondary, $important:true);
-@include bg-color($selector:$bg-secondary-text, $bg-color:$color-secondary-text, $important:true);
-@include bg-color($selector:$bg-secondary-light, $bg-color:$color-secondary-light, $important:true);
-@include bg-color($selector:$bg-secondary-lighter, $bg-color:$color-secondary-lighter, $important:true);
-@include bg-color($selector:$bg-secondary-dark, $bg-color:$color-secondary-dark, $important:true);
-@include bg-color($selector:$bg-secondary-darker, $bg-color:$color-secondary-darker, $important:true);
-@include bg-color($selector:$bg-secondary-darkest, $bg-color:$color-secondary-darkest, $important:true);
-@include bg-color($selector:$bg-secondary-hover, $bg-color:$color-secondary-hover, $important:true);
-@include bg-color($selector:$bg-secondary-black, $bg-color:$color-secondary-black, $important:true);
-@include bg-color($selector:$bg-color3, $bg-color:$color3, $important:true);
-@include bg-color($selector:$bg-color3-text, $bg-color:$color3-text, $important:true);
-@include bg-color($selector:$bg-color3-light, $bg-color:$color3-light, $important:true);
-@include bg-color($selector:$bg-color3-lighter, $bg-color:$color3-lighter, $important:true);
-@include bg-color($selector:$bg-color3-dark, $bg-color:$color3-dark, $important:true);
-@include bg-color($selector:$bg-color3-darker, $bg-color:$color3-darker, $important:true);
-@include bg-color($selector:$bg-color3-darkest, $bg-color:$color3-darkest, $important:true);
-@include bg-color($selector:$bg-color3-hover, $bg-color:$color3-hover, $important:true);
-@include bg-color($selector:$bg-color3-black, $bg-color:$color3-black, $important:true);
-@include bg-color($selector:$bg-color4, $bg-color:$color4, $important:true);
-@include bg-color($selector:$bg-color4-text, $bg-color:$color4-text, $important:true);
-@include bg-color($selector:$bg-color4-light, $bg-color:$color4-light, $important:true);
-@include bg-color($selector:$bg-color4-lighter, $bg-color:$color4-lighter, $important:true);
-@include bg-color($selector:$bg-color4-dark, $bg-color:$color4-dark, $important:true);
-@include bg-color($selector:$bg-color4-darker, $bg-color:$color4-darker, $important:true);
-@include bg-color($selector:$bg-color4-darkest, $bg-color:$color4-darkest, $important:true);
-@include bg-color($selector:$bg-color4-hover, $bg-color:$color4-hover, $important:true);
-@include bg-color($selector:$bg-color4-black, $bg-color:$color4-black, $important:true);
-
 @include bg-color($selector:$bg-white, $bg-color:$color-white, $important:true);
 @include bg-color($selector:$bg-black, $bg-color:$color-black, $important:true);
 @include bg-color($selector:$bg-dark, $bg-color:$color-dark, $important:true);
@@ -2290,7 +2219,7 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*---------- Opacity ------------------------------*/
 @include min-max($selector:$opacity-name, $percent:100, $min:.01, $max:.09, $step:.01, $opacity:true);
-@include min-max($selector:$opacity-name, $percent:100, $min:.1, $max:.9, $step:.1, $opacity:true);
+@include min-max($selector:$opacity-name, $percent:100, $min:.1, $max:.9, $step:.05, $opacity:true);
 
 /*---------- Display & Visibility ------------------------------*/
 #{$inline-block} {display:inline-block;}
@@ -2298,7 +2227,7 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 #{$ifEmpty}[class*=border]:empty {border: none !important;}
 
 /*---------- Border ------------------------------*/
-*, *::before, *::after {box-sizing: border-box;} //prevent the errors of the padding changing width
+// *, *::before, *::after {box-sizing: border-box;} //prevent the errors of the padding changing width
 @include min-max($selector:$border-white-opacity, $percent:100, $min:.01, $max:.09, $step:.01, $border-opacity:true, $child:true, $childSelector:", * , *::before");
 @include min-max($selector:$border-white-opacity, $percent:100, $min:.1, $max:.9, $step:.1, $border-opacity:true, $child:true, $childSelector:", * , *::before");
 @include min-max($selector:$border-black-opacity, $percent:100, $min:.01, $max:.09, $step:.01, $border-opacity:true, $border-color:black, $child:true, $childSelector:", * , *::before");
@@ -2307,6 +2236,13 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 @include min-max($selector:$border-white-opacity, $percent:100, $min:.1, $max:.9, $step:.1, $border-opacity:true, $important:true, $child:true, $childSelector:", * , *::before");
 @include min-max($selector:$border-black-opacity, $percent:100, $min:.01, $max:.09, $step:.01, $border-opacity:true, $border-color:black, $important:true, $child:true, $childSelector:", * , *::before");
 @include min-max($selector:$border-black-opacity, $percent:100, $min:.1, $max:.9, $step:.1, $border-opacity:true, $border-color:black, $important:true, $child:true, $childSelector:", * , *::before");
+
+#{$border-dashed}, #{$border-dashed}-before#{$uk-tab}::before {@include bordered($property:border-style, $all:false, $value:dashed)}
+#{$border-dashed}\!, #{$border-dashed}-before\!#{$uk-tab}::before {@include bordered($property:border-style, $all:false, $value:dashed, $important:true)}
+#{$border-dotted}, #{$border-dotted}-before#{$uk-tab}::before {@include bordered($property:border-style, $all:false, $value:dotted)}
+#{$border-dotted}\!, #{$border-dotted}-before\!#{$uk-tab}::before {@include bordered($property:border-style, $all:false, $value:dotted, $important:true)}
+#{$border-double}, #{$border-double}-before#{$uk-tab}::before {@include bordered($property:border-style, $all:false, $value:double)}
+#{$border-double}\!, #{$border-double}-before\!#{$uk-tab}::before {@include bordered($property:border-style, $all:false, $value:double, $important:true)}
 
 #{$border}2, #{$border}2 li a {border-width:2px}
 #{$border}3, #{$border}3 li a {border-width:3px}
@@ -2324,7 +2260,8 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 #{$divider-child}>:not(:last-child) {@include bordered($property:border-right)}
 
 /*---------- Space ------------------------------*/
-*:last-child:not([class*=mb]):not([class*=\:mb]):not([class*=my]):not([class*=\:my]):not([class*=uk-position]):not([class*=uk-margin]) {margin-bottom: 0;}
+*:last-child:not([class*=mb]):not([class*=\:mb]):not([class*=my]):not([class*=\:my]):not([class*=uk-position]):not([class*=uk-margin]), #{$margin-y-child-0}>* {margin-bottom: 0;}
+#{$margin-y-child-0}\!>* {margin-bottom: 0 !important;}
 #{$margin-x-child}>:not(:last-child) {@include space($property:margin-right, $size:$space)}
 #{$margin-x-child-m}>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
 #{$margin-x-child-l}>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
@@ -2334,13 +2271,30 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 #{$margin-y-all-child}>:not(#{$footer}) ,#{$margin-y-all-child-even}>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
 #{$margin-y-all-child-m}>:not(#{$footer}) ,#{$margin-y-all-child-even-m}>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
 #{$margin-y-all-child-l}>:not(#{$footer}) ,#{$margin-y-all-child-even-l}>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+#{$margin-x-child}\!>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+#{$margin-x-child-m}\!>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+#{$margin-x-child-l}\!>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+#{$margin-y-child}\!>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+#{$margin-y-child-m}\!>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+#{$margin-y-child-l}\!>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+#{$margin-y-all-child}\!>:not(#{$footer}) ,#{$margin-y-all-child-even}\!>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+#{$margin-y-all-child-m}\!>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+#{$margin-y-all-child-l}\!>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\!>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
 @include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left);
 @include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top);
 @include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right);
 @include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom);
+#{$padding-x-child-0}>* {padding-left: 0; padding-right: 0;}
+#{$padding-x-child-0}\!>* {padding-left: 0 !important; padding-right: 0 !important;}
+#{$padding-x-child-m}>* {padding-left: $space-m; padding-right: $space-m;}
+#{$padding-x-child-m}\!>* {padding-left: $space-m !important; padding-right: $space-m !important;}
+#{$padding-x-child-l}>* {padding-left: $space-l; padding-right: $space-l;}
+#{$padding-x-child-l}\!>* {padding-left: $space-l !important; padding-right: $space-l !important;}
 
 /*uk-@s*/
 @media (min-width:640px) {
+  #{$margin-y-child-0}\@s>* {margin-bottom: 0;}
+  #{$margin-y-child-0}\!\@s>* {margin-bottom: 0 !important;}
   #{$margin-x-child}\@s>:not(:last-child) {@include space($property:margin-right, $size:$space)}
   #{$margin-x-child-m}\@s>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
   #{$margin-x-child-l}\@s>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
@@ -2350,14 +2304,31 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
   #{$margin-y-all-child}\@s>:not(#{$footer}) ,#{$margin-y-all-child-even}\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
   #{$margin-y-all-child-m}\@s>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
   #{$margin-y-all-child-l}\@s>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+  #{$margin-x-child}\!\@s>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+  #{$margin-x-child-m}\!\@s>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+  #{$margin-x-child-l}\!\@s>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+  #{$margin-y-child}\!\@s>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!\@s>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-child-m}\!\@s>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!\@s>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-child-l}\!\@s>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!\@s>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+  #{$margin-y-all-child}\!\@s>:not(#{$footer}) ,#{$margin-y-all-child-even}\!\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-all-child-m}\!\@s>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-all-child-l}\!\@s>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\!\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
   @include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left, $media:\@s);
   @include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top, $media:\@s);
   @include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right, $media:\@s);
   @include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom, $media:\@s);
+  #{$padding-x-child-0}\@s>* {padding-left: 0; padding-right: 0;}
+  #{$padding-x-child-0}\!\@s>* {padding-left: 0 !important; padding-right: 0 !important;}
+  #{$padding-x-child-m}\@s>* {padding-left: $space-m; padding-right: $space-m;}
+  #{$padding-x-child-m}\!\@s>* {padding-left: $space-m !important; padding-right: $space-m !important;}
+  #{$padding-x-child-l}\@s>* {padding-left: $space-l; padding-right: $space-l;}
+  #{$padding-x-child-l}\!\@s>* {padding-left: $space-l !important; padding-right: $space-l !important;}
 }
 
 /*uk-@m*/
 @media (min-width:960px) {
+  #{$margin-y-child-0}\@m>* {margin-bottom: 0;}
+  #{$margin-y-child-0}\!\@m>* {margin-bottom: 0 !important;}
   #{$margin-x-child}\@m>:not(:last-child) {@include space($property:margin-right, $size:$space)}
   #{$margin-x-child-m}\@m>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
   #{$margin-x-child-l}\@m>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
@@ -2367,14 +2338,31 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
   #{$margin-y-all-child}\@m>:not(#{$footer}) ,#{$margin-y-all-child-even}\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
   #{$margin-y-all-child-m}\@m>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
   #{$margin-y-all-child-l}\@m>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+  #{$margin-x-child}\!\@m>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+  #{$margin-x-child-m}\!\@m>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+  #{$margin-x-child-l}\!\@m>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+  #{$margin-y-child}\!\@m>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!\@m>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-child-m}\!\@m>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!\@m>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-child-l}\!\@m>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!\@m>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+  #{$margin-y-all-child}\!\@m>:not(#{$footer}) ,#{$margin-y-all-child-even}\!\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-all-child-m}\!\@m>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-all-child-l}\!\@m>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\!\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
   @include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left, $media:\@m);
   @include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top, $media:\@m);
   @include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right, $media:\@m);
   @include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom, $media:\@m);
+  #{$padding-x-child-0}\@m>* {padding-left: 0; padding-right: 0;}
+  #{$padding-x-child-0}\!\@m>* {padding-left: 0 !important; padding-right: 0 !important;}
+  #{$padding-x-child-m}\@m>* {padding-left: $space-m; padding-right: $space-m;}
+  #{$padding-x-child-m}\!\@m>* {padding-left: $space-m !important; padding-right: $space-m !important;}
+  #{$padding-x-child-l}\@m>* {padding-left: $space-l; padding-right: $space-l;}
+  #{$padding-x-child-l}\!\@m>* {padding-left: $space-l !important; padding-right: $space-l !important;}
 }
 
 /*uk-@l*/
 @media (min-width:1200px) {
+  #{$margin-y-child-0}\@l>* {margin-bottom: 0;}
+  #{$margin-y-child-0}\!\@l>* {margin-bottom: 0 !important;}
   #{$margin-x-child}\@l>:not(:last-child) {@include space($property:margin-right, $size:$space)}
   #{$margin-x-child-m}\@l>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
   #{$margin-x-child-l}\@l>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
@@ -2384,14 +2372,31 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
   #{$margin-y-all-child}\@l>:not(#{$footer}) ,#{$margin-y-all-child-even}\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
   #{$margin-y-all-child-m}\@l>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
   #{$margin-y-all-child-l}\@l>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+  #{$margin-x-child}\!\@l>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+  #{$margin-x-child-m}\!\@l>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+  #{$margin-x-child-l}\!\@l>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+  #{$margin-y-child}\!\@l>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!\@l>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-child-m}\!\@l>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!\@l>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-child-l}\!\@l>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!\@l>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+  #{$margin-y-all-child}\!\@l>:not(#{$footer}) ,#{$margin-y-all-child-even}\!\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-all-child-m}\!\@l>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-all-child-l}\!\@l>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\!\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
   @include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left, $media:\@l);
   @include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top, $media:\@l);
   @include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right, $media:\@l);
   @include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom, $media:\@l);
+  #{$padding-x-child-0}\@l>* {padding-left: 0; padding-right: 0;}
+  #{$padding-x-child-0}\!\@l>* {padding-left: 0 !important; padding-right: 0 !important;}
+  #{$padding-x-child-m}\@l>* {padding-left: $space-m; padding-right: $space-m;}
+  #{$padding-x-child-m}\!\@l>* {padding-left: $space-m !important; padding-right: $space-m !important;}
+  #{$padding-x-child-l}\@l>* {padding-left: $space-l; padding-right: $space-l;}
+  #{$padding-x-child-l}\!\@l>* {padding-left: $space-l !important; padding-right: $space-l !important;}
 }
 
 /*uk-@xl*/
 @media (min-width:1600px) {
+  #{$margin-y-child-0}\@xl>* {margin-bottom: 0;}
+  #{$margin-y-child-0}\!\@xl>* {margin-bottom: 0 !important;}
   #{$margin-x-child}\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space)}
   #{$margin-x-child-m}\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
   #{$margin-x-child-l}\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
@@ -2401,13 +2406,36 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
   #{$margin-y-all-child}\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even}\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
   #{$margin-y-all-child-m}\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
   #{$margin-y-all-child-l}\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+  #{$margin-x-child}\!\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+  #{$margin-x-child-m}\!\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+  #{$margin-x-child-l}\!\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+  #{$margin-y-child}\!\@xl>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!\@xl>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-child-m}\!\@xl>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!\@xl>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-child-l}\!\@xl>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!\@xl>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+  #{$margin-y-all-child}\!\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even}\!\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-all-child-m}\!\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-all-child-l}\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
   @include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left, $media:\@xl);
   @include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top, $media:\@xl);
   @include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right, $media:\@xl);
   @include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom, $media:\@xl);
+  #{$padding-x-child-0}\@xl>* {padding-left: 0; padding-right: 0;}
+  #{$padding-x-child-0}\!\@xl>* {padding-left: 0 !important; padding-right: 0 !important;}
+  #{$padding-x-child-m}\@xl>* {padding-left: $space-m; padding-right: $space-m;}
+  #{$padding-x-child-m}\!\@xl>* {padding-left: $space-m !important; padding-right: $space-m !important;}
+  #{$padding-x-child-l}\@xl>* {padding-left: $space-l; padding-right: $space-l;}
+  #{$padding-x-child-l}\!\@xl>* {padding-left: $space-l !important; padding-right: $space-l !important;}
 }
 
 /*---------- List ------------------------------*/
+#{$list} {
+  &>li::before {position: absolute; @include space($property:margin-left, $size:-4rem); @include space($property:padding-right, $size:0.5rem); @include space($property:padding-left, $size:1rem); text-align: right; width: 4rem;}
+  &>li {
+    position: relative;
+    @include space($property:margin-bottom, $size:$space-m); @include space($property:left, $size:4rem); width: calc(100% - 4rem); text-align: justify;
+    &>* {display: inline-block; margin: 0;}
+  }
+}
 #{$list-striped} {
   &>li {@include position-index($z:1); @include space($property:padding); @include bordered($property:border-bottom)}
   &>li:first-child {@include bordered($property:border-top)}
@@ -2416,21 +2444,20 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 #{$list-horizontal} {
   display:block;
   list-style:none;
-  @include margin-padding($m:0, $p:$space-s 0);
+  @include margin-padding($m:0, $p:$space-xs 0);
   li {
     display:inline-block;
     float:none;
     @include space($property:margin-left, $size:calc(-4rem/16));
     a {
-      @include space($property:padding, $size:0 $space-s);
+      @include space($property:padding, $size:0 $space-xs);
       &:hover {text-decoration:none;}
     }
   }
 }
 #{$list-decimal} {
   @include list-counter($reset:true);
-  &>li:before {@include list-counter;}
-  &>li {@include space($property:margin-bottom, $size:$space-m)}
+  &>li:before {@include list-counter($display:inline-block);}
 }
 #{$list-decimal-ch} {list-style-type:cjk-ideographic; padding-left: 30px;}
 #{$list-decimal-row} {
@@ -2467,22 +2494,65 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
     &:nth-of-type(odd) {background:$color-light;}
   }
 }
+// #{$list-dot}, #{$list-arrow} {
+//   // $content-val:unquote("\"\\f111\"");
+//   list-style:none;
+//   &>li {position:relative; @include space($property:padding-left, $size:$space-xl);}
+// }
 #{$list-dot}, #{$list-arrow} {
-  // $content-val:unquote("\"\\f111\"");
-  list-style:none;
-  &>li {position:relative; @include space($property:padding-left, $size:$space-xl);}
+  &>li:before {
+    @include space($property:margin-left, $size:-2rem);
+    width: 2rem;
+  }
+  &>li {@include space($property:left, $size:2rem); width: calc(100% - 2rem);}
 }
 #{$list-dot} {
-  &>li:before {@include pseudo-content($pos:absolute, $content:true, $content-val:"•", $icon:fa, $l:0, $padding:0);}
+  &>li:before {@include pseudo-content($content:true, $content-val:"•", $icon:fa);}
 }
 #{$list-arrow} {
-  &>li:before {@include pseudo-content($pos:absolute, $content:true, $content-val:"▸", $icon:fa, $l:0, $padding:0);}
+  &>li:before {@include pseudo-content($content:true, $content-val:"▸", $icon:fa);}
 }
 #{$list-vline} {
-  &>li:not(:last-child):after {@include pseudo-content($pos:absolute, $content:true, $content-val:│, $padding:0 $space-s);}
+  &>li:not(:last-child):after {@include pseudo-content($pos:absolute, $content:true, $content-val:│, $padding:0 $space-xs);}
 }
 #{$list-btmline} {
   &>li:not(:last-child) {@include space($property:margin-bottom); @include space($property:padding, $size:$space-m 0 $space-m $space);}
+}
+#{$list-initial} {
+  list-style: initial;
+  list-style-position: initial;
+  // padding-inline-start: 2.5rem;
+  &>li {
+    width: calc(100% - 2.5rem);
+    position: relative;
+    left: 2.5rem;
+    text-align: justify;
+  }
+  // &::before {display: none;}
+}
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  #{$list-initial} {
+    list-style: disc;
+  }
+}
+#{$list-decimal-leading-zero} {
+  list-style: decimal-leading-zero;
+}
+#{$list-cjk-ideographic} {
+  list-style: cjk-ideographic;
+}
+#{$list-upper-latin} {
+  list-style: upper-latin;
+}
+#{$list-lower-latin} {
+  list-style: lower-latin;
+}
+#{$list-upper-roman} {
+  list-style: upper-roman;
+}
+#{$list-lower-roman} {
+  list-style: lower-roman;
 }
 
 [class*=#{str-slice($list-tabs, 2, -1)}] {
@@ -2501,12 +2571,15 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
     margin-bottom: -1px;
     background-color: white;
     border: 1px solid $color-border;
-    &:first-child {
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: 3px solid $color-border;
+    }
+    &#{$tab-buttons-rounded}:first-child {
       border-top-left-radius: .25rem;
       border-top-right-radius: .25rem;
     }
-    &:last-child {
-      margin-bottom: 0;
+    &#{$tab-buttons-rounded}:last-child {
       border-bottom-right-radius: .25rem;
       border-bottom-left-radius: .25rem;
     }
@@ -2537,6 +2610,37 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
     }
   }
 }
+#{$tab-buttons} {
+  &::before {
+    border-bottom: 1px solid #f8f8f8;
+  }
+  &, &>* {
+    padding-left: 10px;
+  }
+  >*>a {
+    background: #f8f8f8;
+    &, &:hover {
+      border: none;
+    }
+    // padding: 5px 30px;
+    @media (min-width:960px) {
+      & {
+        padding: 5px 30px;
+      }
+    }  
+  }
+  &>.uk-active>a, &>*>a:hover {
+    background: $color-primary;
+  }
+  &#{$tab-buttons-txt-white}>#{$uk-active}>a, &#{$tab-buttons-txt-white}>*>a:hover, &#{$tab-buttons-txt-white}>*>a:hover>* {
+    color: white !important;
+  }
+}
+#{$tab-buttons-noborder} {
+  &::before {
+    border-bottom: none;
+  }
+}
 #{$nav-header-dotted} {
   >li {
     &#{$uk-nav-header}>*:not(ul) {
@@ -2558,12 +2662,18 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 #{$reset-indent} {display:inherit;}
 
 /*---------- Width & Height & Scroll ------------------------------*/
+#{$width}auto {width:auto}
+#{$width}auto\! {width:auto !important}
 #{$width} {@include grid-width}
 #{$width} {@include grid-width($important:true)}
 // #{$min-width} {@include min-width}
 // #{$min-width} {@include min-width($important:true)}
 // #{$max-width} {@include max-width}
 // #{$max-width} {@include max-width($important:true)}
+#{$min-width}auto {min-width:auto}
+#{$min-width}auto\! {min-width:auto !important}
+#{$min-width}full {min-width:100%}
+#{$min-width}full\! {min-width:100% !important}
 #{$min-width} {@include grid-width($max:30, $property:min-width)}
 #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true)}
 #{$max-width} {@include grid-width($max:30, $property:max-width)}
@@ -2579,10 +2689,16 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*uk-@s*/
 @media (min-width:640px) {
+  #{$width}auto\@s {width:auto}
+  #{$width}auto\!\@s {width:auto !important}
   #{$width} {@include grid-width($media:\@s)}
   #{$width} {@include grid-width($important:true, $media:\@s)}
   // #{$min-width} {@include min-width($media:\@s)}
   // #{$min-width} {@include min-width($important:true, $media:\@s)}
+  #{$min-width}auto\@s {min-width:auto}
+  #{$min-width}auto\!\@s {min-width:auto !important}
+  #{$min-width}full\@s {min-width:100%}
+  #{$min-width}full\!\@s {min-width:100% !important}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $media:\@s)}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true, $media:\@s)}
   #{$max-width} {@include grid-width($max:30, $property:max-width, $media:\@s)}
@@ -2599,10 +2715,16 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*uk-@m*/
 @media (min-width:960px) {
+  #{$width}auto\@m {width:auto}
+  #{$width}auto\!\@m {width:auto !important}
   #{$width} {@include grid-width($media:\@m)}
   #{$width} {@include grid-width($important:true, $media:\@m)}
   // #{$min-width} {@include min-width($media:\@m)}
   // #{$min-width} {@include min-width($important:true, $media:\@m)}
+  #{$min-width}auto\@m {min-width:auto}
+  #{$min-width}auto\!\@m {min-width:auto !important}
+  #{$min-width}full\@m {min-width:100%}
+  #{$min-width}full\!\@m {min-width:100% !important}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $media:\@m)}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true, $media:\@m)}
   #{$max-width} {@include grid-width($max:30, $property:max-width, $media:\@m)}
@@ -2619,10 +2741,16 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*uk-@l*/
 @media (min-width:1200px) {
+  #{$width}auto\@l {width:auto}
+  #{$width}auto\!\@l {width:auto !important}
   #{$width} {@include grid-width($media:\@l)}
   #{$width} {@include grid-width($important:true, $media:\@l)}
   // #{$min-width} {@include min-width($media:\@l)}
   // #{$min-width} {@include min-width($important:true, $media:\@l)}
+  #{$min-width}auto\@l {min-width:auto}
+  #{$min-width}auto\!\@l {min-width:auto !important}
+  #{$min-width}full\@l {min-width:100%}
+  #{$min-width}full\!\@l {min-width:100% !important}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $media:\@l)}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true, $media:\@l)}
   #{$max-width} {@include grid-width($max:30, $property:max-width, $media:\@l)}
@@ -2639,10 +2767,16 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*uk-@xl*/
 @media (min-width:1600px) {
+  #{$width}auto\@xl {width:auto}
+  #{$width}auto\!\@xl {width:auto !important}
   #{$width} {@include grid-width($media:\@xl)}
   #{$width} {@include grid-width($important:true, $media:\@xl)}
   // #{$min-width} {@include min-width($media:\@xl)}
   // #{$min-width} {@include min-width($important:true, $media:\@xl)}
+  #{$min-width}auto\@xl {min-width:auto}
+  #{$min-width}auto\!\@xl {min-width:auto !important}
+  #{$min-width}full\@xl {min-width:100%}
+  #{$min-width}full\!\@xl {min-width:100% !important}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $media:\@xl)}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true, $media:\@xl)}
   #{$max-width} {@include grid-width($max:30, $property:max-width, $media:\@xl)}
@@ -2664,6 +2798,7 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*---------- Aspect Ratio - padding-top:calc(100%*height/width) ------------------------------*/
 #{$aspect} {
+  position: relative;
   &#{$not-uk-width} {width:100%; padding-top:100%;}
   // &:before {@include pseudo-content($display:block, $content:true); padding-top:100%;}
   &#{$ratio}3\/4 {padding-top:calc(100%*4/3);}
@@ -2775,6 +2910,108 @@ section {
   }
 }
 
+/*---------- Tab ------------------------------*/
+#{$tab-btn}#{$uk-tab}::before, #{$tab-btn-secondary}#{$uk-tab}::before {
+  display: none;
+}
+#{$tab-btn}#{$uk-tab}>li:first-child, #{$tab-btn-secondary}#{$uk-tab}>li:first-child {
+  padding-left: 0;
+}
+#{$tab-btn}#{$uk-tab}>*>a, #{$tab-btn-secondary}#{$uk-tab}>*>a {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+#{$tab-btn}#{$uk-tab}>#{$uk-active}>a {
+  background-color: $color-primary;
+  color: text-black-white($color-primary) !important;
+}
+#{$tab-btn-secondary}#{$uk-tab}>#{$uk-active}>a {
+  background-color: $color-secondary;
+  color: text-black-white($color-secondary) !important;
+}
+#{$tab-btn}#{$uk-tab}>*>a:hover, #{$tab-btn}#{$uk-tab}>*>a:focus {
+  background-color: $color-primary;
+  color: text-black-white(text-black-white($color-primary)) !important;
+}
+#{$tab-btn-secondary}#{$uk-tab}>*>a:hover, #{$tab-btn-secondary}#{$uk-tab}>*>a:focus {
+  background-color: $color-secondary;
+  color: text-black-white(text-black-white($color-secondary)) !important;
+}
+#{$tab-btn-active-white}#{$uk-tab}>#{$uk-active}>a {
+  color: white !important;
+}
+#{$tab-btn-space-xs}>*:not(:first-child) {
+  padding-left: 5px;
+}
+#{$tab-btn-space-xs}\!>*:not(:first-child) {
+  padding-left: 5px !important;
+}
+#{$tab-btn-space-s}>*:not(:first-child) {
+  padding-left: 10px;
+}
+#{$tab-btn-space-s}\!>*:not(:first-child) {
+  padding-left: 10px !important;
+}
+@media (min-width: 640px) {
+  #{$tab-btn-space-xs}\@s>*:not(:first-child) {
+    padding-left: 5px;
+  }
+  #{$tab-btn-space-xs}\!\@s>*:not(:first-child) {
+    padding-left: 5px !important;
+  }
+  #{$tab-btn-space-s}\@s>*:not(:first-child) {
+    padding-left: 10px;
+  }
+  #{$tab-btn-space-s}\!\@s>*:not(:first-child) {
+    padding-left: 10px !important;
+  }  
+}
+
+@media (min-width: 960px) {
+  #{$tab-btn-space-xs}\@m>*:not(:first-child) {
+    padding-left: 5px;
+  }
+  #{$tab-btn-space-xs}\!\@m>*:not(:first-child) {
+    padding-left: 5px !important;
+  }
+  #{$tab-btn-space-s}\@m>*:not(:first-child) {
+    padding-left: 10px;
+  }
+  #{$tab-btn-space-s}\!\@m>*:not(:first-child) {
+    padding-left: 10px !important;
+  }  
+}
+
+@media (min-width: 1200px) {
+  #{$tab-btn-space-xs}\@l>*:not(:first-child) {
+    padding-left: 5px;
+  }
+  #{$tab-btn-space-xs}\!\@l>*:not(:first-child) {
+    padding-left: 5px !important;
+  }
+  #{$tab-btn-space-s}\@l>*:not(:first-child) {
+    padding-left: 10px;
+  }
+  #{$tab-btn-space-s}\!\@l>*:not(:first-child) {
+    padding-left: 10px !important;
+  }  
+}
+
+@media (min-width: 1600px) {
+  #{$tab-btn-space-xs}\@xl>*:not(:first-child) {
+    padding-left: 5px;
+  }
+  #{$tab-btn-space-xs}\!\@xl>*:not(:first-child) {
+    padding-left: 5px !important;
+  }
+  #{$tab-btn-space-s}\@xl>*:not(:first-child) {
+    padding-left: 10px;
+  }
+  #{$tab-btn-space-s}\!\@xl>*:not(:first-child) {
+    padding-left: 10px !important;
+  }  
+}
+
 /*---------- Nav ------------------------------*/
 nav#{$nav-reset} {
   background: transparent;
@@ -2873,6 +3110,9 @@ $logo-ratio:floor(128/65*100)/100;
 
 /*---------- Pagination ------------------------------*/
 #{$pagination} a {
+  &:not(.disabled):hover, &:not(.disabled):hover * {
+    color: black;
+  }
   padding: 0 10px;
   @media (min-width:640px) {
     padding: 0 $space-l;
@@ -2889,17 +3129,289 @@ $logo-ratio:floor(128/65*100)/100;
 /*---------- Uikit 3 Style
 ---------------------------------------------------------------------------------- */
 address, dl, fieldset, figure, ol, p, pre, ul {
-  margin: 0 0 20px 0;
+  margin: 10px 0;
 }
 #{$uk} * {text-transform: inherit !important;}
 
-#{$grid-xsmall} {
+#{$grid-xs} {
+  @include space($property:margin-left, $size:$space-xs-negative);
+  &>* {@include space($property:padding-left, $size:$space-xs)}
+  &\! {
+    @include space($property:margin-left, $size:$space-xs-negative, $important:true);
+    &>* {@include space($property:padding-left, $size:$space-xs, $important:true)}
+  }
+  &\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-xs-negative);
+      &>* {@include space($property:padding-left, $size:$space-xs)}
+    }
+  }
+  &\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-xs-negative);
+      &>* {@include space($property:padding-left, $size:$space-xs)}
+    }
+  }
+  &\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-xs-negative);
+      &>* {@include space($property:padding-left, $size:$space-xs)}
+    }
+  }
+  &\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-xs-negative);
+      &>* {@include space($property:padding-left, $size:$space-xs)}
+    }
+  }
+  &\!\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-xs-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-xs, $important:true)}
+    }
+  }
+  &\!\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-xs-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-xs, $important:true)}
+    }
+  }
+  &\!\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-xs-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-xs, $important:true)}
+    }
+  }
+  &\!\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-xs-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-xs, $important:true)}
+    }
+  }
+}
+#{$grid-s} {
+  @include space($property:margin-left, $size:$space-s-negative);
+  &>* {@include space($property:padding-left, $size:$space-s)}
+  &\! {
+    @include space($property:margin-left, $size:$space-s-negative, $important:true);
+    &>* {@include space($property:padding-left, $size:$space-s, $important:true)}      
+  }
+  &\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-s-negative);
+      &>* {@include space($property:padding-left, $size:$space-s)}
+    }
+  }
+  &\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-s-negative);
+      &>* {@include space($property:padding-left, $size:$space-s)}
+    }
+  }
+  &\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-s-negative);
+      &>* {@include space($property:padding-left, $size:$space-s)}
+    }
+  }
+  &\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-s-negative);
+      &>* {@include space($property:padding-left, $size:$space-s)}
+    }
+  }
+  &\!\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-s-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-s, $important:true)}
+    }
+  }
+  &\!\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-s-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-s, $important:true)}
+    }
+  }
+  &\!\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-s-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-s, $important:true)}
+    }
+  }
+  &\!\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-s-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-s, $important:true)}
+    }
+  }
+}
+#{$grid-m} {
   @include space($property:margin-left, $size:$space-m-negative);
   &>* {@include space($property:padding-left, $size:$space-m)}
+  &\! {
+    @include space($property:margin-left, $size:$space-m-negative, $important:true);
+    &>* {@include space($property:padding-left, $size:$space-m, $important:true)}      
+  }
+  &\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-m-negative);
+      &>* {@include space($property:padding-left, $size:$space-m)}
+    }
+  }
+  &\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-m-negative);
+      &>* {@include space($property:padding-left, $size:$space-m)}
+    }
+  }
+  &\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-m-negative);
+      &>* {@include space($property:padding-left, $size:$space-m)}
+    }
+  }
+  &\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-m-negative);
+      &>* {@include space($property:padding-left, $size:$space-m)}
+    }
+  }
+  &\!\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-m-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-m, $important:true)}
+    }
+  }
+  &\!\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-m-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-m, $important:true)}
+    }
+  }
+  &\!\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-m-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-m, $important:true)}
+    }
+  }
+  &\!\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-m-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-m, $important:true)}
+    }
+  }
 }
-#{$grid-xxsmall} {
-  @include space($property:margin-left, $size:$space-negative);
-  &>* {@include space($property:padding-left, $size:$space)}
+#{$grid-l} {
+  @include space($property:margin-left, $size:$space-l-negative);
+  &>* {@include space($property:padding-left, $size:$space-l)}
+  &\! {
+    @include space($property:margin-left, $size:$space-l-negative, $important:true);
+    &>* {@include space($property:padding-left, $size:$space-l, $important:true)}      
+  }
+  &\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-l-negative);
+      &>* {@include space($property:padding-left, $size:$space-l)}
+    }
+  }
+  &\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-l-negative);
+      &>* {@include space($property:padding-left, $size:$space-l)}
+    }
+  }
+  &\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-l-negative);
+      &>* {@include space($property:padding-left, $size:$space-l)}
+    }
+  }
+  &\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-l-negative);
+      &>* {@include space($property:padding-left, $size:$space-l)}
+    }
+  }
+  &\!\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-l-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-l, $important:true)}
+    }
+  }
+  &\!\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-l-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-l, $important:true)}
+    }
+  }
+  &\!\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-l-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-l, $important:true)}
+    }
+  }
+  &\!\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-l-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-l, $important:true)}
+    }
+  }
+}
+#{$grid-xl} {
+  @include space($property:margin-left, $size:$space-xl-negative);
+  &>* {@include space($property:padding-left, $size:$space-xl)}
+  &\! {
+    @include space($property:margin-left, $size:$space-xl-negative, $important:true);
+    &>* {@include space($property:padding-left, $size:$space-xl, $important:true)}      
+  }
+  &\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-xl-negative);
+      &>* {@include space($property:padding-left, $size:$space-xl)}
+    }
+  }
+  &\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-xl-negative);
+      &>* {@include space($property:padding-left, $size:$space-xl)}
+    }
+  }
+  &\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-xl-negative);
+      &>* {@include space($property:padding-left, $size:$space-xl)}
+    }
+  }
+  &\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-xl-negative);
+      &>* {@include space($property:padding-left, $size:$space-xl)}
+    }
+  }
+  &\!\@s {
+    @media (min-width:640px) {
+      @include space($property:margin-left, $size:$space-xl-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-xl, $important:true)}
+    }
+  }
+  &\!\@m {
+    @media (min-width:960px) {
+      @include space($property:margin-left, $size:$space-xl-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-xl, $important:true)}
+    }
+  }
+  &\!\@l {
+    @media (min-width:1200px) {
+      @include space($property:margin-left, $size:$space-xl-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-xl, $important:true)}
+    }
+  }
+  &\!\@xl {
+    @media (min-width:1600px) {
+      @include space($property:margin-left, $size:$space-xl-negative, $important:true);
+      &>* {@include space($property:padding-left, $size:$space-xl, $important:true)}
+    }
+  }
 }
 
 #{$uk-grid} {
@@ -2908,7 +3420,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   }
 }
 
-#{$uk-navbar-toggle} {min-height: 50px;}
+#{$uk-navbar-toggle} {min-height: 30px;}
 #{$uk-navbar-toggle-icon} {min-width: 50px;}
 
 #{$uk-breadcrumb} a:focus, #{$uk-breadcrumb} a:hover {color: black; text-decoration: underline;}
@@ -2991,6 +3503,11 @@ address, dl, fieldset, figure, ol, p, pre, ul {
     #{$uk-hidden-hover} {visibility: visible;}
   }
 }
+#{$uk-slider}#{$slidenav-thick} {
+  svg[data-svg*=slidenav]>polyline {
+    stroke-width: 5;
+  }
+}
 /* purgecss ignore */
 #{$uk-slideshow} #{$uk-light} #{$uk-slidenav} *, #{$uk-slideshow} #{$uk-light} #{$uk-slidenav}:hover *, #{$uk-slider}#{$uk-light} #{$uk-slidenav}:not([class*=-out]):hover *, #{$uk-slider} #{$uk-light} #{$uk-slidenav}:not([class*=-out]):hover *, #{$uk-modal-dialog-lightbox} #{$uk-lightbox-content} {color: rgba(255, 255, 255, 1) !important; text-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;}
 
@@ -3059,7 +3576,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 #{$accordion-icon-r-arrow}#{$uk-accordion-title}::after {background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkYXRhLXN2Zz0iY2hldnJvbi1yaWdodCI+PHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjAzIiBwb2ludHM9IjcgNCAxMyAxMCA3IDE2Ij48L3BvbHlsaW5lPjwvc3ZnPg=="); margin-bottom: -1px;}
 #{$uk-open}>#{$accordion-icon-r-arrow}#{$uk-accordion-title}::after {background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkYXRhLXN2Zz0iY2hldnJvbi1kb3duIj48cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuMDMiIHBvaW50cz0iMTYgNyAxMCAxMyA0IDciPjwvcG9seWxpbmU+PC9zdmc+");}
 
-#{$uk-table} th {color: #666;}
+#{$uk-table} th {color: $color-text-dark; font-weight: 700;}
 @media (max-width: 1119px) {
 #{$uk-table-responsive}#{$table-responsive}\@l thead {display: none;}
 #{$uk-table-responsive}#{$table-responsive}\@l #{$uk-table-link}:not(:last-child)>a, #{$uk-table-responsive}#{$table-responsive}\@l td:not(:last-child):not(#{$uk-table-link}), #{$uk-table-responsive}#{$table-responsive}\@l th:not(:last-child):not(#{$uk-table-link}) {padding-bottom: 5px!important;}
@@ -3071,6 +3588,12 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 #{$uk-table-responsive}#{$table-responsive}\@xl #{$uk-table-link}:not(:last-child)>a, #{$uk-table-responsive}#{$table-responsive}\@xl td:not(:last-child):not(#{$uk-table-link}), #{$uk-table-responsive}#{$table-responsive}\@xl th:not(:last-child):not(#{$uk-table-link}) {padding-bottom: 5px!important;}
 #{$uk-table-responsive}#{$table-responsive}\@xl td, #{$uk-table-responsive}#{$table-responsive}\@xl th {width: auto!important; max-width: none!important; min-width: 0!important; overflow: visible!important; white-space: normal!important;}
 #{$uk-table-responsive}#{$table-responsive}\@xl, #{$uk-table-responsive}#{$table-responsive}\@xl tbody, #{$uk-table-responsive}#{$table-responsive}\@xl td, #{$uk-table-responsive}#{$table-responsive}\@xl th, #{$uk-table-responsive}#{$table-responsive}\@xl tr { display: block;}
+}
+#{$table-striped-aler}#{$uk-table}-striped tbody tr#{$uk-alert}, #{$table-striped-aler}#{$uk-table}-striped>tr#{$uk-alert} {
+  background: white;
+}
+#{$table-striped-aler}#{$uk-table}-striped tbody tr:nth-of-type(odd), #{$table-striped-aler}#{$uk-table}-striped>tr:nth-of-type(odd) {
+  background: #f8f8f8;
 }
 
 #{$uk-checkbox}#{$form-white}, #{$uk-radio}#{$form-white} {background-color: white;}
@@ -3195,18 +3718,18 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 
 /*---------- IE10+ ------------------------------*/
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-#{$uk-grid}>th[class*=uk-width-], #{$uk-grid}>td[class*=uk-width-] {display: block;}
-#{$uk-table-responsive} #{$uk-grid}>td#{$uk-width-1-1} {flex-basis: 100%;}
-#{$uk-dropdown-nav} li>* {display: block !important;}
-#{$height-ie} {height: 100%;}
-#{$uk-nav-divider} {height: 0;}
-input:-ms-input-placeholder,textarea:-ms-input-placeholder{opacity:1} //fix tailwindcss
-img:not([class*=inline-block]) {
-  width: 100%; //fix tailwindcss img <display: block>
-}
-#{$uk-tab} #{$uk-dropdown} {
-  margin-left: 0;
-}
+  #{$uk-grid}>th[class*=uk-width-], #{$uk-grid}>td[class*=uk-width-] {display: block;}
+  #{$uk-table-responsive} #{$uk-grid}>td#{$uk-width-1-1} {flex-basis: 100%;}
+  #{$uk-dropdown-nav} li>*:not(#{$hidden-ie}) {display: block !important;}
+  #{$height-ie} {height: 100%;}
+  #{$uk-nav-divider} {height: 0;}
+  input:-ms-input-placeholder,textarea:-ms-input-placeholder{opacity:1} //fix tailwindcss
+  img:not([class*=inline-block]) {
+    width: 100%; //fix tailwindcss img <display: block>
+  }
+  #{$uk-tab} #{$uk-dropdown} {
+    margin-left: 0;
+  }
   @media (min-width: 960px) {
     .min_width-1\/3\!\@m {
       min-width: calc(100%*1/3 - 1px) !important;
@@ -3215,4 +3738,5 @@ img:not([class*=inline-block]) {
   [uk-height-viewport] {
     height: auto !important;
   }
+  #{$hidden-ie} {display: none !important;}
 }
