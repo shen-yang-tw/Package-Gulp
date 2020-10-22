@@ -7,8 +7,8 @@
 			<div class="uk-flex uk-flex-middle">
 				<div class="flex-auto"><input class="uk-input" type="text" placeholder="{{placeholder}}"></div>
 				{{#if 2ndInput}}
-				<div class="px-2">或</div>
-				<div class="flex-auto"><input class="uk-input" type="text" placeholder="{{2ndInputPlaceholder}}"></div>
+					<div class="px-2">或</div>
+					<div class="flex-auto"><input class="uk-input" type="text" placeholder="{{2ndInputPlaceholder}}"></div>
 				{{/if}}
 				{{!-- <!-- <div class="flex-auto"><a class="btn_secondary min_width-100! w-full uk-button uk-button-primary" href="#search" uk-toggle>病症瀏覽</a></div> --> --}}
 			</div>
@@ -27,6 +27,12 @@
 							<select class="uk-select">
 								<option value="0" selected>-月-</option>
 								<option value="">9</option>
+							</select>
+						</div>
+						<div>
+							<select class="uk-select">
+								<option value="0" selected>-類別-</option>
+								<option value="">全部</option>
 							</select>
 						</div>
 					</div>
@@ -65,18 +71,18 @@
 				</div>
 			{{/if}}
 		{{/if}}
-		<div class="min_width-100! uk-width-auto@s uk-text-nowrap">
+		<div class="{{#if only1button}}min_width-200!{{else}}min_width-100!{{/if}} uk-width-auto@s uk-text-nowrap">
 			<button class="btn_primary w-full uk-button uk-button-primary"><i class="mr-2 fas fa-search"></i>搜尋</button>
 		</div>
 		{{#if 2ndButton}}
-		<div class="min_width-100! uk-width-auto@s uk-text-nowrap">
-			<button class="btn_primary w-full uk-button uk-button-primary">{{#if 2ndButtonFaicon}}<i class="mr-2 {{2ndButtonFaiconClasses}}"></i>{{/if}}{{2ndButtonName}}</button>
-		</div>
+			<div class="min_width-100! uk-width-auto@s uk-text-nowrap">
+				<button class="btn_primary w-full uk-button uk-button-primary">{{#if 2ndButtonFaicon}}<i class="mr-2 {{2ndButtonFaiconClasses}}"></i>{{/if}}{{2ndButtonName}}</button>
+			</div>
 		{{/if}}
 		{{#if 3rdButton}}
-		<div class="min_width-100! uk-width-auto@s uk-text-nowrap">
-			<button class="btn_primary w-full uk-button uk-button-primary">{{#if 3rdButtonFaicon}}<i class="mr-2 {{3rdButtonFaiconClasses}}"></i>{{/if}}{{3rdButtonName}}</button>
-		</div>
+			<div class="min_width-100! uk-width-auto@s uk-text-nowrap">
+				<button class="btn_primary w-full uk-button uk-button-primary">{{#if 3rdButtonFaicon}}<i class="mr-2 {{3rdButtonFaiconClasses}}"></i>{{/if}}{{3rdButtonName}}</button>
+			</div>
 		{{/if}}
 	</div>
 </form>

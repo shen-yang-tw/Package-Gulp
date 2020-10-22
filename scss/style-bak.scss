@@ -9,18 +9,23 @@
 
 .logo>* {
   min-width: 200px;
-  max-height: 70px;
+  max-height: 50px;
   width: calc(1313px/141*70) !important; //Fix Firefox - Original aspact:1313/141, Final needed height:70px, Or fix with the following
 }
 // @media (min-width: 640px) {
 //   .logo>* {
 //     min-width: 350px;
+//     max-width: 450px;
 //   }  
 // }
-
 // @media (min-width: 960px) {
 //   .logo>* {
 //     min-width: 450px;
+//   }  
+// }
+// @media (min-width: 960px) {
+//   .logo>* {
+//     max-width: 650px;
 //   }  
 // }
 /*---------- IE10+ ------------------------------*/

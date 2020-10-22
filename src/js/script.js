@@ -329,25 +329,43 @@ function showOption(thisSelect, index, sl) {
   }
 }
 
-//--Checkbox toggle check all - <input type="checkbox" onchange="toggleCheckAll(this, '.listCheck')"> or <button onclick="toggleCheckAll(this, '.listCheck')">
-function toggleCheckAll(thisClick, inputClass) {
+//--Checkbox toggle check all - <input type="checkbox" onchange="toggleCheckAll(this, '.listCheck', '.checkAll', 'false')"> or <button onclick="toggleCheckAll(this, '.listCheck')">
+function toggleCheckAll(thisClick, inputCheck, checkAll, ifAddChecked) {
   //thisClick means the "owner" and CANNOT use "this" that means the Global object "Window"
   thisClick.classList.toggle('checked')
-  var i, el = document.querySelectorAll(inputClass)
+  var inputCheck = document.querySelectorAll(inputCheck)
+  var checkAll = document.querySelectorAll(checkAll)
+  var ifAddChecked = ifAddChecked //ifAddChecked is boolean
   //--set all input checked & unchecked--
   if (thisClick.classList.contains('checked')) {
     //if 'select all' checked
-    for (i = 0;i < el.length;i++) {
-      el[i].checked = true
-      el[i].offsetParent.classList.add('checked')
-      //parent el<li> add class "checked" when input checked
+    if (checkAll != null | checkAll != undefined) {
+      for (var i = 0;i < checkAll.length;i++) {
+        checkAll[i].checked = true
+        checkAll[i].classList.add('checked')
+      }
+    }
+    for (var i = 0;i < inputCheck.length;i++) {
+      inputCheck[i].checked = true
+      if (ifAddChecked == true) {
+        inputCheck[i].offsetParent.classList.add('checked')
+        //parent inputCheck<li> add class "checked" when input checked
+      }
     }
   } else {
     //if 'select all' unchecked
-    for (i = 0;i < el.length;i++) {
-      el[i].checked = false
-      el[i].offsetParent.classList.remove('checked')
-      //parent el<li> remove class "checked" when input unchecked
+    if (checkAll != null | checkAll != undefined) {
+      for (var i = 0;i < checkAll.length;i++) {
+        checkAll[i].checked = false
+        checkAll[i].classList.remove('checked')
+      }
+    }
+    for (var i = 0;i < inputCheck.length;i++) {
+      inputCheck[i].checked = false
+      if (ifAddChecked == true) {
+        inputCheck[i].offsetParent.classList.remove('checked')
+        //parent inputCheck<li> remove class "checked" when input unchecked
+      }
     }
   }
 }
