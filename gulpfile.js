@@ -205,60 +205,70 @@ gulp.task('inject', function() {
       read: false
     }), {
       name: 'uk',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/uikit*.css'], {
       read: false
     }), {
       name: 'uk',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/tailwind*.css'], {
       read: false
     }), {
       name: 'tw',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/font*.css'], {
       read: false
     }), {
       name: 'fa',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/main.css'], {
       read: false
     }), {
       name: 'main',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/colors.css'], {
       read: false
     }), {
       name: 'colors',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style.css'], {
       read: false
     }), {
       name: 'style',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style-*.css'], {
       read: false
     }), {
       name: 'style2',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/*.css', '!' + paths.src.root + paths.dist.css + '/ui*.css', '!' + paths.src.root + paths.dist.css + '/ta*.css', '!' + paths.src.root + paths.dist.css + '/font*.css', '!' + paths.src.root + paths.dist.css + '/main*.css', '!' + paths.src.root + paths.dist.css + '/colors*.css', '!' + paths.src.root + paths.dist.css + '/style*.css'], {
       read: false
     }), {
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/script.js'], {
       read: false
     }), {
       name: 'head',
       relative: true,
+      removeTags: true,
       transform: function(filepath) {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }
@@ -267,6 +277,7 @@ gulp.task('inject', function() {
       read: false
     }), {
       relative: true,
+      removeTags: true,
       transform: function(filepath) {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }
@@ -281,60 +292,70 @@ gulp.task('build-inject', function() {
       read: false
     }), {
       name: 'uk',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/uikit*.css'], {
       read: false
     }), {
       name: 'uk',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/tailwind*.css'], {
       read: false
     }), {
       name: 'tw',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/font*.css'], {
       read: false
     }), {
       name: 'fa',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/main*.css'], {
       read: false
     }), {
       name: 'main',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/colors*.css'], {
       read: false
     }), {
       name: 'colors',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style.min.css'], {
       read: false
     }), {
       name: 'style',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style-*.css'], {
       read: false
     }), {
       name: 'style2',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/*.css', '!' + paths.dist.root + paths.dist.css + '/ui*.css', '!' + paths.dist.root + paths.dist.css + '/ta*.css', '!' + paths.dist.root + paths.dist.css + '/font*.css', '!' + paths.dist.root + paths.dist.css + '/main*.css', '!' + paths.dist.root + paths.dist.css + '/colors*.css', '!' + paths.dist.root + paths.dist.css + '/style*.css'], {
       read: false
     }), {
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/script*.js'], {
       read: false
     }), {
       name: 'head',
       relative: true,
+      removeTags: true,
       transform: function(filepath) {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }
@@ -343,6 +364,7 @@ gulp.task('build-inject', function() {
       read: false
     }), {
       relative: true,
+      removeTags: true,
       transform: function(filepath) {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }

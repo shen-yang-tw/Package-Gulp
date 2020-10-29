@@ -139,12 +139,14 @@ gulp.task('inject', function() {
       read: false
     }), {
       name: 'head',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.vendors + '/*.css', paths.src.css, './src/js/script.js'], {
       read: false
     }), {
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(gulp.dest(paths.src.root))
   // .pipe(gulp.dest(paths.dist.root))
@@ -156,12 +158,14 @@ gulp.task('build-inject', function() {
       read: false
     }), {
       name: 'head',
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.vendors + '/*.css', paths.dist.root + paths.dist.css + '/*.css', paths.dist.root + paths.dist.js + '/*.js'], {
       read: false
     }), {
-      relative: true
+      relative: true,
+      removeTags: true
     }))
     .pipe(gulp.dest(paths.dist.root))
 });

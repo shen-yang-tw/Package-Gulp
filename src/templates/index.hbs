@@ -4,15 +4,15 @@
 {{!-- First edit the title of the templateData in the gulp.task('templates') of gulpfile.js.
 The title will be changed to {{title}} in all hbs --}}
 <head>
-	{{>meta}}
+	{{>meta editor='true'}}
 </head>
 
 <body id="top" class="index">
-	{{>header-modal}}
+	{{>header-modal hrefForAA='true'}}
 
-	{{>indexContent}}
+	{{>indexContent hrefForAA='true'}}
 
-	{{>footer}}
+	{{>footer hrefForAA='true'}}
 </body>
 
 </html>

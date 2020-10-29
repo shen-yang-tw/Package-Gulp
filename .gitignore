@@ -8,5 +8,6 @@ temp
 *複製*
 *old*
 *-i.*
+*-bak.*
 *.lock
 .DS_Store

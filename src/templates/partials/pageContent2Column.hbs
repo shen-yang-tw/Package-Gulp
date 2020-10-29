@@ -28,10 +28,13 @@
 
     {{!-- <div class="s:mb-2 uk-card uk-card-small uk-card-default uk-card-body" uk-height-viewport="min-height: 200"> --}}
     <div class="min_height-550 s:mb-2 uk-card uk-card-small uk-card-default uk-card-body">
+      {{#if hrefForAA}}
+        <a class="no-underline px-1 uk-position-absolute uk-visible@l" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;top: -5px;">:::</a>
+      {{/if}}
       <div class="uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
         <div class="uk-width-1-4@m uk-width-1-5@l">
           {{#if sideMenuTop}}
-          <div class="uk-visible@m" style="{{sideMenuTopStyle}}"></div>
+            <div class="uk-visible@m" style="{{sideMenuTopStyle}}"></div>
           {{/if}}
           {{#if tab}}
             <ul class="border2 border_primary-dark mb-3 uk-tab" uk-tab>

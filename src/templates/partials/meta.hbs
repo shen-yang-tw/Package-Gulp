@@ -49,8 +49,10 @@
 <!-- endinject -->
 <!-- inject:js -->
 {{#if navMenu}}
+{{#if navMenu-auto}}
 <script src="js/nav-menu.js" defer></script>
 {{else}}
 <script src="js/nav-menu-basic.js" defer></script>
+{{/if}}
 {{/if}}
 <!-- endinject -->

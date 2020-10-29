@@ -1,11 +1,11 @@
 {
-  "name": "200928-recmd.lib.cgu.edu",
+  "name": "package-gulp",
   "version": "1.0.0",
   "description": "Using Gulp pack the website with Uikit, Fontawesome, Tailwindcss, and Handlebars",
   "main": "gulpfile.js",
   "author": "Shen Yang",
   "license": "MIT",
-  "url": "https://github.com/shen-yang-tw/200928-recmd.lib.cgu.edu.git",
+  "url": "https://github.com/shen-yang-tw/Package-Gulp.git",
   "scripts": {
     "start": "gulp start",
     "server": "gulp server",

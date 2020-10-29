@@ -28,6 +28,9 @@
 
     {{!-- <div class="s:mb-2 uk-card uk-card-small uk-card-default uk-card-body" uk-height-viewport="min-height: 200"> --}}
     <div class="min_height-550 pt-0 s:pt-2 s:mb-2 uk-card uk-card-small uk-card-default uk-card-body">
+      {{#if hrefForAA}}
+      <a class="no-underline px-1 uk-position-absolute uk-visible@l" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;top: -5px;">:::</a>
+      {{/if}}
       <h2 class="btm_line text-base s:text-2xl mt-2 s:mt-0">
         <div class="uk-flex-middle uk-grid uk-grid-small uk-child-width-expand@m" uk-grid>
           <div class="uk-width-expand">{{pageTitle}}</div>

@@ -15,6 +15,15 @@
 {{!-- <!-- --------------------- Uikit --------------------- --> --}}
 {{!-- <!-- uk-grid default to wrap --> --}}
 
+<!-- uk-tab-button -->
+<ul class="tab_btn tab_btn-secondary tab_btn-noline tab_btn-active-white tab_btn-space-xs tab_btn-space-s@m uk-tab" uk-tab uk-margin>
+	<li class="uk-active"><a href="#">圖書資料</a></li>
+	<li><a href="#">視聽資料</a></li>
+	<li><a href="#">期刊雜誌</a></li>
+	<li><a href="#">資料庫</a></li>
+</ul>
+<!-- uk-tab-button -->
+
 <!-- uk-tab -->
 <ul class="border2 border_primary uk-tab" uk-tab uk-margin>
 	<li class="uk-active"><a href="#">圖書資料</a></li>
@@ -32,9 +41,23 @@
 </ul>
 <!-- uk-switcher -->
 
+{{!-- <!-- Wrap Auto & Expand grid child width --> --}}
+<!-- uk-grid -->
+<div class="uk-grid uk-text-center" uk-grid>
+	{{!-- <!-- Child <div> Default effect same as class="uk-width-auto" --> --}}
+	<div class="uk-width-auto">
+		<div class="uk-card uk-card-default uk-card-body">Auto</div>
+	</div>
+	<div class="uk-width-expand">
+		<div class="uk-card uk-card-default uk-card-body">Expand</div>
+	</div>
+</div>
+<!-- uk-grid -->
+{{!-- <!-- Wrap Auto & Expand grid child width --> --}}
+
 {{!-- <!-- 2 Columns with grid match height from media 640px --> --}}
 <!-- uk-child-width-expand@s -->
-<div class="uk-grid-small uk-grid-match uk-child-width-expand@s" uk-grid>
+<div class="uk-grid uk-grid-small uk-grid-match uk-child-width-expand@s" uk-grid>
 	<div class="min_width-1/2!@s"></div>
 </div>
 <!-- uk-child-width-expand@s -->
@@ -60,18 +83,6 @@
 </div>
 <!-- uk-child-width-1-5 -->
 {{!-- <!-- Wrap fit child width & match height to max 5 --> --}}
-
-<!-- Wrap Auto & Expand grid child width -->
-<div class="uk-grid uk-text-center" uk-grid>
-	<!-- Child <div> Default to class="uk-width-auto" -->
-	<div>
-		<div class="uk-card uk-card-default uk-card-body">Auto</div>
-	</div>
-	<div class="uk-width-expand">
-		<div class="uk-card uk-card-default uk-card-body">Expand</div>
-	</div>
-</div>
-<!-- Wrap Auto & Expand grid child width -->
 
 <!-- Hover Card & Icon Box -->
 <div class="p-3 hover:shadow-2xl uk-card uk-card-default">

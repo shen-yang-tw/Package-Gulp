@@ -1,8 +1,27 @@
 #### Guide ####
+##	<Nvm> Install 
+1.	Install nvm-windows for windows, using an installer: https://github.com/coreybutler/nvm-windows/releases
+		nvm-windows usage: https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows
+		nvm usage: https://github.com/nvm-sh/nvm#usage
+2.	[Note]: Must <Restart Computer> after New installation otherwise webpack command `yarn run build` will get "node path" error
+
+##	<Node & Npm>
+* * Install or update to the latest: *** ` nvm install latest ` ***
+	` nvm install latest `  //This will install the latest Node & Npm
+		[option]: Istall an old version
+	` nvm install 6.10.1 32 ` //usage: nvm install <version> //"32" means a 32 bit version
+
+##	<Yarn> Install: https://yarnpkg.com/latest.msi
+1.	Test that Yarn is installed by running: *** ` yarn --version ` ***
+	` yarn --version `
+
+2.	Starting a new project: *** ` yarn init -y ` ***
+	` yarn init ` //Creating <package.json> - https://classic.yarnpkg.com/en/docs/cli/init/#toc-yarn-init
+	` yarn init -y ` //Creating <package.json> with default value
+
 ## Yarn https://classic.yarnpkg.com/en/docs/creating-a-project
 * Run `yarn help COMMAND` for more information on specific commands - https://yarnpkg.com/en/docs/cli/
-``yarn init`` Create new package.json - https://classic.yarnpkg.com/en/docs/cli/init/#toc-yarn-init
-``yarn global add handlebars syncyarnlock sass postcss-cli browser-sync`` - https://classic.yarnpkg.com/en/docs/cli/add
+`yarn global add xxx` - https://classic.yarnpkg.com/en/docs/cli/add
 
 * `yarn add handlebars @fortawesome/fontawesome-free FitText-UMD tailwindcss uikit`
 	`yarn add @fullhuman/postcss-purgecss autoprefixer browser-sync del gulp gulp-compile-handlebars gulp-autoprefixer gulp-clean-css gulp-concat gulp-imagemin gulp-inject gulp-mode gulp-postcss gulp-rename gulp-replace gulp-sass gulp-uglify-es imagemin-jpeg-recompress imagemin-pngquant postcss-import -D`
