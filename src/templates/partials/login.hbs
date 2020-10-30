@@ -1,115 +1,70 @@
-<form>
+<form onsubmit="return false;">
   {{#if formTitleOn}}
   <h3>{{formTitle}}</h3>
   {{/if}}
-  <div class="uk-grid-small uk-child-width-expand@m uk-grid" uk-grid>
-    <div class="space-y-1 min_width-1/2!@m">
-      <label class="w-full" for="#acc">帳 號</label>
+  <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
+    <div class="space-y-1 min_width-1/2!@s">
+      <label class="w-full" for="acc">帳 號</label>
       <input id="acc" class="uk-input" type="email" placeholder="">
-      <p class="color_secondary-text uk-text-small">{{error1}}</p>
-      <p class="color_secondary-text uk-text-small">{{error2}}</p>
+      {{#if errorOn}}
+      <p class="color_secondary-text uk-text-small">{{error}}</p>
+      {{/if}}
     </div>
-    <div class="space-y-1 min_width-1/2!@m">
-      <label class="w-full" for="#pas">密 碼</label>
-      <input id="pas" class="uk-input" type="password" placeholder="">
-      <p class="color_secondary-text uk-text-small">驗證提示語</p>
+    <div class="space-y-1 min_width-1/2!@s">
+      <label class="w-full" for="paw">密 碼</label>
+      <input id="paw" class="uk-input" type="password" placeholder="">
+      {{#if errorOn}}
+      <p class="color_secondary-text uk-text-small">{{error}}</p>
+      {{/if}}
     </div>
-    {{!-- <div class="space-y-1 min_width-1/2!@m">
-      <label class="w-full" for="#cap">驗證碼</label>
+    {{#if captcha}}
+    <div class="space-y-1 min_width-1/2!@s">
+      <label class="w-full" for="cap">驗證碼</label>
       <input id="cap" class="uk-input" type="text" placeholder="">
+      {{#if errorOn}}
+      <p class="color_secondary-text s:mt-1 uk-text-small">{{error}}</p>
+      {{/if}}
     </div>
-    <div class="space-y-1 min_width-1/2!@m">
+    <div class="space-y-1 min_width-1/2!@s">
       <span class="w-full uk-visible@m"></span>
       <img class="inline-block mr-2" data-src="http://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼" uk-img>
-      <a href="#" title="重新換圖"><i class="fas fa-redo"></i></a>
-    </div> --}}
-    <div class="m:mt-8 uk-width-1-1">
-      <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
-        <div class="space-y-1 min_width-1/2!@m">
-          <a href="{{submit}}" class="btn_primary w-full rounded-full uk-button uk-button-primary">登入</a>
+      <a href="#" title="重新換圖"><i class="fas fa-redo"></i><span class="sr-only">重新換圖</span></a>
+    </div>
+    {{/if}}
+    {{#if note}}
+    <div class="uk-width-1-1">
+      <small class="mt-2"><i class="mr-1 fas fa-question-circle"></i>{{noteText}}</small>
+    </div>
+    {{/if}}
+    <div class="m:mt-2 mx-auto uk-width-1-1">
+      <div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
+        <div class="space-y-1 min_width-150@s">
+          <a href="{{loginToHref}}" class="btn_primary w-full uk-button uk-button-primary">登入</a>
         </div>
-        {{!-- <div class="space-y-1 min_width-1/2!@m">
-          <a href="#" class="w-full rounded-full uk-button uk-button-default" type="reset">取消</a>
+        {{#if forgetPsw}}
+        <div class="space-y-1 min_width-150@s">
+          <a href="#" class="btn_primary w-full uk-button uk-button-primary">忘記密碼</a>
         </div>
-        <div class="space-y-1 min_width-1/2!@m">
-          <a href="#register" class="w-full rounded-full uk-button uk-button-default uk-toggle" uk-toggle>註冊</a>
-        </div> --}}
+        {{/if}}
+        {{#if cancel}}
+        <div class="space-y-1 min_width-150@s">
+          <a href="#" class="w-full uk-button uk-button-default">取消</a>
+        </div>
+        {{/if}}
+        {{#if register}}
+        <div class="space-y-1 min_width-150@s">
+          <a href="#register" class="w-full uk-button uk-button-default uk-toggle" uk-toggle>註冊</a>
+        </div>
+        {{/if}}
       </div>
-      {{#if btnRegisterOn}}
+      {{#if register}}
       <small class="mt-2 text-center block">
         沒有帳戶？<a class="color_primary link_line ml-2 uk-toggle" href="#register" uk-toggle>註冊</a>
       </small>
       {{/if}}
-      {{#if formContactOn}}
-      <small class="w-full text-center mt-10">忘記帳戶資訊，請聯絡系統管理員<br><a class="color_primary link_line"
-          href="mailto:sherry5473@tmu.edu.tw">sherry5473@tmu.edu.tw</a><br>02-6638-2736 分機 1219</small>
+      {{#if contact}}
+      <small class="mt-2 text-center block">忘記帳戶資訊，請聯絡系統管理員<br><a class="color_primary link_line" href="mailto:sherry5473@tmu.edu.tw">sherry5473@tmu.edu.tw</a><br>02-6638-2736 分機 1219</small>
       {{/if}}
     </div>
   </div>
 </form>
-<!-- uk-modal-register -->
-<div id="register" class="uk-flex-top uk-modal" uk-modal>
-  <div class="uk-modal-dialog uk-margin-auto-vertical">
-    <button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
-    <div class="uk-modal-header">
-      <h2 class="uk-modal-title">醫師註冊</h2>
-    </div>
-    <div class="uk-modal-body">
-      <form>
-        <div class="margin_y_child-even-m margin_y_child-m@m uk-grid uk-grid-collapse uk-flex-right uk-flex-middle"
-          uk-grid>
-          <div class="uk-width-1-3@m">
-            <label class="font_size-10 font-bold uk-form-label" for="form_name">姓名</label>
-          </div>
-          <div class="uk-width-2-3@m">
-            <input id="form_name" class="uk-input" type="text" placeholder="">
-          </div>
-          <div class="uk-width-1-3@m"><label class="font_size-10 font-bold uk-form-label" for="form_dep">科別</label>
-          </div>
-          <div class="uk-width-2-3@m">
-            <div class="uk-margin uk-grid-small uk-child-width-expand@m" uk-margin uk-grid>
-              <div class="min_width1_2!@m">
-                <select id="form_dep" class="uk-select" onchange="showOption(this,5,'#other_dep')">
-                  <option>-請選擇科別-</option>
-                  <option>整形外科</option>
-                  <option>美容外科</option>
-                  <option>一般外科</option>
-                  <option>乳房外科</option>
-                  <option>其它</option>
-                </select>
-              </div>
-              <div id="other_dep" class="m-0 min_width1_2!@m" hidden>
-                <div class="uk-hidden@m" style="height: 10px;"></div>
-                <input class="uk-input" id="i_other" type="text" placeholder="請輸入科別">
-              </div>
-            </div>
-          </div>
-          <div class="uk-width-1-3@m">
-            <label class="font_size-10 font-bold uk-form-label" for="form_certificate">外科醫師證書字號</label>
-          </div>
-          <div class="uk-width-2-3@m">
-            <input id="form_certificate" class="uk-input" type="text" placeholder="">
-          </div>
-          <div class="uk-width-1-3@m">
-            <label class="font_size-10 font-bold uk-form-label" for="form_email">Email</label>
-          </div>
-          <div class="uk-width-2-3@m">
-            <input id="form_email" class="uk-input" type="text" placeholder="">
-          </div>
-          <div class="uk-width-1-3@m">
-            <label class="font_size-10 font-bold uk-form-label" for="form_phone">連絡電話</label>
-          </div>
-          <div class="uk-width-2-3@m">
-            <input id="form_phone" class="uk-input" type="text" placeholder="">
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="text-center uk-modal-footer" uk-margin>
-      <a href="#" class="btn_primary min_width-100 m-0 rounded-full uk-button uk-button-primary">註　　冊</a>
-      <button class="min_width-100 rounded-full uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
-      {{!-- <a href="#login" class="rounded-full uk-button uk-button-default" uk-toggle>返回登入</a> --}}
-    </div>
-  </div>
-</div>
-<!-- uk-modal-register -->
