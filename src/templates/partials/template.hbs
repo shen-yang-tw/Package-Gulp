@@ -15,12 +15,11 @@
 {{!-- <!-- --------------------- Uikit --------------------- --> --}}
 {{!-- <!-- uk-grid default to wrap --> --}}
 
+{{!-- <!-- --------------------- Tab & Switcher --------------------- --> --}}
 <!-- uk-tab-button -->
-<ul class="tab_btn tab_btn-secondary tab_btn-noline tab_btn-active-white tab_btn-space-xs tab_btn-space-s@m uk-tab" uk-tab uk-margin>
+<ul class="tab_btn tab_btn-secondary tab_btn-noline tab_btn-active-white tab_btn-space-xs tab_btn-space-s@m m-0 uk-tab" uk-tab uk-margin>
 	<li class="uk-active"><a href="#">圖書資料</a></li>
 	<li><a href="#">視聽資料</a></li>
-	<li><a href="#">期刊雜誌</a></li>
-	<li><a href="#">資料庫</a></li>
 </ul>
 <!-- uk-tab-button -->
 
@@ -28,19 +27,61 @@
 <ul class="border2 border_primary uk-tab" uk-tab uk-margin>
 	<li class="uk-active"><a href="#">圖書資料</a></li>
 	<li><a href="#">視聽資料</a></li>
-	<li><a href="#">期刊雜誌</a></li>
-	<li><a href="#">資料庫</a></li>
 </ul>
 <!-- uk-tab -->
 <!-- uk-switcher -->
-<ul class="uk-switcher uk-margin">
-	<li></li>
-	<li></li>
+<ul class="uk-switcher">
 	<li></li>
 	<li></li>
 </ul>
 <!-- uk-switcher -->
 
+{{!-- <!-- --------------------- Flex --------------------- --> --}}
+{{!-- <!-- The 1st flex item will fit its content and the others will wrap if necessary --> --}}
+<!-- Flex hanging indent -->
+<div class="flex">
+	<span class="flex-none">資料類型：</span>
+	<div>
+		<label class="mr-4"><input class="mr-1 uk-checkbox" type="checkbox">數位檔</label>
+		<label class="mr-4"><input class="mr-1 uk-checkbox" type="checkbox">報紙</label>
+		<label class="mr-4"><input class="mr-1 uk-checkbox" type="checkbox">剪報</label>
+		<label class="mr-4"><input class="mr-1 uk-checkbox" type="checkbox">公報</label>
+		<label class="mr-4"><input class="mr-1 uk-checkbox" type="checkbox">期刊</label>
+		<label class="mr-4"><input class="mr-1 uk-checkbox" type="checkbox">圖書</label>
+		<label class="mr-4"><input class="mr-1 uk-checkbox" type="checkbox">檔案</label>
+	</div>
+</div>
+<!-- Flex hanging indent -->
+
+{{!-- <!-- The flex items auto grow and shrink width to fit the parent container and wrap if necessary --> --}}
+<!-- uk-flex -->
+<div class="uk-flex uk-flex-wrap uk-flex-between">
+	<div class="min_width-120">
+		<label class="uk-margin-right"><input class="form_white uk-checkbox mr-1" type="checkbox">精確檢索</label>
+	</div>
+	<div><small>查詢 isn:147986143X OR isn:9781479861439 ，共 1 筆</small></div>
+</div>
+<!-- uk-flex -->
+
+{{!-- <!-- The flex items auto middle & justify with between space to fit the parent container "in One Row" --> --}}
+<!-- uk-flex -->
+<div class="color_black! uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+	<h2 class="bg_primary text-sm m-0 p-2">最新消息</h2>
+	<a class="text-xs" href="#" title="更多">More</a>
+</div>
+<!-- uk-flex -->
+
+{{!-- <!-- The flex items auto grow and shrink width to fit the parent container "in One Row" --> --}}
+<!-- uk-flex -->
+<div class="uk-flex">
+	<div class="flex-auto">
+		<input id="search_input" class="uk-input" type="text" placeholder="請輸入檢索詞">
+	</div>
+	<div class="flex-auto"><a class="btn_secondary min_width-100! w-full uk-button" href="#search" uk-toggle>病症瀏覽</a></div>
+</div>
+<!-- uk-flex -->
+
+{{!-- <!-- --------------------- Grid --------------------- --> --}}
 {{!-- <!-- Wrap Auto & Expand grid child width --> --}}
 <!-- uk-grid -->
 <div class="uk-grid uk-text-center" uk-grid>
@@ -53,7 +94,6 @@
 	</div>
 </div>
 <!-- uk-grid -->
-{{!-- <!-- Wrap Auto & Expand grid child width --> --}}
 
 {{!-- <!-- 2 Columns with grid match height from media 640px --> --}}
 <!-- uk-child-width-expand@s -->
@@ -61,7 +101,25 @@
 	<div class="min_width-1/2!@s"></div>
 </div>
 <!-- uk-child-width-expand@s -->
-{{!-- <!-- 2 Columns with grid match height from media 640px --> --}}
+
+{{!-- <!-- Grid one child min-width and the other child expand-width --> --}}
+<!-- Left Image & Right Text -->
+<div class="uk-grid uk-grid-small" uk-grid>
+	<div class="min_width-1/3! min_width-1/4!@s uk-width-auto">
+		<a class="block hover:shadow-md" href="">
+			<div class="aspect ratio-3/4">
+				{{!-- <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_01.jpg);"></div> --}}
+				<div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" data-src="img/book.svg" uk-img></div>
+			</div>
+		</a>
+	</div>
+	<div class="uk-width-expand">
+		<h3 class="color_primary mt-0 text-base font-bold">Title</h3>
+		<time class="text-sm">2020-12-1</time>
+		<p>了智會不相是能方物結，可率以認來過除建後相國得，評他石傳一手叫答成動時，類存沒務，形眾經來公狀入教裡青英運解仍強晚方真國的日</p>
+	</div>
+</div>
+<!-- Left Image & Right Text -->
 
 {{!-- <!-- Flow expand child width & match target height from 2 to 4 --> --}}
 <!-- uk-child-width-expand@s -->
@@ -71,25 +129,22 @@
 	</div>
 </div>
 <!-- uk-child-width-expand@s -->
-{{!-- <!-- Flow expand child width & match target height from 2 to 4 --> --}}
 
 {{!-- <!-- Wrap fit child width & match height to max 5 --> --}}
 <!-- uk-child-width-1-5 -->
 <div class="uk-grid uk-grid-small uk-grid-match uk-child-width-1-5" uk-grid uk-height-match="target: > div">
 	<div class="min_width-200">
-		<a class="btn_color3 p-2 px-3 text-center uk-flex uk-flex-middle uk-flex-center" href="#" title="#"
-			target="_blank">Title</a>
+		<a class="btn_color3 p-2 px-3 text-center uk-flex uk-flex-middle uk-flex-center" href="#" title="#" target="_blank">Title</a>
 	</div>
 </div>
 <!-- uk-child-width-1-5 -->
-{{!-- <!-- Wrap fit child width & match height to max 5 --> --}}
 
+{{!-- <!-- --------------------- UK Card --------------------- --> --}}
 <!-- Hover Card & Icon Box -->
 <div class="p-3 hover:shadow-2xl uk-card uk-card-default">
 	<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid uk-height-match="target: > div > .uk-flex">
 		<div class="min_width-1/2! min_width-1/4!@s">
-			<a class="no-underline hover:color_secondary! bg-gray-100 space-y-2 py-3 uk-flex uk-flex-column uk-flex-center uk-flex-middle"
-				href="#">
+			<a class="no-underline hover:color_secondary! bg-gray-100 space-y-2 py-3 uk-flex uk-flex-column uk-flex-center uk-flex-middle" href="#">
 				<i class="color_primary text-4xl fas fa-database"></i>
 				<span class="text-xs text-center px-2">資料庫</span>
 			</a>
@@ -112,8 +167,7 @@
 				<ul class="text-justify uk-list">
 					<li>
 						<div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
-							<div class="min_width-100 uk-width-auto"><i class="color_primary fas fa-angle-right fa-fw"></i><time
-									class="text-sm mr-2">2020-07-03</time></div>
+							<div class="min_width-100 uk-width-auto"><i class="color_primary fas fa-angle-right fa-fw"></i><time class="text-sm mr-2">2020-07-03</time></div>
 							<div class="uk-width-expand">
 								<a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
 							</div>
@@ -121,8 +175,7 @@
 					</li>
 					<li>
 						<div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
-							<div class="min_width-100 uk-width-auto"><i class="color_primary fas fa-angle-right fa-fw"></i><time
-									class="text-sm mr-2">2020-08-21</time></div>
+							<div class="min_width-100 uk-width-auto"><i class="color_primary fas fa-angle-right fa-fw"></i><time class="text-sm mr-2">2020-08-21</time></div>
 							<div class="uk-width-expand">
 								<a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
 							</div>
@@ -130,8 +183,7 @@
 					</li>
 				</ul>
 			</div>
-			<a class="color3! text-xs text-right mb-2 mr-3 uk-position-bottom-right uk-position-z-index" href="#"
-				title="更多">閱讀更多</a>
+			<a class="color3! text-xs text-right mb-2 mr-3 uk-position-bottom-right uk-position-z-index" href="#" title="更多">閱讀更多</a>
 		</div>
 	</div>
 </div>
@@ -153,8 +205,7 @@
 							<div class="aspect ratio-3/4 bg_primary">
 								{{!-- <img class="object-contain h-full w-full" src="img/book_01.jpg" alt=""> --}}
 								{{!-- <img class="w-full uk-responsive-height	" src="img/book_01.jpg" alt=""> --}}
-								<div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
-									style="background-image: url(img/book_01.jpg);"></div>
+								<div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_01.jpg);"></div>
 							</div>
 						</a>
 						<div class="p-0 uk-card-body">
@@ -168,39 +219,34 @@
 				uk-slider-item="previous"><span class="sr-only">前一個</span></a>
 			<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
 				uk-slider-item="next"><span class="sr-only">下一個</span></a> --}}
-			<a class="w-50 px-lg-5 uk-position-left uk-flex uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#"
-				uk-slidenav-previous uk-slider-item="previous"><span class="sr-only">前一個</span></a>
-			<a class="w-50 px-lg-5 uk-position-right uk-flex uk-flex-right uk-flex-middle uk-slidenav-large uk-hidden-hover"
-				href="#" uk-slidenav-next uk-slider-item="next"><span class="sr-only">下一個</span></a>
+			<a class="w-50 px-lg-5 uk-position-left uk-flex uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"><span class="sr-only">前一個</span></a>
+			<a class="w-50 px-lg-5 uk-position-right uk-flex uk-flex-right uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"><span class="sr-only">下一個</span></a>
 		</div>
 	</div>
 	<!-- Slider Books with aspact ratio 3/4 -->
 </div>
 <!-- Title Card with Slider Books -->
 
+{{!-- <!-- --------------------- Slider --------------------- --> --}}
 <!-- Slider Buttons with flexible width -->
 <div class="uk-position-relative uk-visible-toggle uk-light uk-slider" uk-slider>
 	<ul class="uk-slider-items uk-child-width-expand">
 		<li class="uk-flex uk-flex-nowrap uk-width-auto">
 			<div>
-				<a class="uk-text-nowrap bg-white border border-solid border-l-8 p-2 px-3 min_width-100!" href="#"
-					target="_blank">社區服務</a>
+				<a class="uk-text-nowrap bg-white border border-solid border-l-8 p-2 px-3 min_width-100!" href="#" target="_blank">社區服務</a>
 			</div>
 			<div><span class="min_width-10!">&nbsp;</span></div>
 		</li>
 	</ul>
-	<a class="w-50 px-lg-5 uk-position-left uk-flex uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#"
-		uk-slidenav-previous uk-slider-item="previous" aria-label="previous" title="前一張圖"><span
-			class="sr-only">前一張圖</span></a>
-	<a class="w-50 px-lg-5 uk-position-right uk-flex uk-flex-right uk-flex-middle uk-slidenav-large uk-hidden-hover"
-		href="#" uk-slidenav-next uk-slider-item="next" aria-label="next"><span class="sr-only">下一張圖</span></a>
+	<a class="w-50 px-lg-5 uk-position-left uk-flex uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous" aria-label="previous" title="前一張圖"><span class="sr-only">前一張圖</span></a>
+	<a class="w-50 px-lg-5 uk-position-right uk-flex uk-flex-right uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next" aria-label="next"><span class="sr-only">下一張圖</span></a>
 </div>
 <!-- Slider Buttons with flexible width -->
 
+{{!-- <!-- --------------------- Dropdown --------------------- --> --}}
 <!-- Button with Dropdown -->
 <div class="uk-inline">
-	<button class="w-100 uk-button uk-button-default uk-button-small" type="button">排　　序 <i
-			uk-icon="icon: triangle-down"></i></button>
+	<button class="w-100 uk-button uk-button-default uk-button-small" type="button">排　　序 <i uk-icon="icon: triangle-down"></i></button>
 	<div class="min_width-100" uk-dropdown="mode: click; pos: bottom-right">
 		<ul class="uk-nav uk-dropdown-nav">
 			<li uk-filter-control="sort: data-year"><a href="#">年代 ↑</a></li>
@@ -214,3 +260,19 @@
 		</ul>
 	</div>
 </div>
+
+{{!-- <!-- --------------------- Image --------------------- --> --}}
+<img data-src="" width="" height="" alt="" uk-img>
+<img data-src="" data-width data-height alt="" uk-img>
+<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="img/photo.jpg" uk-img>
+	<h1>Background Image</h1>
+</div>
+
+<!-- Background Image with ratio:3/4 -->
+<a class="block" href="">
+	<div class="aspect ratio-3/4">
+		{{!-- <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_01.jpg);"></div> --}}
+		<div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" data-src="img/book.svg" uk-img></div>
+	</div>
+</a>
+<!-- Background Image with ratio:3/4 -->

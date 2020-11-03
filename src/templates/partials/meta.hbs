@@ -27,13 +27,14 @@
 <!-- style:css -->
 <link rel="stylesheet" href="css/style.css">
 <!-- endinject -->
-{{#if moreStyle}}
-<!-- inject:css -->
-<!-- endinject -->
-{{/if}}
 {{#if editor}}
 <!-- inject:css -->
 <link rel="stylesheet" href="css/editor.css">
+<!-- endinject -->
+{{/if}}
+{{#if moreStyle}}
+<!-- inject:css -->
+<link rel="stylesheet" href="css/style-sub.css">
 <!-- endinject -->
 {{/if}}
 <!-- uk:js -->
@@ -49,10 +50,8 @@
 <!-- endinject -->
 <!-- inject:js -->
 {{#if navMenu}}
-{{#if navMenu-auto}}
 <script src="js/nav-menu.js" defer></script>
 {{else}}
 <script src="js/nav-menu-basic.js" defer></script>
-{{/if}}
 {{/if}}
 <!-- endinject -->
