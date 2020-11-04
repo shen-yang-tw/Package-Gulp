@@ -272,12 +272,8 @@ div.editor.table {
   font-size: calc(15.75rem/18);
 }
 
-.editor p *:not(span) {
+.editor img, .editor a, .editor span, .editor label, .editor strong, .editor small {
   display: inline;
-}
-
-.editor img {
-  display: inherit;
 }
 
 .editor table img {
