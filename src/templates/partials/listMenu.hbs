@@ -4,50 +4,114 @@
 <div class="listMenu {{#if listMenuMaxHeight}}max_height-200 max_height-700@m uk-overflow-auto{{/if}}{{#if listMenuVisibleOnDesktop}} uk-visible@m{{/if}}">
 	<ul class="list_tabs list_tabs-icon-active-white uk-nav-parent-icon uk-nav" uk-nav="multiple: true; animation: false">
 		{{#if 1level}}
-			<li class="uk-nav-header uk-active">
-				<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-			</li>
-			<li class="uk-nav-header">
-				<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-			</li>
-			<li class="uk-nav-header">
-				<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-			</li>
+		<li class="uk-nav-header uk-active">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+		</li>
+		<li class="uk-nav-header">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+		</li>
+		<li class="uk-nav-header">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+		</li>
 		{{/if}}
 		{{#if 2level}}
-			<li class="uk-nav-header uk-active">
-				<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-			</li>
-			<li class="uk-nav-header uk-parent">
-				<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-				<ul>
-					<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
-					{{#if more}}
-						<li>
-							<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
-						</li>
-						<li class="listMore hidden">
-							<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-						</li>
-						<li class="listMore hidden">
-							<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-						</li>
-					{{/if}}
-				</ul>
-			</li>
-			<li class="uk-nav-header">
-				<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-			</li>
+		<li class="uk-nav-header">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+		</li>
+		<li class="uk-nav-header">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+		</li>
+		<li class="uk-nav-header uk-parent uk-open">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+			<ul>
+				<li class="uk-active"><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+				<li>
+				<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+				{{#if more}}
+				<li>
+					<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+				</li>
+				<li class="listMore hidden">
+					<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+				</li>
+				<li class="listMore hidden">
+					<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+				</li>
+				{{/if}}
+			</ul>
+		</li>
+		<li class="uk-nav-header uk-parent">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+			<ul>
+				<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+				<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+				{{#if more}}
+				<li>
+					<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+				</li>
+				<li class="listMore hidden">
+					<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+				</li>
+				<li class="listMore hidden">
+					<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+				</li>
+				{{/if}}
+			</ul>
+		</li>
 		{{/if}}
 		{{#if 3level}}
-			<li class="uk-nav-header uk-active">
-				<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-			</li>
-			<li class="uk-nav-header uk-parent">
-				<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-				<ul>
-					<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
-					{{#if more}}
+		<li class="uk-nav-header">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+		</li>
+		<li class="uk-nav-header">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+		</li>
+		<li class="uk-nav-header uk-parent">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+			<ul>
+				<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+				<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+				{{#if more}}
+				<li>
+					<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+				</li>
+				<li class="listMore hidden">
+					<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+				</li>
+				<li class="listMore hidden">
+					<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+				</li>
+				{{/if}}
+			</ul>
+		</li>
+		<li class="uk-nav-header uk-parent">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+			<ul>
+				<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+				<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+				{{#if more}}
+				<li>
+					<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+				</li>
+				<li class="listMore hidden">
+					<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+				</li>
+				<li class="listMore hidden">
+					<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+				</li>
+				{{/if}}
+			</ul>
+		</li>
+		<li class="uk-nav-header uk-parent uk-open">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+			<ul>
+				<li>
+					<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+					<ul>
+						<li class="uk-active"><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+						<li>
+						<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+						{{#if more}}
 						<li>
 							<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
 						</li>
@@ -57,33 +121,73 @@
 						<li class="listMore hidden">
 							<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
 						</li>
-					{{/if}}
-				</ul>
-			</li>
-			<li class="uk-nav-header uk-parent">
-				<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-				<ul>
-					<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
-					<li>
-						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-						<ul>
-							<li><a class="break-all" href="#content">subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
-							<li><a class="break-all" href="#content">subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
-							{{#if more}}
-								<li>
-									<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
-								</li>
-								<li class="listMore hidden">
-									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-								</li>
-								<li class="listMore hidden">
-									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
-								</li>
-							{{/if}}
-						</ul>
-					</li>
-				</ul>
-			</li>
+						{{/if}}
+					</ul>
+				</li>
+				<li>
+					<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+					<ul>
+						<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+						<li>
+						<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+						{{#if more}}
+						<li>
+							<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+						</li>
+						<li class="listMore hidden">
+							<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+						</li>
+						<li class="listMore hidden">
+							<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+						</li>
+						{{/if}}
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="uk-nav-header uk-parent">
+			<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+			<ul>
+				<li>
+					<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+					<ul>
+						<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+						<li>
+						<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+						{{#if more}}
+						<li>
+							<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+						</li>
+						<li class="listMore hidden">
+							<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+						</li>
+						<li class="listMore hidden">
+							<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+						</li>
+						{{/if}}
+					</ul>
+				</li>
+				<li>
+					<a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+					<ul>
+						<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+						<li>
+						<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a></li>
+						{{#if more}}
+						<li>
+							<a class="listMore text-xs text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+						</li>
+						<li class="listMore hidden">
+							<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+						</li>
+						<li class="listMore hidden">
+							<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="ml-1 pseudo:parentheses text-xs">999</small>{{/if}}</a>
+						</li>
+						{{/if}}
+					</ul>
+				</li>
+			</ul>
+		</li>
 		{{/if}}
 	</ul>
 	{{!-- <ul class="list_tabs uk-nav-parent-icon uk-nav" uk-nav="multiple: true; animation: false">

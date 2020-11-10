@@ -1,7 +1,7 @@
-{{!-- {{>print-modal id='print' modal-title='列印'}} --}}
+{{!-- {{>print-modal id='print' wide='true' modal-title='列印'}} --}}
 
 <!-- uk-modal-print -->
-<div id="{{id}}" class="uk-flex-top uk-modal" uk-modal>
+<div id="{{id}}" class="uk-flex-top uk-modal{{#if wide}} uk-modal-container{{/if}}" uk-modal>
 	<div class="uk-modal-dialog uk-margin-auto-vertical">
 		<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
 		<div class="uk-modal-header">

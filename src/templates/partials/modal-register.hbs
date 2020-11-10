@@ -1,7 +1,7 @@
-{{!-- {{>modal-register id='register' modal-title='會員註冊' errorOn='true' error='驗證提示語'}} --}}
+{{!-- {{>modal-register id='register' wide='true' modal-title='會員註冊' errorOn='true' error='驗證提示語'}} --}}
 
 <!-- uk-modal-register -->
-<div id="{{id}}" class="uk-flex-top uk-modal" uk-modal>
+<div id="{{id}}" class="uk-flex-top uk-modal{{#if wide}} uk-modal-container{{/if}}" uk-modal>
 	<div class="uk-modal-dialog uk-margin-auto-vertical">
 		<form onsubmit="return false;">
 			<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>

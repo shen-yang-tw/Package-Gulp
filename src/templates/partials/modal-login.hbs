@@ -1,7 +1,7 @@
-{{!-- {{>modal-login id='login' modal-title='會員登入' errorOn='true' error='驗證提示語' note='true' noteText='登入說明' register='true'}} --}}
+{{!-- {{>modal-login id='login' wide='true' modal-title='會員登入' errorOn='true' error='驗證提示語' note='true' noteText='登入說明' register='true'}} --}}
 
 <!-- uk-modal-login -->
-<div id="{{id}}" class="uk-flex-top" uk-modal>
+<div id="{{id}}" class="uk-flex-top uk-modal{{#if wide}} uk-modal-container{{/if}}" uk-modal>
   <div class="uk-modal-dialog uk-margin-auto-vertical">
     <form onsubmit="return false;">
       <button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>

@@ -1,7 +1,7 @@
-{{!-- {{>modal-search id='search' modal-title='搜尋'}} --}}
+{{!-- {{>modal-search id='search' wide='true' modal-title='搜尋'}} --}}
 
 <!-- uk-modal-search -->
-<div id="{{id}}" class="uk-flex-top uk-modal" uk-modal>
+<div id="{{id}}" class="uk-flex-top uk-modal{{#if wide}} uk-modal-container{{/if}}" uk-modal>
 	<div class="uk-modal-dialog uk-margin-auto-vertical uk-width-2-3@l uk-width-1-2@xl">
 		<form onsubmit="return false;">
 			<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
