@@ -1,4 +1,4 @@
-{{!-- {{>offcanvas navMenu='true'}} --}}
+{{!-- {{>offcanvas navMenu='true' level4='true'}} --}}
 
 <!-- uk-offcanvas -->
 {{#if navMenu}}
@@ -59,9 +59,9 @@
 </div>
 {{else}}
 <div id="offcanvas" uk-offcanvas>
-	<div class="bg_primary-darkest! py-5 uk-offcanvas-bar">
+	<div class="bg_primary py-5 uk-offcanvas-bar">
 		<button class="uk-offcanvas-close" type="button" title="刪除" uk-close></button>
-		<ul class="uk-nav uk-nav-default uk-nav-parent-icon text-white" uk-nav>
+		<ul class="uk-nav uk-nav-default uk-nav-parent-icon text-white" uk-nav="multiple: true">
 			<li><a href="#">Level1</a></li>
 			<li class="uk-parent">
 				<a href="#">Level2</a>
@@ -89,6 +89,7 @@
 					</li>
 				</ul>
 			</li>
+			{{#if level4}}
 			<li class="uk-parent">
 				<a href="#">Level4</a>
 				<ul class="uk-nav-sub">
@@ -132,10 +133,9 @@
 					</li>
 				</ul>
 			</li>
-			<li><a href="#">Level1</a></li>
+			{{/if}}
 			<li class="uk-nav-divider"></li>
 			<li><a href="index.html">首頁</a></li>
-			<li><a href="#">Item</a></li>
 			<li><a href="#">Item</a></li>
 			<li><a href="#">English</a></li>
 		</ul>

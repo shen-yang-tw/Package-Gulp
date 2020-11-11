@@ -514,7 +514,7 @@ function urlShowTab(ukTab) {
 }
 
 //Click a link to show a tab by the 'index' [[in the same page]]
-function linkShowTab(link, ukTab) {
+function listShowTab(link, ukTab) {
   var links = document.querySelectorAll(link)
   for (var i = 0;i < links.length;i++) {
     links[i].onclick = function () {
@@ -556,7 +556,7 @@ if (allExist([".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber"]) == tr
 
 //The two functions below must be togther
 // urlShowTab(".border2.uk-tab")
-// linkShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
+// listShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
 
 if (oneExist('img[data-src*=".svg"]') == true) {
   // console.log("The logo exists")

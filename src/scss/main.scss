@@ -3485,7 +3485,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 #{$uk-nav-sub}, ul#{$uk-nav-sub} {padding: 5px 0 5px 15px; & ul {padding-left: 15px;}}
 
 #{$uk-offcanvas-bar-a} {color: inherit;}
-#{$uk-offcanvas-bar} {padding-top: 40px !important;}
+#{$uk-offcanvas-bar} {padding-top: 40px !important; * {word-break: break-all;}}
 #{$uk-offcanvas-close} {top: 10px;}
 
 #{$uk-slideshow}, #{$uk-slider} {
