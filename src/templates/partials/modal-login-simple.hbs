@@ -11,13 +11,13 @@
       <form onsubmit="return false;">
         <div class="uk-grid-small uk-child-width-expand@m uk-grid" uk-grid>
           <div class="space-y-1 min_width-1/2!@m">
-            <input class="uk-input" type="email" placeholder="請輸入個人信箱">
+            <input class="uk-input" type="email" placeholder="請輸入個人信箱" title="輸入信箱">
             {{#if errorOn}}
               <p class="color_secondary-text uk-text-small">{{error}}</p>
             {{/if}}
           </div>
           <div class="space-y-1 min_width-1/2!@m">
-            <input class="uk-input" type="password" placeholder="6-15碼英數混合密碼">
+            <input class="uk-input" type="password" placeholder="6-15碼英數混合密碼" title="輸入密碼">
             {{#if errorOn}}
               <p class="color_secondary-text uk-text-small">{{error}}</p>
             {{/if}}
@@ -25,13 +25,12 @@
           </div>
           {{#if captcha}}
             <div class="space-y-1 min_width-1/2!@m">
-              <input class="uk-input" type="text" placeholder="請輸入圖形6碼數字">
+              <input class="uk-input" type="text" placeholder="請輸入圖形6碼數字" title="輸入驗證碼">
               {{#if errorOn}}
                 <p class="color_secondary-text uk-text-small">{{error}}</p>
               {{/if}}
             </div>
             <div class="space-y-1 min_width-1/2!@m">
-              <!-- <img src="http://fakeimg.pl/150x40/"> -->
               <img src="http://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼" uk-img>
             </div>
           {{/if}}
