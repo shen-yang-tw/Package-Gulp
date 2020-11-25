@@ -640,11 +640,11 @@ $uk-hidden-hover:".uk-hidden-hover" !default;
 $height-ie:".height_ie" !default;
 
 //### Exclude Selectors ###------------------------------------------------//
-$not-fa:":not([class^=fa-])" !default;
+$not-fa:":not([class*=fa-])" !default;
 $fa-exclude:":not(.fa-layers-text):not(.font_default)" !default;
 $uk-icon-exclude:":not([class*=uk-icon]):not(svg):not(polyline)" !default;
-$color-exclude:":not([class^=bg_]):not([class^=btn_]):not([class^=color_]):not([class^=uk-button]):not([class^=text-trans]):not([class^=text-current]):not([class^=text-black]):not([class^=text-white]):not([class^=text-gray]):not([class^=text-red]):not([class^=text-orange]):not([class^=text-yellow]):not([class^=text-green]):not([class^=text-teal]):not([class^=text-blue]):not([class^=text-indigo]):not([class^=text-purple]):not([class^=text-pink])" !default;
-$not-bg:":not([class^=bg_]):not([class^=btn_])" !default;
+$color-exclude:":not([class*=bg_]):not([class*=btn_]):not([class*=color_]):not([class*=uk-button]):not([class*=text-trans]):not([class*=text-current]):not([class*=text-black]):not([class*=text-white]):not([class*=text-gray]):not([class*=text-red]):not([class*=text-orange]):not([class*=text-yellow]):not([class*=text-green]):not([class*=text-teal]):not([class*=text-blue]):not([class*=text-indigo]):not([class*=text-purple]):not([class*=text-pink])" !default;
+$not-bg:":not([class*=bg_]):not([class*=btn_])" !default;
 $not-uk-width:":not([class*=uk-width])" !default;
 
 //### Line Height ###------------------------------------------------//

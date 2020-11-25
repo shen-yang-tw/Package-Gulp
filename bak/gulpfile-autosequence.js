@@ -63,7 +63,7 @@ gulp.task('templates', async function() { //It must need the 'async' or get erro
   var options = {
     batch: [paths.src.root + paths.dist.templates + '/partials'],
   }
-  gulp.src(paths.src.templates)
+  gulp.src([paths.src.templates, '!' + paths.src.root + paths.dist.templates + '/*-i.hbs'])
     .pipe(handlebars(null, options))
     // .pipe(rename('hello.html'))
     .pipe(rename({extname: ".html"}))

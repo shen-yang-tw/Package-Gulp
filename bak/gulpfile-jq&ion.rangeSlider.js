@@ -183,7 +183,7 @@ gulp.task('templates', async function() {
     options = {
       batch: [paths.src.root + paths.dist.templates + '/partials'],
     }
-  gulp.src(paths.src.templates)
+  gulp.src([paths.src.templates, '!' + paths.src.root + paths.dist.templates + '/*-i.hbs'])
     .pipe(handlebars(templateData, options))
     // .pipe(rename('hello.html'))
     .pipe(rename({

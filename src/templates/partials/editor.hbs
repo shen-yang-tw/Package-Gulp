@@ -1,62 +1,79 @@
 <h3>{{h3Title}}</h3>
-<div class="editor table" uk-margin>
-	<ul>
-		<li>
-			L1
-			<ul>
-				<li>L2</li>
-				<li>
-					L2
-					<ul>
-						<li>L3 item</li>
-						<li>L3 item</li>
-						<li>
-							<a><span>張制成節打去說行，書孩個體苦做，行習高人可看舉在什但優！是馬此有組，樹親生信意美大過產立！來靜我故半演們種熱光……或該更。開經功家可了，命化臺到陸產文老如然節，身初把，步信女背切不張財前日指統假？所文影清是，方此小了合國子易連體德利會之的參，馬方不了機圖都至展有別開場來裡了覺對活的，時做建了力國廠委果分一備女進小功創有？那給國靜球學動他藝轉明、化漸飯不</span></a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-	<ol>
-		<li>
-			L1
-			<ol>
-				<li>L2</li>
-				<li>
-					L2
-					<ol>
-						<li>L3 item</li>
-						<li>L3 item</li>
-						<li>L3 item</li>
-					</ol>
-				</li>
-			</ol>
-		</li>
-	</ol>
-	{{!-- <ul class="list_arrow">
-		<li>L1</li>
-		<li>
-			L1
-			<ul class="list_arrow">
-				<li>L2</li>
-				<li>
-					L2
-					<ul class="list_arrow">
-						<li>L3 item</li>
-						<li>L3 item</li>
-						<li>L3 item</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul> --}}
-	<div class="bg-gray-300 uk-card uk-card-body">
+<div class="ckeditor" uk-margin>
+	<!-- listDot -->
+	<div class="listDot">
+		<ul>
+			<li>
+				L1
+				<ul>
+					<li>L2</li>
+					<li>
+						L2
+						<ul>
+							<li>L3</li>
+							<li>L3</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>L1</li>
+		</ul>
+	</div>
+	<!-- listDot -->
+	<!-- listNumber -->
+	<div class="listNumber">
+		<ol>
+			<li>
+				L1
+				<ol>
+					<li>L2</li>
+					<li>
+						L2
+						<ol>
+							<li>L3</li>
+							<li>L3</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li>L1</li>
+		</ol>
+	</div>
+	<!-- listNumber -->
+	<!-- listDotWithNumber -->
+	<div class="listDotWithNumber">
+		<ul>
+			<li>
+				L1
+				<ol>
+					<li>L2</li>
+					<li>L2</li>
+				</ol>
+			</li>
+			<li>L1</li>
+		</ul>
+	</div>
+	<!-- listDotWithNumber -->
+	<!-- listNumberWithDot -->
+	<div class="listNumberWithDot">
+		<ol>
+			<li>
+				L1
+				<ul>
+					<li>L2</li>
+					<li>L2</li>
+				</ul>
+			</li>
+			<li>L1</li>
+		</ol>
+	</div>
+	<!-- listNumberWithDot -->
+
+	<div class="uk-card uk-card-body" style="background-color: #e2e8f0;">
 		<h3>Primary</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 	</div>
-	<h1>標題文字-h1</h1>
-	<h2>標題文字-h2</h2>
+
 	<h3>標題文字-h3</h3>
 	<p class="h3">標題文字-h3</p>
 	<h4>標題文字-h4</h4>
@@ -67,73 +84,210 @@
 	<p class="h6">標題文字-h6</p>
 	<p><a href="#">http://sample.com.tw</a>，書孩個體苦做，行習高人可看舉在什但優！是馬此有組，樹親生信意美大過產立！來靜我故半演們種熱光……或該更。開經功家可了，命化臺到陸產文老如然節，身初把，步信女背切不張財前日指統假？所文影清是，方此小了合國子易連體德利會之的參，馬方不了機圖都至展有別開場來裡了覺對活的，時做建了力國廠委果分一備女進小功創有？那給國靜球學動他藝轉明、化漸飯不！
 	</p>
-	<div class="grid-container my-3">
+
+	<div><i class="color_primary fas fa-arrow-circle-right mr-1"></i><a href="#">連結圖示</a></div>
+	<div><i class="color_primary fas fa-cloud-download-alt mr-1"></i><a href="#">檔案下載圖式</a></div>
+
+	<div class="grid-container">
 		<div class="uk-child-width-expand@m uk-grid-small" uk-margin uk-grid>
 			<div>
-				<div class="bg-gray-100 h-full uk-card uk-card-body">
-					<p class="bg-gray-400 px-2 mb-2"><strong class="font-semibold text-black">標題文字</strong></p>
+				<div class="h-100 uk-card uk-card-body" style="background-color: #f7fafc;">
+					<p class="text-black px-2 mb-2" style="background-color: #cbd5e0;"><strong class="font-semibold text-black">掛號服務</strong></p>
 					<ul>
-						<li>書孩個體苦做</li>
-						<li>書孩個體苦做</li>
-						<li>書孩個體苦做</li>
-						<li>書孩個體苦做</li>
+						<li>網路掛號</li>
+						<li>電話掛號</li>
+						<li>現場掛號</li>
+						<li>轉診掛號</li>
 					</ul>
 				</div>
 			</div>
 			<div>
-				<div class="bg-gray-100 h-full uk-card uk-card-body">
-					<p class="bg-gray-400 px-2 mb-2"><strong class="font-semibold text-black">標題文字</strong class="font-semibold"></p>
+				<div class="h-100 uk-card uk-card-body" style="background-color: #f7fafc;">
+					<p class="text-black px-2 mb-2" style="background-color: #cbd5e0;"><strong class="font-semibold text-black">門診看診</strong class="font-semibold"></p>
 					<ul>
-						<li>那給國靜球學動他</li>
-						<li>那給國靜球學動他</li>
-						<li>那給國靜球學動他</li>
-						<li>那給國靜球學動他</li>
-						<li>那給國靜球學動他</li>
-						<li>那給國靜球學動他</li>
+						<li>門診時間表查詢</li>
+						<li>看診進度查詢</li>
+						<li>領藥進度查詢</li>
+						<li>門診就醫須知</li>
+						<li>門診檢查說明書</li>
+						<li>連續處方箋預約領藥</li>
 					</ul>
 				</div>
 			</div>
 			<div>
-				<div class="bg-gray-100 h-full uk-card uk-card-body">
-					<div class="h-full uk-flex uk-flex-middle uk-flex-center">
-						<a href="#">那給國靜球學動他</a>
+				<div class="h-100 uk-card uk-card-body" style="background-color: #f7fafc;">
+					<div class="h-100 uk-flex uk-flex-middle uk-flex-center">
+						<a href="https://www.ntuh.gov.tw/ntuh/Fpage.action?muid=70&amp;fid=2972">該看哪一科?</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<table border="1" cellpadding="0" cellspacing="0" width="784">
+
+	<div class="switcher">
+		<!-- This is the nav containing the toggling elements -->
+		<ul class="uk-subnav uk-subnav-pill" uk-switcher>
+			<li><a href="#">Tab1</a></li>
+			<li><a href="#">Tab2</a></li>
+		</ul>
+		<!-- This is the container of the content items -->
+		<ul class="uk-switcher">
+			<li>
+				<!-- listDot -->
+				<div class="listDot">
+					<ul>
+						<li>
+							L1
+							<ul>
+								<li>L2</li>
+								<li>
+									L2
+									<ul>
+										<li>L3</li>
+										<li>L3</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>L1</li>
+					</ul>
+				</div>
+				<!-- listDot -->
+				<!-- listNumber -->
+				<div class="listNumber">
+					<ol>
+						<li>
+							L1
+							<ol>
+								<li>L2</li>
+								<li>
+									L2
+									<ol>
+										<li>L3</li>
+										<li>L3</li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+						<li>L1</li>
+					</ol>
+				</div>
+				<!-- listNumber -->
+				<!-- listDotWithNumber -->
+				<div class="listDotWithNumber">
+					<ul>
+						<li>
+							L1
+							<ol>
+								<li>L2</li>
+								<li>L2</li>
+							</ol>
+						</li>
+						<li>L1</li>
+					</ul>
+				</div>
+				<!-- listDotWithNumber -->
+				<!-- listNumberWithDot -->
+				<div class="listNumberWithDot">
+					<ol>
+						<li>
+							L1
+							<ul>
+								<li>L2</li>
+								<li>L2</li>
+							</ul>
+						</li>
+						<li>L1</li>
+					</ol>
+				</div>
+				<!-- listNumberWithDot -->
+			</li>
+			<li>Content2</li>
+		</ul>
+	</div>
+
+	<div class="block">
+		<div class="px-1 py-2 text-black" style="background: #5b9bd5;">路線一：書孩個體苦做，行習高人可看舉在什但優是馬此有組</div>
+		<div class="px-1 py-2">書孩個體苦做，行習高人可看舉在什但優！是馬此有組，樹親生信意美大過產立！來靜我故半演們種熱光……或該更。開經功家可了，命化臺到陸產文老如然節，身初把，步信女背切不張財前日指統假？所文影清是，方此小了合國子易連體德利會之的參，馬方不了機圖都至展有別開場來裡了覺對活的，時做建了力國廠委果分一備女進小功創有？那給國靜球學動他藝轉明、化漸飯不</div>
+		<div class="px-1 py-2 text-black" style="background: #70ad47;">路線二：書孩個體苦做，行習高人可看舉在什但優是馬此有組</div>
+		<div class="px-1 py-2">書孩個體苦做，行習高人可看舉在什但優！是馬此有組，樹親生信意美大過產立！來靜我故半演們種熱光……或該更。開經功家可了，命化臺到陸產文老如然節，身初把，步信女背切不張財前日指統假？所文影清是，方此小了合國子易連體德利會之的參，馬方不了機圖都至展有別開場來裡了覺對活的，時做建了力國廠委果分一備女進小功創有？那給國靜球學動他藝轉明、化漸飯不</div>
+		<div class="px-1 py-2 text-black" style="background: #ed7d31;">路線三：書孩個體苦做，行習高人可看舉在什但優是馬此有組</div>
+		<div class="px-1 py-2">書孩個體苦做，行習高人可看舉在什但優！是馬此有組，樹親生信意美大過產立！來靜我故半演們種熱光……或該更。開經功家可了，命化臺到陸產文老如然節，身初把，步信女背切不張財前日指統假？所文影清是，方此小了合國子易連體德利會之的參，馬方不了機圖都至展有別開場來裡了覺對活的，時做建了力國廠委果分一備女進小功創有？那給國靜球學動他藝轉明、化漸飯不</div>
+	</div>
+
+	<div class="photo">
+		<div class="uk-grid uk-grid-small" uk-grid>
+			<div class="min_width-1/3! min_width-1/4!@s uk-width-auto">
+				<img data-src="img/user.svg" data-width data-height alt="圖片" uk-img>
+			</div>
+			<div class="uk-width-expand">
+				<h4 class="color_primary mt-0 text-base font-bold">Title</h4>
+				<p>了智會不相是能方物結，可率以認來過除建後相國得，評他石傳一手叫答成動時，類存沒務，形眾經來公狀入教裡青英運解仍強晚方真國的日</p>
+			</div>
+			<div class="uk-width-1-1">
+				<p>了智會不相是能方物結，可率以認來過除建後相國得，評他石傳一手叫答成動時，類存沒務，形眾經來公狀入教裡青英運解仍強晚方真國的日</p>
+				<p>了智會不相是能方物結，可率以認來過除建後相國得，評他石傳一手叫答成動時，類存沒務，形眾經來公狀入教裡青英運解仍強晚方真國的日</p>
+			</div>
+		</div>
+	</div>
+
+	<table class="table_center" border="1" cellpadding="0" cellspacing="0" width="784">
 		<thead>
-			<tr height="22">
-				<th headers="_180" height="22" style="text-align: left; width: 20%;">Hours</th>
-				<th id="_180" style="text-align: left;" width="64">Monday</th>
-				<th headers="_55" style="text-align: left;" width="64">Tuesday</th>
-				<th style="text-align: left;" width="64">Wednesday</th>
-				<th style="text-align: left;" width="64">Thursday</th>
-				<th style="text-align: left;" width="64">Friday</th>
+			<tr>
+				<th>Hours</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr height="22">
-				<td headers="_57" height="22" width="64"><span class="heading">Heading1</span>Morning 9:00-12:00
+			<tr>
+				<td>Morning 9:00-12:00
 				</td>
-				<td headers="_58" width="64"><span class="heading">Heading2</span>X</td>
-				<td headers="_59" width="64"><span class="heading">Heading3</span>X</td>
-				<td id="_60" width="64"><span class="heading">Heading4</span>X</td>
-				<td headers="_61" width="64"><span class="heading">Heading5</span>X</td>
-				<td headers="_62" width="64"><span class="heading">Heading6</span>X</td>
+				<td>X</td>
+				<td>X</td>
+				<td>X</td>
+				<td>X</td>
+				<td>X</td>
 			</tr>
-			<tr height="22">
-				<td headers="_63" height="22" width="64"><span class="heading">Heading1</span>Afternoon 1:30-4:30
+			<tr>
+				<td>Afternoon 1:30-4:30
 				</td>
-				<td headers="_64" width="64"><span class="heading">Heading2</span>X</td>
-				<td headers="_65" width="64"><span class="heading">Heading3</span>X</td>
-				<td headers="_66" width="64"><span class="heading">Heading4</span>X</td>
-				<td headers="_67" width="64"><span class="heading">Heading5</span>X</td>
-				<td headers="_68" width="64"><span class="heading">Heading6</span>X</td>
+				<td>X</td>
+				<td>X</td>
+				<td>X</td>
+				<td>X</td>
+				<td>X</td>
 			</tr>
 		</tbody>
 	</table>
+
+	<table border="1" cellpadding="0" cellspacing="0" width="784">
+		<thead>
+			<tr>
+				<th>Hours</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="heading d-block uk-hidden@m">Heading1</span>Morning 9:00-12:00
+				</td>
+				<td><span class="heading d-block uk-hidden@m">Heading2</span>X</td>
+				<td><span class="heading d-block uk-hidden@m">Heading3</span>X</td>
+			</tr>
+			<tr>
+				<td><span class="heading d-block uk-hidden@m">Heading1</span>Afternoon 1:30-4:30
+				</td>
+				<td><span class="heading d-block uk-hidden@m">Heading2</span>X</td>
+				<td><span class="heading d-block uk-hidden@m">Heading3</span>X</td>
+			</tr>
+		</tbody>
+	</table>
+
 	<table border="1" width="50%">
 		<caption>Table-有外框無間距 width="50%，在手機版自動寬度100%"</caption>
 		<thead>
@@ -152,10 +306,11 @@
 			<tr>
 				<td>Table Data</td>
 				<td>Table Data</td>
-				<td>Table Data</td>
+				<td><i class="color_primary fas fa-cloud-download-alt mr-1"></i>診斷書補發申請書</td>
 			</tr>
 		</tbody>
 	</table>
+
 	<table border="0" cellspacing="20">
 		<caption>Table-無外框有間距20</caption>
 		<thead>
@@ -178,6 +333,7 @@
 			</tr>
 		</tbody>
 	</table>
+
 	<table border="1" cellspacing="10" style="width: 80%;">
 		<caption>Table-有外框有間距10</caption>
 		<thead>
