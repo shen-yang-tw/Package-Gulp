@@ -559,7 +559,7 @@ gulp.task('html', gulp.series('delhtml', 'templates', 'sass', 'js', 'inject'));
 gulp.task('start', gulp.series('vendors', 'delhtml', 'templates', 'sass', 'js', 'inject'));
 
 //1. Preset then watch
-gulp.task('server', gulp.series('vendors', 'templates', 'sass', 'js', 'inject', 'watch'));
+gulp.task('server', gulp.series('vendors', 'templates', 'sass', 'css', 'js', 'inject', 'watch'));
 
 //3. Prepare all assets for production, run: 'yarn build-nohtml' or 'yarn build'
 gulp.task('build-nohtml', gulp.series('vendors', 'tocss', 'js', 'img'));
