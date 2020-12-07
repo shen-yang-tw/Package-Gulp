@@ -32,7 +32,7 @@
 	remove: ``yarn global remove gulp-cli` then add: `yarn global add gulp-cli`
 	Must add "one by one": `yarn add @fullhuman/postcss-purgecss del gulp gulp-autoprefixer gulp-clean-css gulp-compile-handlebars gulp-concat gulp-dart-sass gulp-imagemin gulp-inject gulp-mode gulp-postcss gulp-rename gulp-replace gulp-uglify gulp-uglify-es imagemin-jpeg-recompress imagemin-pngquant postcss-import -D`
 
-* `yarn install` Install all packages from package.json, then run ``yarn upgrade`` Not working on all packages
+* `yarn install` Install all packages in dependencies of the package.json, then run ``yarn upgrade`` Not working on all packages
 	Just run below
 	Install: ***	`yarn install && upgrade && syncyarnlock -s -k` *** - https://www.npmjs.com/package/syncyarnlock#usage
 	Update: ***	`yarn upgrade --latest --pattern && syncyarnlock -s -k` ***
