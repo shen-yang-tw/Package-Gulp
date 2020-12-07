@@ -13,7 +13,7 @@
 	` nvm list ` //List all versions
 	` nvm use 15.3.0 ` //Use <version>
 
-##	<Yarn> Install: https://yarnpkg.com/latest.msi
+##	<Yarn> Install/Update: https://yarnpkg.com/latest.msi
 1.	Test that Yarn is installed by running: *** ` yarn --version ` ***
 	` yarn --version `
 
@@ -47,6 +47,7 @@
 0. `yarn start` or `gulp start`：It means to run `gulp vendors`, `gulp scss`, `gulp html`
 1. `yarn server` or `gulp server`：It means to run  `gulp vendors`, `gulp scss`, `gulp html` then `gulp watch`
 2. `yarn build`：It means to run `gulp build --production`
+	 `yarn build-purge`：It means to run `gulp build-purge --purge`
 	 `yarn build-nohtml`：It means to run `gulp build-nohtml --production`
 ---------------------------
 `gulp vendors`：Output tailwind css, Copy vendors files to src & dist
