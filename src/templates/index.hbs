@@ -7,8 +7,8 @@ The title will be changed to {{title}} in all hbs --}}
 	{{>meta editor='true'}}
 </head>
 
-<body id="top" class="index">
-	{{>header-modal hrefForAA='true'}}
+<body id="top" class="index {{#if focus}} focus{{/if}}">
+	{{>header hrefForAA='true' shadow='true' logoRightNav='true' iconLogin='true' mainMenu='true'}}
 
 	{{>indexContent hrefForAA='true'}}
 

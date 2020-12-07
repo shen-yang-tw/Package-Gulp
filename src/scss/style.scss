@@ -37,68 +37,75 @@
   // }
 }
 
-#{$focus-visible},
-a:focus,
-button:focus {
-  // border: 1px solid $color-border-focus !important;
-  //Don't use the [border] or got more space outside the element
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  outline-width: 0 !important;
+.uk-heading-line>::after, .uk-heading-line>::before {
+  top: calc(50% - (2px/ 2));
+  border-bottom: calc(2px) dotted $color-primary;
 }
 
-em,
-strong {
-  color: $color-primary
+.uk-input, .uk-select, .uk-textarea, .uk-button-default {
+  border-color: #d0d0d0;
 }
 
-body::before,
-header::before, header::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.icon {
+  width: 65px;
+  margin: 2px 0;
 }
 
-body::before {
-  // background: url(../img/bg.png) no-repeat center center;
+// em,
+// strong {
+//   color: $color-secondary
+// }
+
+// body::before,
+// header::before, header::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+// }
+
+// body::before {
+//   background: url(../img/bg.png) no-repeat center center;
+//   background-size: 100% 100%;
+//   background-position: center top;
+//   // transform: scaleX(-1);
+//   // opacity: .15;
+// }
+
+body {
+  background: url(../img/bg.png) no-repeat center center;
   background-size: 100% 100%;
   background-position: center top;
   // transform: scaleX(-1);
   // opacity: .15;
 }
 
-header::after {
-  position: relative;
-}
+// @media (min-width: 960px) {
+//   header::before {
+//     background: url(../img/header.png) no-repeat center center;
+//     background-size: contain;
+//     background-position: 0 0;
+//     max-height: 244px;
+//     // opacity: .15;
+//   }
+// }
 
-@media (min-width: 960px) {
-  header::before {
-    background: url(../img/header.png) no-repeat center center;
-    background-size: contain;
-    background-position: 0 0;
-    max-height: 244px;
-    // opacity: .15;
-  }
-}
-
-@media (min-width: 1100px) {
-  header::after {
-    background: url('data:image/gif;base64,R0lGODlhMgAyAJEAAP///wAAAMDAwAAAACH5BAEAAAIALAAAAAAyADIAAAIzlI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKicFADs=') no-repeat center center;
-    // BASE64 code for blank.gif
-    background-size: contain;
-    background-position: 0 0;
-    padding-top: calc(100%*244/1920 - 120px);
-    height: 100%;
-  }
-}
-
-.page header::before, .page header::after {
-  display: none;
-}
+// header::after {
+//   position: relative;
+// }
+// @media (min-width: 1100px) {
+//   header::after {
+//     background: url('data:image/gif;base64,R0lGODlhMgAyAJEAAP///wAAAMDAwAAAACH5BAEAAAIALAAAAAAyADIAAAIzlI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKicFADs=') no-repeat center center;
+//     // BASE64 code for blank.gif
+//     background-size: contain;
+//     background-position: 0 0;
+//     padding-top: calc(100%*244/1920 - 120px);
+//     height: 100%;
+//   }
+// }
 
 // #footer {
 //   background-color: $color-primary-lighter !important;
@@ -111,7 +118,6 @@ header::after {
 #footer,
 footer {
   background: none;
-
   // & * {color: $color-text !important;}
   & * {
     color: $color-text-dark !important;
@@ -127,13 +133,9 @@ footer {
   color: white !important;
 }
 
-.sub_nav [uk-dropdown] {
-  z-index: 2;
-}
-
-#gototop {
-  bottom: 40px;
-}
+// #gototop {
+//   bottom: 40px;
+// }
 
 //------ Ion.RangeSlider ------------------------
 .irs--flat .irs-bar, .irs--flat .irs-single, .irs--flat .irs-handle>i:first-child, .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {

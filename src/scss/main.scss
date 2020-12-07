@@ -32,6 +32,10 @@ body {
   #{$text-l} & {font-size:calc(#{strip-unit($font-base)+2}rem/#{$fontsize-l-integer})}
 }
 
+em, strong {
+  color: $color-primary
+}
+
 @include min-max($selector:$font-size-name, $percent:10, $min:0.1, $max:6, $step:0.1, $property:true, $property-name:font-size, $unit:true);
 @include min-max($selector:$font-size-name, $percent:10, $min:0.1, $max:6, $step:0.1, $property:true, $property-name:font-size, $unit:true, $important:true);
 @include min-max($selector:$font-size-name, $percent:10, $min:0.1, $max:6, $step:0.1, $property:true, $property-name:font-size, $unit:true);
@@ -88,7 +92,7 @@ a, button {
 *:focus {outline: none;}
 button:focus {background-color: inherit;} //fix Materialize
 /* Optional: Customize Class .focus-visible */
-#{$focus-visible}, a:focus, button:focus {@include focus($important:true)}
+#{$focus}, #{$focus} a:focus, #{$focus} button:focus {@include focus($important:true)}
 
 #{$link-line}, #{$link-line}>* {text-decoration: underline;}
 #{$link-line}:hover, #{$link-line}:hover>*, #{$mc-underline}:hover, #{$mc-underline}:hover>* {text-decoration: none}
@@ -2795,6 +2799,23 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 #{$overflow-hidden}\@m {@media (min-width: 960px) {@include overflow-hidden($mask:true)}}
 #{$truncate} {@include ellipsis($lineCount:3, $truncate:true)}
 #{$ellipsis} {@include ellipsis($lineCount:3)}
+
+/*---------- Position ------------------------------*/
+#{$vertical-middle} {
+  font-size: 0;
+}
+#{$vertical-middle}::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+#{$vertical-middle}>* {
+  display: inline-block;
+  max-width: 100%;
+  // font-size: 1rem;
+  vertical-align: middle;
+}
 
 /*---------- Aspect Ratio - padding-top:calc(100%*height/width) ------------------------------*/
 #{$aspect} {

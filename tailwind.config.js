@@ -7,6 +7,13 @@ module.exports = {
       'xl': '1600px',
     },
     extend: {
+      zIndex: {
+        '1': '1',
+        '2': '2',
+        '3': '3',
+        '4': '4',
+        '5': '5',
+      },
       spacing: {
         '1/2%': '50%',
         '1/3%': '33.333333%',
@@ -111,6 +118,7 @@ module.exports = {
     visibility: ['responsive', 'hover', 'focus'],
     boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     borderStyle: ['responsive', 'hover', 'focus'],
+    fontWeight: ['hover', 'focus']
   },
   plugins: []
 }

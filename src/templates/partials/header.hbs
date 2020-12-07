@@ -1,8 +1,8 @@
-{{!-- {{>header shadow='true' topNav='true' hrefForAA='true' mainMenu='true' 01active='true' borderHR='true' iconLogin='true' modal='true'}} --}}
+{{!-- {{>header shadow='true' hrefForAA='true' topNav='true' logoRightNav='true' mainMenu='true' 01active='true' borderHR='true' iconLogin='true' modal='true'}} --}}
 
 <!-- header -->
 
-<header{{#if shadow}} class="shadow"{{/if}}>
+<header {{#if shadow}}class="shadow{{/if}}">
 	{{#if topNav}}
 	<nav class="bg_primary py-1 text-center relative uk-visible@m" uk-margin>
 		<div class="px-4 py-1 uk-container">
@@ -31,6 +31,7 @@
 								</a>
 							</h1>
 						</div>
+						{{#if logoRightNav}}
 						<div class="m-0 relative uk-width-auto uk-visible@m">
 							<div class="sub_nav text-xs uk-flex uk-flex-middle">
 								{{#if hrefForAA}}
@@ -57,7 +58,9 @@
 								{{/if}}
 							</div>
 						</div>
+						{{/if}}
 						<div class="uk-flex-nowrap uk-width-auto uk-hidden@m">
+							{{#if iconLogin}}
 							<div class="uk-inline">
 								<button class="color_primary border-none h-full uk-button uk-button-default" type="button" title="註冊/登入/登出"><i class="-mb-1 fas fa-user-circle fa-lg"></i></button>
 								<div class="min_width-50 uk-dropdown" uk-dropdown="pos: bottom-right">
@@ -69,6 +72,7 @@
 									</ul>
 								</div>
 							</div>
+							{{/if}}
 							<button class="min_width-30! color_primary px-0 uk-flex uk-flex-right uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas"><span class="sr-only">選單</span></button>
 						</div>
 					</div>
@@ -79,7 +83,7 @@
 			<!-- mainMenu -->
 			<div class="relative">
 				{{!-- <div class="bg_primary opacity-85 uk-position-cover"></div> --}}
-				<div class="container_responsive@s uk-visible@m uk-container">
+				<div class="container_responsive@s uk-container uk-visible@m">
 					<div class="uk-flex uk-navbar" uk-navbar>
 						<div class="uk-navbar-center">
 							<ul class="nav_bar nav_bar-secondary uk-tab">

@@ -1,6 +1,7 @@
+'use strict';
 // node.js Packages / Dependencies
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 // const uglify = require('gulp-uglify');
 const uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
@@ -17,6 +18,7 @@ const inject = require('gulp-inject');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const purgecss = require("@fullhuman/postcss-purgecss");
+// const purgecss = require("gulp-purgecss");
 const tailwindcss = require("tailwindcss");
 // const series = require("stream-series");
 const atimport = require("postcss-import");
@@ -101,9 +103,8 @@ gulp.task('tailwind', function() {
       postcss([
         atimport(),
         tailwindcss("tailwind.config.js"),
-        purgecss({
+        purgecss({ //For "@fullhuman/postcss-purgecss"
           content: [paths.src.html, paths.src.js],
-          // whitelist: ['opacity-100'],
           defaultExtractor: content =>
             content.match(/[\w-/:!@]+(?<!:)/g) || []
         }),
@@ -178,7 +179,8 @@ gulp.task('copyfonts', function() {
 //gulp.task('templates', async function(){}): It must need the 'async' or get error 'Did you forget to signal async completion?'
 gulp.task('templates', async function() {
   var templateData = {
-      title: '中研院近史所圖書館'
+      title: '中研院近史所圖書館',
+      focus: 'true'
     },
     options = {
       batch: [paths.src.root + paths.dist.templates + '/partials'],
@@ -376,9 +378,10 @@ gulp.task('build-inject', function() {
 // Compile SCSS
 gulp.task('sass', function() {
   return gulp.src([paths.src.scss, '!' + paths.src.root + paths.dist.scss + '/*-i.scss', '!' + paths.src.root + paths.dist.scss + '/*-bak.scss'])
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }).on('error', sass.logError))
+    // .pipe(sass({
+    //   outputStyle: 'expanded'  //For old "gulp-sass"
+    // }).on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulpautoprefixer()) //Cannot use autoprefixer or get err
     .pipe(replace('@charset "UTF-8";', ''))
     .pipe(gulp.dest(paths.src.root + paths.dist.css))

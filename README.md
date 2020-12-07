@@ -10,6 +10,8 @@
 	` nvm install latest `  //This will install the latest Node & Npm
 		[option]: Istall an old version
 	` nvm install 6.10.1 32 ` //usage: nvm install <version> //"32" means a 32 bit version
+	` nvm list ` //List all versions
+	` nvm use 15.3.0 ` //Use <version>
 
 ##	<Yarn> Install: https://yarnpkg.com/latest.msi
 1.	Test that Yarn is installed by running: *** ` yarn --version ` ***
@@ -23,13 +25,17 @@
 * Run `yarn help COMMAND` for more information on specific commands - https://yarnpkg.com/en/docs/cli/
 `yarn global add xxx` - https://classic.yarnpkg.com/en/docs/cli/add
 
-* `yarn add handlebars @fortawesome/fontawesome-free FitText-UMD tailwindcss uikit`
-	`yarn add @fullhuman/postcss-purgecss autoprefixer browser-sync del gulp gulp-compile-handlebars gulp-autoprefixer gulp-clean-css gulp-concat gulp-imagemin gulp-inject gulp-mode gulp-postcss gulp-rename gulp-replace gulp-sass gulp-uglify-es imagemin-jpeg-recompress imagemin-pngquant postcss-import -D`
+## If use new node version, just delete all dependencies in package.json and run below:
+* `yarn add handlebars @fortawesome/fontawesome-free tailwindcss postcss autoprefixer uikit jquery ion-rangeslider FitText-UMD`
+	remove: ``yarn global remove sass` then add: `yarn global add sass`
+	remove: ``yarn global remove browser-sync` then add: `yarn global add browser-sync`
+	remove: ``yarn global remove gulp-cli` then add: `yarn global add gulp-cli`
+	Must add "one by one": `yarn add @fullhuman/postcss-purgecss del gulp gulp-autoprefixer gulp-clean-css gulp-compile-handlebars gulp-concat gulp-dart-sass gulp-imagemin gulp-inject gulp-mode gulp-postcss gulp-rename gulp-replace gulp-uglify gulp-uglify-es imagemin-jpeg-recompress imagemin-pngquant postcss-import -D`
 
 * `yarn install` Install all packages from package.json, then run ``yarn upgrade`` Not working on all packages
 	Just run below
 	Install: ***	`yarn install && upgrade && syncyarnlock -s -k` *** - https://www.npmjs.com/package/syncyarnlock#usage
-	Update: ***	`yarn upgrade && syncyarnlock -s -k` ***
+	Update: ***	`yarn upgrade --latest --pattern && syncyarnlock -s -k` ***
 	`-s`: Override the package.json, `-k`: Keep the prefix '^' or any other dynamic numbers
 	Or change the package.json then run  - https://github.com/yarnpkg/yarn/issues/3266#issuecomment-573382303
 	`yarn install && upgrade --latest`
