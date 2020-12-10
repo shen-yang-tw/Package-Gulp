@@ -1,7 +1,7 @@
 {
   "name": "package-gulp",
   "version": "2.0.0",
-  "description": "Using Gulp pack the website with Uikit, Fontawesome, Tailwindcss, and Handlebars",
+  "description": "Using NVM Node:15.3.0 and Gulp pack the website with Uikit, Fontawesome, Tailwindcss, and Handlebars",
   "main": "gulpfile.js",
   "author": "Shen Yang",
   "license": "MIT",

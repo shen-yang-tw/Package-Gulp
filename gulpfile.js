@@ -155,9 +155,10 @@ gulp.task('copycss', function() {
   return gulp.src(paths.vendors.css)
     // Find digits between "font-size:" and "px" in Visual Studio Code using: "font-size:(\d+)px" or "font-size:\s+(\d+)px"
     //\d+ means one or more digits, \s means one or more whitespaces
-    .pipe(replace('font-size:12px', 'font-size:calc(12rem/16)'))
-    .pipe(replace('font-size:16px', 'font-size:calc(16rem/16)'))
-    .pipe(replace('font-size:500px', 'font-size:calc(500rem/16)'))
+    // .pipe(replace('font-size:12px', 'font-size:calc(12rem/16)'))
+    .pipe(replace(/font-size:(\d+)px/g, function(match) {
+      return "font-size:calc(" + match.slice(10, -2) + "rem/16)"
+    }))
     .pipe(gulp.dest(paths.src.root + paths.dist.css))
     .pipe(gulp.dest(paths.dist.root + paths.dist.css))
   // .pipe(gulp.dest(paths.dist.root + paths.dist.css))

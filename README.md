@@ -1,5 +1,5 @@
 #### Guide ####
-##	<Nvm> Install 
+##	<Nvm> Install
 1.	Install nvm-windows for windows, using an installer: https://github.com/coreybutler/nvm-windows/releases
 		nvm-windows usage: https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows
 		nvm usage: https://github.com/nvm-sh/nvm#usage

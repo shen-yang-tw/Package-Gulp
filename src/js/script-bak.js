@@ -83,6 +83,19 @@ function RemoveAddClassByElement(el, classRemove, classAdd) {
   }
 }
 
+//Remove & Add Class to all by element, only works on selector not object
+function RemoveAddClassByArray(el, classRemove, classAdd) {
+  // var _el = document.querySelectorAll(el)
+  for (var i = 0; i < el.length; i++) {
+    if (classRemove != '') {
+      el[i].classList.remove(classRemove)
+    }
+    if (classAdd != '') {
+      el[i].classList.add(classAdd)
+    }
+  }
+}
+
 //Remove all by selector
 function removeAll(sel) {
   var target = document.querySelectorAll(sel)
@@ -92,6 +105,7 @@ function removeAll(sel) {
 }
 
 //Toggle Show/Hide by attribute - onclick="toggleShow(findChildren(findParent(this, 'LI', ''), '.detail'), 'hidden')"
+//Or using "event.currentTarget" relpace the "thisElement": findParent(event, 'LI', '')
 function toggleShow(thisElement) {
   //if (elID.getAttribute("aria-hidden") == "true"))
   if (thisElement.hasAttribute('hidden')) {
@@ -142,6 +156,7 @@ function removeAddClasses(allChildren, classRemove, classAdd) {
 }
 
 //findParent(this, thisParentTagName, ''), the last variable is necessary
+//Or using "event.currentTarget" relpace the "thisElement": findParent(event, 'LI', '')
 function findParent(thisElement, parentTagName, className) {
   if (className != '') {
     while (
@@ -160,6 +175,14 @@ function findParent(thisElement, parentTagName, className) {
 
 function findChildren(parentEL, sl) {
   return parentEL.querySelectorAll(sl)
+}
+
+function findFirstChild(parentEL) {
+  return parentEL.firstElementChild
+}
+
+function findLastChild(parentEL) {
+  return parentEL.lastElementChild
 }
 
 function findAll(sl) {
@@ -201,15 +224,12 @@ function plusHeight(sel, plusSelector) {
     plusSelector.getBoundingClientRect().bottom >
     el1.getBoundingClientRect().bottom
   ) {
-    var h =
-      el1.getBoundingClientRect().height +
-      plusSelector.getBoundingClientRect().bottom -
-      el1.getBoundingClientRect().bottom
+    var h = el1.getBoundingClientRect().height + plusSelector.getBoundingClientRect().bottom - el1.getBoundingClientRect().bottom
   } else {
     var h = el1.getBoundingClientRect().height
   }
   // var h = el1.clientHeight + plusSelector.getBoundingClientRect().bottom - el1.getBoundingClientRect().bottom;
-  console.log(el1.getBoundingClientRect().height)
+  // console.log(el1.getBoundingClientRect().height)
   el1.style.height = h + 'px'
   plusSelector.style.display = 'inherit'
 }
@@ -482,6 +502,62 @@ function checkedSum(inputCheck, checkAll, resetButton, textSum) {
 
 //------------- End Form ------------------------------------------------//
 
+//------------- Table in editor ------------------------------------------------//
+//Table width in editor
+function tableWidth(el) {
+  var target = document.querySelectorAll(el)
+  if (window.innerWidth <= 959 || document.documentElement.clientWidth <= 959) {
+    for (var i = 0;i < target.length;i++) {
+      target[i].style.setProperty('width', '100%', 'important')
+      if (target[i].getAttribute('width') != null) {
+        target[i].setAttribute('width', 'auto')
+      }
+      var th = target[i].querySelectorAll('th')
+      var td = target[i].querySelectorAll('td')
+      for (var j = 0;j < th.length;j++) {
+        if (th[j].style.width != null) {
+          th[j].style.setProperty('width', 'auto', 'important')
+        }
+        if (th[j].getAttribute('width') != null) {
+          th[j].setAttribute('width', 'auto')
+        }
+      }
+      for (var k = 0;k < td.length;k++) {
+        if (td[k].style.width != null) {
+          td[k].style.setProperty('width', 'auto')
+        }
+        if (td[k].getAttribute('width') != null) {
+          td[k].setAttribute('width', 'auto')
+        }
+      }
+    }
+    for (var i = 0;i < target.length;i++) {
+      var columns = target[i].querySelector('thead tr').childElementCount
+      // IF the columns of table is 6 or greater than 6, add the parent <div class="uk-overflow-auto">
+      if (columns >= 6) {
+        var parent = target[i].parentNode //Parent of the target
+        var wrapper = document.createElement('div') // It's a method not element
+        // set the wrapper as child (instead of the element)
+        parent.replaceChild(wrapper, target[i])
+        wrapper.classList.add('uk-overflow-auto')
+        // set element as child of wrapper
+        wrapper.appendChild(target[i])
+        target[i].classList.add('scroll_table', 'min_width-600', 'min_width-700@s', 'min_width-1000@m')
+      }
+    }
+  } else {
+    for (var i = 0;i < target.length;i++) {
+      if (target[i].getAttribute('width') >= target[i].parentElement.offsetWidth) {
+        target[i].setAttribute('width', 'auto')
+      }
+    }
+  }
+}
+if (oneExist('.ckeditor table')) {
+  tableWidth('.ckeditor table')
+}
+//------------- End Table in editor ------------------------------------------------//
+
 //Slideshow tab focus
 function slideShowFocus(slideshow, tabsArray, thisFocus) {
   var slideshow = document.querySelector(slideshow)
@@ -495,6 +571,7 @@ function slideShowFocus(slideshow, tabsArray, thisFocus) {
 }
 
 //Click 'Enter' to open window by the attribute 'href'
+//Or using "event.currentTarget" relpace the "thisKeyDown"
 function enterOpenUrl(targetWindow, thisKeyDown, event) {
   if (event.keyCode === 13) {
     window.open(thisKeyDown.getAttribute('href'), targetWindow)
@@ -513,7 +590,7 @@ function urlShowTab(ukTab) {
   }
 }
 
-//Click a link to show a tab by the 'index' [[in the same page]]
+//Click a link to show a uk-tab [[in the same page]] by the 'index'
 function listShowTab(link, ukTab) {
   var links = document.querySelectorAll(link)
   for (var i = 0;i < links.length;i++) {
@@ -526,6 +603,10 @@ function listShowTab(link, ukTab) {
     }
   }
 }
+
+//The two functions below must be togther
+// urlShowTab(".border2.uk-tab")
+// listShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
 
 function logoSvg(logoSvg) {
   var logo = document.querySelector(logoSvg)
@@ -553,10 +634,6 @@ if (oneExist(".text_size") == true) {
 if (allExist([".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber"]) == true) {
   checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
 }
-
-//The two functions below must be togther
-// urlShowTab(".border2.uk-tab")
-// listShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
 
 if (oneExist('img[data-src*=".svg"]') == true) {
   // console.log("The logo exists")

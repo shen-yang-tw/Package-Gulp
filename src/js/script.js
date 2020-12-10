@@ -105,12 +105,13 @@ function removeAll(sel) {
 }
 
 //Toggle Show/Hide by attribute - onclick="toggleShow(findChildren(findParent(this, 'LI', ''), '.detail'), 'hidden')"
-function toggleShow(thisElement) {
+//Or using "event.currentTarget" relpace the "thisElement": findParent(event, 'LI', '')
+function toggleShow(event) {
   //if (elID.getAttribute("aria-hidden") == "true"))
-  if (thisElement.hasAttribute('hidden')) {
-    thisElement.removeAttribute('hidden')
+  if (event.currentTarget.hasAttribute('hidden')) {
+    event.currentTarget.removeAttribute('hidden')
   } else {
-    thisElement.setAttribute('hidden', true)
+    event.currentTarget.setAttribute('hidden', true)
   }
 }
 
@@ -155,6 +156,7 @@ function removeAddClasses(allChildren, classRemove, classAdd) {
 }
 
 //findParent(this, thisParentTagName, ''), the last variable is necessary
+//Or using "event.currentTarget" relpace the "thisElement": findParent(event, 'LI', '')??
 function findParent(thisElement, parentTagName, className) {
   if (className != '') {
     while (
@@ -222,15 +224,12 @@ function plusHeight(sel, plusSelector) {
     plusSelector.getBoundingClientRect().bottom >
     el1.getBoundingClientRect().bottom
   ) {
-    var h =
-      el1.getBoundingClientRect().height +
-      plusSelector.getBoundingClientRect().bottom -
-      el1.getBoundingClientRect().bottom
+    var h = el1.getBoundingClientRect().height + plusSelector.getBoundingClientRect().bottom - el1.getBoundingClientRect().bottom
   } else {
     var h = el1.getBoundingClientRect().height
   }
   // var h = el1.clientHeight + plusSelector.getBoundingClientRect().bottom - el1.getBoundingClientRect().bottom;
-  console.log(el1.getBoundingClientRect().height)
+  // console.log(el1.getBoundingClientRect().height)
   el1.style.height = h + 'px'
   plusSelector.style.display = 'inherit'
 }
@@ -336,10 +335,10 @@ function fontResize(
 //------------- Form ------------------------------------------------//
 
 //select onchange Event - <select onchange="showOption()">
-function showOption(thisSelect, index, sl) {
+function showOption(event, index, sl) {
   var showEl = document.querySelectorAll(sl)
   var i
-  if (thisSelect.selectedIndex == index) {
+  if (event.currentTarget.selectedIndex == index) {
     for (i = 0;i < showEl.length;i++) {
       showEl[i].style.setProperty('display', 'block', 'important')
     }
@@ -572,9 +571,10 @@ function slideShowFocus(slideshow, tabsArray, thisFocus) {
 }
 
 //Click 'Enter' to open window by the attribute 'href'
-function enterOpenUrl(targetWindow, thisKeyDown, event) {
+//Or using "event.currentTarget" relpace the "thisKeyDown"
+function enterOpenUrl(targetWindow, event) {
   if (event.keyCode === 13) {
-    window.open(thisKeyDown.getAttribute('href'), targetWindow)
+    window.open(event.currentTarget.getAttribute('href'), targetWindow)
   }
 }
 
@@ -589,7 +589,6 @@ function urlShowTab(ukTab) {
     // console.log('li' + hash + '>a')
   }
 }
-
 //Click a link to show a uk-tab [[in the same page]] by the 'index'
 function listShowTab(link, ukTab) {
   var links = document.querySelectorAll(link)
@@ -603,6 +602,9 @@ function listShowTab(link, ukTab) {
     }
   }
 }
+//The two functions below must be togther
+// urlShowTab(".border2.uk-tab")
+// listShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
 
 function logoSvg(logoSvg) {
   var logo = document.querySelector(logoSvg)
@@ -630,10 +632,6 @@ if (oneExist(".text_size") == true) {
 if (allExist([".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber"]) == true) {
   checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
 }
-
-//The two functions below must be togther
-// urlShowTab(".border2.uk-tab")
-// listShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
 
 if (oneExist('img[data-src*=".svg"]') == true) {
   // console.log("The logo exists")

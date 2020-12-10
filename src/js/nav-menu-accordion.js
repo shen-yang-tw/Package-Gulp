@@ -137,7 +137,7 @@ function navMenu(targetMenu, btn, thisParentTagName, classThisParent, activePare
       }
 
       //------------- 2. Close one item and all the others in the same active tree menu, not the other active tree menu -------------
-      // If this step active, the last variable is needed
+      // If this step is active, the last variable is needed
 
       let close = findLastChild(this).classList.contains(classHiddenName) //It's Boolean. This Arrow down is hidden
       let subMenus = findChildren(activeParent, subNavTagName.toLowerCase() + classToggle) //All active ul.toggle
