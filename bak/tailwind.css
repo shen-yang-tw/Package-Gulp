@@ -1,0 +1,97 @@
+/* If using @import , need install `postcss-import` */
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+/* Or using @tailwind , don't need `postcss-import` */
+@tailwind base;
+
+/* Custom CSS */
+*,
+*::before,
+*::after {
+  border-style: inherit;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+/* header {
+  @apply shadow relative;
+} */
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* Custom Components */
+@layer components {
+  /* .btn {
+    @apply font-bold py-2 px-4 rounded;
+  }
+
+  .btn-blue {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+
+  .btn-gray {
+    @apply bg-gray-400 text-gray-800;
+  }
+  .btn-gray:hover {
+    @apply bg-gray-500;
+  } */
+}

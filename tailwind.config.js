@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/plugin')
 module.exports = {
   theme: {
     screens: {
@@ -7,6 +8,9 @@ module.exports = {
       'xl': '1600px',
     },
     extend: {
+      borderStyle: {
+        'inherit': 'inherit',
+      },
       zIndex: {
         '1': '1',
         '2': '2',
@@ -120,5 +124,14 @@ module.exports = {
     borderStyle: ['responsive', 'hover', 'focus'],
     fontWeight: ['hover', 'focus']
   },
-  plugins: []
+  plugins: [
+    plugin(function({ addBase, config }) {
+      addBase({
+        // 'h1': { fontSize: config('theme.fontSize.2xl') },
+        'h1, h2, h3, h4, h5, h6': {fontWeight: config('theme.fontWeight.bold')},
+        '*, *::before, *::after': {borderStyle: config('theme.borderStyle.inherit')},
+        'blockquote, dl, dd, h1, h2, h3, h4, h5, h6, figure, p, pre': {marginBottom: config('theme.margin.4')},
+      })
+    })
+  ]
 }
