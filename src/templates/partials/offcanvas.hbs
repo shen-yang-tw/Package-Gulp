@@ -1,55 +1,170 @@
-{{!-- {{>offcanvas navMenu='true' level4='true'}} --}}
+{{!-- {{>offcanvas titleIsLink='true' accordion='true' level4='true'}} --}}
 
 <!-- uk-offcanvas -->
-{{#if navMenu}}
-<div id="offcanvas" class="uk-offcanvas" uk-offcanvas>
+{{#if titleIsLink}}
+{{#if navMenuJS}}
+<div id="offcanvas" uk-offcanvas>
 	<div class="bg_primary py-5 uk-offcanvas-bar">
-		<button class="uk-offcanvas-close" type="button" title="刪除" uk-close></button>
+		<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
 		<ul class="pt-6 uk-nav uk-nav-default">
 			<li class="py-1 uk-parent">
-				<a class="p-0" href="#"><span class="text-white">Level2</span></a>
+				<a class="p-0" href="#"><span class="text-white">Level1</span></a>
 			</li>
 			<li class="py-1 uk-parent">
 				<div class="flex justify-between">
 					<a class="flex flex-1 items-center" href="#"><span class="text-white">Level2</span></a>
-					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
 				</div>
-				<ul class="toggle hidden uk-nav-sub">
-					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+				<ul class="toggle hidden py-0 uk-nav-sub">
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
 					</li>
-					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
 					</li>
 				</ul>
 			</li>
 			<li class="py-1 uk-parent">
 				<div class="flex justify-between">
 					<a class="flex flex-1 items-center" href="#"><span class="text-white">Level3</span></a>
-					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
 				</div>
-				<ul class="toggle hidden uk-nav-sub">
-					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+				<ul class="toggle hidden py-0 uk-nav-sub">
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
 					</li>
-					<li class="mt-0 uk-nav-header uk-parent">
-						<div class="flex justify-between">
-							<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
-							<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
-						</div>
-						<ul class="toggle hidden uk-nav-sub">
-							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+					<li class="py-1 uk-parent">
+						<a href="#"><span class="text-white text-opacity-50">Item</span></a>
+						<ul class="py-0 uk-nav-sub">
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
 							</li>
-							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
 							</li>
-							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
 							</li>
 						</ul>
 					</li>
-					<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{#if level4}}
+			<li class="py-1 uk-parent">
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Level4</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+				</div>
+				<ul class="toggle hidden py-0 uk-nav-sub">
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<a href="#"><span class="text-white text-opacity-50">Item</span></a>
+						<ul class="py-0 uk-nav-sub">
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+							<li class="py-1 uk-parent">
+								<a href="#"><span class="text-white text-opacity-50">Item</span></a>
+								<ul class="py-0 uk-nav-sub">
+									<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+									</li>
+									<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{/if}}
+			<li class="uk-nav-divider"></li>
+			<li><a href="index.html">首頁</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">English</a></li>
+		</ul>
+	</div>
+</div>
+{{else}}
+{{#if subSwitch}}
+<div id="offcanvas" uk-offcanvas>
+	<div class="bg_primary py-5 uk-offcanvas-bar">
+		<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
+		<ul class="pt-6 uk-nav uk-nav-default">
+			<li class="py-1 uk-parent">
+				<a class="p-0" href="#"><span class="text-white">Level1</span></a>
+			</li>
+			<li class="py-1 uk-parent">
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Level2</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+				</div>
+				<ul class="toggle hidden py-0 uk-nav-sub">
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
 					</li>
 				</ul>
 			</li>
 			<li class="py-1 uk-parent">
-				<a class="p-0" href="#"><span class="text-white">Level2</span></a>
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Level3</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+				</div>
+				<ul class="toggle hidden py-0 uk-nav-sub">
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<div class="flex justify-between">
+							<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
+							<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+						</div>
+						<ul class="toggle hidden py-0 uk-nav-sub">
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+				</ul>
 			</li>
+			{{#if level4}}
+			<li class="py-1 uk-parent">
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Level4</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+				</div>
+				<ul class="toggle hidden py-0 uk-nav-sub">
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<div class="flex justify-between">
+							<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
+							<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+						</div>
+						<ul class="toggle hidden py-0 uk-nav-sub">
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+							<li class="py-1 uk-parent">
+								<div class="flex justify-between">
+									<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
+									<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+								</div>
+								<ul class="toggle hidden py-0 uk-nav-sub">
+									<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+									</li>
+									<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{/if}}
 			<li class="uk-nav-divider"></li>
 			<li><a href="index.html">首頁</a></li>
 			<li><a href="#">Item</a></li>
@@ -60,31 +175,113 @@
 {{else}}
 <div id="offcanvas" uk-offcanvas>
 	<div class="bg_primary py-5 uk-offcanvas-bar">
-		<button class="uk-offcanvas-close" type="button" title="刪除" uk-close></button>
+		<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
+		<ul class="pt-6 uk-nav uk-nav-default">
+			<li class="py-1 uk-parent">
+				<a class="p-0" href="#"><span class="text-white">Level1</span></a>
+			</li>
+			<li class="py-1 uk-parent">
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Level2</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+				</div>
+				<ul class="toggle hidden py-0 uk-nav-sub">
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="py-1 uk-parent">
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Level3</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+				</div>
+				<ul class="toggle hidden py-0 uk-nav-sub">
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<a href="#"><span class="text-white text-opacity-50">Item</span></a>
+						<ul class="py-0 uk-nav-sub">
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{#if level4}}
+			<li class="py-1 uk-parent">
+				<div class="flex justify-between">
+					<a class="flex flex-1 items-center" href="#"><span class="text-white">Level4</span></a>
+					<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+				</div>
+				<ul class="toggle hidden py-0 uk-nav-sub">
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<a href="#"><span class="text-white text-opacity-50">Item</span></a>
+						<ul class="py-0 uk-nav-sub">
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+							<li class="py-1 uk-parent">
+								<a href="#"><span class="text-white text-opacity-50">Item</span></a>
+								<ul class="py-0 uk-nav-sub">
+									<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+									</li>
+									<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{/if}}
+			<li class="uk-nav-divider"></li>
+			<li><a href="index.html">首頁</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">English</a></li>
+		</ul>
+	</div>
+</div>
+{{/if}}
+{{/if}}
+{{else}}
+<div id="offcanvas" uk-offcanvas>
+	<div class="bg_primary py-5 uk-offcanvas-bar">
+		<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
 		<ul class="uk-nav uk-nav-default uk-nav-parent-icon text-white" uk-nav="multiple: true">
 			<li><a href="#">Level1</a></li>
 			<li class="uk-parent">
 				<a href="#">Level2</a>
-				<ul class="uk-nav-sub">
-					<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-					<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
+				<ul class="py-0 uk-nav-sub">
+					<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
+					<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
 				</ul>
 			</li>
 			<li class="uk-parent">
 				<a href="#">Level3</a>
-				<ul class="uk-nav-sub">
+				<ul class="py-0 uk-nav-sub">
 					<li class="mt-0 uk-nav-header">
 						<span>Item</span>
-						<ul class="uk-nav-sub">
-							<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-							<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
+						<ul class="py-0 uk-nav-sub">
+							<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
+							<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
 						</ul>
 					</li>
 					<li class="mt-0 uk-nav-header">
 						<span>Item</span>
-						<ul class="uk-nav-sub">
-							<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-							<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
+						<ul class="py-0 uk-nav-sub">
+							<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
+							<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -92,41 +289,41 @@
 			{{#if level4}}
 			<li class="uk-parent">
 				<a href="#">Level4</a>
-				<ul class="uk-nav-sub">
+				<ul class="py-0 uk-nav-sub">
 					<li class="mt-0 uk-nav-header">
 						<span>Item</span>
-						<ul class="uk-nav-sub">
+						<ul class="py-0 uk-nav-sub">
 							<li>
-								<a class="mx-2" href="#">SubItem</a>
+								<a class="mx-2" href="#">Item</a>
 								<ul>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
+									<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
+									<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
 								</ul>
 							</li>
 							<li>
-								<a class="mx-2" href="#">SubItem</a>
+								<a class="mx-2" href="#">Item</a>
 								<ul>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
+									<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
+									<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
 								</ul>
 							</li>
 						</ul>
 					</li>
 					<li class="mt-0 uk-nav-header">
 						<span>Item</span>
-						<ul class="uk-nav-sub">
+						<ul class="py-0 uk-nav-sub">
 							<li>
-								<a class="mx-2" href="#">SubItem</a>
+								<a class="mx-2" href="#">Item</a>
 								<ul>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
+									<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
+									<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
 								</ul>
 							</li>
 							<li>
-								<a class="mx-2" href="#">SubItem</a>
+								<a class="mx-2" href="#">Item</a>
 								<ul>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
+									<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
+									<li class="inline-block"><a class="mx-2" href="#">Item</a></li>
 								</ul>
 							</li>
 						</ul>

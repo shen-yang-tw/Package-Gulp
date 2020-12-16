@@ -86,7 +86,7 @@ function RemoveAddClassByElement(el, classRemove, classAdd) {
 //Remove & Add Class to all by element, only works on selector not object
 function RemoveAddClassByArray(el, classRemove, classAdd) {
   // var _el = document.querySelectorAll(el)
-  for (var i = 0; i < el.length; i++) {
+  for (var i = 0;i < el.length;i++) {
     if (classRemove != '') {
       el[i].classList.remove(classRemove)
     }
@@ -206,6 +206,12 @@ function gotoTop(sl, classFadeName) {
     el.classList.add(classFadeName)
   } else {
     el.classList.remove(classFadeName)
+  }
+}
+if (oneExist("#gototop") == true) {
+  gotoTop("#gototop", "opacity-100")
+  window.onscroll = function () {
+    gotoTop("#gototop", "opacity-100")
   }
 }
 
@@ -329,7 +335,9 @@ function fontResize(
     }
   }
 }
-
+if (oneExist(".text_size") == true) {
+  fontResize("text-m", "text-l", "text_size", "text_size-s", "text_size-m", "text_size-l", "active")
+}
 //------------- End font resize ------------------------------------------------//
 
 //------------- Form ------------------------------------------------//
@@ -392,22 +400,12 @@ function toggleCheckAll(thisClick, inputCheck, checkAll, ifAddChecked) {
 
 // checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
 function checkedSum(inputCheck, checkAll, resetButton, textSum) {
+  var inputCheck = document.querySelectorAll(inputCheck)
   var checkAll = document.querySelectorAll(checkAll)
   var resetButton = document.querySelectorAll(resetButton)
-  var inputCheck = document.querySelectorAll(inputCheck)
   var textSum = document.querySelectorAll(textSum)
   var sum = 0
   textSum.innerHTML = sum
-
-  // function checkAllSum() {
-  //   for (var j = 0; j < inputCheck.length; j++) {
-  //     inputCheck[j].checked = true
-  //     sum = sum + 1
-  //   }
-  //   for (var k = 0; k < textSum.length; k++) {
-  //     textSum.innerHTML = sum
-  //   }
-  // }
 
   for (var i = 0;i < inputCheck.length;i++) {
     inputCheck[i].addEventListener('change', (event) => {
@@ -499,7 +497,9 @@ function checkedSum(inputCheck, checkAll, resetButton, textSum) {
     }
   }
 }
-
+if (allExist([".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber"]) == true) {
+  checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
+}
 //------------- End Form ------------------------------------------------//
 
 //------------- Table in editor ------------------------------------------------//
@@ -558,18 +558,19 @@ if (oneExist('.ckeditor table')) {
 }
 //------------- End Table in editor ------------------------------------------------//
 
+//------------- Uikit ------------------------------------------------//
 //Slideshow tab focus
-function slideShowFocus(slideshow, tabsArray, thisFocus) {
+// Set <a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', event)" onkeydown="enterOpenUrl('_blank', event)">Banner1</a> on <ul class="uk-dotnav">
+function slideShowFocus(slideshow, tabsArray, event) {
   var slideshow = document.querySelector(slideshow)
   var tabs = document.querySelectorAll(tabsArray)
   for (var i = 0;i < tabs.length;i++) {
     // tabs[i] = UIkit.slideshow(slideshow).show(i)
-    if (thisFocus == tabs[i]) {
+    if (event.currentTarget == tabs[i]) {
       UIkit.slideshow(slideshow).show(i)
     }
   }
 }
-
 //Click 'Enter' to open window by the attribute 'href'
 //Or using "event.currentTarget" relpace the "thisKeyDown"
 function enterOpenUrl(targetWindow, event) {
@@ -577,6 +578,22 @@ function enterOpenUrl(targetWindow, event) {
     window.open(event.currentTarget.getAttribute('href'), targetWindow)
   }
 }
+// Set <a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', this)" onkeydown="enterOpenUrl('_blank', this, event)">Banner1</a> on <ul class="uk-dotnav">
+// function slideShowFocus(slideshow, tabsArray, thisFocus) {
+//   var slideshow = document.querySelector(slideshow)
+//   var tabs = document.querySelectorAll(tabsArray)
+//   for (var i = 0;i < tabs.length;i++) {
+//     // tabs[i] = UIkit.slideshow(slideshow).show(i)
+//     if (thisFocus == tabs[i]) {
+//       UIkit.slideshow(slideshow).show(i)
+//     }
+//   }
+// }
+// function enterOpenUrl(targetWindow, thisKeyDown, event) {
+//   if (event.keyCode === 13) {
+//     window.open(thisKeyDown.getAttribute('href'), targetWindow)
+//   }
+// }
 
 //Uikit 3 load active tab (or with switcher) from url [[for another page]]. Usage: page.html#3
 //https://www.w3schools.com/JSREF/prop_loc_hash.asp
@@ -606,36 +623,70 @@ function listShowTab(link, ukTab) {
 // urlShowTab(".border2.uk-tab")
 // listShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
 
-function logoSvg(logoSvg) {
+function uikitSvg(logoSvg) {
   var logo = document.querySelector(logoSvg)
   UIkit.svg(logo).svg.then(function (svg) {
     svg.setAttribute("preserveAspectRatio", "xMinYMid")
     // svg.querySelector('path').style.stroke = 'red'
   })
 }
+window.onload = function () {
+  if (oneExist('.logo>img') == true) {
+    // console.log("The logo exists")
+    uikitSvg(".logo>img")
+  }
+}
+//------------- End Uikit ------------------------------------------------//
+
+//Set multiple attributes to element at once
+//ES6 Helper function: The "key" can be replace with "x" or any var
+function setAttributes(el, attrs) {
+  Object.keys(attrs).forEach(key => el.setAttribute(key, attrs[key]))
+}
+//Helper function
+function setAttributes(el, attrs) {
+  for (var key in attrs) {
+    el.setAttribute(key, attrs[key])
+  }
+}
+// setAttributes(elem, {"src": "http://example.com/something.jpeg", "height": "100%"})
+
+//Set multiple attributes to multiple elements: attrs={'attr':'attrValue', 'attr2':'attrValue2'}
+function setAttrs(el, attrs) {
+  document.querySelectorAll(el).forEach( key1 => Object.keys(attrs).forEach(key2 => key1.setAttribute(key2, attrs[key2])))
+}
+//Set the "alt" attribute to all icons for AA
+setAttrs('[class*=fa-]', {'alt':''})
+//Set the 'preserveAspectRatio:"xMinYMid"' attribute to the logo svg
+document.addEventListener("DOMContentLoaded", function () {
+  setAttrs(".logo svg", {"preserveAspectRatio":"xMinYMid"})
+})
+
+// Loading script
+function loadScript(src, loading) {
+  let script = document.createElement('script');
+  script.src = src;
+  if (loading == 'async') {
+    script.async = true;
+  }
+  if (loading == 'defer') {
+    script.defer = true;
+  }
+  document.body.append(script);
+}
+// loadScript("/long.js");
+// loadScript("/small.js");
+
+//------------- End Functions ------------------------------------------------//
+
 
 if (oneExist("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty") == true) {
   removeAll("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty")
 }
 
-if (oneExist("#gototop") == true) {
-  gotoTop("#gototop", "opacity-100")
-  window.onscroll = function () {
-    gotoTop("#gototop", "opacity-100")
-  }
-}
-
-if (oneExist(".text_size") == true) {
-  fontResize("text-m", "text-l", "text_size", "text_size-s", "text_size-m", "text_size-l", "active")
-}
-
-if (allExist([".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber"]) == true) {
-  checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
-}
-
-if (oneExist('img[data-src*=".svg"]') == true) {
-  // console.log("The logo exists")
-  logoSvg(".logo>img")
+//Active LeftMenu opening with the 'uk-open' class
+if (allExist('.list_tabs .uk-open')) {
+  toggleAllClass(findAll('.list_tabs .uk-open .toggle'), 'hidden')
 }
 
 // if (allExist(".logo_cht, logo_eng") == true) {

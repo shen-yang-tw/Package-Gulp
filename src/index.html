@@ -16,8 +16,8 @@
 	<link rel="stylesheet" href="css/colors.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/editor.css">
-	<script src="js/uikit-icons.min.js"></script>
 	<script src="js/uikit.min.js"></script>
+	<script src="js/uikit-icons.min.js"></script>
 	<script src="js/script.js" defer></script>
 </head>
 
@@ -158,32 +158,43 @@
 		<!-- uk-offcanvas -->
 		<div id="offcanvas" uk-offcanvas>
 			<div class="bg_primary py-5 uk-offcanvas-bar">
-				<button class="uk-offcanvas-close" type="button" title="刪除" uk-close></button>
-				<ul class="uk-nav uk-nav-default uk-nav-parent-icon text-white" uk-nav="multiple: true">
-					<li><a href="#">Level1</a></li>
-					<li class="uk-parent">
-						<a href="#">Level2</a>
-						<ul class="uk-nav-sub">
-							<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-							<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
+				<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
+				<ul class="pt-6 uk-nav uk-nav-default">
+					<li class="py-1 uk-parent">
+						<a class="p-0" href="#"><span class="text-white">Level1</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<div class="flex justify-between">
+							<a class="flex flex-1 items-center" href="#"><span class="text-white">Level2</span></a>
+							<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+						</div>
+						<ul class="toggle hidden py-0 uk-nav-sub">
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
 						</ul>
 					</li>
-					<li class="uk-parent">
-						<a href="#">Level3</a>
-						<ul class="uk-nav-sub">
-							<li class="mt-0 uk-nav-header">
-								<span>Item</span>
-								<ul class="uk-nav-sub">
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
+					<li class="py-1 uk-parent">
+						<div class="flex justify-between">
+							<a class="flex flex-1 items-center" href="#"><span class="text-white">Level3</span></a>
+							<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span></a>
+						</div>
+						<ul class="toggle hidden py-0 uk-nav-sub">
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							</li>
+							<li class="py-1 uk-parent">
+								<a href="#"><span class="text-white text-opacity-50">Item</span></a>
+								<ul class="py-0 uk-nav-sub">
+									<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+									</li>
+									<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+									</li>
+									<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+									</li>
 								</ul>
 							</li>
-							<li class="mt-0 uk-nav-header">
-								<span>Item</span>
-								<ul class="uk-nav-sub">
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-									<li class="inline-block"><a class="mx-2" href="#">SubItem</a></li>
-								</ul>
+							<li class="py-1"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
 							</li>
 						</ul>
 					</li>
@@ -444,7 +455,7 @@
 	              </div>
 	              <div class="min_width-1/2! min_width-1/3!@s">
 	                <a class="no-underline hover:color_secondary! bg-gray-100 space-y-2 py-3 uk-flex uk-flex-column uk-flex-center uk-flex-middle" href="#">
-	                  <img class="icon inline-block uk-responsive-width" src="img/icon-book.png" alt="本所資料庫">
+	                  <i class="color_primary text-4xl fas fa-question-circle"></i>
 	                  <span class="text-center px-2">本所資料庫</span>
 	                </a>
 	              </div>

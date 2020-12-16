@@ -204,10 +204,17 @@ gulp.task('delhtml', function() {
 // inject css & js to html - https://www.npmjs.com/package/gulp-inject#method-2-use-gulp-inject-s-name-option
 gulp.task('inject', function() {
   return gulp.src(paths.src.html)
-    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/ui*.js', {
+    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/uikit.min.js', {
       read: false
     }), {
       name: 'uk',
+      relative: true,
+      removeTags: true
+    }))
+    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/uikit-icons.min.js', {
+      read: false
+    }), {
+      name: 'uk2',
       relative: true,
       removeTags: true
     }))
@@ -291,10 +298,17 @@ gulp.task('inject', function() {
 
 gulp.task('build-inject', function() {
   return gulp.src(paths.dist.html)
-    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/ui*.js', {
+    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/uikit.min.js', {
       read: false
     }), {
       name: 'uk',
+      relative: true,
+      removeTags: true
+    }))
+    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/uikit-icons.min.js', {
+      read: false
+    }), {
+      name: 'uk2',
       relative: true,
       removeTags: true
     }))
