@@ -253,7 +253,7 @@ function viewHeight(sel, upperSelector) {
   }
 }
 
-//viewHeightMiddle(".uk-slideshow-items", "header", ".bg_bar") - uk-slideshow height, working with CSS {min-height: auto !important};
+//viewHeightMiddle(".uk-slideshow-items", "header", ".bg_bar") - uk-slideshow height, working with CSS: #slideshow .uk-slideshow-items {min-height: auto !important;}
 //Subtracts the height of preceding and following element
 function viewHeightMiddle(sel, upperSelector, lowerSelector) {
   if (allExist(sel, upperSelector, lowerSelector)) {
@@ -630,12 +630,12 @@ function uikitSvg(logoSvg) {
     // svg.querySelector('path').style.stroke = 'red'
   })
 }
-window.onload = function () {
-  if (oneExist('.logo>img') == true) {
-    // console.log("The logo exists")
-    uikitSvg(".logo>img")
-  }
-}
+// window.onload = function () {
+//   if (oneExist('.logo>img') == true) {
+//     // console.log("The logo exists")
+//     uikitSvg(".logo>img")
+//   }
+// }
 //------------- End Uikit ------------------------------------------------//
 
 //Set multiple attributes to element at once
@@ -644,23 +644,17 @@ function setAttributes(el, attrs) {
   Object.keys(attrs).forEach(key => el.setAttribute(key, attrs[key]))
 }
 //Helper function
-function setAttributes(el, attrs) {
-  for (var key in attrs) {
-    el.setAttribute(key, attrs[key])
-  }
-}
+// function setAttributes(el, attrs) {
+//   for (var key in attrs) {
+//     el.setAttribute(key, attrs[key])
+//   }
+// }
 // setAttributes(elem, {"src": "http://example.com/something.jpeg", "height": "100%"})
 
 //Set multiple attributes to multiple elements: attrs={'attr':'attrValue', 'attr2':'attrValue2'}
 function setAttrs(el, attrs) {
   document.querySelectorAll(el).forEach( key1 => Object.keys(attrs).forEach(key2 => key1.setAttribute(key2, attrs[key2])))
 }
-//Set the "alt" attribute to all icons for AA
-setAttrs('[class*=fa-]', {'alt':''})
-//Set the 'preserveAspectRatio:"xMinYMid"' attribute to the logo svg
-document.addEventListener("DOMContentLoaded", function () {
-  setAttrs(".logo svg", {"preserveAspectRatio":"xMinYMid"})
-})
 
 // Loading script
 function loadScript(src, loading) {
@@ -684,10 +678,28 @@ if (oneExist("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empt
   removeAll("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty")
 }
 
+//Set the "alt" attribute to all icons for AA
+// setAttrs('[class*=fa-]', {'title':''})
+
+//Set the 'preserveAspectRatio:"xMinYMid"' attribute to the logo svg
+setAttrs(".logo svg", {"preserveAspectRatio":"xMinYMid"})
+// document.addEventListener("DOMContentLoaded", function () {
+//   setAttrs(".logo svg", {"preserveAspectRatio":"xMinYMid"})
+// })
+
+//Slideshow adjusts the height to fit the view height, working with CSS: #slideshow .uk-slideshow-items {min-height: auto !important;}
+// if (allExist("#slideshow .uk-slideshow-items, header, .bg_bar") == true) {
+//   viewHeightMiddle("#slideshow .uk-slideshow-items", "header", ".bg_bar")
+//   window.onresize = function() {
+//     viewHeightMiddle("#slideshow .uk-slideshow-items", "header", ".bg_bar")
+//   }
+// }
+
 //Active LeftMenu opening with the 'uk-open' class
-if (allExist('.list_tabs .uk-open')) {
-  toggleAllClass(findAll('.list_tabs .uk-open .toggle'), 'hidden')
-}
+// if (allExist('.list_tabs .uk-open')) {
+//   toggleAllClass(findAll('.list_tabs .uk-open .toggle'), 'hidden')
+// }
+
 
 // if (allExist(".logo_cht, logo_eng") == true) {
 //   var fitText = require("FitText-UMD");

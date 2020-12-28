@@ -1,6 +1,6 @@
 {{!-- <!-- --------------------- FontAwesome --------------------- --> --}}
-<i class="color_secondary mr-1 fas fa-thumbtack"></i>
-<i class="color_secondary mr-1 fas fa-thumbtack" style="transform: rotate(-25deg);"></i>
+<i class="color_secondary mr-1 fas fa-thumbtack" title=""></i>
+<i class="color_secondary mr-1 fas fa-thumbtack" title="" style="transform: rotate(-25deg);"></i>
 
 {{!-- <!-- --------------------- Picsum --------------------- --> --}}
 <img src="https://picsum.photos/200/300" alt="圖片">
@@ -23,9 +23,9 @@
 </ul>
 <!-- uk-tab-button -->
 
-<!-- uk-tab -->
+<!-- uk-tab:"NO uk-active" with switcher -->
 <ul class="border2 border_primary uk-tab" uk-tab uk-margin>
-	<li class="uk-active"><a href="#">圖書資料</a></li>
+	<li><a href="#">圖書資料</a></li>
 	<li><a href="#">視聽資料</a></li>
 </ul>
 <!-- uk-tab -->
@@ -269,15 +269,48 @@
 	</div>
 </div>
 
-{{!-- <!-- --------------------- Image --------------------- --> --}}
-<img data-src="" width="" height="" alt="圖片" uk-img>
-<img data-src="" data-width data-height alt="圖片" uk-img>
+{{!-- <!-- --------------------- Image & Icon --------------------- --> --}}
+{{!-- 替代說明文字：alt=""，標題屬性文字：title="" --}}
+{{!-- img若為有意義之圖片必需有說明，若<img>和<h2>都包含在<a>，因為已有h2為說明文字，則替代說明文字：img alt必需為空值<img alt="">
+若只有圖片在a標籤中，因為必需有說明文字，因此alt不可以為空值 --}}
+<a href="">
+	<img alt="">
+	<h2>文字說明</h2>
+</a>
+<a href="">
+	<img alt="文字說明">
+</a>
+<a href="">
+	<img alt="" src="img/icon.png">
+</a>
+
+<a href="">
+	更多
+	<i class="color_secondary ml-1 fas fa-chevron-right"></i>
+</a>
+<a href="">
+	<i class="color_secondary mr-1 fas fa-search"></i>
+	<span class="sr-only">搜尋</span>
+</a>
+
+{{!-- img若為無意義圖片或是icon，完全只有裝飾作用，則無需有說明，並且不可使用title屬性，img alt必需為空值<img alt=""> --}}
+<h2>
+	<img alt="" src="img/icon.png">
+	標題文字
+</h2>
+<h2>
+	<i class="mr-1 fab fa-envira"></i>
+	標題文字
+</h2>
+
+<img data-src="" width="" height="" alt="圖片說明" uk-img>
+<img data-src="" data-width data-height alt="圖片說明" uk-img>
 <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="img/photo.jpg" uk-img>
-	<h1>Background Image</h1>
+	<h1>說明文字</h1>
 </div>
 
 <!-- Background Image with ratio:3/4 -->
-<a class="block" href="">
+<a class="block" href="" title="說明文字">
 	<div class="aspect ratio-3/4">
 		{{!-- <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_01.jpg);"></div> --}}
 		<div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" data-src="img/book.svg" uk-img></div>

@@ -23,12 +23,13 @@
             {{!-- <small class="mb-1">數位典藏系統可查詢本館數位化特藏資料</small> --}}
             <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
               <div class="uk-width-auto@s">
-                <select class="w-100 uk-select">
+                <select class="w-100 uk-select" title="欄位選項">
                   <option>不限欄位</option>
                 </select>
               </div>
               <div class="uk-width-expand@s">
-                <input class="w-full uk-input" type="text" placeholder="請輸入關鍵字" title="輸入關鍵字搜尋">
+                <label class="sr-only" for="ip_search">關鍵字搜尋</label>
+                <input id="ip_search" class="w-full uk-input" type="text" placeholder="請輸入關鍵字" title="輸入關鍵字搜尋">
               </div>
               <div class="uk-width-auto@s"><a class="btn_primary color_white! min_width-150 w-full uk-button uk-button-primary" href="#"><i class="fas fa-search"></i>搜尋</a>
               </div>
@@ -48,10 +49,10 @@
       {{/if}}
       <div class="uk-grid uk-grid-small uk-child-width-expand@m" uk-grid uk-height-match="target: > div > .uk-card">
         <div class="min_width-2/3!@m">
-          <h2 class="color_primary uk-heading-line text-base uk-text-center"><span><i class="mr-2 fas fa-bullhorn"></i>最新消息</span></h2>
+          <h2 class="color_primary uk-heading-line text-base uk-text-center"><i class="mr-2 fas fa-bullhorn"></i>最新消息</h2>
           <div class="color_black! uk-flex uk-flex-between uk-flex-middle uk-flex-right">
             {{!-- <h2 class="bg_primary text-sm m-0 p-2">最新消息</h2> --}}
-            {{!-- <a class="text-xs" href="#" title="更多">More</a> --}}
+            {{!-- <a class="text-xs" href="#">更多</a> --}}
           </div>
           <div class="p-3 hover:shadow-2xl uk-card uk-card-default">
             <div class="overflow_hidden@m max_height-275@m max_height-220@xl pb-6">
@@ -94,15 +95,15 @@
                   </li>
                 </ul>
               </div>
-              <a class="color_primary bottom-15 right-15 m:bottom-0 m:right-0 text-xs text-right uk-position-bottom-right uk-position-z-index" href="#" title="更多">閱讀更多</a>
+              <a class="color_primary bottom-15 right-15 m:bottom-0 m:right-0 text-xs text-right uk-position-bottom-right uk-position-z-index" href="#">閱讀更多</a>
             </div>
           </div>
         </div>
         <div class="min_width-1/3!@m">
-          <h2 class="color_primary uk-heading-line text-base uk-text-center"><span><i class="mr-2 fas fa-star"></i>熱門服務</span></h2>
+          <h2 class="color_primary uk-heading-line text-base uk-text-center"><i class="mr-2 fas fa-star"></i>熱門服務</h2>
           <div class="color_black! uk-flex uk-flex-between uk-flex-middle uk-flex-right">
             {{!-- <h2 class="bg_primary text-sm m-0 p-2">熱門服務</h2> --}}
-            {{!-- <a class="text-xs" href="#" title="更多">More</a> --}}
+            {{!-- <a class="text-xs" href="#">更多</a> --}}
           </div>
           <div class="p-3 hover:shadow-2xl uk-card uk-card-default">
             <div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid uk-height-match="target: > div > .uk-flex">
@@ -149,9 +150,9 @@
         <div class="uk-width-1-1">
           {{!-- <div class="color_black! uk-flex uk-flex-between uk-flex-middle uk-flex-right">
             <h2 class="bg_primary text-sm m-0 p-2">新書推介</h2>
-            <a class="text-xs" href="#" title="更多">More</a>
+            <a class="text-xs" href="#">更多</a>
           </div> --}}
-          <h2 class="color_primary mb-0 uk-heading-line text-base uk-text-center"><span><i class="mr-2 fas fa-book-open"></i>新書推介</span></h2>
+          <h2 class="color_primary mb-0 uk-heading-line text-base uk-text-center"><i class="mr-2 fas fa-book-open"></i>新書推介</h2>
           <div class="mb-2 px-2 s:p-0 s:justify-end flex-wrap uk-flex uk-flex-middle">
             <span class="pseudo:line_v"><a class="color_primary" href="#">中文新書清單</a></span>
             <span class="pseudo:line_v"><a class="color_primary" href="#">西文新書清單</a></span>
@@ -162,11 +163,11 @@
               <ul class="uk-slider-items uk-child-width-1-3 uk-child-width-1-4@s uk-child-width-1-5@m uk-grid uk-grid-large">
                 <li>
                   <div class="text-center hover:shadow-2xl uk-card">
-                    <a class="block" href="">
+                    <a class="block" href="" title="封面">
                       <div class="aspect ratio-3/4">
                         {{!-- <img class="object-contain h-full w-full" src="img/book_01.jpg" alt="封面"> --}}
                         {{!-- <img class="w-full uk-responsive-height	" src="img/book_01.jpg" alt="封面"> --}}
-                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(https://fakeimg.pl/300x400/);"></div>
+                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(https://fakeimg.pl/300x400/);"><span class="sr-only">書名</span></div>
                       </div>
                     </a>
                     {{!-- <div class="p-0 uk-card-body">
@@ -177,54 +178,54 @@
                 </li>
                 <li>
                   <div class="text-center hover:shadow-2xl uk-card">
-                    <a class="block" href="">
+                    <a class="block" href="" title="封面">
                       <div class="aspect ratio-3/4">
-                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_01.jpg);"></div>
+                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_01.jpg);"><span class="sr-only">書名</span></div>
                       </div>
                     </a>
                   </div>
                 </li>
                 <li>
                   <div class="text-center hover:shadow-2xl uk-card">
-                    <a class="block" href="">
+                    <a class="block" href="" title="封面">
                       <div class="aspect ratio-3/4">
-                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_02.jpg);"></div>
+                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_02.jpg);"><span class="sr-only">書名</span></div>
                       </div>
                     </a>
                   </div>
                 </li>
                 <li>
                   <div class="text-center hover:shadow-2xl uk-card">
-                    <a class="block" href="">
+                    <a class="block" href="" title="封面">
                       <div class="aspect ratio-3/4">
-                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_03.jpg);"></div>
+                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_03.jpg);"><span class="sr-only">書名</span></div>
                       </div>
                     </a>
                   </div>
                 </li>
                 <li>
                   <div class="text-center hover:shadow-2xl uk-card">
-                    <a class="block" href="">
+                    <a class="block" href="" title="封面">
                       <div class="aspect ratio-3/4">
-                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_04.jpg);"></div>
+                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_04.jpg);"><span class="sr-only">書名</span></div>
                       </div>
                     </a>
                   </div>
                 </li>
                 <li>
                   <div class="text-center hover:shadow-2xl uk-card">
-                    <a class="block" href="">
+                    <a class="block" href="" title="封面">
                       <div class="aspect ratio-3/4">
-                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_05.jpg);"></div>
+                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_05.jpg);"><span class="sr-only">書名</span></div>
                       </div>
                     </a>
                   </div>
                 </li>
                 <li>
                   <div class="text-center hover:shadow-2xl uk-card">
-                    <a class="block" href="">
+                    <a class="block" href="" title="封面">
                       <div class="aspect ratio-3/4">
-                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_06.jpg);"></div>
+                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/book_06.jpg);"><span class="sr-only">書名</span></div>
                       </div>
                     </a>
                   </div>
