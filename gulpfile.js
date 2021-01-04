@@ -43,6 +43,9 @@ var paths = {
   vendors: {
     css: ['node_modules/uikit/dist/css/uikit.min.css'],
     js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js'],
+    // css: ['node_modules/uikit/dist/css/uikit.min.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css'], //Bootstrap
+    // js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js', 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 'node_modules/jquery/dist/jquery.min.js'], //Bootstrap
+    // js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js', 'node_modules/jquery/dist/jquery.min.js'], //jQuery
     // js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js', 'node_modules/FitText-UMD/fittext.js'], //FitText
     fontawesome: ['node_modules/@fortawesome/fontawesome-free/css/all.min.css'],
     fonts: 'node_modules/@fortawesome/fontawesome-free/webfonts/*',
@@ -181,7 +184,7 @@ gulp.task('copyfonts', function() {
 gulp.task('templates', async function() {
   var templateData = {
       title: '中研院近史所圖書館',
-      focus: 'true'
+      focus: 'true' //Add the class 'focus' to <body> for AA
     },
     options = {
       batch: [paths.src.root + paths.dist.templates + '/partials'],
@@ -204,17 +207,10 @@ gulp.task('delhtml', function() {
 // inject css & js to html - https://www.npmjs.com/package/gulp-inject#method-2-use-gulp-inject-s-name-option
 gulp.task('inject', function() {
   return gulp.src(paths.src.html)
-    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/uikit.min.js', {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/bootstrap*.css'], {
       read: false
     }), {
-      name: 'uk',
-      relative: true,
-      removeTags: true
-    }))
-    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/uikit-icons.min.js', {
-      read: false
-    }), {
-      name: 'uk2',
+      name: 'bs',
       relative: true,
       removeTags: true
     }))
@@ -267,11 +263,50 @@ gulp.task('inject', function() {
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/*.css', '!' + paths.src.root + paths.dist.css + '/ui*.css', '!' + paths.src.root + paths.dist.css + '/ta*.css', '!' + paths.src.root + paths.dist.css + '/font*.css', '!' + paths.src.root + paths.dist.css + '/main*.css', '!' + paths.src.root + paths.dist.css + '/colors*.css', '!' + paths.src.root + paths.dist.css + '/style*.css'], {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/*.css', '!' + paths.src.root + paths.dist.css + '/bootstrap*.css', '!' + paths.src.root + paths.dist.css + '/ui*.css', '!' + paths.src.root + paths.dist.css + '/ta*.css', '!' + paths.src.root + paths.dist.css + '/font*.css', '!' + paths.src.root + paths.dist.css + '/main*.css', '!' + paths.src.root + paths.dist.css + '/colors*.css', '!' + paths.src.root + paths.dist.css + '/style*.css'], {
       read: false
     }), {
       relative: true,
       removeTags: true
+    }))
+    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/uikit.min.js', {
+      read: false
+    }), {
+      name: 'uk',
+      relative: true,
+      removeTags: true
+    }))
+    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/uikit-icons.min.js', {
+      read: false
+    }), {
+      name: 'uk2',
+      relative: true,
+      removeTags: true
+    }))
+    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/jquery.min.js', {
+      read: false
+    }), {
+      name: 'jq',
+      relative: true,
+      removeTags: true
+    }))
+    // .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/bootstrap*.js', {
+    //   //For bootstrap 4
+    //   read: false
+    // }), {
+    //   name: 'bs',
+    //   relative: true,
+    //   removeTags: true
+    // }))
+    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/bootstrap*.js', {
+      read: false
+    }), {
+      name: 'bs',
+      relative: true,
+      removeTags: true,
+      transform: function(filepath) {
+        return '<script src="' + filepath + '" defer>' + '</script>';
+      }
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/script.js'], {
       read: false
@@ -283,7 +318,7 @@ gulp.task('inject', function() {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/*.js', '!' + paths.src.root + paths.dist.js + '/script*.js', '!' + paths.src.root + paths.dist.js + '/jquery*.js', '!' + paths.src.root + paths.dist.js + '/ui*.js', '!' + paths.src.root + paths.dist.js + '/*-i.js'], {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/*.js', '!' + paths.src.root + paths.dist.js + '/script*.js', '!' + paths.src.root + paths.dist.js + '/jquery*.js', '!' + paths.src.root + paths.dist.js + '/bootstrap*.js', '!' + paths.src.root + paths.dist.js + '/ui*.js', '!' + paths.src.root + paths.dist.js + '/*-i.js'], {
       read: false
     }), {
       relative: true,
@@ -298,17 +333,10 @@ gulp.task('inject', function() {
 
 gulp.task('build-inject', function() {
   return gulp.src(paths.dist.html)
-    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/uikit.min.js', {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/bootstrap*.css'], {
       read: false
     }), {
-      name: 'uk',
-      relative: true,
-      removeTags: true
-    }))
-    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/uikit-icons.min.js', {
-      read: false
-    }), {
-      name: 'uk2',
+      name: 'bs',
       relative: true,
       removeTags: true
     }))
@@ -361,11 +389,50 @@ gulp.task('build-inject', function() {
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/*.css', '!' + paths.dist.root + paths.dist.css + '/ui*.css', '!' + paths.dist.root + paths.dist.css + '/ta*.css', '!' + paths.dist.root + paths.dist.css + '/font*.css', '!' + paths.dist.root + paths.dist.css + '/main*.css', '!' + paths.dist.root + paths.dist.css + '/colors*.css', '!' + paths.dist.root + paths.dist.css + '/style*.css'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/*.css', '!' + paths.dist.root + paths.dist.css + '/bootstrap*.css', '!' + paths.dist.root + paths.dist.css + '/ui*.css', '!' + paths.dist.root + paths.dist.css + '/ta*.css', '!' + paths.dist.root + paths.dist.css + '/font*.css', '!' + paths.dist.root + paths.dist.css + '/main*.css', '!' + paths.dist.root + paths.dist.css + '/colors*.css', '!' + paths.dist.root + paths.dist.css + '/style*.css'], {
       read: false
     }), {
       relative: true,
       removeTags: true
+    }))
+    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/uikit.min.js', {
+      read: false
+    }), {
+      name: 'uk',
+      relative: true,
+      removeTags: true
+    }))
+    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/uikit-icons.min.js', {
+      read: false
+    }), {
+      name: 'uk2',
+      relative: true,
+      removeTags: true
+    }))
+    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/jquery.min.js', {
+      read: false
+    }), {
+      name: 'jq',
+      relative: true,
+      removeTags: true
+    }))
+    // .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/bootstrap*.js', {
+    //   //For bootstrap 4
+    //   read: false
+    // }), {
+    //   name: 'bs',
+    //   relative: true,
+    //   removeTags: true
+    // }))
+    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/bootstrap*.js', {
+      read: false
+    }), {
+      name: 'bs',
+      relative: true,
+      removeTags: true,
+      transform: function(filepath) {
+        return '<script src="' + filepath + '" defer>' + '</script>';
+      }
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/script*.js'], {
       read: false
@@ -377,7 +444,7 @@ gulp.task('build-inject', function() {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js', '!' + paths.dist.root + paths.dist.js + '/script*.js', '!' + paths.dist.root + paths.dist.js + '/jquery*.js', '!' + paths.dist.root + paths.dist.js + '/ui*.js', '!' + paths.dist.root + paths.dist.js + '/*-i.js'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js', '!' + paths.dist.root + paths.dist.js + '/script*.js', '!' + paths.dist.root + paths.dist.js + '/jquery*.js', '!' + paths.dist.root + paths.dist.js + '/bootstrap*.js', '!' + paths.dist.root + paths.dist.js + '/ui*.js', '!' + paths.dist.root + paths.dist.js + '/*-i.js'], {
       read: false
     }), {
       relative: true,
@@ -556,6 +623,7 @@ gulp.task('watch', function() {
 //------------------- First run 'gulp start' ---------------------------------------------------------
 //First Preset all files
 gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts'));
+gulp.task('notw', gulp.series('copyjs', 'copycss', 'fontawesome', 'copyfonts'));
 
 //Compile Tailwind to CSS and minify css, using 'gulp tailwind' & 'gulp tailwind --production' to purge css on production
 gulp.task('tocss', gulp.series('tailwind', 'sass', 'css'));
@@ -572,14 +640,17 @@ gulp.task('html', gulp.series('delhtml', 'templates', 'sass', 'js', 'inject'));
 
 //0. Preset
 gulp.task('start', gulp.series('vendors', 'delhtml', 'templates', 'sass', 'js', 'inject'));
+gulp.task('startnotw', gulp.series('notw', 'delhtml', 'templates', 'sass', 'js', 'inject'));
 
 //1. Preset then watch
 gulp.task('server', gulp.series('vendors', 'templates', 'sass', 'css', 'js', 'inject', 'watch'));
+gulp.task('servernotw', gulp.series('notw', 'templates', 'sass', 'css', 'js', 'inject', 'watch'));
 
 //3. Prepare all assets for production, run: 'yarn build-nohtml' or 'yarn build'
 gulp.task('build-nohtml', gulp.series('vendors', 'tocss', 'js', 'img'));
 gulp.task('build-purge', gulp.series('dist', 'clean', 'vendors', 'delhtml', 'templates', 'tocss', 'js', 'img', 'build-inject'));
 gulp.task('build', gulp.series('dist', 'clean', 'vendors', 'delhtml', 'templates', 'tocss', 'js', 'img', 'inject', 'build-inject'));
+gulp.task('buildnotw', gulp.series('dist', 'clean', 'notw', 'delhtml', 'templates', 'tocss', 'js', 'img', 'inject', 'build-inject'));
 
 //--- 0.First run: 'gulp start'
 //--- 1.For development run: 'gulp server' or 'yarn server'

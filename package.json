@@ -12,20 +12,21 @@
     "tailwind": "gulp tailwind --development",
     "temp": "gulp temp --development",
     "build": "gulp build --production",
+    "buildnotw": "gulp buildnotw --production",
     "build-purge": "gulp build-purge --purge",
     "build-nohtml": "gulp build-nohtml --production"
   },
   "browserslist": [
-    "> 1%",
-    "ie >= 9",
-    "edge >= 15",
-    "ie_mob >= 10",
-    "ff >= 45",
-    "chrome >= 45",
-    "safari >= 7",
-    "opera >= 23",
-    "ios >= 7",
-    "android >= 4"
+    "last 1 major version",
+    ">= 1%",
+    "Chrome >= 45",
+    "Firefox >= 38",
+    "Edge >= 12",
+    "Explorer >= 10",
+    "iOS >= 9",
+    "Safari >= 9",
+    "Android >= 4.4",
+    "Opera >= 30"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",

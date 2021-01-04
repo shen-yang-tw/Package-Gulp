@@ -1,5 +1,6 @@
 const plugin = require('tailwindcss/plugin')
 module.exports = {
+  // prefix: 'tw-',
   theme: {
     screens: {
       's': '640px',

@@ -1,3 +1,4 @@
+{{!-- {{> meta bootstrap='true' bootstrap4='true' headStyle='true' editor='true' moreStyle='true' jquery='true' navMenu='true' navMenuAccordion'true'}} --}}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -5,6 +6,11 @@
 <!-- Fix phone number style for MS Edge -->
 <meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
 <title>{{title}}</title>
+{{#if bootstrap}}
+<!-- bs:css -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- endinject -->
+{{/if}}
 <!-- uk:css -->
 <link rel="stylesheet" href="css/uikit.min.css">
 <!-- endinject -->
@@ -43,12 +49,18 @@
 <!-- uk2:js -->
 <script src="js/uikit-icons.min.js"></script>
 <!-- endinject -->
-<!-- head:js -->
 {{#if jquery}}
+<!-- jq:js -->
 <script src="js/jquery.min.js"></script>
-{{else}}
-<script src="js/script.js" defer></script>
+<!-- endinject -->
 {{/if}}
+{{#if bootstrap}}
+<!-- bs:js -->
+<script src="js/bootstrap.bundle.min.js"{{#if bootstrap4}}{{else}} defer{{/if}}></script>
+<!-- endinject -->
+{{/if}}
+<!-- head:js -->
+<script src="js/script.js" defer></script>
 <!-- endinject -->
 {{#if navMenu}}
 <!-- inject:js -->

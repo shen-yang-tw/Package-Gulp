@@ -26,7 +26,7 @@
 `yarn global add xxx` - https://classic.yarnpkg.com/en/docs/cli/add
 
 ## If use new node version, just delete all dependencies in package.json and run below:
-* `yarn add handlebars @fortawesome/fontawesome-free tailwindcss postcss autoprefixer uikit jquery ion-rangeslider FitText-UMD`
+* `yarn add handlebars @fortawesome/fontawesome-free tailwindcss postcss autoprefixer uikit bootstrap@next jquery ion-rangeslider FitText-UMD`
 	remove: ``yarn global remove sass` then add: `yarn global add sass`
 	remove: ``yarn global remove browser-sync` then add: `yarn global add browser-sync`
 	remove: ``yarn global remove gulp-cli` then add: `yarn global add gulp-cli`
