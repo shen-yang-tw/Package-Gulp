@@ -26,7 +26,7 @@
 `yarn global add xxx` - https://classic.yarnpkg.com/en/docs/cli/add
 
 ## If use new node version, just delete all dependencies in package.json and run below:
-* `yarn add handlebars @fortawesome/fontawesome-free tailwindcss postcss autoprefixer uikit bootstrap@next jquery ion-rangeslider FitText-UMD`
+* `yarn add handlebars @fortawesome/fontawesome-free tailwindcss@latest postcss@latest autoprefixer@latest uikit bootstrap@next jquery ion-rangeslider FitText-UMD`
 	remove: ``yarn global remove sass` then add: `yarn global add sass`
 	remove: ``yarn global remove browser-sync` then add: `yarn global add browser-sync`
 	remove: ``yarn global remove gulp-cli` then add: `yarn global add gulp-cli`
@@ -34,8 +34,11 @@
 
 * `yarn install` Install all packages in dependencies of the package.json, then run ``yarn upgrade`` Not working on all packages
 	Just run below
-	Install: ***	`yarn install && upgrade && syncyarnlock -s -k` *** - https://www.npmjs.com/package/syncyarnlock#usage
-	Update: ***	`yarn upgrade --latest --pattern && syncyarnlock -s -k` ***
+	Install: ***	`yarn install` *** - https://www.npmjs.com/package/syncyarnlock#usage
+	Update: ***	`yarn remove uikit @fortawesome/fontawesome-free autoprefixer bootstrap debug handlebars jquery postcss tailwindcss uikit && add uikit @fortawesome/fontawesome-free autoprefixer bootstrap debug handlebars jquery postcss tailwindcss uikit && yarn remove @fullhuman/postcss-purgecss browser-sync && yarn add @fullhuman/postcss-purgecss browser-sync -D` *** or run one by one
+	***	`yarn remove uikit @fortawesome/fontawesome-free autoprefixer bootstrap debug handlebars jquery postcss tailwindcss uikit @fullhuman/postcss-purgecss browser-sync` ***
+	***	`yarn add uikit @fortawesome/fontawesome-free autoprefixer bootstrap debug handlebars jquery postcss tailwindcss uikit` ***
+	***	`yarn add @fullhuman/postcss-purgecss browser-sync -D` ***
 	`-s`: Override the package.json, `-k`: Keep the prefix '^' or any other dynamic numbers
 	Or change the package.json then run  - https://github.com/yarnpkg/yarn/issues/3266#issuecomment-573382303
 	`yarn install && upgrade --latest`

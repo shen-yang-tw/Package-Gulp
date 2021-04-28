@@ -1,0 +1,167 @@
+{{#if searchBox}}
+{{>searchBox placeholder='輸入關鍵字搜尋' only1button=true 1stButtonName='搜尋'}}
+{{/if}}
+{{>pagination pageSelect=true pageSum='2'}}
+<!-- uk-overflow-auto -->
+<div class="uk-overflow-auto">
+  <!-- uk-grid -->
+  <div class="uk-grid-small uk-child-width-expand uk-hidden@m uk-grid" uk-grid>
+    <div><label class="tw-w-full"><input class="checkAll tw-mr-1 uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck')">全選</label></div>
+    <div class="uk-flex uk-flex-right">
+      <a class="min_width-20 tw-text-right tw-no-underline tw-block" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>排序篩選</a>
+      <div class="tw-py-3 tw-px-4" uk-dropdown="mode: click; pos: bottom-right">
+        <form>
+          <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
+          <ul class="uk-nav uk-dropdown-nav">
+            <li class="tw-py-1"><a class="sort tw-no-underline" href="#">Heading1<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a></li>
+            <li class="tw-py-1"><a class="sort tw-no-underline" href="#">Heading2<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a></li>
+            <li class="uk-nav-divider"></li>
+            <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+            <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+            <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- /uk-grid -->
+  <table class="min_width-1000@m uk-table uk-table-small uk-table-striped uk-table-responsive">
+    <thead>
+      <tr>
+        <th class="uk-table-shrink uk-text-nowrap">
+          <label class="tw-w-full"><input class="checkAll tw-mr-1 uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck')">全選</label>
+        </th>
+        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">
+          <a class="sort tw-no-underline" href="#">Heading1<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a>
+          <a class="min_width-20 tw-text-center tw-no-underline uk-invisible-hover" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>篩選</a>
+          <!-- <div class="min_width-20"></div> -->
+          <div class="tw-py-3 tw-px-4" uk-dropdown="mode: click">
+            <form>
+              <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+              </ul>
+            </form>
+          </div>
+        </th>
+        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">
+          <a class="sort tw-no-underline" href="#">Heading2<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a>
+          <a class="min_width-20 tw-text-center tw-no-underline uk-invisible-hover" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>篩選</a>
+          <!-- <div class="min_width-20"></div> -->
+          <div uk-dropdown="mode: click">
+            <form>
+              <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+              </ul>
+            </form>
+          </div>
+        </th>
+        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">
+          <a class="sort tw-no-underline" href="#">Heading3<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a>
+          <a class="min_width-20 tw-text-center tw-no-underline uk-invisible-hover" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>篩選</a>
+          <!-- <div class="min_width-20"></div> -->
+          <div uk-dropdown="mode: click">
+            <form>
+              <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+              </ul>
+            </form>
+          </div>
+        </th>
+        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">注意事項</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><label class="tw-w-full"><input class="listCheck uk-checkbox" type="checkbox"></label></td>
+        <!-- <td class="uk-table-link uk-table-middle"><a class="tw-inline uk-link-reset" href="#">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</a></td> -->
+        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading1</span><a class="color_primary tw-inline" href="#">文字｛連結至詳細頁面｝</a></td>
+        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading2</span><a class="color_primary tw-inline" href="#">文字｛連結至詳細頁面｝</a></td>
+        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading3</span><a class="color_primary tw-inline" href="#">文字｛連結至詳細頁面｝</a></td>
+        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading4</span><span class="color_secondary tw-inline">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</span></td>
+      </tr>
+      <tr>
+        <td><label class="tw-w-full"><input class="listCheck uk-checkbox" type="checkbox"></label></td>
+        <td>
+          <span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading1</span>
+          <div class="tw-pl-10 l:tw-pl-0 l:tw-pr-10 tw-relative">
+            <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
+              <div class="uk-width-auto"><i class="color_primary fas fa-paperclip"></i></div>
+              <div class="uk-width-expand"><a class="color_primary tw-inline" href="" uk-toggle="target: #modal-table">文字｛連結至Modal｝</a></div>
+            </div>
+            <a class="min_width-20 tw-text-center tw-bottom-auto l:tw-left-auto l:tw-right-0 uk-position-left" href="#" title="篩選"><i class="tw-mx-1 fas fa-ellipsis-h"></i></a>
+            <div class="tw-py-1 tw-px-4" uk-dropdown="mode: click; pos: bottom-right;">
+              <ul class="uk-nav uk-dropdown-nav">
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td>
+          <span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading2</span>
+          <div class="tw-pl-10 l:tw-pl-0 l:tw-pr-10 tw-relative">
+            <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
+              <div class="uk-width-auto"><i class="color_primary fas fa-paperclip"></i></div>
+              <div class="uk-width-expand"><a class="color_primary tw-inline" href="" uk-toggle="target: #modal-table">文字｛連結至Modal｝</a></div>
+            </div>
+            <a class="min_width-20 tw-text-center tw-bottom-auto l:tw-left-auto l:tw-right-0 uk-position-left" href="#" title="篩選"><i class="tw-mx-1 fas fa-ellipsis-h"></i></a>
+            <div class="tw-py-1 tw-px-4" uk-dropdown="mode: click; pos: bottom-right;">
+              <ul class="uk-nav uk-dropdown-nav">
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td>
+          <span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading3</span>
+          <div class="tw-pl-10 l:tw-pl-0 l:tw-pr-10 tw-relative">
+            <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
+              <div class="uk-width-auto"><i class="color_primary fas fa-paperclip"></i></div>
+              <div class="uk-width-expand"><a class="color_primary tw-inline" href="" uk-toggle="target: #modal-table">文字｛連結至Modal｝</a></div>
+            </div>
+            <a class="min_width-20 tw-text-center tw-bottom-auto l:tw-left-auto l:tw-right-0 uk-position-left" href="#" title="篩選"><i class="tw-mx-1 fas fa-ellipsis-h"></i></a>
+            <div class="tw-py-1 tw-px-4" uk-dropdown="mode: click; pos: bottom-right;">
+              <ul class="uk-nav uk-dropdown-nav">
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading4</span><span class="color_secondary tw-inline">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</span></td>
+      </tr>
+      <tr>
+        <td><label class="tw-w-full"><input class="listCheck uk-checkbox" type="checkbox"></label></td>
+        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading1</span>中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</td>
+        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading2</span>中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</td>
+        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading3</span>中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</td>
+        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading4</span><span class="color_secondary tw-inline">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</span></td>
+      </tr>
+    </tbody>
+  </table>
+  {{>modal-table id='modal-table' wide=true modal-title='標題' note='建立日期 2016/2/25 10:55，建立者: 黃舜煦' footerBtnRight=true}}
+</div>
+<!-- /uk-overflow-auto -->
+{{>pagination pageSelect=true pageSum='2'}}

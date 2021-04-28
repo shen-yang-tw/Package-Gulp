@@ -1,0 +1,190 @@
+{{!-- {{>listMenu bootstrap='' titleIsLink='' bg='' listMenuMaxHeight=true listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true level1=true optionSum=true more=true}} --}}
+
+<!-- listMenu -->
+{{#if titleIsLink}}
+{{#if bg}}
+{{!-- Need CSS:'List Menu' &  JS: eventToggleClasses('.list_accordion_bg .arrow', 'click', '', 'ul.accordion', 'li', '', '.toggle', ['hidden']); --}}
+<div class="list_accordion_bg{{#if listMenuMaxHeight}} max_height-200 max_height-700@m overflow-auto{{/if}} bg-dark p-4{{#if listMenuVisibleOnDesktop}} d-none d-lg-block{{/if}}">
+	<ul class="list-unstyled">
+		{{#if level1}}
+		<li class="py-1">
+			<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+				<a class="text-white d-block w-100 position-relative" href="#">Level1{{#if optionSum}}<span class="badge badge-secondary ml-2 position-absolute" style="margin-top: 3px;">14</span>{{/if}}</a>
+			</div>
+		</li>
+		{{/if}}
+		{{#if level2}}
+		<li class="py-1">
+			<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+				<a class="text-white d-block w-100 position-relative" href="#">Level2{{#if optionSum}}<span class="badge badge-secondary ml-2 position-absolute" style="margin-top: 3px;">14</span>{{/if}}</a>
+				<a class="arrow px-3" href="javascript:void(0)" title="展開/收合選單"><span class="toggle text-white fas fa-angle-right"></span><span class="toggle tw-hidden text-white fas fa-angle-down"></span></a>
+			</div>
+			<ul class="accordion list-unstyled pl-4 mt-1">
+				<li class="py-1">
+					<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+						<a class="text-white d-block w-100 position-relative" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 position-absolute" style="margin-top: 3px;">14</span>{{/if}}</a>
+					</div>
+				</li>
+				<li class="py-1">
+					<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+						<a class="text-white d-block w-100 position-relative" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 position-absolute" style="margin-top: 3px;">14</span>{{/if}}</a>
+					</div>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+		{{#if level3}}
+		<li class="py-1">
+			<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+				<a class="text-white d-block w-100 position-relative" href="#">Level3{{#if optionSum}}<span class="badge badge-secondary ml-2 position-absolute" style="margin-top: 3px;">14</span>{{/if}}</a>
+				<a class="arrow px-3" href="javascript:void(0)" title="展開/收合選單"><span class="toggle text-white fas fa-angle-right"></span><span class="toggle tw-hidden text-white fas fa-angle-down"></span></a>
+			</div>
+			<ul class="accordion list-unstyled pl-4 mt-1">
+				<li class="py-1">
+					<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+						<a class="text-white d-block w-100 position-relative" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 position-absolute" style="margin-top: 3px;">14</span>{{/if}}</a>
+					</div>
+					<ul class="list-unstyled pl-4 mt-1">
+						<li class="py-1">
+							<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+								<a class="text-white d-block w-100 position-relative" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 position-absolute" style="margin-top: 3px;">14</span>{{/if}}</a>
+							</div>
+						</li>
+						<li class="py-1">
+							<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+								<a class="text-white d-block w-100 position-relative" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 position-absolute" style="margin-top: 3px;">14</span>{{/if}}</a>
+							</div>
+						</li>
+						<li class="py-1">
+							<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+								<a class="text-white d-block w-100 position-relative" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 position-absolute" style="margin-top: 3px;">14</span>{{/if}}</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+		{{#if otherLinks}}
+		<li class="dropdown-divider"></li>
+		<li class="py-1">
+			<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+				<a class="text-white d-block w-100 position-relative" href="index.html">首頁</a>
+			</div>
+		</li>
+		<li class="py-1">
+			<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+				<a class="text-white d-block w-100 position-relative" href="#">Item</a>
+			</div>
+		</li>
+		<li class="py-1">
+			<div class="d-flex flex-nowrap align-items-stretch justify-content-between align-items-center">
+				<a class="text-white d-block w-100 position-relative" href="#">English</a>
+			</div>
+		</li>
+		{{/if}}
+	</ul>
+</div>
+{{else}}
+{{!-- Need CSS:'List Menu' & JS: eventToggleClasses('.list_accordion_titlelink .list-group-item>div>a:nth-child(2)', 'click', '', 'ul.accordion', 'li', ['active'], '.toggle', ['hidden']); --}}
+<div class="list_accordion_titlelink{{#if listMenuMaxHeight}} max_height-200 max_height-700@m overflow-auto{{/if}} p-4{{#if listMenuVisibleOnDesktop}} d-none d-lg-block{{/if}}">
+	<ul class="list-group">
+		{{#if level1}}
+		<li class="list-group-item p-0">
+			<div class="d-flex align-items-stretch justify-content-between align-items-center">
+				<a class="list-group-item-action p-2 px-3 text-body d-flex align-items-start flex-grow-1" href="#">Level1{{#if optionSum}}<span class="badge badge-secondary ml-2 mt-1">14</span>{{/if}}</a>
+			</div>
+		</li>
+		{{/if}}
+		{{#if level2}}
+		<li class="list-group-item p-0">
+			<div class="d-flex align-items-stretch justify-content-between align-items-center">
+				<a class="list-group-item-action p-2 px-3 text-body d-flex align-items-start flex-grow-1" href="#">Level2{{#if optionSum}}<span class="badge badge-secondary ml-2 mt-1">14</span>{{/if}}</a>
+				<a class="p-2 px-3 text-body hover:tw-bg-gray-100" href="javascript:void(0)" title="展開/收合選單"><i class="toggle mr-1 fas fa-angle-right"></i><i class="toggle tw-hidden mr-1 fas fa-angle-down"></i></a>
+			</div>
+			<ul class="accordion rounded-0 w-100">
+				<li class="list-group-item d-flex flex-wrap p-0 border-0">
+					<a class="list-group-item-action p-2 px-3 text-body d-flex align-items-start flex-grow-1" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 mt-1">14</span>{{/if}}</a>
+				</li>
+				<li class="list-group-item d-flex flex-wrap p-0 border-0">
+					<a class="list-group-item-action p-2 px-3 text-body d-flex align-items-start flex-grow-1" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 mt-1">14</span>{{/if}}</a>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+		{{#if level3}}
+		<li class="list-group-item p-0">
+			<div class="d-flex align-items-stretch justify-content-between align-items-center">
+				<a class="list-group-item-action p-2 px-3 text-body d-flex align-items-start flex-grow-1" href="#">Level3{{#if optionSum}}<span class="badge badge-secondary ml-2 mt-1">14</span>{{/if}}</a>
+				<a class="p-2 px-3 text-body hover:tw-bg-gray-100" href="javascript:void(0)" title="展開/收合選單"><i class="toggle mr-1 fas fa-angle-right"></i><i class="toggle tw-hidden mr-1 fas fa-angle-down"></i></a>
+			</div>
+			<ul class="accordion rounded-0 w-100">
+				<li class="list-group-item d-flex flex-wrap p-0 border-0">
+					<a class="list-group-item-action p-2 px-3 text-body d-flex align-items-start flex-grow-1" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 mt-1">14</span>{{/if}}</a>
+					<ul class="rounded-0 w-100">
+						<li class="list-group-item d-flex flex-wrap p-0 border-0">
+							<a class="list-group-item-action p-2 px-3 text-body d-flex align-items-start flex-grow-1" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 mt-1">14</span>{{/if}}</a>
+						</li>
+						<li class="list-group-item d-flex flex-wrap p-0 border-0">
+							<a class="list-group-item-action p-2 px-3 text-body d-flex align-items-start flex-grow-1" href="#">Item{{#if optionSum}}<span class="badge badge-secondary ml-2 mt-1">14</span>{{/if}}</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+	</ul>
+</div>
+{{/if}}
+{{else}}
+{{!-- Need CSS:'List Menu' & JS: eventToggleClasses('.list_accordion_bs .list-group-item-action', 'click', ['active'], 'ul.accordion', 'li', '', '.toggle', ['hidden', 'active']); --}}
+<div class="list_accordion_bs{{#if listMenuMaxHeight}} max_height-200 max_height-700@m overflow-auto{{/if}} p-4{{#if listMenuVisibleOnDesktop}} d-none d-lg-block{{/if}}">
+	<ul class="list-group">
+		{{#if level1}}
+		<li class="list-group-item p-0">
+			<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#"><span>Item_1</span>{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+		</li>
+		{{/if}}
+		{{#if level2}}
+		<li class="list-group-item p-0">
+			<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#"><span><i class="toggle mr-1 fas fa-angle-right"></i><i class="toggle tw-hidden mr-1 fas fa-angle-down"></i>Item_2</span>{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+			<ul class="accordion rounded-0">
+				<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+					<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_2_1{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+				</li>
+				<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+					<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_2_2{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+		{{#if level3}}
+		<li class="list-group-item p-0">
+			<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#"><span><i class="toggle mr-1 fas fa-angle-right"></i><i class="toggle tw-hidden mr-1 fas fa-angle-down"></i>Item_3</span>{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+			<ul class="accordion rounded-0">
+				<li class="list-group-item p-0 border-0">
+					<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_3_1{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+					<ul class="rounded-0">
+						<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+							<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_3_1_1{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+						</li>
+						<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+							<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_3_1_2{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+	</ul>
+</div>
+{{/if}}
+{{#if listMenuVisibleOnDesktop}}
+<div class="{{#if widthFullMobile}}w-100 {{/if}}d-lg-none">
+	<div class="dropdown">
+		<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">選單</button>
+		{{>dropdown bootstrap=true level1=true optionSum=''}}
+	</div>
+</div>
+{{/if}}
+<!-- listMenu -->

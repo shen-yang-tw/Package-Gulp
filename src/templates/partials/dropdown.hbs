@@ -1,22 +1,111 @@
-{{!-- {{>dropdown optionSum='true'}} --}}
+{{!-- {{>dropdown bootstrap='' level1='' optionSum=true}} --}}
 
 <!-- Dropdown -->
-<div class="min_width-100" uk-dropdown>
-	<ul class="uk-nav uk-dropdown-nav uk-text-left">
-		<li class="m-0 uk-nav-header"><span>Type</span></li>
-		<li class="px-2 py-1">
-			<a href="">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</a>
+{{#if bootstrap}}
+<div class="dropdown-menu border-0 py-0" aria-labelledby="{{labelledbyid}}">
+	<ul class="list-group">
+		{{#if level1}}
+		<li class="list-group-item p-0">
+			<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#"><span>Item</span>{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
 		</li>
-		<li class="px-2 py-1">
-			<a href="">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</a>
+		{{/if}}
+		{{#if level2}}
+		<li class="list-group-item p-0">
+			<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#"><span>Item_2</span>{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+			<ul class="accordion rounded-0">
+				<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+					<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_2_1<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span></a>
+				</li>
+				<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+					<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_2_2<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span></a>
+				</li>
+			</ul>
 		</li>
-		<li class="m-0 uk-nav-header"><span>Type</span></li>
-		<li class="px-2 py-1">
-			<a href="">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</a>
+		{{/if}}
+		{{#if level3}}
+		<li class="list-group-item p-0">
+			<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#"><span>Item_3</span>{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}</a>
+			<ul class="accordion rounded-0">
+				<li class="list-group-item p-0 border-0">
+					<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_3_1<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span></a>
+					<ul class="rounded-0">
+						<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+							<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_3_1_1<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span></a>
+						</li>
+						<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+							<a class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3" href="#">Item_3_1_2<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span></a>
+						</li>
+					</ul>
+				</li>
+			</ul>
 		</li>
-		<li class="px-2 py-1">
-			<a href="">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</a>
-		</li>
+		{{/if}}
 	</ul>
 </div>
-<!-- Dropdown -->
+{{else}}
+<div class="min_width-100" uk-dropdown>
+	<ul class="uk-nav uk-dropdown-nav tw-text-left">
+		{{#if level1}}
+		{{#if header}}
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		{{/if}}
+		{{!-- <li class="uk-active"><a href="#">Active</a></li> --}}
+		<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+		<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+		{{#if divider}}
+		<li class="tw-m-0 uk-nav-divider"></li>
+		{{/if}}
+		<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+		{{/if}}
+		{{#if level2}}
+		{{#if header}}
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		{{/if}}
+		<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+		{{#if divider}}
+		<li class="tw-m-0 uk-nav-divider"></li>
+		{{/if}}
+		<li class="uk-parent">
+			<a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+			<ul class="tw-pt-0 uk-nav-sub">
+				<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+				<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+			</ul>
+		</li>
+		{{/if}}
+		{{#if level3}}
+		{{#if header}}
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		{{/if}}
+		<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+		{{#if divider}}
+		<li class="tw-m-0 uk-nav-divider"></li>
+		{{/if}}
+		<li class="uk-parent">
+			<a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+			<ul class="tw-pt-0 uk-nav-sub">
+				<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+				<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+			</ul>
+		</li>
+		{{#if divider}}
+		<li class="tw-m-0 uk-nav-divider"></li>
+		{{/if}}
+		<li class="uk-parent">
+			<a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+			<ul class="tw-pt-0 uk-nav-sub">
+				<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+				<li>
+					<a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					<ul>
+						<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+	</ul>
+</div>
+{{/if}}
+<!-- /Dropdown -->

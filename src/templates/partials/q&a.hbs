@@ -1,0 +1,13 @@
+{{#if h3Title}}
+<h3>{{h3Title}}</h3>
+{{/if}}
+{{#if tabSwitcher}}
+{{>tabSwitcher tab1name='全部' tabNoline=true tab2name='Tab2' tab3=true tab3name='Tab3' content1='q&aTabContent' searchBox=true content2='blank' content3='blank'}}
+{{else}}
+{{#if searchBox}}
+{{>searchBox placeholder='輸入關鍵字搜尋' only1button=true 1stButtonName='搜尋'}}
+{{/if}}
+{{>pagination pageSelect=true pageSum='2'}}
+{{>accordion colorSecondary=''}}
+{{>pagination pageSelect=true pageSum='2'}}
+{{/if}}

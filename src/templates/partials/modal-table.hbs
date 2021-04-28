@@ -1,0 +1,25 @@
+{{!-- {{>modal-content id='modal-table' wide=true modal-title='標題' note='建立日期 2016/2/25 10:55，建立者: 黃舜煦' footerBtnCenter='' footerBtnRight=true}} --}}
+
+<!-- uk-modal-content -->
+<div id="{{id}}" class="uk-flex-top uk-modal{{#if wide}} uk-modal-container{{/if}}" uk-modal>
+  <div class="uk-modal-dialog uk-margin-auto-vertical">
+    <button class="uk-modal-close-default" type="button" title="關閉" uk-close></button>
+    <div class="uk-modal-header">
+      <p class="tw-text-2xl tw-font-bold uk-modal-title">{{modal-title}}</p>
+    </div>
+    <div class="uk-modal-body">
+      {{>table-basic minWiodth=true smallTable=true}}
+    </div>
+    <div class="uk-modal-footer" uk-margin>
+      {{#if note}}
+      <small>建立日期 2016/2/25 10:55，建立者: 黃舜煦</small>
+      {{/if}}
+      <div class="uk-grid uk-grid-small uk-child-width-expand@m" uk-grid>
+        <div class="margin_y_child-all min_width-1/2!@m{{#if footerBtnCenter}} tw-text-center{{/if}}{{#if footerBtnRight}} tw-text-right{{/if}}">
+          <button class="min_width-120 uk-button uk-button-default uk-modal-close" type="button">關　　閉</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- uk-modal-content -->

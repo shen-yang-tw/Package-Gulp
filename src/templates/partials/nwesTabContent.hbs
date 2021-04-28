@@ -1,0 +1,27 @@
+{{#if searchBox}}
+{{>searchBox placeholder='輸入關鍵字搜尋' only1button=true 1stButtonName='搜尋'}}
+{{/if}}
+{{>pagination pageSelect=true pageSum='2'}}
+<table class="uk-table uk-table-small uk-table-striped uk-table-responsive">
+	<thead>
+		<tr>
+			<th class="uk-width-1-5@s">日期</th>
+			<th class="uk-width-3-5@s">主題</th>
+			<th class="uk-width-1-5@s">公告單位</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><time>2020-07-03</time></td>
+			<td>{{!-- <i class="color_secondary mr-1 fas fa-star"></i> --}}<a class="color_primary inline hover:underline" href="{{newsDetailHref}}">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</a>
+			</td>
+			<td>物理治療</td>
+		</tr>
+		<tr>
+			<td><time>2020-08-21</time></td>
+			<td><a class="color_primary inline hover:underline" href="{{newsDetailHref}}">臺灣乳房植入物登錄雛型系統將於2020年底建立</a></td>
+			<td>物理治療</td>
+		</tr>
+	</tbody>
+</table>
+{{>pagination pageSelect=true pageSum='2'}}

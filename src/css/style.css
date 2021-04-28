@@ -1,13 +1,18 @@
-.logo > * {
-  min-width: 200px;
+.logoimg > * {
   max-height: 50px;
-  width: calc(1313px/141*70) !important;
+  width: calc(1313px/141*50);
 }
 
+@media (min-width: 480px) {
+  .logoimg > * {
+    min-width: 400px;
+    width: auto;
+  }
+}
 /*---------- IE10+ ------------------------------*/
 .uk-heading-line > ::after, .uk-heading-line > ::before {
   top: calc(50% - (2px/ 2));
-  border-bottom: calc(2px) dotted #606f7b;
+  border-bottom: calc(2px) dotted #2779bd;
 }
 
 .uk-input, .uk-select, .uk-textarea, .uk-button-default {
@@ -20,7 +25,6 @@
 }
 
 body {
-  background: url(../img/bg.png) no-repeat center center;
   background-size: 100% 100%;
   background-position: center top;
 }
@@ -43,23 +47,25 @@ footer * {
   color: white !important;
 }
 
+.heading_line > ::before, .heading_line > ::after, .uk-heading-line > ::before, .uk-heading-line > ::after {
+  top: calc(50% - (2px/ 2));
+  border-bottom: calc(2px) dotted #2779bd;
+}
+
 .irs--flat .irs-bar, .irs--flat .irs-single, .irs--flat .irs-handle > i:first-child, .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
-  background: #606f7b;
+  background: #2779bd;
 }
 
 .irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
-  border-top-color: #606f7b;
+  border-top-color: #2779bd;
 }
 
 /*---------- Only landscape in mobile ------------------------------*/
 /*---------- IE10+ ------------------------------*/
-/* ----------- iPhone 4 and 4S ----------- */
-/* Portrait and Landscape */
-/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
-/* Portrait and Landscape */
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-/* Portrait and Landscape */
-/* ----------- iPhone 6+, 7+ and 8+ ----------- */
-/* Portrait and Landscape */
-/* ----------- iPhone X ----------- */
-/* Portrait and Landscape */
+/* ----------- iPhone ----------- */
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+}
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */
+}

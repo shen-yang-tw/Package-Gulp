@@ -1,6 +1,7 @@
 ﻿.tmp
 node_modules
 Assets
+Layout
 temp
 *.psd
 *.ai
@@ -9,5 +10,6 @@ temp
 *old*
 *-i.*
 *-bak.*
+*-new.*
 *.lock
 .DS_Store

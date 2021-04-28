@@ -1,0 +1,273 @@
+{{!-- {{>pageContent containerXlarge=true breadcrumbCurrent='查詢列表' BreadcrumbUserVisibleOnDesk=true userOn=true user='陳大天' linkLogout='index.html' hrefForAA=true leftMenu=true leftMenuTop=true leftMenuTopStyle='margin-top:15px' leftMenuTab=true leftMenuTitle=true leftMenuTitleClasses='' leftMenuTitleName='' leftMenu1level=true listMenuMaxHeight=true pageTitle='查詢列表' h2linkBack=true h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile=true h2buttonMobileClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' h2buttonName='次選單' h2buttonDropdown=true content='searchlist' pageSelect=true pageSum='2'}} --}}
+
+<!-- page main content -->
+<section class="m:tw-py-2 tw-relative">
+  {{!-- <div class="bg_primary tw-opacity-10 tw-absolute tw-inset-0"></div> --}}
+  <!-- container -->
+  <div class="tw-gap-4 {{#if containerXlarge}}l:tw-w-11/12 xl:tw-w-10/12 container-fluid{{else}}container{{/if}}">
+    <!-- Breadcrumb & User -->
+    <div class="tw-gap-4 row align-items-center justify-content-between{{#if BreadcrumbUserVisibleOnDesk}} d-none d-lg-block{{/if}}">
+      <div class="col">
+        {{>breadcrumb bootstrap=true}}
+      </div>
+      {{#if userOn}}
+      <div class="tw-text-xs m:tw-text-sm align-items-center col-sm-auto">
+        <span class="mr-2 w-auto">帳號：{{user}}</span>
+        <a class="color_primary-text! w-auto" href="{{linkLogout}}">登出</a>
+      </div>
+      {{/if}}
+    </div>
+    <!-- /Breadcrumb & User -->
+    {{#if hrefForAA}}
+    {{#if leftMenu}}
+    <!-- accesskey -->
+    <div class="tw-relative">
+      <a class="text-decoration-none tw-px-1 tw-absolute d-none d-xl-block" href="#L" id="AL" name="L" title="左側選單" accesskey="L" style="left:-30px;top: -5px;">:::</a>
+    </div>
+    <!-- /accesskey -->
+    {{else}}
+    <!-- accesskey -->
+    <div class="tw-relative">
+      <a class="text-decoration-none tw-px-1 tw-absolute d-none d-xl-block" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;top: -5px;">:::</a>
+    </div>
+    <!-- /accesskey -->
+    {{/if}}
+    {{/if}}
+    <!-- card -->
+    <div class="card shadow-sm tw-border-light">
+      <!-- card body -->
+      <div class="min_height-550 card-body">
+        <!-- row -->
+        <div class="row mx-md-n2 tw-gap-y-4">
+          {{#if leftMenu}}
+          <!-- left menu -->
+          <div class="col-sm-4 col-xl-3 px-md-2">
+            {{#if leftMenuTop}}
+            <div class="d-none d-lg-block" style="{{leftMenuTopStyle}}"></div>
+            {{/if}}
+            {{#if leftMenuTab}}
+            <!-- Underline Tabs -->
+            <ul class="underline_tabs underline_tabs-primary tw-border-b tw-border-gray-100 nav justify-content-center">
+              <li class="active">
+                <a class="nav-link text-gray-500 tw-border-gray-400 hover:tw-text-black hover:tw-border-b-2" href="#">Item</a>
+              </li>
+              <li>
+                <a class="nav-link text-gray-500 tw-border-gray-400 hover:tw-text-black hover:tw-border-b-2" href="#">Item</a>
+              </li>
+            </ul>
+            <!-- /Underline Tabs -->
+            {{/if}}
+            {{#if leftMenuTitle}}
+            <p class="tw-border-solid tw-border-b{{leftMenuTitleClasses}}">{{leftMenuTitleName}}</p>
+            {{/if}}
+            {{#if leftMenu1level}}
+            {{>listMenu bootstrap=true listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 1level=true optionSum=true more=true}}
+            {{/if}}
+            {{#if leftMenu2level}}
+            {{>listMenu bootstrap=true listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 2level=true optionSum=true more=true}}
+            {{/if}}
+            {{#if leftMenu3level}}
+            {{>listMenu bootstrap=true listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 3level=true optionSum=true more=true}}
+            {{/if}}
+          </div>
+          <!-- /left menu -->
+          {{/if}}
+          <!-- right column -->
+          <div class="col-sm px-md-2">
+            {{#if hrefForAA}}
+            {{#if leftMenu}}
+            <!-- accesskey -->
+            <div class="tw-relative">
+              <a class="text-decoration-none tw-px-1 tw-absolute d-none d-xl-block" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;top: -5px;">:::</a>
+            </div>
+            <!-- /accesskey -->
+            {{/if}}
+            {{/if}}
+            <h2 class="border-bottom tw-text-base s:tw-text-2xl">
+              <!-- flex -->
+              <div class="d-flex justify-content-between tw-gap-4">
+                <div class="flex-grow-1">{{pageTitle}}</div>
+                {{#if h2linkBack}}
+                <div><small><a class="text-decoration-none" href="{{h2linkBackHref}}"><i class="mr-1 fas fa-angle-left"></i>{{h2linkBackTxt}}</a></small></div>
+                {{/if}}
+                {{#if h2button}}
+                <div><a class="{{h2buttonClasses}}" href="{{h2buttonLink}}">{{#if h2buttonFaicon}}<i class="mr-2 {{h2buttonFaiconClasses}}"></i>{{/if}}{{h2buttonName}}</a></div>
+                {{/if}}
+                {{#if h2buttonModal}}
+                <div><a class="{{h2buttonModalClasses}}btn btn-primary" href="#{{h2buttonModalID}}" data-toggle="modal">{{#if h2buttonModalFaicon}}<i class="mr-2 {{h2buttonModalFaiconClasses}}"></i>{{/if}}{{h2buttonModalName}}</a>
+                </div>
+                {{/if}}
+                {{#if h2buttonMobile}}
+                <div class="dropdown d-none d-lg-block">
+                  <button id="{{labelledbyid}}" class="{{h2buttonMobileClasses}}btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">{{#if h2buttonMobileFaicon}}<i class="mr-2 {{h2buttonMobileFaiconClasses}}"></i>{{/if}}{{h2buttonMobileName}}</button>
+                  {{#if h2buttonDropdown}}
+                  {{>dropdown bootstrap=true level1=true}}
+                  {{/if}}
+                  {{#if h2buttonDropdownSum}}
+                  {{>dropdown bootstrap=true level1=true optionSum=true}}
+                  {{/if}}
+                  {{#if h2buttonDropdownCheckbox}}
+                  {{>dropdownCheckbox bootstrap=true}}
+                  {{/if}}
+                  {{#if h2buttonDropdownCheckboxSum}}
+                  {{>dropdownCheckbox bootstrap=true optionSum=true}}
+                  {{/if}}
+                </div>
+                {{/if}}
+              </div>
+              <!-- /flex -->
+
+              <div class="tw-justify-between uk-flex-middle uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand@m" uk-grid>
+                <div class="uk-width-expand@m">{{pageTitle}}</div>
+                {{#if h2linkBack}}
+                <div class="uk-width-auto"><small class="mt-2"><a class="text-decoration-none" href="{{h2linkBackHref}}"><i class="mr-1 fas fa-angle-left"></i>{{h2linkBackTxt}}</a></small></div>
+                {{/if}}
+                {{#if h2button}}
+                {{!-- h2buttonClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' --}}
+                {{!-- h2buttonFaiconClasses='far fa-envelope' --}}
+                <div class="uk-width-auto"><a class="{{h2buttonClasses}}" href="{{h2buttonLink}}">{{#if h2buttonFaicon}}<i class="mr-2 {{h2buttonFaiconClasses}}"></i>{{/if}}{{h2buttonName}}</a></div>
+                {{/if}}
+                {{#if h2buttonModal}}
+                <div class="uk-width-auto"><a class="{{h2buttonModalClasses}}" href="#{{h2buttonModalID}}" uk-toggle>{{#if h2buttonModalFaicon}}<i class="mr-2 {{h2buttonModalFaiconClasses}}"></i>{{/if}}{{h2buttonModalName}}</a></div>
+                {{/if}}
+                {{#if h2buttonMobile}}
+                <div class="uk-width-auto uk-hidden@m">
+                  <button class="{{h2buttonMobileClasses}}" type="button">{{#if h2buttonMobileFaicon}}<i class="mr-2 {{h2buttonMobileFaiconClasses}}"></i>{{/if}}{{h2buttonMobileName}}</button>
+                  {{#if h2buttonDropdown}}
+                  {{>dropdown}}
+                  {{/if}}
+                  {{#if h2buttonDropdownSum}}
+                  {{>dropdown optionSum=true}}
+                  {{/if}}
+                  {{#if h2buttonDropdownCheckbox}}
+                  {{>dropdownCheckbox}}
+                  {{/if}}
+                </div>
+                {{/if}}
+              </div>
+            </h2>
+            <!-- content -->
+            {{#if form}}
+            <div id="content">
+              <form onsubmit="return false;">
+                {{> (lookup . 'content') }}
+                {{!--
+              <!-- Look up partial:content='' --> --}}
+              </form>
+            </div>
+            {{else}}
+            <div id="content">
+              {{> (lookup . 'content') }}
+              {{!--
+            <!-- Look up partial:content='' --> --}}
+            </div>
+            {{/if}}
+            <!-- /content -->
+          </div>
+          <!-- /right column -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /card body -->
+    </div>
+    <!-- /card -->
+
+    <!-- uk-card -->
+    <div class="min_height-550@m s:tw-mb-2 uk-card uk-card-small uk-card-default uk-card-body" {{!-- uk-height-viewport="min-height: 200" --}}>
+      <!-- uk-grid -->
+      <div class="uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
+        {{#if leftMenu}}
+        <!-- left menu -->
+        <div class="uk-width-1-4@m uk-width-1-5@l">
+          {{#if leftMenuTop}}
+          <div class="d-none d-lg-block" style="{{leftMenuTopStyle}}"></div>
+          {{/if}}
+          {{#if leftMenuTab}}
+          <ul class="tw-border2 tw-border_primary-dark tw-mb-3 uk-tab" uk-tab>
+            <li class="uk-active"><a href="#">依科部</a></li>
+            <li><a href="#">依病症</a></li>
+          </ul>
+          {{/if}}
+          {{#if leftMenuTitle}}
+          <p class="tw-border-solid tw-border-b{{leftMenuTitleClasses}}">{{leftMenuTitleName}}</p>
+          {{/if}}
+          {{#if leftMenu1level}}
+          {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 1level=true optionSum=true more=true}}
+          {{/if}}
+          {{#if leftMenu2level}}
+          {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 2level=true optionSum=true more=true}}
+          {{/if}}
+          {{#if leftMenu3level}}
+          {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 3level=true optionSum=true more=true}}
+          {{/if}}
+        </div>
+        <!-- /left menu -->
+        {{/if}}
+        <!-- right column -->
+        <div class="uk-width-expand@m">
+          {{#if hrefForAA}}
+          {{#if leftMenu}}
+          <!-- accesskey -->
+          <div class="tw-relative">
+            <a class="text-decoration-none tw-px-1 tw-absolute d-none d-xl-block" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;top: -5px;">:::</a>
+          </div>
+          <!-- /accesskey -->
+          {{/if}}
+          {{/if}}
+          <h2 class="tw-border-solid tw-border-b tw-text-base s:tw-text-2xl mt-0">
+            <div class="tw-justify-between uk-flex-middle uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand@m" uk-grid>
+              <div class="uk-width-expand@m">{{pageTitle}}</div>
+              {{#if h2linkBack}}
+              <div class="uk-width-auto"><small class="mt-2"><a class="text-decoration-none" href="{{h2linkBackHref}}"><i class="mr-1 fas fa-angle-left"></i>{{h2linkBackTxt}}</a></small></div>
+              {{/if}}
+              {{#if h2button}}
+              {{!-- h2buttonClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' --}}
+              {{!-- h2buttonFaiconClasses='far fa-envelope' --}}
+              <div class="uk-width-auto"><a class="{{h2buttonClasses}}" href="{{h2buttonLink}}">{{#if h2buttonFaicon}}<i class="mr-2 {{h2buttonFaiconClasses}}"></i>{{/if}}{{h2buttonName}}</a></div>
+              {{/if}}
+              {{#if h2buttonModal}}
+              <div class="uk-width-auto"><a class="{{h2buttonModalClasses}}" href="#{{h2buttonModalID}}" uk-toggle>{{#if h2buttonModalFaicon}}<i class="mr-2 {{h2buttonModalFaiconClasses}}"></i>{{/if}}{{h2buttonModalName}}</a></div>
+              {{/if}}
+              {{#if h2buttonMobile}}
+              <div class="uk-width-auto uk-hidden@m">
+                <button class="{{h2buttonMobileClasses}}" type="button">{{#if h2buttonMobileFaicon}}<i class="mr-2 {{h2buttonMobileFaiconClasses}}"></i>{{/if}}{{h2buttonMobileName}}</button>
+                {{#if h2buttonDropdown}}
+                {{>dropdown}}
+                {{/if}}
+                {{#if h2buttonDropdownSum}}
+                {{>dropdown optionSum=true}}
+                {{/if}}
+                {{#if h2buttonDropdownCheckbox}}
+                {{>dropdownCheckbox}}
+                {{/if}}
+              </div>
+              {{/if}}
+            </div>
+          </h2>
+          <!-- content -->
+          {{#if form}}
+          <div id="content">
+            <form onsubmit="return false;">
+              {{> (lookup . 'content') }}
+              {{!--
+              <!-- Look up partial:content='' --> --}}
+            </form>
+          </div>
+          {{else}}
+          <div id="content">
+            {{> (lookup . 'content') }}
+            {{!--
+            <!-- Look up partial:content='' --> --}}
+          </div>
+          {{/if}}
+          <!-- /content -->
+        </div>
+        <!-- /right column -->
+      </div>
+      <!-- /uk-grid -->
+    </div>
+    <!-- /uk-card -->
+  </div>
+  <!-- /container -->
+</section>
+<!-- /page main content -->

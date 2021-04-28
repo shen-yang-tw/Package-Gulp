@@ -1,0 +1,148 @@
+{{!-- {{>header shadow=true hrefForAA=true topNav=true textSize=true logoRightNav=true mainMenu=true 01active=true tw-borderHR=true iconLogin=true modal=true}} --}}
+
+<!-- header -->
+{{#if bootstrap}}
+<header{{#if shadow}} class="shadow{{/if}}">
+	{{#if topNav}}
+	<!-- Top Nav -->
+	<nav class="bg_primary tw-py-1 tw-text-center tw-relative d-none d-lg-block">
+		<div class="container-lg">
+			<div class="sub_nav margin_x_child tw-text-sm tw-h-full d-flex justify-content-center align-items-center">
+				{{#if hrefForAA}}
+				<span class="d-none d-lg-inline-block"><a class="tw-px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U" style="padding-bottom: 3px;">:::</a></span>
+				{{/if}}
+				<span><a class="tw-px-2" href="index.html">回首頁</a></span>
+				<span><a class="tw-px-2" href="#">常見問題</a></span>
+				<span><a class="tw-px-2" href="#">聯絡我們</a></span>
+				{{#if textSize}}
+				<span class="text_size text_size-s hover_bg"><button class="tw-text-white tw-px-2 btn btn-light" type="button" title="縮小字級">A-</button></span>
+				<span class="text_size text_size-m hover_bg active"><button class="tw-text-white tw-px-2 btn btn-light" type="button" title="適中字級">A</button></span>
+				<span class="text_size text_size-l hover_bg"><button class="tw-text-white tw-px-2 btn btn-light" type="button" title="加大字級">A+</button></span>
+				{{/if}}
+			</div>
+		</div>
+	</nav>
+	<!-- /Top Nav -->
+	{{/if}}
+	<!-- Sticky -->
+	<div class="tw-sticky tw-top-0 tw-shadow-xl tw-bg-white m:tw-bg-transparent m:tw-shadow-none m:tw-relative container-lg">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light tw-flex-wrap">
+			<!-- Logo -->
+			{{!-- <a class="navbar-brand" href="#">Navbar</a> --}}
+			<h1 class="tw-m-0 tw-flex tw-items-center">
+				<a class="navbar-brand" href="index.html" title="{{title}}">
+					<img src="img/logo.svg" alt="{{title}}">
+				</a>
+			</h1>
+			<!-- /Logo -->
+			<button class="navbar-toggler tw-border-0" type="button" {{#if bootstrap4}}data-toggle="collapse" data-target=".navbar-collapse" {{else}}data-bs-toggle="collapse" data-bs-target=".navbar-collapse" {{/if}}>
+				<span class="navbar-toggler-icon"><span class="sr-only">選單按鈕</span></span>
+			</button>
+			{{#if rightNav}}
+			<!-- Right Nav -->
+			<div class="collapse navbar-collapse tw-flex-wrap">
+				<ul class="navbar-nav ml-auto">
+					<li class="pseudo:line_v nav-item">
+						<a class="nav-link" href="index.html">回首頁</a>
+					</li>
+					<li class="pseudo:line_v nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="pseudo:line_v nav-item">
+						{{!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					{{#if textSize}}
+					<li class="nav-item">
+						<span class="text_size text_size-s hover_bg"><button class="tw-text-white tw-px-2 uk-button" type="button" title="縮小字級">A-</button></span>
+					</li>
+					<li class="nav-item">
+						<span class="text_size text_size-m hover_bg active"><button class="tw-text-white tw-px-2 uk-button" type="button" title="適中字級">A</button></span>
+					</li>
+					<li class="nav-item">
+						<span class="text_size text_size-l hover_bg"><button class="tw-text-white tw-px-2 uk-button" type="button" title="加大字級">A+</button></span>
+					</li>
+					{{/if}}
+					{{#if iconLogin}}
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" data-toggle="dropdown"><i class="tw--tw-mb-1 fas fa-user-circle fa-lg"></i></a>
+						<div class="dropdown-menu">
+							{{!-- <a class="dropdown-item" href="#">Action</a>
+										<div class="dropdown-divider"></div> --}}
+							<button class="dropdown-item" type="button" data-toggle="modal" data-target="#password">修改密碼</button>
+							<button class="dropdown-item" type="button" data-toggle="modal" data-target="#register">註冊</button>
+							<button class="dropdown-item" type="button" data-toggle="modal" data-target="#login">登入</button>
+							<a class="dropdown-item" href="index.html">登出</a>
+						</div>
+					</li>
+					{{/if}}
+				</ul>
+				{{#if rightSearch}}
+				<form class="form-inline tw-my-2 tw-my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success tw-my-2 tw-my-sm-0" type="submit">Search</button>
+				</form>
+				{{/if}}
+			</div>
+			<!-- /Right Nav -->
+			{{/if}}
+			{{#if mainMenu}}
+			<!-- mainMenu -->
+			<div class="mainmenu collapse navbar-collapse tw-flex-wrap">
+				{{!-- <div class="bg_primary tw-opacity-85 tw-absolute tw-inset-0"></div> --}}
+				<div class="container-lg">
+					<ul class="nav justify-content-center">
+						<li class="{{#if 01active}}active{{/if}}">
+							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" href="{{#if menuTitle1IsLink}}{{menuTitle1link}}{{else}}#{{/if}}">{{menuTitle1}}</a>
+						</li>
+						<li class="dropdown{{#if 02active}} active{{/if}}">
+							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" data-toggle="dropdown" href="{{#if menuTitle2IsLink}}{{menuTitle2link}}{{else}}#{{/if}}">{{menuTitle2}}</a>
+							{{>dropdown bootstrap=true level1=true optionSum=true}}
+						</li>
+						<li class="dropdown{{#if 03active}} active{{/if}}">
+							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" data-toggle="dropdown" href="{{#if menuTitle3IsLink}}{{menuTitle3link}}{{else}}#{{/if}}">{{menuTitle3}}</a>
+							{{>dropdown bootstrap=true level2=true optionSum=true}}
+						</li>
+						<li class="dropdown{{#if 04active}} active{{/if}}">
+							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" data-toggle="dropdown" href="{{#if menuTitle4IsLink}}{{menuTitle4link}}{{else}}#{{/if}}">{{menuTitle4}}</a>
+							{{>dropdown bootstrap=true level3=true optionSum=true}}
+						</li>
+						<li class="{{#if 05active}}active{{/if}}">
+							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" href="{{#if menuTitle5IsLink}}{{menuTitle5link}}{{else}}#{{/if}}">{{menuTitle5}}</a>
+						</li>
+						<li class="{{#if 06active}}active{{/if}}">
+							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" href="{{#if menuTitle6IsLink}}{{menuTitle1link}}{{else}}#{{/if}}">{{menuTitle6}}</a>
+						</li>
+						<li class="{{#if 07active}}active{{/if}}">
+							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" href="{{#if menuTitle7IsLink}}{{menuTitle7link}}{{else}}#{{/if}}">{{menuTitle7}}</a>
+						</li>
+						<li class="{{#if 08active}}active{{/if}}">
+							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" href="{{#if menuTitle8IsLink}}{{menuTitle8link}}{{else}}#{{/if}}">{{menuTitle8}}</a>
+						</li>
+					</ul>
+					{{#if gradientLine}}
+					<div class="tw-bg-gradient-to-r from-transparent via-black to-transparent" style="height: 2px;"></div>
+					{{/if}}
+				</div>
+			</div>
+			<!-- /mainMenu -->
+			{{/if}}
+		</nav>
+		{{#if tw-borderHR}}
+		<hr class="tw-border-black tw-border-tw-opacity-25 tw-m-0">
+		{{/if}}
+	</div>
+	<!-- Sticky -->
+</header>
+{{#if iconLogin}}
+{{>modal-login id='login' modal-title='會員登入' errorOn=true error='驗證提示語' note=true noteText='登入說明' register=true}}
+
+{{>modal-register id='register' modal-title='會員註冊' errorOn=true error='驗證提示語'}}
+
+{{>modal-password id='password' modal-title='修改密碼' errorOn=true error='驗證提示語' note=true noteText='密碼規則說明' resetButton=true resetButtonName='重　　填'}}
+{{/if}}
+{{#if modal}}
+{{>modal-confirm id='confirm' modal-title='確定？'}}
+{{/if}}
+{{else}}
+<!-- /header -->

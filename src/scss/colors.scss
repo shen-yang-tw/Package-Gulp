@@ -4,6 +4,7 @@
 @include color($selector:#{$text-color-primary-text}, $prefix:"a", $color:$color-primary-text);
 @include color($selector:#{$text-color-primary-light}, $prefix:"a", $color:$color-primary-light);
 @include color($selector:#{$text-color-primary-lighter}, $prefix:"a", $color:$color-primary-lighter);
+@include color($selector:#{$text-color-primary-lightest}, $prefix:"a", $color:$color-primary-lightest);
 @include color($selector:#{$text-color-primary-dark}, $prefix:"a", $color:$color-primary-dark);
 @include color($selector:#{$text-color-primary-darker}, $prefix:"a", $color:$color-primary-darker);
 @include color($selector:#{$text-color-primary-darkest}, $prefix:"a", $color:$color-primary-darkest);
@@ -12,6 +13,7 @@
 @include color($selector:#{$text-color-primary-text}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-text);
 @include color($selector:#{$text-color-primary-light}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-light);
 @include color($selector:#{$text-color-primary-lighter}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-lighter);
+@include color($selector:#{$text-color-primary-lightest}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-lightest);
 @include color($selector:#{$text-color-primary-dark}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-dark);
 @include color($selector:#{$text-color-primary-darker}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-darker);
 @include color($selector:#{$text-color-primary-darkest}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-darkest);
@@ -20,6 +22,7 @@
 @include color($selector:#{$text-color-secondary-text}, $prefix:"a", $color:$color-secondary-text);
 @include color($selector:#{$text-color-secondary-light}, $prefix:"a", $color:$color-secondary-light);
 @include color($selector:#{$text-color-secondary-lighter}, $prefix:"a", $color:$color-secondary-lighter);
+@include color($selector:#{$text-color-secondary-lightest}, $prefix:"a", $color:$color-secondary-lightest);
 @include color($selector:#{$text-color-secondary-dark}, $prefix:"a", $color:$color-secondary-dark);
 @include color($selector:#{$text-color-secondary-darker}, $prefix:"a", $color:$color-secondary-darker);
 @include color($selector:#{$text-color-secondary-darkest}, $prefix:"a", $color:$color-secondary-darkest);
@@ -28,6 +31,7 @@
 @include color($selector:#{$text-color-secondary-text}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-text);
 @include color($selector:#{$text-color-secondary-light}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-light);
 @include color($selector:#{$text-color-secondary-lighter}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-lighter);
+@include color($selector:#{$text-color-secondary-lightest}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-lightest);
 @include color($selector:#{$text-color-secondary-dark}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-dark);
 @include color($selector:#{$text-color-secondary-darker}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-darker);
 @include color($selector:#{$text-color-secondary-darkest}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-darkest);
@@ -36,6 +40,7 @@
 @include color($selector:#{$text-color-color3-text}, $prefix:"a", $color:$color3-text);
 @include color($selector:#{$text-color-color3-light}, $prefix:"a", $color:$color3-light);
 @include color($selector:#{$text-color-color3-lighter}, $prefix:"a", $color:$color3-lighter);
+@include color($selector:#{$text-color-color3-lightest}, $prefix:"a", $color:$color3-lightest);
 @include color($selector:#{$text-color-color3-dark}, $prefix:"a", $color:$color3-dark);
 @include color($selector:#{$text-color-color3-darker}, $prefix:"a", $color:$color3-darker);
 @include color($selector:#{$text-color-color3-darkest}, $prefix:"a", $color:$color3-darkest);
@@ -44,6 +49,7 @@
 @include color($selector:#{$text-color-color3-text}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-text);
 @include color($selector:#{$text-color-color3-light}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-light);
 @include color($selector:#{$text-color-color3-lighter}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-lighter);
+@include color($selector:#{$text-color-color3-lightest}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-lightest);
 @include color($selector:#{$text-color-color3-dark}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-dark);
 @include color($selector:#{$text-color-color3-darker}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-darker);
 @include color($selector:#{$text-color-color3-darkest}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-darkest);
@@ -52,6 +58,7 @@
 @include color($selector:#{$text-color-color4-text}, $prefix:"a", $color:$color4-text);
 @include color($selector:#{$text-color-color4-light}, $prefix:"a", $color:$color4-light);
 @include color($selector:#{$text-color-color4-lighter}, $prefix:"a", $color:$color4-lighter);
+@include color($selector:#{$text-color-color4-lightest}, $prefix:"a", $color:$color4-lightest);
 @include color($selector:#{$text-color-color4-dark}, $prefix:"a", $color:$color4-dark);
 @include color($selector:#{$text-color-color4-darker}, $prefix:"a", $color:$color4-darker);
 @include color($selector:#{$text-color-color4-darkest}, $prefix:"a", $color:$color4-darkest);
@@ -60,6 +67,7 @@
 @include color($selector:#{$text-color-color4-text}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-text);
 @include color($selector:#{$text-color-color4-light}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-light);
 @include color($selector:#{$text-color-color4-lighter}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-lighter);
+@include color($selector:#{$text-color-color4-lightest}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-lightest);
 @include color($selector:#{$text-color-color4-dark}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-dark);
 @include color($selector:#{$text-color-color4-darker}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-darker);
 @include color($selector:#{$text-color-color4-darkest}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-darkest);
@@ -69,6 +77,7 @@
 @include color($selector:#{$text-color-primary-text}, $prefix:#{$hover}\:, $color:$color-primary-text, $hover:true);
 @include color($selector:#{$text-color-primary-light}, $prefix:#{$hover}\:, $color:$color-primary-light, $hover:true);
 @include color($selector:#{$text-color-primary-lighter}, $prefix:#{$hover}\:, $color:$color-primary-lighter, $hover:true);
+@include color($selector:#{$text-color-primary-lightest}, $prefix:#{$hover}\:, $color:$color-primary-lightest, $hover:true);
 @include color($selector:#{$text-color-primary-dark}, $prefix:#{$hover}\:, $color:$color-primary-dark, $hover:true);
 @include color($selector:#{$text-color-primary-darker}, $prefix:#{$hover}\:, $color:$color-primary-darker, $hover:true);
 @include color($selector:#{$text-color-primary-darkest}, $prefix:#{$hover}\:, $color:$color-primary-darkest, $hover:true);
@@ -77,6 +86,7 @@
 @include color($selector:#{$text-color-primary-text}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-primary-text, $hover:true);
 @include color($selector:#{$text-color-primary-light}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-primary-light, $hover:true);
 @include color($selector:#{$text-color-primary-lighter}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-primary-lighter, $hover:true);
+@include color($selector:#{$text-color-primary-lightest}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-primary-lightest, $hover:true);
 @include color($selector:#{$text-color-primary-dark}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-primary-dark, $hover:true);
 @include color($selector:#{$text-color-primary-darker}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-primary-darker, $hover:true);
 @include color($selector:#{$text-color-primary-darkest}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-primary-darkest, $hover:true);
@@ -85,6 +95,7 @@
 @include color($selector:#{$text-color-secondary-text}, $prefix:#{$hover}\:, $color:$color-secondary-text, $hover:true);
 @include color($selector:#{$text-color-secondary-light}, $prefix:#{$hover}\:, $color:$color-secondary-light, $hover:true);
 @include color($selector:#{$text-color-secondary-lighter}, $prefix:#{$hover}\:, $color:$color-secondary-lighter, $hover:true);
+@include color($selector:#{$text-color-secondary-lightest}, $prefix:#{$hover}\:, $color:$color-secondary-lightest, $hover:true);
 @include color($selector:#{$text-color-secondary-dark}, $prefix:#{$hover}\:, $color:$color-secondary-dark, $hover:true);
 @include color($selector:#{$text-color-secondary-darker}, $prefix:#{$hover}\:, $color:$color-secondary-darker, $hover:true);
 @include color($selector:#{$text-color-secondary-darkest}, $prefix:#{$hover}\:, $color:$color-secondary-darkest, $hover:true);
@@ -93,6 +104,7 @@
 @include color($selector:#{$text-color-secondary-text}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-secondary-text, $hover:true);
 @include color($selector:#{$text-color-secondary-light}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-secondary-light, $hover:true);
 @include color($selector:#{$text-color-secondary-lighter}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-secondary-lighter, $hover:true);
+@include color($selector:#{$text-color-secondary-lightest}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-secondary-lightest, $hover:true);
 @include color($selector:#{$text-color-secondary-dark}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-secondary-dark, $hover:true);
 @include color($selector:#{$text-color-secondary-darker}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-secondary-darker, $hover:true);
 @include color($selector:#{$text-color-secondary-darkest}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color-secondary-darkest, $hover:true);
@@ -101,6 +113,7 @@
 @include color($selector:#{$text-color-color3-text}, $prefix:#{$hover}\:, $color:$color3-text, $hover:true);
 @include color($selector:#{$text-color-color3-light}, $prefix:#{$hover}\:, $color:$color3-light, $hover:true);
 @include color($selector:#{$text-color-color3-lighter}, $prefix:#{$hover}\:, $color:$color3-lighter, $hover:true);
+@include color($selector:#{$text-color-color3-lightest}, $prefix:#{$hover}\:, $color:$color3-lightest, $hover:true);
 @include color($selector:#{$text-color-color3-dark}, $prefix:#{$hover}\:, $color:$color3-dark, $hover:true);
 @include color($selector:#{$text-color-color3-darker}, $prefix:#{$hover}\:, $color:$color3-darker, $hover:true);
 @include color($selector:#{$text-color-color3-darkest}, $prefix:#{$hover}\:, $color:$color3-darkest, $hover:true);
@@ -109,6 +122,7 @@
 @include color($selector:#{$text-color-color3-text}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color3-text, $hover:true);
 @include color($selector:#{$text-color-color3-light}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color3-light, $hover:true);
 @include color($selector:#{$text-color-color3-lighter}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color3-lighter, $hover:true);
+@include color($selector:#{$text-color-color3-lightest}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color3-lightest, $hover:true);
 @include color($selector:#{$text-color-color3-dark}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color3-dark, $hover:true);
 @include color($selector:#{$text-color-color3-darker}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color3-darker, $hover:true);
 @include color($selector:#{$text-color-color3-darkest}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color3-darkest, $hover:true);
@@ -117,6 +131,7 @@
 @include color($selector:#{$text-color-color4-text}, $prefix:#{$hover}\:, $color:$color4-text, $hover:true);
 @include color($selector:#{$text-color-color4-light}, $prefix:#{$hover}\:, $color:$color4-light, $hover:true);
 @include color($selector:#{$text-color-color4-lighter}, $prefix:#{$hover}\:, $color:$color4-lighter, $hover:true);
+@include color($selector:#{$text-color-color4-lightest}, $prefix:#{$hover}\:, $color:$color4-lightest, $hover:true);
 @include color($selector:#{$text-color-color4-dark}, $prefix:#{$hover}\:, $color:$color4-dark, $hover:true);
 @include color($selector:#{$text-color-color4-darker}, $prefix:#{$hover}\:, $color:$color4-darker, $hover:true);
 @include color($selector:#{$text-color-color4-darkest}, $prefix:#{$hover}\:, $color:$color4-darkest, $hover:true);
@@ -125,6 +140,7 @@
 @include color($selector:#{$text-color-color4-text}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color4-text, $hover:true);
 @include color($selector:#{$text-color-color4-light}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color4-light, $hover:true);
 @include color($selector:#{$text-color-color4-lighter}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color4-lighter, $hover:true);
+@include color($selector:#{$text-color-color4-lightest}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color4-lightest, $hover:true);
 @include color($selector:#{$text-color-color4-dark}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color4-dark, $hover:true);
 @include color($selector:#{$text-color-color4-darker}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color4-darker, $hover:true);
 @include color($selector:#{$text-color-color4-darkest}, $important:true, $prefix:#{$hover}\:, $suffix:\!, $color:$color4-darkest, $hover:true);
@@ -133,6 +149,7 @@
 @include fillcolor($selector:#{$fill-color-primary}, $prefix:"a", $color:$color-primary);
 @include fillcolor($selector:#{$fill-color-primary-light}, $prefix:"a", $color:$color-primary-light);
 @include fillcolor($selector:#{$fill-color-primary-lighter}, $prefix:"a", $color:$color-primary-lighter);
+@include fillcolor($selector:#{$fill-color-primary-lightest}, $prefix:"a", $color:$color-primary-lightest);
 @include fillcolor($selector:#{$fill-color-primary-dark}, $prefix:"a", $color:$color-primary-dark);
 @include fillcolor($selector:#{$fill-color-primary-darker}, $prefix:"a", $color:$color-primary-darker);
 @include fillcolor($selector:#{$fill-color-primary-darkest}, $prefix:"a", $color:$color-primary-darkest);
@@ -140,6 +157,7 @@
 @include fillcolor($selector:#{$fill-color-primary}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary);
 @include fillcolor($selector:#{$fill-color-primary-light}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-light);
 @include fillcolor($selector:#{$fill-color-primary-lighter}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-lighter);
+@include fillcolor($selector:#{$fill-color-primary-lightest}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-lightest);
 @include fillcolor($selector:#{$fill-color-primary-dark}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-dark);
 @include fillcolor($selector:#{$fill-color-primary-darker}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-darker);
 @include fillcolor($selector:#{$fill-color-primary-darkest}, $important:true, $prefix:"a", $suffix:\!, $color:$color-primary-darkest);
@@ -147,6 +165,7 @@
 @include fillcolor($selector:#{$fill-color-secondary}, $prefix:"a", $color:$color-secondary);
 @include fillcolor($selector:#{$fill-color-secondary-light}, $prefix:"a", $color:$color-secondary-light);
 @include fillcolor($selector:#{$fill-color-secondary-lighter}, $prefix:"a", $color:$color-secondary-lighter);
+@include fillcolor($selector:#{$fill-color-secondary-lightest}, $prefix:"a", $color:$color-secondary-lightest);
 @include fillcolor($selector:#{$fill-color-secondary-dark}, $prefix:"a", $color:$color-secondary-dark);
 @include fillcolor($selector:#{$fill-color-secondary-darker}, $prefix:"a", $color:$color-secondary-darker);
 @include fillcolor($selector:#{$fill-color-secondary-darkest}, $prefix:"a", $color:$color-secondary-darkest);
@@ -154,6 +173,7 @@
 @include fillcolor($selector:#{$fill-color-secondary}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary);
 @include fillcolor($selector:#{$fill-color-secondary-light}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-light);
 @include fillcolor($selector:#{$fill-color-secondary-lighter}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-lighter);
+@include fillcolor($selector:#{$fill-color-secondary-lightest}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-lightest);
 @include fillcolor($selector:#{$fill-color-secondary-dark}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-dark);
 @include fillcolor($selector:#{$fill-color-secondary-darker}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-darker);
 @include fillcolor($selector:#{$fill-color-secondary-darkest}, $important:true, $prefix:"a", $suffix:\!, $color:$color-secondary-darkest);
@@ -161,6 +181,7 @@
 @include fillcolor($selector:#{$fill-color-color3}, $prefix:"a", $color:$color3);
 @include fillcolor($selector:#{$fill-color-color3-light}, $prefix:"a", $color:$color3-light);
 @include fillcolor($selector:#{$fill-color-color3-lighter}, $prefix:"a", $color:$color3-lighter);
+@include fillcolor($selector:#{$fill-color-color3-lightest}, $prefix:"a", $color:$color3-lightest);
 @include fillcolor($selector:#{$fill-color-color3-dark}, $prefix:"a", $color:$color3-dark);
 @include fillcolor($selector:#{$fill-color-color3-darker}, $prefix:"a", $color:$color3-darker);
 @include fillcolor($selector:#{$fill-color-color3-darkest}, $prefix:"a", $color:$color3-darkest);
@@ -168,6 +189,7 @@
 @include fillcolor($selector:#{$fill-color-color3}, $important:true, $prefix:"a", $suffix:\!, $color:$color3);
 @include fillcolor($selector:#{$fill-color-color3-light}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-light);
 @include fillcolor($selector:#{$fill-color-color3-lighter}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-lighter);
+@include fillcolor($selector:#{$fill-color-color3-lightest}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-lightest);
 @include fillcolor($selector:#{$fill-color-color3-dark}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-dark);
 @include fillcolor($selector:#{$fill-color-color3-darker}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-darker);
 @include fillcolor($selector:#{$fill-color-color3-darkest}, $important:true, $prefix:"a", $suffix:\!, $color:$color3-darkest);
@@ -175,6 +197,7 @@
 @include fillcolor($selector:#{$fill-color-color4}, $prefix:"a", $color:$color4);
 @include fillcolor($selector:#{$fill-color-color4-light}, $prefix:"a", $color:$color4-light);
 @include fillcolor($selector:#{$fill-color-color4-lighter}, $prefix:"a", $color:$color4-lighter);
+@include fillcolor($selector:#{$fill-color-color4-lightest}, $prefix:"a", $color:$color4-lightest);
 @include fillcolor($selector:#{$fill-color-color4-dark}, $prefix:"a", $color:$color4-dark);
 @include fillcolor($selector:#{$fill-color-color4-darker}, $prefix:"a", $color:$color4-darker);
 @include fillcolor($selector:#{$fill-color-color4-darkest}, $prefix:"a", $color:$color4-darkest);
@@ -182,6 +205,7 @@
 @include fillcolor($selector:#{$fill-color-color4}, $important:true, $prefix:"a", $suffix:\!, $color:$color4);
 @include fillcolor($selector:#{$fill-color-color4-light}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-light);
 @include fillcolor($selector:#{$fill-color-color4-lighter}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-lighter);
+@include fillcolor($selector:#{$fill-color-color4-lightest}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-lightest);
 @include fillcolor($selector:#{$fill-color-color4-dark}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-dark);
 @include fillcolor($selector:#{$fill-color-color4-darker}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-darker);
 @include fillcolor($selector:#{$fill-color-color4-darkest}, $important:true, $prefix:"a", $suffix:\!, $color:$color4-darkest);
@@ -190,48 +214,56 @@
 @include bg-color($selector:#{$bg-primary}, $bg-color:$color-primary);
 @include bg-color($selector:#{$bg-primary-light}, $bg-color:$color-primary-light);
 @include bg-color($selector:#{$bg-primary-lighter}, $bg-color:$color-primary-lighter);
+@include bg-color($selector:#{$bg-primary-lightest}, $bg-color:$color-primary-lightest);
 @include bg-color($selector:#{$bg-primary-dark}, $bg-color:$color-primary-dark);
 @include bg-color($selector:#{$bg-primary-darker}, $bg-color:$color-primary-darker);
 @include bg-color($selector:#{$bg-primary-darkest}, $bg-color:$color-primary-darkest);
 @include bg-color($selector:#{$bg-secondary}, $bg-color:$color-secondary);
 @include bg-color($selector:#{$bg-secondary-light}, $bg-color:$color-secondary-light);
 @include bg-color($selector:#{$bg-secondary-lighter}, $bg-color:$color-secondary-lighter);
+@include bg-color($selector:#{$bg-secondary-lightest}, $bg-color:$color-secondary-lightest);
 @include bg-color($selector:#{$bg-secondary-dark}, $bg-color:$color-secondary-dark);
 @include bg-color($selector:#{$bg-secondary-darker}, $bg-color:$color-secondary-darker);
 @include bg-color($selector:#{$bg-secondary-darkest}, $bg-color:$color-secondary-darkest);
 @include bg-color($selector:#{$bg-color3}, $bg-color:$color3);
 @include bg-color($selector:#{$bg-color3-light}, $bg-color:$color3-light);
 @include bg-color($selector:#{$bg-color3-lighter}, $bg-color:$color3-lighter);
+@include bg-color($selector:#{$bg-color3-lightest}, $bg-color:$color3-lightest);
 @include bg-color($selector:#{$bg-color3-dark}, $bg-color:$color3-dark);
 @include bg-color($selector:#{$bg-color3-darker}, $bg-color:$color3-darker);
 @include bg-color($selector:#{$bg-color3-darkest}, $bg-color:$color3-darkest);
 @include bg-color($selector:#{$bg-color4}, $bg-color:$color4);
 @include bg-color($selector:#{$bg-color4-light}, $bg-color:$color4-light);
 @include bg-color($selector:#{$bg-color4-lighter}, $bg-color:$color4-lighter);
+@include bg-color($selector:#{$bg-color4-lightest}, $bg-color:$color4-lightest);
 @include bg-color($selector:#{$bg-color4-dark}, $bg-color:$color4-dark);
 @include bg-color($selector:#{$bg-color4-darker}, $bg-color:$color4-darker);
 @include bg-color($selector:#{$bg-color4-darkest}, $bg-color:$color4-darkest);
 @include bg-color($selector:#{$bg-primary}, $bg-color:$color-primary, $important:true);
 @include bg-color($selector:#{$bg-primary-light}, $bg-color:$color-primary-light, $important:true);
 @include bg-color($selector:#{$bg-primary-lighter}, $bg-color:$color-primary-lighter, $important:true);
+@include bg-color($selector:#{$bg-primary-lightest}, $bg-color:$color-primary-lightest, $important:true);
 @include bg-color($selector:#{$bg-primary-dark}, $bg-color:$color-primary-dark, $important:true);
 @include bg-color($selector:#{$bg-primary-darker}, $bg-color:$color-primary-darker, $important:true);
 @include bg-color($selector:#{$bg-primary-darkest}, $bg-color:$color-primary-darkest, $important:true);
 @include bg-color($selector:#{$bg-secondary}, $bg-color:$color-secondary, $important:true);
 @include bg-color($selector:#{$bg-secondary-light}, $bg-color:$color-secondary-light, $important:true);
 @include bg-color($selector:#{$bg-secondary-lighter}, $bg-color:$color-secondary-lighter, $important:true);
+@include bg-color($selector:#{$bg-secondary-lightest}, $bg-color:$color-secondary-lightest, $important:true);
 @include bg-color($selector:#{$bg-secondary-dark}, $bg-color:$color-secondary-dark, $important:true);
 @include bg-color($selector:#{$bg-secondary-darker}, $bg-color:$color-secondary-darker, $important:true);
 @include bg-color($selector:#{$bg-secondary-darkest}, $bg-color:$color-secondary-darkest, $important:true);
 @include bg-color($selector:#{$bg-color3}, $bg-color:$color3, $important:true);
 @include bg-color($selector:#{$bg-color3-light}, $bg-color:$color3-light, $important:true);
 @include bg-color($selector:#{$bg-color3-lighter}, $bg-color:$color3-lighter, $important:true);
+@include bg-color($selector:#{$bg-color3-lightest}, $bg-color:$color3-lightest, $important:true);
 @include bg-color($selector:#{$bg-color3-dark}, $bg-color:$color3-dark, $important:true);
 @include bg-color($selector:#{$bg-color3-darker}, $bg-color:$color3-darker, $important:true);
 @include bg-color($selector:#{$bg-color3-darkest}, $bg-color:$color3-darkest, $important:true);
 @include bg-color($selector:#{$bg-color4}, $bg-color:$color4, $important:true);
 @include bg-color($selector:#{$bg-color4-light}, $bg-color:$color4-light, $important:true);
 @include bg-color($selector:#{$bg-color4-lighter}, $bg-color:$color4-lighter, $important:true);
+@include bg-color($selector:#{$bg-color4-lightest}, $bg-color:$color4-lightest, $important:true);
 @include bg-color($selector:#{$bg-color4-dark}, $bg-color:$color4-dark, $important:true);
 @include bg-color($selector:#{$bg-color4-darker}, $bg-color:$color4-darker, $important:true);
 @include bg-color($selector:#{$bg-color4-darkest}, $bg-color:$color4-darkest, $important:true);
@@ -240,7 +272,9 @@
   @extend #{$bg-primary};
   &#{$active}, &:hover, &:focus {
     background-color:$color-primary-hover;
-    color:text-color($color-primary-hover) !important;
+    &, &>* {
+      color:text-color($color-primary-hover) !important;
+    }
     text-decoration: none;
   }
 }
@@ -248,7 +282,9 @@
   @extend #{$bg-primary-light};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-primary-light, 10%);
-    color:text-color(darken($color-primary-light, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-primary-light, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -256,7 +292,19 @@
   @extend #{$bg-primary-lighter};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-primary-lighter, 10%);
-    color:text-color(darken($color-primary-lighter, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-primary-lighter, 10%)) !important;
+    }
+    text-decoration: none;
+  }
+}
+#{$btn-primary-lightest} {
+  @extend #{$bg-primary-lightest};
+  &#{$active}, &:hover, &:focus {
+    background-color:darken($color-primary-lightest, 10%);
+    &, &>* {
+      color:text-color(darken($color-primary-lightest, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -264,7 +312,9 @@
   @extend #{$bg-primary-dark};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-primary-dark, 10%);
-    color:text-color(darken($color-primary-dark, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-primary-dark, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -272,7 +322,9 @@
   @extend #{$bg-primary-darker};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-primary-darker, 10%);
-    color:text-color(darken($color-primary-darker, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-primary-darker, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -280,7 +332,9 @@
   @extend #{$bg-primary-darkest};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-primary-darkest, 10%);
-    color:text-color(darken($color-primary-darkest, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-primary-darkest, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -288,7 +342,9 @@
   @extend #{$bg-secondary};
   &#{$active}, &:hover, &:focus {
     background-color:$color-secondary-hover;
-    color:text-color($color-secondary-hover) !important;
+    &, &>* {
+      color:text-color($color-secondary-hover) !important;
+    }
     text-decoration: none;
   }
 }
@@ -296,7 +352,9 @@
   @extend #{$bg-secondary-light};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-secondary-light, 10%);
-    color:text-color(darken($color-secondary-light, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-secondary-light, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -304,7 +362,19 @@
   @extend #{$bg-secondary-lighter};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-secondary-lighter, 10%);
-    color:text-color(darken($color-secondary-lighter, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-secondary-lighter, 10%)) !important;
+    }
+    text-decoration: none;
+  }
+}
+#{$btn-secondary-lightest} {
+  @extend #{$bg-secondary-lightest};
+  &#{$active}, &:hover, &:focus {
+    background-color:darken($color-secondary-lightest, 10%);
+    &, &>* {
+      color:text-color(darken($color-secondary-lightest, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -312,7 +382,9 @@
   @extend #{$bg-secondary-dark};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-secondary-dark, 10%);
-    color:text-color(darken($color-secondary-dark, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-secondary-dark, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -320,7 +392,9 @@
   @extend #{$bg-secondary-darker};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-secondary-darker, 10%);
-    color:text-color(darken($color-secondary-darker, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-secondary-darker, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -328,7 +402,9 @@
   @extend #{$bg-secondary-darkest};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color-secondary-darkest, 10%);
-    color:text-color(darken($color-secondary-darkest, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color-secondary-darkest, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -336,7 +412,9 @@
   @extend #{$bg-color3};
   &#{$active}, &:hover, &:focus {
     background-color:$color3-hover;
-    color:text-color($color3-hover) !important;
+    &, &>* {
+      color:text-color($color3-hover) !important;
+    }
     text-decoration: none;
   }
 }
@@ -344,7 +422,9 @@
   @extend #{$bg-color3-light};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color3-light, 10%);
-    color:text-color(darken($color3-light, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color3-light, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -352,7 +432,19 @@
   @extend #{$bg-color3-lighter};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color3-lighter, 10%);
-    color:text-color(darken($color3-lighter, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color3-lighter, 10%)) !important;
+    }
+    text-decoration: none;
+  }
+}
+#{$btn-color3-lightest} {
+  @extend #{$bg-color3-lightest};
+  &#{$active}, &:hover, &:focus {
+    background-color:darken($color3-lightest, 10%);
+    &, &>* {
+      color:text-color(darken($color3-lightest, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -360,7 +452,9 @@
   @extend #{$bg-color3-dark};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color3-dark, 10%);
-    color:text-color(darken($color3-dark, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color3-dark, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -368,7 +462,9 @@
   @extend #{$bg-color3-darker};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color3-darker, 10%);
-    color:text-color(darken($color3-darker, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color3-darker, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -376,7 +472,9 @@
   @extend #{$bg-color3-darkest};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color3-darkest, 10%);
-    color:text-color(darken($color3-darkest, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color3-darkest, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -384,7 +482,9 @@
   @extend #{$bg-color4};
   &#{$active}, &:hover, &:focus {
     background-color:$color4-hover;
-    color:text-color($color4-hover) !important;
+    &, &>* {
+      color:text-color($color4-hover) !important;
+    }
     text-decoration: none;
   }
 }
@@ -392,7 +492,9 @@
   @extend #{$bg-color4-light};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color4-light, 10%);
-    color:text-color(darken($color4-light, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color4-light, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -400,7 +502,19 @@
   @extend #{$bg-color4-lighter};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color4-lighter, 10%);
-    color:text-color(darken($color4-lighter, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color4-lighter, 10%)) !important;
+    }
+    text-decoration: none;
+  }
+}
+#{$btn-color4-lightest} {
+  @extend #{$bg-color4-lightest};
+  &#{$active}, &:hover, &:focus {
+    background-color:darken($color4-lightest, 10%);
+    &, &>* {
+      color:text-color(darken($color4-lightest, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -408,7 +522,9 @@
   @extend #{$bg-color4-dark};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color4-dark, 10%);
-    color:text-color(darken($color4-dark, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color4-dark, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -416,7 +532,9 @@
   @extend #{$bg-color4-darker};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color4-darker, 10%);
-    color:text-color(darken($color4-darker, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color4-darker, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -424,7 +542,9 @@
   @extend #{$bg-color4-darkest};
   &#{$active}, &:hover, &:focus {
     background-color:darken($color4-darkest, 10%);
-    color:text-color(darken($color4-darkest, 10%)) !important;
+    &, &>* {
+      color:text-color(darken($color4-darkest, 10%)) !important;
+    }
     text-decoration: none;
   }
 }
@@ -436,6 +556,9 @@
 }
 #{$border-primary-lighter}, #{$border-primary-lighter}[class*=divider]>::before, #{$border-primary-lighter} li[class*=active] a, #{$border-primary-lighter} li a[class*=open], #{$border-primary-lighter} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color-primary-lighter)
+}
+#{$border-primary-lightest}, #{$border-primary-lightest}[class*=divider]>::before, #{$border-primary-lightest} li[class*=active] a, #{$border-primary-lightest} li a[class*=open], #{$border-primary-lightest} li a:hover {
+  @include bordered($property:border-color, $all:false, $value:$color-primary-lightest)
 }
 #{$border-primary-dark}, #{$border-primary-dark}[class*=divider]>::before, #{$border-primary-dark} li[class*=active] a, #{$border-primary-dark} li a[class*=open], #{$border-primary-dark} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color-primary-dark)
@@ -458,6 +581,9 @@
 #{$border-secondary-lighter}, #{$border-secondary-lighter}[class*=divider]>::before, #{$border-secondary-lighter} li[class*=active] a, #{$border-secondary-lighter} li a[class*=open], #{$border-secondary-lighter} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color-secondary-lighter)
 }
+#{$border-secondary-lightest}, #{$border-secondary-lightest}[class*=divider]>::before, #{$border-secondary-lightest} li[class*=active] a, #{$border-secondary-lightest} li a[class*=open], #{$border-secondary-lightest} li a:hover {
+  @include bordered($property:border-color, $all:false, $value:$color-secondary-lightest)
+}
 #{$border-secondary-dark}, #{$border-secondary-dark}[class*=divider]>::before, #{$border-secondary-dark} li[class*=active] a, #{$border-secondary-dark} li a[class*=open], #{$border-secondary-dark} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color-secondary-dark)
 }
@@ -478,6 +604,9 @@
 }
 #{$border-color3-lighter}, #{$border-color3-lighter}[class*=divider]>::before, #{$border-color3-lighter} li[class*=active] a, #{$border-color3-lighter} li a[class*=open], #{$border-color3-lighter} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color3-lighter)
+}
+#{$border-color3-lightest}, #{$border-color3-lightest}[class*=divider]>::before, #{$border-color3-lightest} li[class*=active] a, #{$border-color3-lightest} li a[class*=open], #{$border-color3-lightest} li a:hover {
+  @include bordered($property:border-color, $all:false, $value:$color3-lightest)
 }
 #{$border-color3-dark}, #{$border-color3-dark}[class*=divider]>::before, #{$border-color3-dark} li[class*=active] a, #{$border-color3-dark} li a[class*=open], #{$border-color3-dark} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color3-dark)
@@ -500,6 +629,9 @@
 #{$border-color4-lighter}, #{$border-color4-lighter}[class*=divider]>::before, #{$border-color4-lighter} li[class*=active] a, #{$border-color4-lighter} li a[class*=open], #{$border-color4-lighter} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color4-lighter)
 }
+#{$border-color4-lightest}, #{$border-color4-lightest}[class*=divider]>::before, #{$border-color4-lightest} li[class*=active] a, #{$border-color4-lightest} li a[class*=open], #{$border-color4-lightest} li a:hover {
+  @include bordered($property:border-color, $all:false, $value:$color4-lightest)
+}
 #{$border-color4-dark}, #{$border-color4-dark}[class*=divider]>::before, #{$border-color4-dark} li[class*=active] a, #{$border-color4} li a[class*=open], #{$border-color4} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color4-dark)
 }
@@ -520,6 +652,9 @@
 }
 #{$border-primary-lighter}\!, #{$border-primary-lighter}\![class*=divider]>::before, #{$border-primary-lighter}\! li[class*=active] a, #{$border-primary-lighter} li a[class*=open], #{$border-primary-lighter} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color-primary-lighter, $important:true)
+}
+#{$border-primary-lightest}\!, #{$border-primary-lightest}\![class*=divider]>::before, #{$border-primary-lightest}\! li[class*=active] a, #{$border-primary-lightest} li a[class*=open], #{$border-primary-lightest} li a:hover {
+  @include bordered($property:border-color, $all:false, $value:$color-primary-lightest, $important:true)
 }
 #{$border-primary-dark}\!, #{$border-primary-dark}\![class*=divider]>::before, #{$border-primary-dark}\! li[class*=active] a, #{$border-primary-dark} li a[class*=open], #{$border-primary-dark} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color-primary-dark, $important:true)
@@ -542,6 +677,9 @@
 #{$border-secondary-lighter}\!, #{$border-secondary-lighter}\![class*=divider]>::before, #{$border-secondary-lighter}\! li[class*=active] a, #{$border-secondary-lighter} li a[class*=open], #{$border-secondary-lighter} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color-secondary-lighter, $important:true)
 }
+#{$border-secondary-lightest}\!, #{$border-secondary-lightest}\![class*=divider]>::before, #{$border-secondary-lightest}\! li[class*=active] a, #{$border-secondary-lightest} li a[class*=open], #{$border-secondary-lightest} li a:hover {
+  @include bordered($property:border-color, $all:false, $value:$color-secondary-lightest, $important:true)
+}
 #{$border-secondary-dark}\!, #{$border-secondary-dark}\![class*=divider]>::before, #{$border-secondary-dark}\! li[class*=active] a, #{$border-secondary-dark} li a[class*=open], #{$border-secondary-dark} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color-secondary-dark, $important:true)
 }
@@ -562,6 +700,9 @@
 }
 #{$border-color3-lighter}\!, #{$border-color3-lighter}\![class*=divider]>::before, #{$border-color3-lighter}\! li[class*=active] a, #{$border-color3-lighter} li a[class*=open], #{$border-color3-lighter} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color3-lighter, $important:true)
+}
+#{$border-color3-lightest}\!, #{$border-color3-lightest}\![class*=divider]>::before, #{$border-color3-lightest}\! li[class*=active] a, #{$border-color3-lightest} li a[class*=open], #{$border-color3-lightest} li a:hover {
+  @include bordered($property:border-color, $all:false, $value:$color3-lightest, $important:true)
 }
 #{$border-color3-dark}\!, #{$border-color3-dark}\![class*=divider]>::before, #{$border-color3-dark}\! li[class*=active] a, #{$border-color3-dark} li a[class*=open], #{$border-color3-dark} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color3-dark, $important:true)
@@ -584,6 +725,9 @@
 #{$border-color4-lighter}\!, #{$border-color4-lighter}\![class*=divider]>::before, #{$border-color4-lighter}\! li[class*=active] a, #{$border-color4-lighter} li a[class*=open], #{$border-color4-lighter} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color4-lighter, $important:true)
 }
+#{$border-color4-lightest}\!, #{$border-color4-lightest}\![class*=divider]>::before, #{$border-color4-lightest}\! li[class*=active] a, #{$border-color4-lightest} li a[class*=open], #{$border-color4-lightest} li a:hover {
+  @include bordered($property:border-color, $all:false, $value:$color4-lightest, $important:true)
+}
 #{$border-color4-dark}\!, #{$border-color4-dark}\![class*=divider]>::before, #{$border-color4-dark}\! li[class*=active] a, #{$border-color4-dark} li a[class*=open], #{$border-color4-dark} li a:hover {
   @include bordered($property:border-color, $all:false, $value:$color4-dark, $important:true)
 }
@@ -599,19 +743,24 @@
 
 #{$list-tabs}, #{$list-tabs-bullet} {
   >li {
-    &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+    &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
       background-color:$color-primary !important;
       border-color:$color-primary;
       color:text-color($color-primary) !important;
     }
+    &#{$active}>:first-child>:last-child a:hover, &#{$active}>:first-child>:last-child a:hover * {
+      background-color:darken($color-primary, 5%) !important;
+      border-color:darken($color-primary, 5%);
+      // color:text-color(darken($color-primary, 5%)) !important;
+    }
     &#{$tab-buttons-rounded}:first-child {
-      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+      &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-top-left-radius: .25rem;
         border-top-right-radius: .25rem;
       }
     }
     &#{$tab-buttons-rounded}:last-child {
-      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+      &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;
       }
@@ -620,19 +769,24 @@
 }
 #{$list-tabs-secondary}, #{$list-tabs-bullet}#{$list-tabs-secondary} {
   >li {
-    &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+    &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
       background-color:$color-secondary;
       border-color:$color-secondary;
       color:text-color($color-secondary);
     }
+    &#{$active}>:first-child>:last-child a:hover, &#{$active}>:first-child>:last-child a:hover * {
+      background-color:darken($color-secondary, 5%) !important;
+      border-color:darken($color-secondary, 5%);
+      // color:text-color(darken($color-secondary, 5%)) !important;
+    }
     &#{$tab-buttons-rounded}:first-child {
-      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+      &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-top-left-radius: .25rem;
         border-top-right-radius: .25rem;
       }
     }
     &#{$tab-buttons-rounded}:last-child {
-      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+      &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;
       }
@@ -641,19 +795,24 @@
 }
 #{$list-tabs-color3}, #{$list-tabs-bullet}#{$list-tabs-color3} {
   >li {
-    &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+    &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
       background-color:$color3;
       border-color:$color3;
       color:text-color($color3);
     }
+    &#{$active}>:first-child>:last-child a:hover, &#{$active}>:first-child>:last-child a:hover * {
+      background-color:darken($color3, 5%) !important;
+      border-color:darken($color3, 5%);
+      // color:text-color(darken($color3, 5%)) !important;
+    }
     &#{$tab-buttons-rounded}:first-child {
-      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+      &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-top-left-radius: .25rem;
         border-top-right-radius: .25rem;
       }
     }
     &#{$tab-buttons-rounded}:last-child {
-      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+      &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;
       }
@@ -662,19 +821,24 @@
 }
 #{$list-tabs-color4}, #{$list-tabs-bullet}#{$list-tabs-color4} {
   >li {
-    &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+    &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
       background-color:$color4;
       border-color:$color4;
       color:text-color($color4);
     }
+    &#{$active}>:first-child>:last-child a:hover, &#{$active}>:first-child>:last-child a:hover * {
+      background-color:darken($color4, 5%) !important;
+      border-color:darken($color4, 5%);
+      // color:text-color(darken($color4, 5%)) !important;
+    }
     &#{$tab-buttons-rounded}:first-child {
-      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+      &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-top-left-radius: .25rem;
         border-top-right-radius: .25rem;
       }
     }
     &#{$tab-buttons-rounded}:last-child {
-      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+      &#{$active}>:first-child, &#{$active}>:first-child a, &#{$active}>:first-child a:hover *, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;
       }

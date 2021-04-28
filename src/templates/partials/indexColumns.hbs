@@ -1,0 +1,124 @@
+<!-- index main content -->
+<section id="content" class="tw-space-y-4 tw-relative" uk-height-viewport="expand: true">
+  {{!-- <div class="m:-tw-mt-24 container_responsive@s uk-container">
+    <div class="bg_primary tw-opacity-50 uk-position-cover"></div>
+    <p>台灣乳房植入物登錄系統(Taiwan Breast Implant Registry, TBIR)是
+      台灣衛生福利部食品藥物管理署的研究計畫，由臺北醫學大學研究團
+      隊承接，並與台灣整形外科醫學會合作共同建置而成，目的在於提供
+      乳房植入物手術者健康保障，並監控及提升乳房植入物的安全性。</p>
+  </div> --}}
+
+  {{!-- Search Box --}}
+  {{#if searchBox}}
+  <!-- Search Box -->
+  {{#if tabBox}}
+  <div class="tw-m-auto uk-width-2-3@m uk-width-1-2@l">
+    <ul class="tab_btn tab_btn-active-white tab_btn-tw-space-s! tw-m-0" uk-tab>
+      <li class="tw-p-0"><a href="#">館藏目錄</a></li>
+      <li class="tw-p-0"><a href="#">數位典藏</a></li>
+      <li class="tw-p-0"><a href="#">機構典藏</a></li>
+    </ul>
+    <ul class="tw-m-0 tw-shadow-md tw-bg-white tw-p-6">
+      <li>
+        <form>
+          <!-- .searchBar -->
+          <div class="searchBar">
+            {{!-- <small class="tw-mb-1">數位典藏系統可查詢本館數位化特藏資料</small> --}}
+            <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
+              <div class="uk-width-auto@s">
+                <select class="tw-w-full uk-select" title="欄位選項">
+                  <option>不限欄位</option>
+                </select>
+              </div>
+              <div class="uk-width-expand@s">
+                <label class="tw-sr-only" for="ip_search">關鍵字搜尋</label>
+                <input id="ip_search" class="tw-w-full uk-input" type="text" placeholder="請輸入關鍵字" title="輸入關鍵字搜尋">
+              </div>
+              <div class="uk-width-auto@s"><a class="btn_primary color_white! min_width-150 tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-1 fas fa-search"></i>搜尋</a>
+              </div>
+            </div>
+          </div>
+          <!-- .searchBar -->
+        </form>
+      </li>
+    </ul>
+  </div>
+  {{else}}
+  <div class="tw-m-auto uk-width-2-3@m uk-width-1-2@l">
+    <ul class="tw-m-0 tw-shadow-md tw-bg-white tw-p-6">
+      <li>
+        <form>
+          <!-- .searchBar -->
+          <div class="searchBar">
+            {{!-- <small class="tw-mb-1">數位典藏系統可查詢本館數位化特藏資料</small> --}}
+            <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
+              <div class="uk-width-auto@s">
+                <select class="tw-w-full uk-select" title="欄位選項">
+                  <option>不限欄位</option>
+                </select>
+              </div>
+              <div class="uk-width-expand@s">
+                <label class="tw-sr-only" for="ip_search">關鍵字搜尋</label>
+                <input id="ip_search" class="tw-w-full uk-input" type="text" placeholder="請輸入關鍵字" title="輸入關鍵字搜尋">
+              </div>
+              <div class="uk-width-auto@s"><a class="btn_primary color_white! min_width-150 tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-1 fas fa-search"></i>搜尋</a>
+              </div>
+            </div>
+          </div>
+          <!-- .searchBar -->
+        </form>
+      </li>
+    </ul>
+  </div>
+  {{/if}}
+  <!-- /Search Box -->
+  {{/if}}
+  {{!-- Search Box --}}
+  <!-- content -->
+  <div class="tw-m-auto uk-width-3-4@l uk-width-2-3@xl">
+    <!-- container -->
+    <div class="container_responsive@s uk-container">
+      {{#if hrefForAA}}
+      <div class="h-0 tw-relative uk-visible@m"><a class="tw-no-underline tw-px-1 uk-position-absolute" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px; top:15px">:::</a></div>
+      {{/if}}
+      <!-- Card Box -->
+      <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid uk-height-match="target: > div > .uk-card">
+          {{#if 1and1of2col}}
+          <!-- left column-->
+          <div class="min_width-1/2!@s">
+            <!-- map -->
+            <div class="map"></div>
+            <!-- /map -->
+          </div>
+          <!-- /left column -->
+          <!-- right column -->
+          <div class="min_width-1/2!@s">
+            <!-- search -->
+            <div class="search"></div>
+            <!-- /search -->
+            <!-- tab switcher -->
+            <div class="tabSwitcher"></div>
+            <!-- /tab switcher -->
+          </div>
+          <!-- /right column -->
+          {{/if}}
+          {{#if 2and1of3col}}
+          <div class="min_width-2/3!@m">
+            {{> indexContent}}
+          </div>
+          <div class="min_width-1/3!@m">
+            {{#if h2headingLine}}
+          </div>
+          {{/if}}
+          {{#if 1col}}
+          {{/if}}
+        </div>
+      </div>
+      <!-- /Card Box -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /content -->
+</section>
+<!-- /index main content -->

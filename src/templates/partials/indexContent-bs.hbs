@@ -1,0 +1,372 @@
+<!-- index main content -->
+<section id="content" class="tw-space-y-4 position-relative">
+  {{!-- Search Box --}}
+  {{#if searchBox}}
+  <!-- Search Box -->
+  <div class="{{#if containerXlarge}}l:tw-w-11/12 xl:tw-w-10/12 container-fluid{{else}}container{{/if}}">
+    {{#if tabs}}
+    <ul class="{{#if customTab}}tab_btn tab_btn-active-white tab_btn-tw-space-s! nav{{else}}nav nav-tabs{{/if}}">
+      <li>
+        <a class="nav-link active" data-toggle="tab" href="#tabpanel1">Tab1</a>
+      </li>
+      <li>
+        <a class="nav-link" data-toggle="tab" href="#tabpanel2">Tab2</a>
+      </li>
+      <li>
+        <a class="nav-link" data-toggle="tab" href="#tabpanel3">Tab3</a>
+      </li>
+    </ul>
+    {{/if}}
+    <!-- .searchBar -->
+    <div class="searchBar container-fluid">
+      <form class="tw-shadow-md tw-bg-white tw-p-6">
+        {{!-- <small class="tw-mb-1">數位典藏系統可查詢本館數位化特藏資料</small> --}}
+        <div class="row">
+          <div class="col-sm-auto">
+            <select class="form-control custom-select" title="選項篩選">
+              <option>不限欄位</option>
+            </select>
+          </div>
+          <div class="col">
+            <label class="sr-only" for="ip_search">關鍵字搜尋</label>
+            <input id="ip_search" class="form-control" type="text" placeholder="請輸入關鍵字" title="輸入關鍵字搜尋">
+          </div>
+          <div class="col-sm-auto"><a class="btn_primary min_width-150 w-100 btn btn-primary" href="#"><i class="tw-mr-1 fas fa-search"></i>搜尋</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- .searchBar -->
+  </div>
+  <!-- /Search Box -->
+  {{/if}}
+  {{!-- Search Box --}}
+  <!-- content -->
+  <div class="{{#if containerXlarge}}l:tw-w-11/12 xl:tw-w-10/12 container-fluid{{else}}container{{/if}}">
+    {{#if hrefForAA}}
+    <!-- accesskey -->
+    <div class="h-0 position-relative d-none d-lg-block"><a class="tw-no-underline tw-px-1 position-absolute" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;">:::</a></div>
+    <!-- /accesskey -->
+    {{/if}}
+    <!-- Fullwidth Card -->
+    {{#if h2headingLine}}
+    <h2 class="color_primary heading_line tw-text-base tw-text-center"><span><i class="tw-mr-2 fas fa-bullhorn"></i>最新消息</span></h2>
+    {{/if}}
+    {{#if cardTab}}
+    <!-- Card Tab -->
+    <div class="color_black! d-flex align-items-center justify-content-between">
+      <h2 class="bg_primary tw-text-sm tw-p-2">最新消息</h2>
+      {{#if h2more}}<a class="tw-text-xs" href="#">更多</a>{{/if}}
+    </div>
+    <!-- /Card Tab -->
+    {{/if}}
+    <div class="card tw-border-light shadow-sm">
+      {{#if cardHeader}}
+      <div class="card-header tw-border-0">Header</div>
+      {{/if}}
+      <div class="card-body">
+        <h3 class="h5 card-title">Title</h3>
+        <p class="card-text">text</p>
+      </div>
+    </div>
+    <!-- /Fullwidth Card -->
+
+    <!-- row:small gutters -->
+    <div class="row mx-sm-n2 tw-gap-y-4">
+      <!-- col -->
+      <div class="col-sm-6 px-sm-2">
+        {{#if h2headingLine}}
+        <h2 class="color_primary heading_line tw-text-base tw-text-center"><span><i class="tw-mr-2 fas fa-bullhorn"></i>最新消息</span></h2>
+        {{/if}}
+        {{#if cardTab}}
+        <!-- Card Tab -->
+        <div class="color_black! d-flex align-items-center justify-content-between">
+          <h2 class="bg_primary tw-text-sm tw-p-2">最新消息</h2>
+          {{#if h2more}}<a class="tw-text-xs" href="#">更多</a>{{/if}}
+        </div>
+        <!-- /Card Tab -->
+        {{/if}}
+        <!-- 1/2 Card -->
+        <div class="hover:tw-shadow-2xl tw-border-light card shadow-sm">
+          {{#if cardHeader}}
+          <div class="card-header tw-border-0">Header</div>
+          {{/if}}
+          <div class="card-body">
+            <h3 class="h5 card-title">Title</h3>
+            <p class="card-text">text</p>
+          </div>
+        </div>
+        <!-- 1/2 Card -->
+      </div>
+      <!-- /col -->
+      <!-- col -->
+      <div class="col-sm-6 px-sm-2">
+        <!-- 1/2 Card -->
+        {{#if h2headingLine}}
+        <h2 class="color_primary heading_line tw-text-base tw-text-center"><span><i class="tw-mr-2 fas fa-bullhorn"></i>最新消息</span></h2>
+        {{/if}}
+        {{#if cardTab}}
+        <!-- Card Tab -->
+        <div class="color_black! d-flex align-items-center justify-content-between">
+          <h2 class="bg_primary tw-text-sm tw-p-2">最新消息</h2>
+          {{#if h2more}}<a class="tw-text-xs" href="#">更多</a>{{/if}}
+        </div>
+        <!-- /Card Tab -->
+        {{/if}}
+        <div class="card tw-border-light shadow-sm">
+          {{#if cardHeader}}
+          <div class="card-header tw-border-0">Header</div>
+          {{/if}}
+          <div class="card-body">
+            <h3 class="h5 card-title">Title</h3>
+            <p class="card-text">text</p>
+          </div>
+        </div>
+        <!-- 1/2 Card -->
+      </div>
+      <!-- /col -->
+    </div>
+    <!-- /row:small gutters -->
+
+    <!-- row -->
+    <div class="row mx-sm-n2 tw-gap-y-4">
+      <!-- col -->
+      <div class="col-sm-6 col-md-9 px-sm-2">
+        <!-- 2/3 Card -->
+        {{#if h2headingLine}}
+        <h2 class="color_primary heading_line tw-text-base tw-text-center"><span><i class="tw-mr-2 fas fa-bullhorn"></i>最新消息</span></h2>
+        {{/if}}
+        {{#if cardTab}}
+        <!-- Card Tab -->
+        <div class="color_black! d-flex align-items-center justify-content-between">
+          <h2 class="bg_primary tw-text-sm tw-p-2">最新消息</h2>
+          {{#if h2more}}<a class="tw-text-xs" href="#">更多</a>{{/if}}
+        </div>
+        <!-- /Card Tab -->
+        {{/if}}
+        <div class="card tw-border-light shadow-sm">
+          {{#if cardHeader}}
+          <div class="card-header tw-border-0">Header</div>
+          {{/if}}
+          <div class="card-body">
+            {{!-- <h3 class="h5 card-title">Title</h3>
+            <p class="card-text">text</p> --}}
+            <div class="overflow_hidden@m max_height-275@m max_height-220@xl tw-pb-6">
+              <div class="min_height-100@m">
+                <ul class="tw-mt-0 tw-text-justify">
+                  <li>
+                    <div class="d-flex">
+                      <div class="min_width-100"><i class="color_primary fas fa-angle-right fa-fw"></i><time class="tw-mr-2">2020/09/16</time></div>
+                      <div class="flex-grow-1"><a class="tw-inline tw-text-break" href="#">香級過集樂區非世不品，是增樹千了完心元義</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex">
+                      <div class="min_width-100"><i class="color_primary fas fa-angle-right fa-fw"></i><time class="tw-mr-2">2020-09-15</time></div>
+                      <div class="flex-grow-1"><a class="tw-inline tw-text-break" href="#">同有了地得在：消關知過外會。岸多說國裝吃政內現不用展星不據他食行備對門，整長機！</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex">
+                      <div class="min_width-100"><i class="color_primary fas fa-angle-right fa-fw"></i><time class="tw-mr-2">2020-09-15</time></div>
+                      <div class="flex-grow-1"><a class="tw-inline tw-text-break" href="#">美夫室個年路代蘭裡、青學最</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex">
+                      <div class="min_width-100"><i class="color_primary fas fa-angle-right fa-fw"></i><time class="tw-mr-2">2020-09-15</time></div>
+                      <div class="flex-grow-1"><a class="tw-inline tw-text-break" href="#">這中國靈點之起感；系說筆？算地他似的只，些股與買業為，術字人然個面園未政招要作前動常便</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex">
+                      <div class="min_width-100"><i class="color_primary fas fa-angle-right fa-fw"></i><time class="tw-mr-2">2020-09-15</time></div>
+                      <div class="flex-grow-1"><a class="tw-inline tw-text-break" href="#">實作率寫也中面人自國，老年正有要命飛不？容大了政。他草上話石義負，同部意是來飛過高傳，來布對同候的臺於立我在要日人朋</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <a class="color_primary bottom-15 right-15 m:tw-bottom-0 m:tw-right-0 tw-text-xs tw-text-right uk-position-bottom-right uk-position-z-index" href="#">閱讀更多</a>
+            </div>
+          </div>
+        </div>
+        <!-- 2/3 Card -->
+      </div>
+      <!-- /col -->
+      <!-- col -->
+      <div class="col-sm-6 col-md-3 px-sm-2">
+        <!-- 1/3 Card -->
+        {{#if h2headingLine}}
+        <h2 class="color_primary heading_line tw-text-base tw-text-center"><span><i class="tw-mr-2 fas fa-bullhorn"></i>最新消息</span></h2>
+        {{/if}}
+        {{#if cardTab}}
+        <!-- Card Tab -->
+        <div class="color_black! d-flex align-items-center justify-content-between">
+          <h2 class="bg_primary tw-text-sm tw-p-2">最新消息</h2>
+          {{#if h2more}}<a class="tw-text-xs" href="#">更多</a>{{/if}}
+        </div>
+        <!-- /Card Tab -->
+        {{/if}}
+        <div class="card tw-border-light shadow-sm">
+          {{#if cardHeader}}
+          <div class="card-header tw-border-0">Header</div>
+          {{/if}}
+          <div class="card-body">
+            {{!-- <h3 class="h5 card-title">Title</h3>
+            <p class="card-text">text</p> --}}
+            <div class="container-fluid">
+              <div class="row">
+                <div class="min_width-1/2! min_width-1/3!@s">
+                  <a class="tw-no-underline hover:color_secondary! tw-bg-gray-100 tw-space-y-2 tw-py-3 d-flex flex-column align-items-center justify-content-center" href="#">
+                    <i class="color_primary tw-text-4xl fas fa-file-alt"></i>
+                    <span class="tw-text-center tw-px-2">期刊目次</span>
+                  </a>
+                </div>
+                <div class="min_width-1/2! min_width-1/3!@s">
+                  <a class="tw-no-underline hover:color_secondary! tw-bg-gray-100 tw-space-y-2 tw-py-3 d-flex flex-column align-items-center justify-content-center" href="#">
+                    <i class="color_primary tw-text-4xl fas fa-database"></i>
+                    <span class="tw-text-center tw-px-2">電子資料庫</span>
+                  </a>
+                </div>
+                <div class="min_width-1/2! min_width-1/3!@s">
+                  <a class="tw-no-underline hover:color_secondary! tw-bg-gray-100 tw-space-y-2 tw-py-3 d-flex flex-column align-items-center justify-content-center" href="#">
+                    <i class="color_primary tw-text-4xl fas fa-file-contract"></i>
+                    <span class="tw-text-center tw-px-2">電子期刊</span>
+                  </a>
+                </div>
+                <div class="min_width-1/2! min_width-1/3!@s">
+                  <a class="tw-no-underline hover:color_secondary! tw-bg-gray-100 tw-space-y-2 tw-py-3 d-flex flex-column align-items-center justify-content-center" href="#">
+                    <i class="color_primary tw-text-4xl fas fa-university"></i>
+                    <span class="tw-text-center tw-px-2">館際合作</span>
+                  </a>
+                </div>
+                <div class="min_width-1/2! min_width-1/3!@s">
+                  <a class="tw-no-underline hover:color_secondary! tw-bg-gray-100 tw-space-y-2 tw-py-3 d-flex flex-column align-items-center justify-content-center" href="#">
+                    <i class="color_primary tw-text-4xl fas fa-question-circle"></i>
+                    <span class="tw-text-center tw-px-2">常見問答</span>
+                  </a>
+                </div>
+                <div class="min_width-1/2! min_width-1/3!@s">
+                  <a class="tw-no-underline hover:color_secondary! tw-bg-gray-100 tw-space-y-2 tw-py-3 d-flex flex-column align-items-center justify-content-center" href="#">
+                    {{!-- <img class="icon tw-inline-tw-block uk-responsive-width" src="img/icon-book.png" alt="本所資料庫"> --}}
+                    <i class="color_primary tw-text-4xl fas fa-question-circle"></i>
+                    <span class="tw-text-center tw-px-2">本所資料庫</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1/3 Card -->
+      </div>
+      <!-- /col -->
+    </div>
+    <!-- /row -->
+
+    <!-- Fullwidth Card -->
+    {{#if h2headingLine}}
+    <h2 class="color_primary heading_line tw-text-base tw-text-center"><span><i class="tw-mr-2 fas fa-bullhorn"></i>最新消息</span></h2>
+    {{/if}}
+    {{#if cardTab}}
+    <!-- Card Tab -->
+    <div class="color_black! d-flex align-items-center justify-content-between">
+      <h2 class="bg_primary tw-text-sm tw-p-2">最新消息</h2>
+      {{#if h2more}}<a class="tw-text-xs" href="#">更多</a>{{/if}}
+    </div>
+    <!-- /Card Tab -->
+    {{/if}}
+    <div class="card tw-border-light shadow-sm">
+      {{#if cardHeader}}
+      <div class="card-header tw-border-0">Header</div>
+      {{/if}}
+      <div class="card-body">
+        {{!-- <h3 class="h5 card-title">Title</h3>
+        <p class="card-text">text</p> --}}
+        <!-- columns carousel -->
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container-fluid">
+                <div class="row row-cols-5 mx-md-n2 gap-y-4">
+                  <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=1" class="d-block w-100" alt="">
+                    </a>
+                  </div>
+                  <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=2" class="d-block w-100" alt="">
+                    </a>
+                  </div>
+                  <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=3" class="d-block w-100" alt="">
+                    </a>
+                  </div>
+                  <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=4" class="d-block w-100" alt="">
+                    </a>
+                  </div>
+                  <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=5" class="d-block w-100" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="row row-cols-5 mx-md-n2 gap-y-4">
+                  <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=6" class="d-block w-100" alt="">
+                    </a>
+                  </div>
+                  <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=7" class="d-block w-100" alt="">
+                    </a>
+                  </div>
+                  <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=8" class="d-block w-100" alt="">
+                    </a>
+                  </div>
+                  <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=9" class="d-block w-100" alt="">
+                    </a>
+                  </div>
+                  {{!-- <div class="col px-md-2">
+                    <a class="block" href="">
+                      <img src="https://fakeimg.pl/300x400/?text=10" class="d-block w-100" alt="">
+                    </a>
+                  </div> --}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!-- /columns carousel -->
+      </div>
+    </div>
+    <!-- /Fullwidth Card -->
+  </div>
+  <!-- /content -->
+</section>
+<!-- /index main content -->

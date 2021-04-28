@@ -1,21 +1,56 @@
-{{!-- {{>modal-confirm id='confirm' wide='true' modal-title='確定儲存？'}} --}}
-
-<!-- uk-modal-confirm -->
-<div id="{{id}}" class="uk-flex-top uk-modal{{#if wide}} uk-modal-container{{/if}}" uk-modal>
-	<div class="uk-modal-dialog uk-margin-auto-vertical">
-		<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
-		{{!-- <div class="uk-modal-header">
+{{!-- {{>modal-confirm bootstrap='' description='' modal-description='' id='confirm' wide=true modal-title='確定儲存？'}} --}}
+{{#if bootstrap}}
+  <!-- bs-modal-confirm -->
+  <div class="modal fade" id="{{id}}" data-keyboard="false" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p id="modalTitle" class="tw-text-2xl tw-font-bold modal-title">{{modal-title}}</p>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close" title="關閉">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {{#if description}}
+          <div class="modal-body">
+            <p>{{modal-description}}</p>
+          </div>
+        {{/if}}
+        <div class="modal-footer">
+          <button class="btn btn-light" data-dismiss="modal" type="button">取　　消</button>
+          <button class="btn_primary btn btn-primary" type="button">確　　定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /bs-modal-confirm -->
+{{else}}
+  <!-- uk-modal-confirm -->
+  <div id="{{id}}" class="uk-flex-top uk-modal{{#if wide}} uk-modal-container{{/if}}" uk-modal>
+    <div class="uk-modal-dialog uk-margin-auto-vertical">
+      <button class="uk-modal-close-default" type="button" title="關閉" uk-close></button>
+      {{!-- <div class="uk-modal-header">
 		</div> --}}
-		<div class="uk-modal-body">
-			<p class="text-2xl font-bold uk-modal-title">{{modal-title}}</p>
-		</div>
-		<div class="text-center uk-modal-footer" uk-margin>
-			{{!-- <a href="#" class="btn_primary min_width-100 m-0 rounded-full uk-button uk-button-primary">註　　冊</a>
+      {{#if description}}
+        <div class="uk-modal-header">
+          <p class="tw-text-2xl tw-font-bold uk-modal-title">{{modal-title}}</p>
+        </div>
+      {{else}}
+      {{/if}}
+      <div class="uk-modal-body">
+        {{#if description}}
+          <p class="mt-0">{{modal-description}}</p>
+        {{else}}
+          <p class="tw-text-2xl tw-font-bold uk-modal-title">{{modal-title}}</p>
+        {{/if}}
+      </div>
+      <div class="tw-text-center uk-modal-footer" uk-margin>
+        {{!-- <a href="#" class="btn_primary min_width-100 tw-m-0 rounded-full uk-button uk-button-primary">註　　冊</a>
 			<button class="min_width-100 rounded-full uk-button uk-button-default uk-modal-close" type="button">取　　消</button> --}}
-			<a href="#" class="btn_primary min_width-100 m-0 uk-button uk-button-primary">送　　出</a>
-			<button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
-			{{!-- <a href="#login" class="rounded-full uk-button uk-button-default" uk-toggle>返回登入</a> --}}
-		</div>
-	</div>
-</div>
-<!-- uk-modal-confirm -->
+        <a href="#" class="btn_primary min_width-100 tw-m-0 uk-button uk-button-primary">送　　出</a>
+        <button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+        {{!-- <a href="#login" class="rounded-full uk-button uk-button-default" uk-toggle>返回登入</a> --}}
+      </div>
+    </div>
+  </div>
+  <!-- /uk-modal-confirm -->
+{{/if}}

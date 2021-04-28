@@ -1,0 +1,31 @@
+{{!-- {{>tabSwitcher secondary=true tabNoline=true tab3=true tab4=true tab1name='Tab1' tab2name='Tab2' tab3name='Tab3' tab4name='Tab4' card=true content1='' content2='blank' content3='blank' content4='blank'}} --}}
+<!-- Tab Switcher -->
+<div class="tabSwitcher">
+	<ul class="tab_btn {{#if secondary}}tab_btn-secondary {{/if}}{{#if tabNoline}}tab_btn-noline {{/if}}tab_btn-active-white tab_btn-space-xs! tab_btn-space-s!@s tw-m-0 tw-border-0" uk-tab="connect: .uk-switcher">
+		<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">{{tab1name}}</a></li>
+		<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">{{tab2name}}</a></li>
+		{{#if tab3}}<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">{{tab3name}}</a></li>{{/if}}
+		{{#if tab4}}<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">{{tab4name}}</a></li>{{/if}}
+	</ul>
+	<div class="{{#if card}}tw-shadow uk-card uk-card-default {{else}}tw-p-0 tw-pt-4 {{/if}}uk-card-body">
+		<ul class="m-0 shadow-md bg-white p-6 uk-switcher">
+			<li class="tw-space-y-4">
+				{{> (lookup . 'content1') }}
+			</li>
+			<li class="tw-space-y-4">
+				{{> (lookup . 'content2') }}
+			</li>
+			{{#if tab3}}
+			<li class="tw-space-y-4">
+				{{> (lookup . 'content3') }}
+			</li>
+			{{/if}}
+			{{#if tab4}}
+			<li class="tw-space-y-4">
+				{{> (lookup . 'content4') }}
+			</li>
+			{{/if}}
+		</ul>
+	</div>
+</div>
+<!-- Tab Switcher -->

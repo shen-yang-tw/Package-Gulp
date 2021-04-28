@@ -1,22 +1,37 @@
-{{!-- {{>breadcrumb breadcrumb1='true' breadcrumbLink1='#' breadcrumbTxt1='Link1' breadcrumb2='true' breadcrumbLink2='#' breadcrumbTxt2='Link2' breadcrumbCurrent='Current'}} --}}
+{{!-- {{>breadcrumb bootstrap='' breadcrumb1=true breadcrumbLink1='#' breadcrumbTxt1='Link1' breadcrumb2=true breadcrumbLink2='#' breadcrumbTxt2='Link2' breadcrumbCurrent='Current'}} --}}
 
 <!-- uk-breadcrumb -->
-<ul class="m-0 px-2 s:p-0 uk-float-left uk-breadcrumb">
-	<li><a class="text-xs m:text-sm" href="index.html">首頁</a></li>
-	{{#if breadcrumb1}}
-		{{#if breadcrumbSpan1}}
-			<li><span class="text-xs m:text-sm">{{breadcrumbTxt1}}</span></li>
-		{{else}}
-			<li><a class="text-xs m:text-sm" href="{{breadcrumbLink1}}">{{breadcrumbTxt1}}</a></li>
+{{#if bootstrap}}
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+		{{#if breadcrumb1}}
+		<li class="breadcrumb-item"><a href="{{breadcrumbLink1}}">{{breadcrumbTxt1}}</a></li>
 		{{/if}}
+		{{#if breadcrumb2}}
+		<li class="breadcrumb-item"><a href="{{breadcrumbLink2}}">{{breadcrumbTxt2}}</a></li>
+		{{/if}}
+		<li class="breadcrumb-item active" aria-current="page">{{breadcrumbCurrent}}</li>
+	</ol>
+</nav>
+{{else}}
+<ul class="tw-m-0 tw-px-2 s:p-0 uk-float-left uk-breadcrumb">
+	<li><a class="tw-text-xs m:tw-text-sm" href="index.html">首頁</a></li>
+	{{#if breadcrumb1}}
+	{{#if breadcrumbSpan1}}
+	<li><span class="tw-text-xs m:tw-text-sm">{{breadcrumbTxt1}}</span></li>
+	{{else}}
+	<li><a class="tw-text-xs m:tw-text-sm" href="{{breadcrumbLink1}}">{{breadcrumbTxt1}}</a></li>
+	{{/if}}
 	{{/if}}
 	{{#if breadcrumb2}}
-		{{#if breadcrumbSpan2}}
-			<li><span class="text-xs m:text-sm">{{breadcrumbTxt2}}</span></li>
-		{{else}}
-			<li><a class="text-xs m:text-sm" href="{{breadcrumbLink2}}">{{breadcrumbTxt2}}</a></li>
-		{{/if}}
+	{{#if breadcrumbSpan2}}
+	<li><span class="tw-text-xs m:tw-text-sm">{{breadcrumbTxt2}}</span></li>
+	{{else}}
+	<li><a class="tw-text-xs m:tw-text-sm" href="{{breadcrumbLink2}}">{{breadcrumbTxt2}}</a></li>
 	{{/if}}
-	<li><span class="text-xs m:text-sm">{{breadcrumbCurrent}}</span></li>
+	{{/if}}
+	<li><span class="tw-text-xs m:tw-text-sm">{{breadcrumbCurrent}}</span></li>
 </ul>
+{{/if}}
 <!-- uk-breadcrumb -->

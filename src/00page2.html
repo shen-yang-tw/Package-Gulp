@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="tw-text-m" lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="format-detection" content="telephone=no">
+		<!-- Fix phone number style for MS Edge -->
+		<meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
+		<title>新光醫院圖書館</title>
+		<link rel="stylesheet" href="css/uikit.min.css">
+		<link rel="stylesheet" href="css/tailwind.css">
+		<link rel="stylesheet" href="css/fontawesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/colors.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/editor.css">
+		<script src="js/uikit.min.js"></script>
+		<script src="js/uikit-icons.min.js"></script>
+		<script src="js/script.js" defer></script>
+	</head>
+
+	<body id="top" class="page">
+		<!-- header -->
+		<header>
+			<div class="uk-sticky" uk-sticky="media: (max-width: 959px); cls-active: tw-shadow-md tw-bg-white">
+				<nav>
+					<!-- logo & sideLinks -->
+					<div class="tw-py-2 tw-relative">
+						<div class="tw-px-4 tw-py-1 uk-container">
+							<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+								<!-- logo -->
+								<div class="logo">
+									<h1 class="tw-m-0 uk-flex uk-flex-middle">
+										<a class="logoimg" href="index.html" title="新光醫院圖書館">
+											<img class="uk-preserve" data-src="img/logo.svg" data-width data-height alt="新光醫院圖書館" uk-img uk-svg>
+										</a>
+									</h1>
+								</div>
+								<!-- /logo -->
+								<!-- sideLinks -->
+								<div class="tw-m-0 tw-relative uk-width-auto uk-visible@m">
+									<div class="sub_nav uk-flex uk-flex-middle">
+										<div>
+											<span class="pseudo:line_v"><a href="#">新光醫院</a></span>
+											<span class="pseudo:line_v"><a href="#">院內網路</a></span>
+											<span class="pseudo:line_v"><a href="#">聯絡我們</a></span>
+											<span class="pseudo:line_v"><a href="#">常見問題</a></span>
+											<span class="pseudo:line_v"><a href="#">What is my IP</a></span>
+										</div>
+									</div>
+								</div>
+								<!-- /sideLinks -->
+								<!-- top nav buttons on mobile -->
+								<div class="uk-flex-nowrap uk-width-auto uk-hidden@m">
+									<button class="min_width-30! color_primary tw-px-0 uk-flex uk-flex-right uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas"><span class="sr-only">選單</span></button>
+								</div>
+								<!-- /top nav buttons on mobile -->
+							</div>
+						</div>
+					</div>
+					<!-- /logo & sideLinks -->
+					<!-- mainMenu -->
+					<div class="bg_primary tw-mt-2 tw-relative">
+						<!-- container -->
+						<div class="container_responsive@s uk-container uk-visible@m">
+							<div class="uk-flex uk-navbar" uk-navbar>
+								<div class="uk-navbar-center">
+									<ul class="nav_bar tw-m-0 uk-tab">
+										<li>
+											<a class="color_white! tw-text-xl tw-font-bold" href="#">關於本館</a>
+										</li>
+										<li>
+											<a class="color_white! tw-text-xl tw-font-bold" href="#">館藏資訊</a>
+											<div class="bg_white_tw-opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 1">
+												<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
+													<li class="tw-mt-0 uk-nav-header">
+														<a class="hover:tw-underline tw-text-base" href="#">Item</a>
+													</li>
+													<li class="tw-mt-0 uk-nav-header">
+														<a class="hover:tw-underline tw-text-base" href="#">Item</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<a class="color_white! tw-text-xl tw-font-bold" href="#">電子資源</a>
+											<div class="bg_white_tw-opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 1">
+												<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
+													<li class="tw-mt-0 uk-nav-header">
+														<a class="hover:tw-underline tw-text-base" href="#">Item</a>
+														<ul class="hidden_ie uk-nav-sub">
+															<li><a class="hover:tw-underline tw-text-base" href="#">SubItem</a></li>
+															<li><a class="hover:tw-underline tw-text-base" href="#">SubItem</a></li>
+														</ul>
+													</li>
+													<li class="tw-mt-0 uk-nav-header">
+														<a class="hover:tw-underline tw-text-base" href="#">Item</a>
+														<ul class="hidden_ie uk-nav-sub">
+															<li><a class="hover:tw-underline tw-text-base" href="#">SubItem</a></li>
+															<li><a class="hover:tw-underline tw-text-base" href="#">SubItem</a></li>
+														</ul>
+													</li>
+													<li class="tw-mt-0 uk-nav-header">
+														<a class="hover:tw-underline tw-text-base" href="#">Item</a>
+													</li>
+													<li class="tw-mt-0 uk-nav-header">
+														<a class="hover:tw-underline tw-text-base" href="#">Item</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<a class="color_white! tw-text-xl tw-font-bold" href="#">館際合作</a>
+										</li>
+										<li>
+											<a class="color_white! tw-text-xl tw-font-bold" href="#">其他資源</a>
+										</li>
+										<li>
+											<a class="color_white! tw-text-xl tw-font-bold" href="#" target="_blank">個人資訊區</a>
+										</li>
+										<li>
+											<a class="color_white! tw-text-xl tw-font-bold" href="#" target="_blank">試用資源區</a>
+										</li>
+										<li>
+											<a class="color_white! tw-text-xl tw-font-bold" href="#" target="_blank">影音課程</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /container -->
+					</div>
+					<!-- /mainMenu -->
+				</nav>
+			</div>
+			
+			<!-- uk-offcanvas -->
+			<div id="offcanvas" uk-offcanvas>
+				<div class="bg_primary tw-py-5 uk-offcanvas-bar">
+					<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
+					<ul class="tw-pt-6 uk-nav uk-nav-default">
+						<li class="tw-py-1">
+							<a class="tw-p-0" href="#"><span class="tw-text-white">Level1</span></a>
+						</li>
+						<li class="tw-py-1 uk-parent">
+							<div class="tw-flex tw-justify-between">
+								<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level2</span></a>
+								<a class="tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a>
+							</div>
+							<ul class="toggle tw-hidden tw-py-0 uk-nav-sub">
+								<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+								</li>
+								<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="tw-py-1 uk-parent">
+							<div class="tw-flex tw-justify-between">
+								<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level3</span></a>
+								<a class="tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a>
+							</div>
+							<ul class="toggle tw-hidden tw-py-0 uk-nav-sub">
+								<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+								</li>
+								<li class="tw-py-1 uk-parent">
+									<a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+									<ul class="tw-py-0 uk-nav-sub">
+										<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+										</li>
+										<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+										</li>
+										<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+										</li>
+									</ul>
+								</li>
+								<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="uk-nav-divider"></li>
+						<li><a href="index.html">首頁</a></li>
+						<li><a href="#">Item</a></li>
+						<li><a href="#">English</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- uk-offcanvas -->
+		</header>
+		<!-- /header -->
+		
+		<!-- page main content -->
+		<section class="tw-p-0 m:tw-py-2 tw-relative" uk-height-viewport="expand: true">
+		  <!-- container -->
+		  <div class="container_responsive@s uk-container uk-container-xlarge">
+		
+		    <!-- Breadcrumb & User -->
+		    <div class="tw-px-2 tw-mb-2 tw-justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle uk-visible@m" uk-grid>
+		      <div class="tw-m-0">
+		        
+		        <!-- uk-breadcrumb -->
+		        <ul class="tw-m-0 tw-px-2 s:p-0 uk-float-left uk-breadcrumb">
+		        	<li><a class="tw-text-xs m:tw-text-sm" href="index.html">首頁</a></li>
+		        	<li><a class="tw-text-xs m:tw-text-sm" href="#">Link1</a></li>
+		        	<li><span class="tw-text-xs m:tw-text-sm">Current</span></li>
+		        </ul>
+		        <!-- uk-breadcrumb -->      </div>
+		      <div class="tw-text-xs m:tw-text-sm content-center tw-m-0">
+		        <span class="tw-mr-2 uk-width-auto">帳號：陳大天</span>
+		        <a class="color_primary-text! uk-width-auto" href="index.html">登出</a>
+		      </div>
+		    </div>
+		    <!-- /Breadcrumb & User -->
+		    <!-- uk-card -->
+		    <div class="min_height-550@m s:tw-mb-2 uk-card uk-card-small uk-card-default uk-card-body" >
+		      <!-- uk-grid -->
+		      <div class="tw-space-y-4 uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
+		        <!-- left menu -->
+		        <div class="uk-width-1-4@m uk-width-1-5@l">
+		          
+		          <!-- listMenu -->
+		          <div class="listMenu_titlelink  uk-visible@m">
+		          	<ul class="list_tabs uk-nav-default">
+		          		<li class="uk-nav-header">
+		          			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1</a>
+		          		</li>
+		          		<li class="uk-nav-header active">
+		          			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1</a>
+		          		</li>
+		          		<li class="uk-nav-header uk-parent">
+		          			<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
+		          				<div class="uk-width-expand"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level2</a></div>
+		          				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a></div>
+		          			</div>
+		          			<ul class="toggle tw-hidden tw-p-0 uk-nav-sub">
+		          				<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
+		          				<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
+		          			</ul>
+		          		</li>
+		          		<li class="uk-nav-header uk-parent">
+		          			<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
+		          				<div class="uk-width-expand"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level3</a></div>
+		          				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a></div>
+		          			</div>
+		          			<ul class="toggle tw-hidden tw-p-0 uk-nav-sub">
+		          				<li>
+		          					<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Title</a>
+		          					<ul class="uk-nav-sub tw-p-0 tw-bg-white">
+		          						<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
+		          						<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
+		          					</ul>
+		          				</li>
+		          			</ul>
+		          		</li>
+		          	</ul>
+		          </div>
+		          <div class="uk-width-1-1 uk-hidden@m">
+		          	<button class="uk-button uk-button-default uk-width-1-1" type="button">次選單</button>
+		          	
+		          	<!-- Dropdown -->
+		          	<div class="min_width-100" uk-dropdown>
+		          		<ul class="uk-nav uk-dropdown-nav tw-text-left">
+		          			<li><a href="#">Item</a></li>
+		          			<li class="uk-parent">
+		          				<a href="#">Item</a>
+		          				<ul class="tw-pt-0 uk-nav-sub">
+		          					<li><a href="#">Item</a></li>
+		          					<li><a href="#">Item</a></li>
+		          				</ul>
+		          			</li>
+		          			<li class="uk-parent">
+		          				<a href="#">Item</a>
+		          				<ul class="tw-pt-0 uk-nav-sub">
+		          					<li><a href="#">Item</a></li>
+		          					<li>
+		          						<a href="#">Item</a>
+		          						<ul>
+		          							<li><a href="#">Item</a></li>
+		          							<li><a href="#">Item</a></li>
+		          						</ul>
+		          					</li>
+		          				</ul>
+		          			</li>
+		          		</ul>
+		          	</div>
+		          	<!-- /Dropdown --></div>
+		          <!-- listMenu -->        </div>
+		        <!-- /left menu -->
+		        <!-- right column -->
+		        <div class="uk-width-expand@m">
+		          <h2 class="tw-border-solid tw-border-b tw-text-base s:tw-text-2xl tw-mt-0">
+		            <div class="tw-justify-between uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand" uk-grid>
+		              <div>標題名稱</div>
+		              <div class="uk-flex uk-width-auto"><small class="m:tw-mt-2"><a class="tw-no-underline" href="#"><i class="tw-mr-1 fas fa-angle-left"></i>回上頁</a></small></div>
+		            </div>
+		          </h2>
+		          <!-- content -->
+		          <div id="content" class="tw-space-y-4">
+		            Text          </div>
+		          <!-- /content -->
+		        </div>
+		        <!-- /right column -->
+		      </div>
+		      <!-- /uk-grid -->
+		    </div>
+		    <!-- /uk-card -->
+		  </div>
+		  <!-- /container -->
+		</section>
+		<!-- /page main content -->
+		<!-- footer -->
+		<div id="footeremask" class="tw-relative"><div class="bg"></div></div>
+		<div id="footer" class="tw-relative">
+			<div class="tw-p-3 s:tw-px-8 m:tw-p-3">
+				<!-- uk-container -->
+				<div class="container_responsive@s uk-container tw-relative">
+					<!-- sitemap -->
+					<div id="sitemap" class="tw-my-1 uk-margin-bottom" uk-margin>
+						<div class="tw-mb-3 uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid="masonry: true">
+							<div class="tw-space-y-1">
+								<p class="header tw-font-bold tw-mb-4 tw-px-1">研究資源</p>
+								<a class="tw-block" href="#">Item</a>
+								<a class="tw-block" href="#">Item</a>
+								<a class="tw-block" href="#">電升密和家提一單他以當作響響一電研言</a>
+							</div>
+							<div class="tw-space-y-1">
+								<p class="header tw-font-bold tw-mb-4 tw-px-1">參考諮詢</p>
+								<a class="tw-block" href="#">Item</a>
+								<a class="tw-block" href="#">Item</a>
+								<a class="tw-block" href="#">電升密和家提一單他以當作響響一電研言</a>
+							</div>
+							<div class="tw-space-y-1">
+								<p class="header tw-font-bold tw-mb-4 tw-px-1">服務項目</p>
+								<a class="tw-block" href="#">Item</a>
+								<a class="tw-block" href="#">Item</a>
+								<a class="tw-block" href="#">電升密和家提一單他以當作響響一電研言</a>
+							</div>
+							<div class="tw-space-y-1">
+								<p class="header tw-font-bold tw-mb-4 tw-px-1">關於本館</p>
+								<a class="tw-block" href="#">Item</a>
+								<a class="tw-block" href="#">Item</a>
+								<a class="tw-block" href="#">電升密和家提一單他以當作響響一電研言</a>
+							</div>
+						</div>
+					</div>
+					<!-- /sitemap -->
+					<hr class="tw-border tw-border-dotted tw-border-1 tw-border-black tw-border-opacity-20 tw-mb-4">
+					<footer class="tw-text-sm uk-flex-top uk-grid uk-grid-divider uk-grid-small uk-child-width-expand@m" uk-grid>
+						<div uk-margin>
+							<div class="uk-grid uk-text-center uk-flex-center" uk-grid uk-margin>
+								<div class="tw-space-x-4">地址：111 台北市士林區文昌路95號<span>B3 No.95, Wenchang Rd., Shrlin Chiu, Taipei, Taiwan 111, R.O.C.</span></div>
+								<div class="tw-space-x-4">電話：(02) 28332211</div>
+								<div class="tw-space-x-4">傳真：(02) 28389415</div>
+								<div class="tw-space-x-4 tw-w-full">新光吳火獅紀念醫院圖書館版權所有 © 2021 All Rights Reserved</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+				<!-- /uk-container -->
+			</div>
+		</div>
+		<!-- /footer -->
+		<a id="gototop" class="tw-text-white tw-bg-black tw-bg-opacity-50 hover:tw-bg-opacity-70 tw-opacity-0 tw-no-underline tw-p-2 tw-px-3 tw-rounded tw-text-center tw-fixed tw-bottom-0 tw-right-0 tw-mr-3 tw-mb-3" href="javascript:void(0)" title="回到最上"><i class="fas fa-angle-up"></i><span class="sr-only">回到最上</span></a>
+	</body>
+</html>

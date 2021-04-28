@@ -7,7 +7,7 @@ function allExist(el) {
       exist = false
       return exist
     } else {
-      exist = true
+      // exist = true
       return exist
     }
   }
@@ -129,7 +129,7 @@ function toggleAllShow(allChildren) {
 }
 
 //toggle all class by selector
-function toggleClasses(el, cls) {
+function toggleClass(el, cls) {
   var all = document.querySelectorAll(el)
   for (var i = 0;i < all.length;i++) {
     all[i].classList.toggle(cls)
@@ -198,23 +198,6 @@ function findChildClass(parentEL, sl) {
   return parentEL.querySelector(sl).className
 }
 
-//go to top
-function gotoTop(sl, classFadeName) {
-  var el = document.querySelector(sl)
-  // el.style.opacity = "0";
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    el.classList.add(classFadeName)
-  } else {
-    el.classList.remove(classFadeName)
-  }
-}
-if (oneExist("#gototop") == true) {
-  gotoTop("#gototop", "opacity-100")
-  window.onscroll = function () {
-    gotoTop("#gototop", "opacity-100")
-  }
-}
-
 //get this year - <p onload="thisYear(this)"></p>
 function thisYear(thisSelector) {
   var d = new Date()
@@ -238,6 +221,17 @@ function plusHeight(sel, plusSelector) {
   // console.log(el1.getBoundingClientRect().height)
   el1.style.height = h + 'px'
   plusSelector.style.display = 'inherit'
+}
+
+//onmouseover="viewHeight('[uk-dropdown]', 'nav.bg_primary')"
+function viewMaxHeight(sel) {
+  if (allExist(sel, upperSelector)) {
+    var target = document.querySelectorAll(sel)
+    // var alltops = document.querySelectorAll(sel).getBoundingClientRect().top
+    for (var i = 0;i < target.length;i++) {
+      target[i].style.maxHeight = window.innerHeight - target[i].getBoundingClientRect().top + 'px'
+    }
+  }
 }
 
 //onmouseover="viewHeight('[uk-dropdown]', 'nav.bg_primary')"
@@ -358,148 +352,148 @@ function showOption(event, index, sl) {
 }
 
 //--Checkbox toggle check all - <input type="checkbox" onchange="toggleCheckAll(this, '.listCheck', '.checkAll', 'false')"> or <button onclick="toggleCheckAll(this, '.listCheck')">
-function toggleCheckAll(thisClick, inputCheck, checkAll, ifAddChecked) {
-  //thisClick means the "owner" and CANNOT use "this" that means the Global object "Window"
-  thisClick.classList.toggle('checked')
-  var inputCheck = document.querySelectorAll(inputCheck)
-  var checkAll = document.querySelectorAll(checkAll)
-  var ifAddChecked = ifAddChecked //ifAddChecked is boolean
-  //--set all input checked & unchecked--
-  if (thisClick.classList.contains('checked')) {
-    //if 'select all' checked
-    if (checkAll != null | checkAll != undefined) {
-      for (var i = 0;i < checkAll.length;i++) {
-        checkAll[i].checked = true
-        checkAll[i].classList.add('checked')
-      }
-    }
-    for (var i = 0;i < inputCheck.length;i++) {
-      inputCheck[i].checked = true
-      if (ifAddChecked == true) {
-        inputCheck[i].offsetParent.classList.add('checked')
-        //parent inputCheck<li> add class "checked" when input checked
-      }
-    }
-  } else {
-    //if 'select all' unchecked
-    if (checkAll != null | checkAll != undefined) {
-      for (var i = 0;i < checkAll.length;i++) {
-        checkAll[i].checked = false
-        checkAll[i].classList.remove('checked')
-      }
-    }
-    for (var i = 0;i < inputCheck.length;i++) {
-      inputCheck[i].checked = false
-      if (ifAddChecked == true) {
-        inputCheck[i].offsetParent.classList.remove('checked')
-        //parent inputCheck<li> remove class "checked" when input unchecked
-      }
-    }
-  }
-}
+// function toggleCheckAll(thisClick, inputCheck, checkAll, ifAddChecked) {
+//   //thisClick means the "owner" and CANNOT use "this" that means the Global object "Window"
+//   thisClick.classList.toggle('checked')
+//   var inputCheck = document.querySelectorAll(inputCheck)
+//   var checkAll = document.querySelectorAll(checkAll)
+//   var ifAddChecked = ifAddChecked //ifAddChecked is boolean
+//   //--set all input checked & unchecked--
+//   if (thisClick.classList.contains('checked')) {
+//     //if 'select all' checked
+//     if (checkAll != null | checkAll != undefined) {
+//       for (var i = 0;i < checkAll.length;i++) {
+//         checkAll[i].checked = true
+//         checkAll[i].classList.add('checked')
+//       }
+//     }
+//     for (var i = 0;i < inputCheck.length;i++) {
+//       inputCheck[i].checked = true
+//       if (ifAddChecked == true) {
+//         inputCheck[i].offsetParent.classList.add('checked')
+//         //parent inputCheck<li> add class "checked" when input checked
+//       }
+//     }
+//   } else {
+//     //if 'select all' unchecked
+//     if (checkAll != null | checkAll != undefined) {
+//       for (var i = 0;i < checkAll.length;i++) {
+//         checkAll[i].checked = false
+//         checkAll[i].classList.remove('checked')
+//       }
+//     }
+//     for (var i = 0;i < inputCheck.length;i++) {
+//       inputCheck[i].checked = false
+//       if (ifAddChecked == true) {
+//         inputCheck[i].offsetParent.classList.remove('checked')
+//         //parent inputCheck<li> remove class "checked" when input unchecked
+//       }
+//     }
+//   }
+// }
 
 // checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
-function checkedSum(inputCheck, checkAll, resetButton, textSum) {
-  var inputCheck = document.querySelectorAll(inputCheck)
-  var checkAll = document.querySelectorAll(checkAll)
-  var resetButton = document.querySelectorAll(resetButton)
-  var textSum = document.querySelectorAll(textSum)
-  var sum = 0
-  textSum.innerHTML = sum
+// function checkedSum(inputCheck, checkAll, resetButton, textSum) {
+//   var inputCheck = document.querySelectorAll(inputCheck)
+//   var checkAll = document.querySelectorAll(checkAll)
+//   var resetButton = document.querySelectorAll(resetButton)
+//   var textSum = document.querySelectorAll(textSum)
+//   var sum = 0
+//   textSum.innerHTML = sum
 
-  for (var i = 0;i < inputCheck.length;i++) {
-    inputCheck[i].addEventListener('change', (event) => {
-      if (event.target.checked) {
-        sum = sum + 1
-        for (var j = 0;j < textSum.length;j++) {
-          textSum[j].innerHTML = sum
-        }
-      } else {
-        sum = sum - 1
-        for (var k = 0;k < textSum.length;k++) {
-          textSum[k].innerHTML = sum
-        }
-      }
-    })
-  }
-  for (var i = 0;i < checkAll.length;i++) {
-    if (checkAll[i].getAttribute('type') == 'checkbox') {
-      checkAll[i].addEventListener('change', (event) => {
-        if (event.target.checked) {
-          for (var i = 0;i < checkAll.length;i++) {
-            checkAll[i].checked = true
-          }
-          for (var j = 0;j < inputCheck.length;j++) {
-            inputCheck[j].checked = true
-            // sum = sum + 1
-          }
-          sum = inputCheck.length
-          for (var k = 0;k < textSum.length;k++) {
-            textSum[k].innerHTML = sum
-          }
-        } else {
-          for (var i = 0;i < checkAll.length;i++) {
-            checkAll[i].checked = false
-          }
-          for (var j = 0;j < inputCheck.length;j++) {
-            inputCheck[j].checked = false
-            // sum = sum - 1
-          }
-          sum = 0
-          for (var k = 0;k < textSum.length;k++) {
-            textSum[k].innerHTML = sum
-          }
-        }
-      })
-    }
-    if (checkAll[i].getAttribute('type') == 'button') {
-      checkAll[i].onclick = function () {
-        if (checkAll[i].classList.contains('checked')) {
-          for (var i = 0;i < checkAll.length;i++) {
-            checkAll[i].classList.toggle('checked')
-          }
-          for (var j = 0;j < inputCheck.length;j++) {
-            inputCheck[j].checked = true
-            // sum = sum + 1
-          }
-          sum = inputCheck.length
-          for (var k = 0;k < textSum.length;k++) {
-            textSum[k].innerHTML = sum
-          }
-        } else {
-          for (var i = 0;i < checkAll.length;i++) {
-            checkAll[i].classList.toggle('checked')
-          }
-          for (var j = 0;j < inputCheck.length;j++) {
-            inputCheck[j].checked = false
-            // sum = sum - 1
-          }
-          sum = 0
-          for (var k = 0;k < textSum.length;k++) {
-            textSum[k].innerHTML = sum
-          }
-        }
-      }
-    }
-  }
-  for (var i = 0;i < resetButton.length;i++) {
-    resetButton[i].onclick = function () {
-      for (var j = 0;j < checkAll.length;j++) {
-        checkAll[j].checked = false
-      }
-      for (var k = 0;k < inputCheck.length;k++) {
-        inputCheck[k].checked = false
-      }
-      sum = 0
-      for (var l = 0;l < textSum.length;l++) {
-        textSum[l].innerHTML = sum
-      }
-    }
-  }
-}
-if (allExist([".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber"]) == true) {
-  checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
-}
+//   for (var i = 0;i < inputCheck.length;i++) {
+//     inputCheck[i].addEventListener('change', (event) => {
+//       if (event.target.checked) {
+//         sum = sum + 1
+//         for (var j = 0;j < textSum.length;j++) {
+//           textSum[j].innerHTML = sum
+//         }
+//       } else {
+//         sum = sum - 1
+//         for (var k = 0;k < textSum.length;k++) {
+//           textSum[k].innerHTML = sum
+//         }
+//       }
+//     })
+//   }
+//   for (var i = 0;i < checkAll.length;i++) {
+//     if (checkAll[i].getAttribute('type') == 'checkbox') {
+//       checkAll[i].addEventListener('change', (event) => {
+//         if (event.target.checked) {
+//           for (var i = 0;i < checkAll.length;i++) {
+//             checkAll[i].checked = true
+//           }
+//           for (var j = 0;j < inputCheck.length;j++) {
+//             inputCheck[j].checked = true
+//             // sum = sum + 1
+//           }
+//           sum = inputCheck.length
+//           for (var k = 0;k < textSum.length;k++) {
+//             textSum[k].innerHTML = sum
+//           }
+//         } else {
+//           for (var i = 0;i < checkAll.length;i++) {
+//             checkAll[i].checked = false
+//           }
+//           for (var j = 0;j < inputCheck.length;j++) {
+//             inputCheck[j].checked = false
+//             // sum = sum - 1
+//           }
+//           sum = 0
+//           for (var k = 0;k < textSum.length;k++) {
+//             textSum[k].innerHTML = sum
+//           }
+//         }
+//       })
+//     }
+//     if (checkAll[i].getAttribute('type') == 'button') {
+//       checkAll[i].onclick = function () {
+//         if (checkAll[i].classList.contains('checked')) {
+//           for (var i = 0;i < checkAll.length;i++) {
+//             checkAll[i].classList.toggle('checked')
+//           }
+//           for (var j = 0;j < inputCheck.length;j++) {
+//             inputCheck[j].checked = true
+//             // sum = sum + 1
+//           }
+//           sum = inputCheck.length
+//           for (var k = 0;k < textSum.length;k++) {
+//             textSum[k].innerHTML = sum
+//           }
+//         } else {
+//           for (var i = 0;i < checkAll.length;i++) {
+//             checkAll[i].classList.toggle('checked')
+//           }
+//           for (var j = 0;j < inputCheck.length;j++) {
+//             inputCheck[j].checked = false
+//             // sum = sum - 1
+//           }
+//           sum = 0
+//           for (var k = 0;k < textSum.length;k++) {
+//             textSum[k].innerHTML = sum
+//           }
+//         }
+//       }
+//     }
+//   }
+//   for (var i = 0;i < resetButton.length;i++) {
+//     resetButton[i].onclick = function () {
+//       for (var j = 0;j < checkAll.length;j++) {
+//         checkAll[j].checked = false
+//       }
+//       for (var k = 0;k < inputCheck.length;k++) {
+//         inputCheck[k].checked = false
+//       }
+//       sum = 0
+//       for (var l = 0;l < textSum.length;l++) {
+//         textSum[l].innerHTML = sum
+//       }
+//     }
+//   }
+// }
+// if (allExist([".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber"]) == true) {
+//   checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
+// }
 //------------- End Form ------------------------------------------------//
 
 //------------- Table in editor ------------------------------------------------//
@@ -559,25 +553,25 @@ if (oneExist('.ckeditor table')) {
 //------------- End Table in editor ------------------------------------------------//
 
 //------------- Uikit ------------------------------------------------//
-//Slideshow tab focus
-// Set <a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', event)" onkeydown="enterOpenUrl('_blank', event)">Banner1</a> on <ul class="uk-dotnav">
-function slideShowFocus(slideshow, tabsArray, event) {
-  var slideshow = document.querySelector(slideshow)
-  var tabs = document.querySelectorAll(tabsArray)
-  for (var i = 0;i < tabs.length;i++) {
-    // tabs[i] = UIkit.slideshow(slideshow).show(i)
-    if (event.currentTarget == tabs[i]) {
-      UIkit.slideshow(slideshow).show(i)
-    }
-  }
-}
-//Click 'Enter' to open window by the attribute 'href'
-//Or using "event.currentTarget" relpace the "thisKeyDown"
-function enterOpenUrl(targetWindow, event) {
-  if (event.keyCode === 13) {
-    window.open(event.currentTarget.getAttribute('href'), targetWindow)
-  }
-}
+// //Slideshow tab focus
+// // Set <a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', event)" onkeydown="enterOpenUrl('_blank', event)">Banner1</a> on <ul class="uk-dotnav">
+// function slideShowFocus(slideshow, tabsArray, event) {
+//   var slideshow = document.querySelector(slideshow)
+//   var tabs = document.querySelectorAll(tabsArray)
+//   for (var i = 0;i < tabs.length;i++) {
+//     // tabs[i] = UIkit.slideshow(slideshow).show(i)
+//     if (event.currentTarget == tabs[i]) {
+//       UIkit.slideshow(slideshow).show(i)
+//     }
+//   }
+// }
+// //Click 'Enter' to open window by the attribute 'href'
+// //Or using "event.currentTarget" relpace the "thisKeyDown"
+// function enterOpenUrl(targetWindow, event) {
+//   if (event.keyCode === 13) {
+//     window.open(event.currentTarget.getAttribute('href'), targetWindow)
+//   }
+// }
 // Set <a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', this)" onkeydown="enterOpenUrl('_blank', this, event)">Banner1</a> on <ul class="uk-dotnav">
 // function slideShowFocus(slideshow, tabsArray, thisFocus) {
 //   var slideshow = document.querySelector(slideshow)
@@ -623,13 +617,13 @@ function listShowTab(link, ukTab) {
 // urlShowTab(".border2.uk-tab")
 // listShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
 
-function uikitSvg(logoSvg) {
-  var logo = document.querySelector(logoSvg)
-  UIkit.svg(logo).svg.then(function (svg) {
-    svg.setAttribute("preserveAspectRatio", "xMinYMid")
-    // svg.querySelector('path').style.stroke = 'red'
-  })
-}
+// function uikitSvg(logoSvg) {
+//   var logo = document.querySelector(logoSvg)
+//   UIkit.svg(logo).svg.then(function (svg) {
+//     svg.setAttribute("preserveAspectRatio", "xMinYMid")
+//     // svg.querySelector('path').style.stroke = 'red'
+//   })
+// }
 // window.onload = function () {
 //   if (oneExist('.logo>img') == true) {
 //     // console.log("The logo exists")
@@ -638,9 +632,375 @@ function uikitSvg(logoSvg) {
 // }
 //------------- End Uikit ------------------------------------------------//
 
+//<a class="fontSize1 pb-1 uk-accordion-title" href="#" onclick="toggleAttr(event, '', 'title', '展開', '縮起')">
+function toggleAttr(event, el, attr, val1, val2) {
+  if (event.currentTarget.getAttribute(attr) == val1) {
+    event.currentTarget.setAttribute(attr, val2)
+    // console.log(event.currentTarget.getAttribute(attr))
+  } else {
+    event.currentTarget.setAttribute(attr, val1)
+  }
+  if (el != '') {
+    var el = document.querySelectorAll(el)
+    for (var i = 0;i < el.length;i++) {
+      if (el.getAttribute(attr) == val1) {
+        el.setAttribute(attr, val2)
+      } else {
+        el.setAttribute(attr, val1)
+      }
+    }
+  }
+}
+function setAttr(el, attr) {
+  var el = document.querySelectorAll(el)
+  // var attrs = []
+  for (var i = 0;i < el.length;i++) {
+    el[i].setAttribute(attr[0], attr[1])
+    console.log(el.length)
+  }
+}
+// setAttr('[class*=fa-]', ["title", ""])
+
+// Loading script
+function loadScript(src, loading) {
+  let script = document.createElement('script')
+  script.src = src
+  if (loading == 'async') {
+    script.async = true
+  }
+  if (loading == 'defer') {
+    script.defer = true
+  }
+  document.body.append(script)
+}
+// loadScript("/long.js");
+// loadScript("/small.js");
+
+//go to top
+// function gotoTop(sl, classFadeName) {
+//   var el = document.querySelector(sl)
+//   // el.style.opacity = "0";
+//   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//     el.classList.add(classFadeName)
+//   } else {
+//     el.classList.remove(classFadeName)
+//   }
+// }
+// if (oneExist("#gototop") == true) {
+//   gotoTop("#gototop", "tw-opacity-100")
+//   window.onscroll = function () {
+//     gotoTop("#gototop", "tw-opacity-100")
+//   }
+// }
+//------------- End Functions ------------------------------------------------//
+
+//------------- ES5/6 -------------//
+//--------------------------------------------------------------------------------------------------------------------------//
+
+// Regular functions
+x = function () { return "Hello World!" }
+
+// Arrow functions
+x = () => { return "Hello World!" }
+x = () => "Hello"
+x = (v1, v2) => "Hello" + v1 + v2
+x = (v) => "Hello" + v
+x = v => "Hello" + v
+
+// Wait for some time: setTimeout() function
+setTimeout(() => {
+  // some code
+}, 300)
+
+//Click Event for Multiple Elements
+document.querySelectorAll('.some-class').forEach(item => {
+  item.addEventListener('click', event => {
+    //handle click
+  })
+})
+// [document.querySelector('.a-class'), document.querySelector('.another-class')].forEach(item => {
+//   item.addEventListener('click', event => {
+//     //handle click
+//   })
+// })
+
+// Event
+// item.addEventListener('click', () => { })
+// window.addEventListener('scroll', () => { })
+
+/* https://jsfiddle.net/shen_yang_work/cu9834fr/ */
+// function $$(elem) {
+//   if (!(this instanceof $$)) {
+//     return (new $$(elem))
+//   } else {
+//     this.elem = elem
+//   }
+// }
+// $$.prototype = {
+//   set: function (prop, value) {
+//     this.elem[prop] = value
+//     return (this)
+//   }
+// }
+// $$(document.getElementById("example-element")).set("innerHTML", "xxxx").set("className", "test")
+
+//------------- Start -------------//
+//------------------------------------------------------------------------------------------------
+
+//Check all exist
+const allPresent = (el) => {
+  // var exist = true
+  // k = document.querySelectorAll(el)
+  $all(el).forEach(item => {
+    if (item == null) {
+      return false
+    } else {
+      return true
+    }
+  })
+  // for (var i = 0;i < k.length;i++) {
+  //   if (k[i] == null) {
+  //     exist = false
+  //     return exist
+  //   } else {
+  //     // exist = true
+  //     return exist
+  //   }
+  // }
+}
+
+//Check one exist
+const onePresent = (el) => {
+  // var exist = true
+  // k = document.querySelectorAll(el)
+  $all(el).forEach(item => {
+    if (item != null) {
+      return true
+    } else {
+      return false
+    }
+  })
+  // for (var i = 0;i < k.length;i++) {
+  //   if (k[i] != null) {
+  //     return exist
+  //   } else {
+  //     exist = false
+  //     return exist
+  //   }
+  // }
+}
+
+/* https://jsfiddle.net/shen_yang_work/0489wdn7/ */
+const $all = (el) => document.querySelectorAll(el)
+
+/* https://gomakethings.com/how-to-get-all-of-an-elements-siblings-with-vanilla-js/ */
+const getSiblings = (el) => {
+  el = document.querySelector(el)
+  // for collecting siblings
+  let siblings = []
+  // if no parent, return no sibling
+  if (!el.parentNode) {
+    return siblings
+  }
+  // first child of the parent node
+  let sibling = el.parentNode.firstChild
+
+  // collecting siblings
+  while (sibling) {
+    if (sibling.nodeType === 1 && sibling !== el) {
+      siblings.push(sibling)
+    }
+    sibling = sibling.nextSibling
+  }
+  return siblings
+}
+// const toggleClasses = (el, ...cls) => cls.map(cl => el.classList.toggle(cl)) // '...cls': Rest parameter must be last formal parameter
+const toggleClasses = (el, classArray) => classArray.map(cl => el.classList.toggle(cl))
+const accordion = (el) => {
+  if (el.classList.contains('open')) {
+    el.style.height = el.scrollHeight + "px"
+    toggleClasses(el, ['accordion', 'accordioning'])
+    setTimeout(() => {
+      el.style.height = null
+    }, 1)
+    setTimeout(() => {
+      toggleClasses(el, ['accordion', 'open', 'accordioning'])
+    }, 201)
+  } else {
+    toggleClasses(el, ['accordion', 'accordioning'])
+    el.style.height = el.scrollHeight + "px"
+    // The scrollHeight property returns the entire height of an element in pixels, including padding, but not the border, scrollbar or margin.
+    setTimeout(() => {
+      toggleClasses(el, ['accordion', 'open', 'accordioning'])
+      el.style.height = null
+    }, 200)
+  }
+}
+const eventToggleClasses = (eventTarget, event, selfToggleClassArray, accordionEl, eventTargetParent, parentToggleClassArray, inactiveParentSiblings, inactiveParentSiblingsChildern, toggleChild, childToggleClassArray) => {
+  $all(eventTarget).forEach(item => {
+    if (event != '') {
+      item.addEventListener(event, event => {
+        if (eventTargetParent != '') {
+
+          if (inactiveParentSiblings != '') {
+            // Remove the calss 'active' from all the same level parents
+            item.closest(eventTargetParent).parentElement.querySelectorAll(eventTargetParent).forEach(item => {
+              item.classList.remove(parentToggleClassArray)
+            })
+          }
+
+          item.closest(eventTargetParent).querySelectorAll(toggleChild).forEach(item => {
+            toggleClasses(item, childToggleClassArray)
+          })
+
+          if (accordionEl != '') {
+            item.closest(eventTargetParent).querySelectorAll(accordionEl).forEach(item => {
+              accordion(item)
+            })
+          }
+
+          if (parentToggleClassArray != '') {
+            toggleClasses(item.closest(eventTargetParent), parentToggleClassArray)
+          }
+
+          // If the arrow right is hidden when the menu is opened
+          if (inactiveParentSiblings != '' && inactiveParentSiblingsChildern != '') {
+            if (item.firstElementChild.classList.contains(childToggleClassArray) == true) {
+              // Add the calss 'active' to parent
+              item.closest(eventTargetParent).classList.add(parentToggleClassArray)
+              // All inactive sibling parents
+              item.closest(eventTargetParent).parentElement.querySelectorAll(inactiveParentSiblings).forEach(item => {
+                // console.log(item)
+                // Show Right arrow
+                item.querySelector(inactiveParentSiblingsChildern).firstElementChild.classList.remove(childToggleClassArray)
+                // Hide Down arrow
+                item.querySelector(inactiveParentSiblingsChildern).lastElementChild.classList.add(childToggleClassArray)
+                // Hide Contents
+                item.lastElementChild.classList.add(childToggleClassArray)
+              })
+            } else {
+              item.closest(eventTargetParent).classList.remove(parentToggleClassArray)
+            }
+          }
+        } else {
+          if (toggleChild != '') {
+            item.querySelectorAll(toggleChild).forEach(item => {
+              toggleClasses(item, childToggleClassArray)
+            })
+          }
+          if (accordionEl != '') {
+            item.querySelectorAll(accordionEl).forEach(item => {
+              accordion(item)
+            })
+          }
+        }
+        if (selfToggleClassArray != '') {
+          toggleClasses(item, selfToggleClassArray)
+        }
+        event.preventDefault() // prevent the page refreshing - https://www.w3schools.com/jsref/event_preventdefault.asp
+      })
+    }
+  })
+}
+// eventToggleClasses('#offcanvas li>div>a:nth-child(2)', 'click', '', 'ul.toggle', 'li', '', '', '', '.toggle', ['tw-hidden']) // uk-offcanvas with accordion
+eventToggleClasses('#offcanvas li>div>a:nth-child(2)', 'click', '', '', 'li.uk-parent', ['active'], '#offcanvas>div>ul>li.uk-parent:not(.active)', 'div>a:last-child', '.toggle', ['tw-hidden']) // uk-offcanvas opeing in turn
+eventToggleClasses('.listMenu_titlelink li>div>div:nth-child(2)>a', 'click', '', '', 'li.uk-parent', ['active'], '.listMenu_titlelink>ul>li.uk-parent:not(.active)', 'div>div:last-child>a', '.toggle', ['tw-hidden']) // listMenu_titlelink opeing in turn
+// eventToggleClasses('.listMenu_titlelink li a.listMore', 'click', '', '', 'ul', '', '', '', '.listMore', ['tw-hidden']) // .listMore
+// eventToggleClasses('li.listMore>a', 'click', '', '', 'li.listMore', ['hidden'], '', '', '', ''); // list click 'more' to show
+// eventToggleClasses('.list_accordion_bs .list-group-item-action', 'click', ['active'], 'ul.accordion', 'li', '', '', '.toggle', '', ['tw-hidden', 'active']);
+// eventToggleClasses('.list_accordion_titlelink .list-group-item>div>a:nth-child(2)', 'click', '', 'ul.accordion', 'li', ['active'], '', '', '.toggle', ['tw-hidden']);
+// eventToggleClasses('.list_accordion_bg .arrow', 'click', '', 'ul.accordion', 'li', '', '', '', '.toggle', ['tw-hidden']);
+
+// const $all = (el) => document.querySelectorAll(el)
+// const toggleClasses = (el, ...cls) => cls.map(cl => el.classList.toggle(cl)) // '...cls': Rest parameter must be last formal parameter
+// const eventToggleClasses = (eventTarget, event, eventTargetParent, toggleChild, ...cls) => {
+//   $all(eventTarget).forEach(item => {
+//     item.addEventListener('click', event => {
+//       if (eventTargetParent != '') {
+//         item.closest(eventTargetParent).querySelectorAll(toggleChild).forEach(item => {
+//           toggleClasses(item, ...cls)
+//         })
+//       } else {
+//         item.querySelectorAll(toggleChild).forEach(item => {
+//           toggleClasses(item, ...cls)
+//         })
+//       }
+//     })
+//   })
+// }
+// eventToggleClasses('.list-group-item', 'click', '', '.fas', 'fa-angle-right', 'fa-angle-down');
+// eventToggleClasses('.list_accordion .arrow', 'click', 'li.py-1', '.toggle', 'tw-hidden');
+
+const setMaxViewHeight = (el) => {
+  $all(el).forEach(item => {
+    item.style.maxHeight = window.innerHeight - item.getBoundingClientRect().top + 'px'
+  })
+}
+const eventMaxViewHeight = (event_el, event, height_el) => {
+  $all(event_el).forEach(item => {
+    item.addEventListener(event, () => {
+      $all(height_el).forEach(item => {
+        item.style.maxHeight = window.innerHeight - item.getBoundingClientRect().top + 'px'
+      })
+    })
+  })
+}
+eventMaxViewHeight('.mainmenu li>a', 'mouseover', '.mainmenu .uk-dropdown')
+// eventMaxViewHeight('.mainmenu li>a', 'mouseover', '.mainmenu .dropdown')
+
+/* global ResizeObserver - https://jsfiddle.net/shen_yang_work/bfejc082/ */
+const roundedBorder = new ResizeObserver(entries => { // 'entries' can be any names like 'items'
+  for (let entry of entries) {
+    entry.target.style.borderRadius = Math.max(0, 250 - entry.getBoundingClientRect().width) + 'px'
+    // entry.contentRect.width: No support on iOS Safari & Android Firefox
+  }
+})
+// Only observe the 2nd box
+// roundedBorder.observe(document.querySelector('.example-element'))
+
+//go to top
+const anchorSmoothScroll = (el) => {
+  document.querySelectorAll('.nav__item a[href^="#"]').forEach(trigger => {
+    trigger.onclick = function (e) {
+      e.preventDefault()
+      let hash = this.getAttribute('href')
+      let target = document.querySelector(hash)
+      let headerOffset = 100
+      let elementPosition = target.offsetTop
+      let offsetPosition = elementPosition - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
+    }
+  })
+}
+const scrollToTop = (amount) => {
+  window.scrollTo({ // If the trigger is a #hash link: <a href="#">, then it's not working. So it needs to be <a href="javascript:void(0)">
+    top: amount,
+    behavior: 'smooth'
+  })
+}
+const gotoTop = (el, addClassName, scollDownPX, scrollTopPX) => {
+  $all(el).forEach(item => {
+    window.addEventListener('scroll', () => {
+      if (document.body.scrollTop > scollDownPX || document.documentElement.scrollTop > scollDownPX) {
+        item.classList.add(addClassName)
+      } else {
+        item.classList.remove(addClassName)
+      }
+    })
+    item.addEventListener('click', () => {
+      scrollToTop(scrollTopPX)
+    })
+  })
+}
+gotoTop("#gototop", "tw-opacity-100", "50", "0")
+
 //Set multiple attributes to element at once
 //ES6 Helper function: The "key" can be replace with "x" or any var
-function setAttributes(el, attrs) {
+const setAttributes = (el, attrs) => {
   Object.keys(attrs).forEach(key => el.setAttribute(key, attrs[key]))
 }
 //Helper function
@@ -652,26 +1012,239 @@ function setAttributes(el, attrs) {
 // setAttributes(elem, {"src": "http://example.com/something.jpeg", "height": "100%"})
 
 //Set multiple attributes to multiple elements: attrs={'attr':'attrValue', 'attr2':'attrValue2'}
-function setAttrs(el, attrs) {
-  document.querySelectorAll(el).forEach( key1 => Object.keys(attrs).forEach(key2 => key1.setAttribute(key2, attrs[key2])))
+const setAttrs = (el, attrs) => {
+  document.querySelectorAll(el).forEach(key1 => Object.keys(attrs).forEach(key2 => key1.setAttribute(key2, attrs[key2])))
+}
+// setAttrs(".logo svg", { "preserveAspectRatio": "xMinYMid" })
+
+//<a class="uk-accordion-title" href="#" onclick="toggleAttr(event, '', 'title', '展開', '縮起')">
+const eventToggleAttr = (event_el, event, event_el_children, attr, val1, val2) => {
+  $all(event_el).forEach(item => {
+    item.addEventListener(event, () => {
+      let attrVal = item.getAttribute(attr)
+      if (val1 != '' && val2 != '') {
+        item.setAttribute(attr, attrVal == val1 ? val2 : val1)
+      }
+      if (val1 == '' && val2 == '') {
+        if (event_el_children != '') {
+          item.querySelectorAll(event_el_children).forEach(item => {
+            if (item.hasAttribute(attr)) {
+              item.removeAttribute(attr)
+            } else {
+              item.setAttribute(attr, true)
+            }
+          })
+        } else {
+          if (item.hasAttribute(attr)) {
+            item.removeAttribute(attr)
+          } else {
+            item.setAttribute(attr, true)
+          }
+        }
+      }
+    })
+  })
+}
+setAttrs('.uk-accordion>li>a', { 'title': '展開' })
+setAttrs('.uk-accordion>li.uk-open>a', { 'title': '縮起' })
+eventToggleAttr('.uk-accordion>li>a', 'click', '', 'title', '展開', '縮起')
+eventToggleAttr('a.sort', 'click', '.icon', 'hidden', '', '')
+
+//------------- Form ------------------------------------------------//
+
+const toggleCheckAll = (checkAll, checkAllEvent, toggleCheckClass, inputCheck, inputCheckParent, ifAddClass) => {
+  // ifAddClass is boolean
+  $all(checkAll).forEach(item => {
+    if (checkAllEvent != '') {
+      item.addEventListener(checkAllEvent, event => {
+        event.target.classList.toggle(toggleCheckClass)
+        if (event.target.classList.contains(toggleCheckClass)) {
+          //if 'select all' checked
+          event.target.checked = true
+          if (ifAddClass == true) {
+            event.target.classList.add(toggleCheckClass)
+          }
+          $all(inputCheck).forEach(item => {
+            item.checked = true
+            if (ifAddClass == true) {
+              item.closest(inputCheckParent).classList.add(toggleCheckClass)
+            }
+          })
+        } else {
+          //if 'select all' unchecked
+          event.target.checked = false
+          if (ifAddClass == true) {
+            event.target.classList.remove(toggleCheckClass)
+          }
+          $all(inputCheck).forEach(item => {
+            item.checked = false
+            if (ifAddClass == true) {
+              item.closest(inputCheckParent).classList.remove(toggleCheckClass)
+            }
+          })
+        }
+      })
+    }
+  })
+}
+// toggleCheckAll('.checkAll', 'click', 'checked', '.listCheck', 'li', 'true')
+toggleCheckAll('.checkAll', 'change', 'checked', '.listCheck', '', '')
+
+// toggleCheckAllSum('.checkAll', 'click', 'checked', '.listCheck', 'change', 'li', 'true', '.uncheckAll', 'click', '.checkedSum')
+const toggleCheckAllSum = (checkAllEl, checkAllEvent, toggleCheckClass, inputCheck, inputCheckEvent, inputCheckParent, ifAddClass, resetButton, resetButtonEvent, textSum) => {
+  // var checkAllEl = document.querySelectorAll(checkAllEl)
+  // var inputCheck = document.querySelectorAll(inputCheck)
+  // var resetButton = document.querySelectorAll(resetButton)
+  // var textSum = document.querySelectorAll(textSum)
+  var sum = 0
+
+  // $all(textSum).forEach(item => {
+  //   item.innerHTML = sum
+  // })
+
+  const checkAll = () => {
+    $all(checkAllEl).forEach(item => {
+      item.classList.add('checked')
+    })
+    $all(inputCheck).forEach(item => {
+      item.checked = true
+      if (ifAddClass == true) {
+        item.closest(inputCheckParent).classList.add(toggleCheckClass)
+      }
+    })
+    if (textSum != '') {
+      sum = $all(inputCheck).length
+      $all(textSum).forEach(item => {
+        item.innerHTML = sum
+      })
+    }
+  }
+  const unCheckAll = () => {
+    $all(checkAllEl).forEach(item => {
+      item.classList.remove('checked')
+      if (item.getAttribute('type') == 'checkbox') {
+        item.checked = false
+      }
+    })
+    $all(inputCheck).forEach(item => {
+      item.checked = false
+      if (ifAddClass == true) {
+        item.closest(inputCheckParent).classList.remove(toggleCheckClass)
+      }
+    })
+    if (textSum != '') {
+      sum = 0
+      $all(textSum).forEach(item => {
+        item.innerHTML = sum
+      })
+    }
+  }
+
+  $all(inputCheck).forEach(item => {
+    if (inputCheckEvent != '') {
+      item.addEventListener(inputCheckEvent, event => {
+        if (event.target.checked) {
+          if (ifAddClass == true) {
+            event.target.closest(inputCheckParent).classList.add(toggleCheckClass)
+          }
+          if (textSum != '') {
+            sum = sum + 1
+            $all(textSum).forEach(item => {
+              item.innerHTML = sum
+            })
+          }
+        } else {
+          if (ifAddClass == true) {
+            event.target.closest(inputCheckParent).classList.remove(toggleCheckClass)
+          }
+          if (textSum != '') {
+            sum = sum - 1
+            $all(textSum).forEach(item => {
+              item.innerHTML = sum
+            })
+          }
+        }
+      })
+    }
+  })
+
+  $all(checkAllEl).forEach(item => {
+    if (checkAllEvent != '') {
+      item.addEventListener(checkAllEvent, event => {
+        event.target.classList.toggle(toggleCheckClass)
+        if (event.target.classList.contains(toggleCheckClass)) {
+          if (event.target.getAttribute('type') == 'checkbox') {
+            $all(checkAllEl).forEach(item => {
+              item.checked = true
+            })
+          }
+          checkAll()
+        } else {
+          if (event.target.getAttribute('type') == 'checkbox') {
+            $all(checkAllEl).forEach(item => {
+              item.checked = false
+            })
+          }
+          unCheckAll()
+        }
+      })
+    }
+  })
+
+  if (resetButton != '') {
+    $all(resetButton).forEach(item => {
+      item.addEventListener(resetButtonEvent, () => {
+        unCheckAll()
+      })
+    })
+  }
 }
 
-// Loading script
-function loadScript(src, loading) {
-  let script = document.createElement('script');
-  script.src = src;
-  if (loading == 'async') {
-    script.async = true;
-  }
-  if (loading == 'defer') {
-    script.defer = true;
-  }
-  document.body.append(script);
-}
-// loadScript("/long.js");
-// loadScript("/small.js");
+//------------- Uikit ------------------------------------------------//
 
-//------------- End Functions ------------------------------------------------//
+const uikitSvg = (logoSvg) => {
+  var logo = document.querySelector(logoSvg)
+  UIkit.svg(logo).svg.then((svg) => {
+    svg.setAttribute("preserveAspectRatio", "xMinYMid")
+    // svg.querySelector('path').style.stroke = 'red'
+  })
+}
+if (allPresent('.logoimg>img~svg') == true) {
+uikitSvg(".logoimg>img")
+}
+// window.onload = () => {
+//   if (oneExist('.logoimg>img') == true) {
+//     // console.log("The logo exists")
+//     uikitSvg(".logoimg>img")
+//   }
+// }
+
+//Slideshow tab focus
+// Set <a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', event)" onkeydown="enterOpenUrl('_blank', event)">Banner1</a> on <ul class="uk-dotnav">
+function slideShowFocus(slideshow, tabsArray, event) {
+  var slideshow = document.querySelector(slideshow)
+  var tabs = document.querySelectorAll(tabsArray)
+  for (var i = 0;i < tabs.length;i++) {
+    // tabs[i] = UIkit.slideshow(slideshow).show(i)
+    if (event.currentTarget == tabs[i]) {
+      UIkit.slideshow(slideshow).show(i)
+    }
+  }
+}
+//Click 'Enter' to open window by the attribute 'href'
+//Or using "event.currentTarget" relpace the "thisKeyDown"
+function enterOpenUrl(targetWindow, event) {
+  if (event.keyCode === 13) {
+    window.open(event.currentTarget.getAttribute('href'), targetWindow)
+  }
+}
+
+
+//------------- /Uikit ------------------------------------------------//
+
+
+//------------- End ES5/6 -------------//
+//--------------------------------------------------------------------------------------------------------------------------//
 
 
 if (oneExist("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty") == true) {
@@ -680,12 +1253,6 @@ if (oneExist("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empt
 
 //Set the "alt" attribute to all icons for AA
 // setAttrs('[class*=fa-]', {'title':''})
-
-//Set the 'preserveAspectRatio:"xMinYMid"' attribute to the logo svg
-setAttrs(".logo svg", {"preserveAspectRatio":"xMinYMid"})
-// document.addEventListener("DOMContentLoaded", function () {
-//   setAttrs(".logo svg", {"preserveAspectRatio":"xMinYMid"})
-// })
 
 //Slideshow adjusts the height to fit the view height, working with CSS: #slideshow .uk-slideshow-items {min-height: auto !important;}
 // if (allExist("#slideshow .uk-slideshow-items, header, .bg_bar") == true) {

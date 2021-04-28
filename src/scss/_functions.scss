@@ -82,7 +82,7 @@
 	@if lightness($color) == 0% {
 		@return lighten($color, 10%);
 	} @else if  lightness($color) == 100% {
-		@return lighten($color, -10%);
+		@return darken($color, 10%);
 	}
 	@else {
 		@return $color;

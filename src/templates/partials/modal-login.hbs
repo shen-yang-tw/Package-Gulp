@@ -1,69 +1,194 @@
-{{!-- {{>modal-login id='login' wide='true' modal-title='會員登入' errorOn='true' error='驗證提示語' note='true' noteText='登入說明' register='true'}} --}}
-
-<!-- uk-modal-login -->
-<div id="{{id}}" class="uk-flex-top uk-modal{{#if wide}} uk-modal-container{{/if}}" uk-modal>
-  <div class="uk-modal-dialog uk-margin-auto-vertical">
-    <form onsubmit="return false;">
-      <button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
-      <div class="uk-modal-header">
-        <h2 class="uk-modal-title">{{modal-title}}</h2>
-      </div>
-      <div class="uk-modal-body">
-        <div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-child-width-expand@s" uk-grid>
-          <div class="min_width-1/4!@s">
-            <label class="min_height-40 font_size-10 font-bold flex uk-flex-middle uk-form-label" for="form_id">帳號</label>
+{{!-- {{>modal-login bootstrap='' captcha='' validation=true submitIsLink='' id='login' wide=true modal-title='會員登入' errorOn=true error='驗證提示語' note=true noteText='登入說明' register=true}} --}}
+{{#if bootstrap}}
+  <!-- bs-modal-login -->
+  <div class="modal fade" id="{{id}}" data-keyboard="false" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <p class="tw-text-2xl tw-font-bold modal-title" id="modalTitle">{{modal-title}}</p>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close" title="關閉">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <div class="space-y-1 min_width-3/4!@s">
-            <input id="form_id" class="match uk-input" type="text" placeholder="請輸入個人信箱">
-            {{#if errorOn}}
-              <p class="color_secondary-text uk-text-small">{{error}}</p>
-            {{/if}}
-          </div>
-          <div class="min_width-1/4!@s">
-            <label class="min_height-40 font_size-10 font-bold flex uk-flex-middle uk-form-label" for="form_pwd">密碼</label>
-          </div>
-          <div class="space-y-1 min_width-3/4!@s">
-            <input id="form_pwd" class="match uk-input" type="password" placeholder="6-15碼英數混合密碼">
-            {{#if errorOn}}
-              <p class="color_secondary-text uk-text-small">{{error}}</p>
-            {{/if}}
-          </div>
-          {{#if captcha}}
-            <div class="min_width-1/4!@s">
-              <label class="min_height-40 font_size-10 font-bold flex uk-flex-middle uk-form-label" for="form_captcha">驗證</label>
+          <div class="modal-body">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="col-form-label" for="ip_id">帳號</label>
+                <input id="ip_id" class="form-control" type="text" placeholder="">
+              </div>
+              <div class="form-group col-md-6">
+                <label class="col-form-label" for="ip_pwd">密碼</label>
+                <input id="ip_pwd" class="form-control" type="password" placeholder="6-15碼英數混合密碼">
+              </div>
+              {{#if captcha}}
+                <div class="form-group col-md-6">
+                  <label class="col-form-label" for="ip_captcha">驗證</label>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto">
+                      <input id="ip_captcha" class="form-control" type="text" placeholder="請輸入圖形6碼數字">
+                    </div>
+                    <div class="col-auto">
+                      <img src="https://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼">
+                    </div>
+                    <div class="col-auto">
+                      <audio class="captchaAudio" src=""></audio>
+                      <button class="btn btn-light btn-sm" type="button" title="播放驗證碼" onclick="document.querySelector('.captchaAudio').play()"><i class="fas fa-volume-down"></i></button>
+                    </div>
+                  </div>
+                </div>
+              {{/if}}
             </div>
-            <div class="space-y-1 min_width-3/4!@s">
-              <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
-                <div class="space-y-1 min_width-1/2!@s">
-                  <input id="form_captcha" class="uk-input" type="text" placeholder="請輸入圖形6碼數字">
+            {{#if validation}}
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label class="col-form-label" for="ip_id_valid">帳號</label>
+                  <input id="ip_id_valid" class="form-control is-valid" type="text" placeholder="xxx">
+                  <div class="valid-feedback">{{error}}</div>
                 </div>
-                <div class="space-y-1 min_width-1/2!@s">
-                  <img src="https://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼">
+                <div class="form-group col-md-6">
+                  <label class="col-form-label" for="ip_pwd_valid">密碼</label>
+                  <input id="ip_pwd_valid" class="form-control is-valid" type="password" placeholder="xxx">
+                  <div class="valid-feedback">{{error}}</div>
                 </div>
-                {{#if errorOn}}
-                  <p class="color_secondary-text s:mt-1 uk-text-small">{{error}}</p>
+                {{#if captcha}}
+                  <div class="form-group col-md-6">
+                    <label class="col-form-label" for="ip_captcha_valid">驗證</label>
+                    <div class="form-row align-items-center">
+                      <div class="col-auto">
+                        <input id="ip_captcha_valid" class="form-control is-valid" type="text" placeholder="xxx">
+                        <div class="valid-feedback">{{error}}</div>
+                      </div>
+                      <div class="col-auto">
+                        <img src="https://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼">
+                      </div>
+                      <div class="col-auto">
+                        <audio class="captchaAudio" src=""></audio>
+                        <button class="btn btn-light btn-sm" type="button" title="播放驗證碼" onclick="document.querySelector('.captchaAudio').play()"><i class="fas fa-volume-down"></i></button>
+                      </div>
+                    </div>
+                  </div>
                 {{/if}}
               </div>
-            </div>
-          {{/if}}
-          {{#if note}}
-            <small class="mt-2"><i class="mr-1 fas fa-question-circle"></i>{{noteText}}</small>
-          {{/if}}
-        </div>
-      </div>
-      <div class="text-center s:text-left uk-modal-footer">
-        <div class="uk-grid-small uk-child-width-expand@s uk-grid" uk-grid>
-          <div class="min_width-1/2!@s">
-            {{#if register}}<a class="mr-2 uk-text-small" href="#register" uk-toggle>會員註冊</a>{{/if}}
-            <a class="uk-text-small" href="#">忘記密碼</a>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label class="col-form-label" for="ip_id_invalid">帳號</label>
+                  <input id="ip_id_invalid" class="form-control is-invalid" type="text" placeholder="xxx">
+                  <div class="invalid-feedback">{{error}}</div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="col-form-label" for="ip_pwd_invalid">密碼</label>
+                  <input id="ip_pwd_invalid" class="form-control is-invalid" type="password" placeholder="xxx">
+                  <div class="invalid-feedback">{{error}}</div>
+                </div>
+                {{#if captcha}}
+                  <div class="form-group col-md-6">
+                    <label class="col-form-label" for="ip_captcha_invalid">驗證</label>
+                    <div class="form-row align-items-center">
+                      <div class="col-auto">
+                        <input id="ip_captcha_invalid" class="form-control is-invalid" type="text" placeholder="xxx">
+                        <div class="invalid-feedback">{{error}}</div>
+                      </div>
+                      <div class="col-auto">
+                        <img src="https://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼">
+                      </div>
+                      <div class="col-auto">
+                        <audio class="captchaAudio" src=""></audio>
+                        <button class="btn btn-light btn-sm" type="button" title="播放驗證碼" onclick="document.querySelector('.captchaAudio').play()"><i class="fas fa-volume-down"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                {{/if}}
+              </div>
+            {{/if}}
           </div>
-          <div class="margin_y_child-all min_width-1/2!@s s:text-right">
-            <a href="#" class="btn_primary min_width-100 uk-button uk-button-primary">登　　入</a>
-            <button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+          <div class="modal-footer">
+            <button class="btn btn-light" data-dismiss="modal" type="button">取　　消</button>
+            {{#if resetButton}}<button class="btn btn-light" type="reset" value="Reset">{{resetButtonName}}</button>{{/if}}
+            {{#if register}}
+              {{#if toModal}}
+                <button class="btn btn-light" type="submit" data-toggle="modal" data-target="#register">註　　冊</button>
+              {{else}}
+                <a class="btn btn-light" href="#">註　　冊</a>
+              {{/if}}
+            {{/if}}
+            {{#if submitIsLink}}
+              <a class="btn_primary btn btn-primary" href="#">登　　入</a>
+            {{else}}
+              <button class="btn_primary btn btn-primary" type="submit">登　　入</button>
+            {{/if}}
           </div>
-        </div>
+        </form>
       </div>
-    </form>
+    </div>
   </div>
-</div>
-<!-- uk-modal-login -->
+  <!-- /bs-modal-login -->
+{{else}}
+  <!-- uk-modal-login -->
+  <div id="{{id}}" class="uk-flex-top uk-modal{{#if wide}} uk-modal-container{{/if}}" uk-modal>
+    <div class="uk-modal-dialog uk-margin-auto-vertical">
+      <form onsubmit="return false;">
+        <button class="uk-modal-close-default" type="button" title="關閉" uk-close></button>
+        <div class="uk-modal-header">
+          <h2 class="uk-modal-title">{{modal-title}}</h2>
+        </div>
+        <div class="uk-modal-body">
+          <div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-child-width-expand@s" uk-grid>
+            <div class="min_width-1/4!@s">
+              <label class="min_height-40 font_size-10 tw-font-bold tw-flex uk-flex-middle uk-form-label" for="form_id">帳號</label>
+            </div>
+            <div class="tw-space-y-1 min_width-3/4!@s">
+              <input id="form_id" class="match uk-input" type="text" placeholder="請輸入個人信箱">
+              {{#if errorOn}}
+                <p class="color_secondary-text tw-text-small">{{error}}</p>
+              {{/if}}
+            </div>
+            <div class="min_width-1/4!@s">
+              <label class="min_height-40 font_size-10 tw-font-bold tw-flex uk-flex-middle uk-form-label" for="form_pwd">密碼</label>
+            </div>
+            <div class="tw-space-y-1 min_width-3/4!@s">
+              <input id="form_pwd" class="match uk-input" type="password" placeholder="6-15碼英數混合密碼">
+              {{#if errorOn}}
+                <p class="color_secondary-text tw-text-small">{{error}}</p>
+              {{/if}}
+            </div>
+            {{#if captcha}}
+              <div class="min_width-1/4!@s">
+                <label class="min_height-40 font_size-10 tw-font-bold tw-flex uk-flex-middle uk-form-label" for="form_captcha">驗證</label>
+              </div>
+              <div class="tw-space-y-1 min_width-3/4!@s">
+                <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
+                  <div class="tw-space-y-1 min_width-1/2!@s">
+                    <input id="form_captcha" class="uk-input" type="text" placeholder="請輸入圖形6碼數字">
+                  </div>
+                  <div class="tw-space-y-1 min_width-1/2!@s">
+                    <img src="https://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼">
+                  </div>
+                  {{#if errorOn}}
+                    <p class="color_secondary-text s:mt-1 tw-text-small">{{error}}</p>
+                  {{/if}}
+                </div>
+              </div>
+            {{/if}}
+            {{#if note}}
+              <small class="mt-2"><i class="mr-1 fas fa-question-circle"></i>{{noteText}}</small>
+            {{/if}}
+          </div>
+        </div>
+        <div class="tw-text-center s:tw-text-left uk-modal-footer">
+          <div class="uk-grid-small uk-child-width-expand@s uk-grid" uk-grid>
+            <div class="min_width-1/2!@s">
+              {{#if register}}<a class="mr-2 tw-text-small" href="#register" uk-toggle>會員註冊</a>{{/if}}
+              <a class="tw-text-small" href="#">忘記密碼</a>
+            </div>
+            <div class="margin_y_child-all min_width-1/2!@s s:tw-text-right">
+              <a href="#" class="btn_primary min_width-100 uk-button uk-button-primary">登　　入</a>
+              <button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- /uk-modal-login -->
+{{/if}}

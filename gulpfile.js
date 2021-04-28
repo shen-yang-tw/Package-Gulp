@@ -7,25 +7,23 @@ const uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
-const imageMin = require('gulp-imagemin');
+const imagemin = require('gulp-imagemin');
 const pngQuint = require('imagemin-pngquant');
 const browserSync = require('browser-sync').create();
 const gulpautoprefixer = require('gulp-autoprefixer');
 const jpgRecompress = require('imagemin-jpeg-recompress');
-// const autopolyfiller = require('gulp-autopolyfiller');
 
 const inject = require('gulp-inject');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const purgecss = require("@fullhuman/postcss-purgecss");
-// const purgecss = require("gulp-purgecss");
 const tailwindcss = require("tailwindcss");
-// const series = require("stream-series");
 const atimport = require("postcss-import");
 const del = require("del");
 const replace = require('gulp-replace');
-// const webp = require('gulp-webp');
 var handlebars = require('gulp-compile-handlebars');
+var gulpif = require('gulp-if');
+var run = require('gulp-run');
 
 //Mode
 // const mode = require('gulp-mode')(); //last '()' means a function must be needed or get err
@@ -35,20 +33,35 @@ const mode = require('gulp-mode')({
   verbose: false
 });
 
+const uk = true, fa = true, tw = true, onlyscript = true, othercolors = false, color1 = false, color2 = false, vendorscss = false, vendorsjs = false, bs = false, bs3 = false, jq = false
+
+if (color1 == true) {
+  var color1val = 'ncu';
+}
+if (color2 == true) {
+  var color2val = 'nthu';
+}
+
 // Paths
 var paths = {
   root: {
     www: './src'
   },
   vendors: {
-    css: ['node_modules/uikit/dist/css/uikit.min.css'],
-    js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js'],
-    // css: ['node_modules/uikit/dist/css/uikit.min.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css'], //Bootstrap
-    // js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js', 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 'node_modules/jquery/dist/jquery.min.js'], //Bootstrap
-    // js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js', 'node_modules/jquery/dist/jquery.min.js'], //jQuery
-    // js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js', 'node_modules/FitText-UMD/fittext.js'], //FitText
-    fontawesome: ['node_modules/@fortawesome/fontawesome-free/css/all.min.css'],
-    fonts: 'node_modules/@fortawesome/fontawesome-free/webfonts/*',
+    ukjs: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js'],
+    ukcss: ['node_modules/uikit/dist/css/uikit.min.css'],
+    facss: ['node_modules/@fortawesome/fontawesome-free/css/all.min.css'],
+    fafonts: ['node_modules/@fortawesome/fontawesome-free/webfonts/*'],
+    bsjs: ['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'],
+    bsscss: ['node_modules/bootstrap/scss/_variables.scss'],
+    bs3js: ['node_modules/bootstrap/dist/js/bootstrap.min.js'],
+    bs3css: ['node_modules/bootstrap/dist/css/bootstrap.min.css'],
+    bs3fonts: ['node_modules/bootstrap/dist/fonts/*'],
+    jq: ['node_modules/jquery/dist/jquery.min.js'],
+    vendorscss: ['src/vendors/*.css'],
+    vendorsjs: ['src/vendors/*.js'],
+    // bodyjs: ['src/js/*.js'],
+    // fittext: ['node_modules/FitText-UMD/fittext.js'], //FitText
   },
   // template: '',
   src: {
@@ -59,7 +72,20 @@ var paths = {
     js: 'src/js/*.js',
     vendors: 'src/libs/**/*.*',
     img: 'src/img/**/*.+(png|jpg|gif|svg)',
-    scss: 'src/scss/*.scss'
+    scss: 'src/scss/*.scss',
+    minjs: ['src/js/*.js', '!src/js/uikit*.js', '!src/js/*.min.js', '!src/js/*-i.js', '!src/js/*-bak.js', '!src/js/*-old.js',],
+    // excludeminjs: "'!src/js/*.min.js', '!src/js/*-i.js', '!src/js/*-bak.js', '!src/js/*-old.js'",
+    // // [...] will get errors. The variable array cannot be included in a array of [paths.src.js, paths.src.excludeminjs]
+    deljs: ['src/js/*.js', '!src/js/script.js'],
+    injectjs: ['src/js/*.js', '!src/js/script*.js', '!src/js/jquery*.js', '!src/js/bootstrap*.js', '!src/js/ui*.js', '!src/js/*-i.js'],
+    injectcss: ['src/css/*.css', '!src/css/bootstrap*.css', '!src/css/ui*.css', '!src/css/ta*.css', '!src/css/font*.css', '!src/css/main*.css', '!src/css/colors*.css', '!src/css/style*.css'],
+    sasstoscss: ['src/scss/*.scss', '!src/scss/*-i.scss', '!src/scss/*-bak.scss', '!src/scss/*-full.scss'],
+    minicss: ['src/css/*.css', '!src/css/ui*.css', '!src/css/ta*.css', '!src/css/font*.css', '!src/css/bootstrap*.css'],
+    // minicss: ['src/css/*.css', '!src/css/ui*.css', '!src/css/ta*.css', '!src/css/font*.css', bs3 ? '' : '!src/css/bootstrap*.css'],
+    color1html: 'src/' + color1val + '-*.html', // 'src/ncu-*.html'
+    color2html: 'src/' + color2val + '-*.html', // 'src/nthu-*.html'
+    color1css: ['src/css/colors-' + color1val + '*.css'], // 'src/css/colors-ncu*.css'
+    color2css: ['src/css/colors-' + color2val + '*.css'], // 'src/css/colors-nthu*.css'
   },
   dist: {
     root: './dist/',
@@ -69,122 +95,183 @@ var paths = {
     css: 'css',
     js: 'js',
     img: 'img',
-    font: 'webfonts',
-    vendors: 'libs'
+    fafonts: 'webfonts',
+    bs3fonts: 'fonts',
+    vendors: 'libs',
+    injectjs: ['dist/js/*.js', '!dist/js/script*.js', '!dist/js/jquery*.js', '!dist/js/bootstrap*.js', '!dist/js/ui*.js', '!dist/js/*-i.js'],
+    injectcss: ['dist/css/*.css', '!dist/css/bootstrap*.css', '!dist/css/ui*.css', '!dist/css/ta*.css', '!dist/css/font*.css', '!dist/css/main*.css', '!dist/css/colors*.css', '!dist/css/style*.css'],
+    color1html: 'dist/' + color1val + '-*.html',
+    color2html: 'dist/' + color2val + '-*.html',
+    color1css: ['dist/css/colors-' + color1val + '*.css'],
+    color2css: ['dist/css/colors-' + color2val + '*.css'],
   }
 }
 
 // Output tailwind css
 gulp.task('tailwind', function() {
   return gulp.src('tailwind.css')
-    .pipe(mode.development(
-      postcss([
-        atimport(),
-        tailwindcss("tailwind.config.js"),
-        autoprefixer()
+    .pipe(gulpif(tw, postcss([
+      atimport(),
+      tailwindcss("tailwind.config.js"),
+      autoprefixer()
       ])
     ))
-    .pipe(mode.production(
-      postcss([
-        atimport(),
-        tailwindcss("tailwind.config.js"),
-        autoprefixer()
+    .pipe(gulpif(tw, gulp.dest(paths.src.root + paths.dist.css)))
+})
+
+gulp.task('tailwind-build', function() {
+  return gulp.src('tailwind.css')
+    .pipe(gulpif(tw, postcss([
+      atimport(),
+      tailwindcss("tailwind.config.js"),
+      autoprefixer()
       ])
     ))
+    .pipe(gulpif(tw, gulp.dest(paths.src.root + paths.dist.css)))
+
     //Minify css
-    .pipe(mode.production(
-      cleanCSS({
+    .pipe(gulpif(tw, cleanCSS({
         compatibility: 'ie8'
       })
     ))
-    .pipe(mode.production(
-      rename({
+    .pipe(gulpif(tw, rename({
         suffix: '.min'
       })
     ))
-    .pipe(mode.purge(
-      postcss([
+    .pipe(gulpif(tw, gulp.dest(paths.dist.root + paths.dist.css)))
+})
+
+gulp.task('tailwind-purge', function() {
+  return gulp.src('tailwind.css')
+    .pipe(gulpif(tw, postcss([
         atimport(),
         tailwindcss("tailwind.config.js"),
-        purgecss({ //For "@fullhuman/postcss-purgecss"
-          content: [paths.src.html, paths.src.js],
-          defaultExtractor: content =>
-            content.match(/[\w-/:!@]+(?<!:)/g) || []
+        purgecss({ // Using '@fullhuman/postcss-purgecss'
+          content: [paths.src.html, paths.src.js], // Must be necessary with 'tailwind.config.js'
+          // defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+          defaultExtractor: content => content.match(/[\w-/:!@]+(?<!:)/g) || []
         }),
         autoprefixer()
       ])
     ))
+
     //Minify css
-    .pipe(mode.purge(
-      cleanCSS({
+    .pipe(gulpif(tw, cleanCSS({
         compatibility: 'ie8'
       })
     ))
-    .pipe(mode.purge(
-      rename({
+    .pipe(gulpif(tw, rename({
         suffix: '.min'
       })
     ))
-    // .pipe(mode.development(
-    //   rename({
-    //     suffix: '.min'
-    //   })
-    // ))
-
-    //Minify css
-    // .pipe(cleanCSS({
-    //   compatibility: 'ie8'
-    // }))
-    // .pipe(rename({
-    //   suffix: '.min'
-    // }))
-
-    .pipe(mode.development(gulp.dest(paths.src.root + paths.dist.css)))
-    .pipe(mode.production(gulp.dest(paths.dist.root + paths.dist.css)))
-    .pipe(mode.purge(gulp.dest(paths.dist.root + paths.dist.css)))
-  // .pipe(mode.production(gulp.dest(paths.dist.root + paths.dist.css)))
-  // .pipe(gulp.dest(paths.src.root + paths.dist.vendors))
-  // .pipe(gulp.dest(paths.dist.root + paths.dist.vendors))
+    .pipe(gulpif(tw, gulp.dest(paths.dist.root + paths.dist.css)))
 });
 
-// copy vendors files to src & dist
-gulp.task('copyjs', function() {
-  return gulp.src(paths.vendors.js)
-    .pipe(gulp.dest(paths.src.root + paths.dist.js))
-    .pipe(gulp.dest(paths.dist.root + paths.dist.js))
-  // .pipe(mode.production(gulp.dest(paths.dist.vendors)))
-});
-gulp.task('copycss', function() {
-  return gulp.src(paths.vendors.css)
+gulp.task('ukjs', function() {
+  return gulp.src(paths.vendors.ukjs, {allowEmpty: true})
+    .pipe(gulpif(uk, gulp.dest(paths.src.root + paths.dist.js)))
+    .pipe(gulpif(uk, gulp.dest(paths.dist.root + paths.dist.js)))
+
+    // .pipe(gulp.dest(paths.src.root + paths.dist.js))
+    // .pipe(gulp.dest(paths.dist.root + paths.dist.js))
+    // .pipe(mode.production(gulp.dest(paths.dist.vendors)))
+})
+gulp.task('ukcss', function() {
+  return gulp.src(paths.vendors.ukcss, {allowEmpty: true})
     // Find digits between "font-size:" and "px" in Visual Studio Code using: "font-size:(\d+)px" or "font-size:\s+(\d+)px"
-    //\d+ means one or more digits, \s means one or more whitespaces
+    //\d+ means one or more digits
     // .pipe(replace('font-size:12px', 'font-size:calc(12rem/16)'))
-    .pipe(replace(/font-size:(\d+)px/g, function(match) {
+    .pipe(gulpif(uk, replace(/font-size:(\d+)px/g, function(match) {
       return "font-size:calc(" + match.slice(10, -2) + "rem/16)"
-    }))
-    .pipe(gulp.dest(paths.src.root + paths.dist.css))
-    .pipe(gulp.dest(paths.dist.root + paths.dist.css))
-  // .pipe(gulp.dest(paths.dist.root + paths.dist.css))
-});
-gulp.task('fontawesome', function() {
-  return gulp.src(paths.vendors.fontawesome)
-    .pipe(rename("fontawesome.min.css"))
-    .pipe(gulp.dest(paths.src.root + paths.dist.css))
-    .pipe(gulp.dest(paths.dist.root + paths.dist.css))
-  // .pipe(gulp.dest(paths.dist.root + paths.dist.css))
-});
-gulp.task('copyfonts', function() {
-  return gulp.src(paths.vendors.fonts)
-    .pipe(gulp.dest(paths.src.root + paths.dist.font))
-    .pipe(gulp.dest(paths.dist.root + paths.dist.font))
-});
+    })))
+    .pipe(gulpif(uk, gulp.dest(paths.src.root + paths.dist.css)))
+    .pipe(gulpif(uk, gulp.dest(paths.dist.root + paths.dist.css)))
+})
+gulp.task('vendorsjs', function() {
+  return gulp.src(paths.vendors.vendorsjs, {allowEmpty: true})
+    .pipe(gulpif(vendorsjs, gulp.dest(paths.src.root + paths.dist.js)))
+    .pipe(gulpif(vendorsjs, gulp.dest(paths.dist.root + paths.dist.js)))
+})
+gulp.task('vendorscss', function() {
+  // return gulp.src([paths.vendors.vendorscss]) // [paths.vendors.vendorscss] will get errors. The variable array cannot be included in a array
+  return gulp.src(paths.vendors.vendorscss, {allowEmpty: true})
+    .pipe(gulpif(vendorscss, gulp.dest(paths.src.root + paths.dist.css)))
+    .pipe(gulpif(vendorscss, gulp.dest(paths.dist.root + paths.dist.css)))
+})
+gulp.task('facss', function() {
+  return gulp.src(paths.vendors.facss, {allowEmpty: true})
+    .pipe(gulpif(fa, rename("fontawesome.min.css")))
+    .pipe(gulpif(fa, gulp.dest(paths.src.root + paths.dist.css)))
+    .pipe(gulpif(fa, gulp.dest(paths.dist.root + paths.dist.css)))
+})
+gulp.task('fafonts', function() {
+  return gulp.src(paths.vendors.fafonts, {allowEmpty: true})
+    .pipe(gulpif(fa, gulp.dest(paths.src.root + paths.dist.fafonts)))
+    .pipe(gulpif(fa, gulp.dest(paths.dist.root + paths.dist.fafonts)))
+})
+gulp.task('bsjs', function() {
+  return gulp.src(paths.vendors.bsjs, {allowEmpty: true})
+    .pipe(gulpif(bs, gulp.dest(paths.src.root + paths.dist.js)))
+    .pipe(gulpif(bs, gulp.dest(paths.dist.root + paths.dist.js)))
+})
+gulp.task('bsscss', function() {
+  // return gulp.src('bootstrap.scss')
+  return gulp.src(paths.vendors.bsscss)
+    // Or just run find 'enable-rounded:(\s+)true' & replace in VScode
+    // \s+ means one or more whitespaces, match.slice(15, -4): all spaces between words
+    .pipe(gulpif(bs, replace(/enable-rounded:(\s+)true/g, function(match) {
+      return "enable-rounded:" + match.slice(15, -4) + "false"
+    })))
+    .pipe(gulpif(bs, gulp.dest('node_modules/bootstrap/scss/')))
+})
+gulp.task('bscss', function() {
+  return gulp.src('bootstrap.scss', {allowEmpty: true})
+    .pipe(gulpif(bs, sass().on('error', sass.logError)))
+    .pipe(gulpif(bs, gulpautoprefixer())) //Cannot use autoprefixer or get err
+    .pipe(gulpif(bs, replace('@charset "UTF-8";', '')))
+    .pipe(gulpif(bs, replace(/font-size:(\d+)px/g, function(match) {
+      return "font-size:calc(" + match.slice(10, -2) + "rem/16)"
+    })))
+    .pipe(gulpif(bs, gulp.dest(paths.src.root + paths.dist.css)))
+    .pipe(gulpif(bs, gulp.dest(paths.dist.root + paths.dist.css)))
+
+})
+gulp.task('bs3js', function() {
+  return gulp.src(paths.vendors.bs3js, {allowEmpty: true})
+    .pipe(gulpif(bs3, gulp.dest(paths.src.root + paths.dist.js)))
+    .pipe(gulpif(bs3, gulp.dest(paths.dist.root + paths.dist.js)))
+})
+gulp.task('bs3css', function() {
+  return gulp.src(paths.vendors.bs3css, {allowEmpty: true})
+    .pipe(gulpif(bs3, replace(/font-size:(\d+)px/g, function(match) {
+      return "font-size:calc(" + match.slice(10, -2) + "rem/16)"
+    })))
+    .pipe(gulpif(bs3, gulp.dest(paths.src.root + paths.dist.css)))
+    .pipe(gulpif(bs3, gulp.dest(paths.dist.root + paths.dist.css)))
+})
+gulp.task('bs3fonts', function() {
+  return gulp.src(paths.vendors.bs3fonts, {allowEmpty: true})
+    .pipe(gulpif(bs3, gulp.dest(paths.src.root + paths.dist.bs3fonts)))
+    .pipe(gulpif(bs3, gulp.dest(paths.dist.root + paths.dist.bs3fonts)))
+})
+gulp.task('jqjs', function() {
+  return gulp.src(paths.vendors.jq, {allowEmpty: true})
+    .pipe(gulpif(jq, gulp.dest(paths.src.root + paths.dist.js)))
+    .pipe(gulpif(jq, gulp.dest(paths.dist.root + paths.dist.js)))
+    // .pipe(gulp.dest(paths.src.root + paths.dist.js))
+    // .pipe(gulp.dest(paths.dist.root + paths.dist.js))
+    // .pipe(mode.production(gulp.dest(paths.dist.vendors)))
+})
 
 //Handlebars templates
 //gulp.task('templates', async function(){}): It must need the 'async' or get error 'Did you forget to signal async completion?'
 gulp.task('templates', async function() {
   var templateData = {
-      title: '中研院近史所圖書館',
-      focus: 'true' //Add the class 'focus' to <body> for AA
+      title: '新光醫院圖書館',
+      bodyClass: true,
+      bodyFocus: false,
+      jqueryBody: false,
+      bootstrapBody: false,
     },
     options = {
       batch: [paths.src.root + paths.dist.templates + '/partials'],
@@ -207,108 +294,104 @@ gulp.task('delhtml', function() {
 // inject css & js to html - https://www.npmjs.com/package/gulp-inject#method-2-use-gulp-inject-s-name-option
 gulp.task('inject', function() {
   return gulp.src(paths.src.html)
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/bootstrap*.css'], {
+    .pipe(gulpif(bs, inject(gulp.src([paths.src.root + paths.dist.css + '/bootstrap*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'bs',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/uikit*.css'], {
+    })))
+    .pipe(gulpif(uk, inject(gulp.src([paths.src.root + paths.dist.css + '/uikit*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'uk',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/tailwind*.css'], {
+    })))
+    .pipe(gulpif(tw, inject(gulp.src([paths.src.root + paths.dist.css + '/tailwind*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'tw',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/font*.css'], {
+    })))
+    .pipe(gulpif(fa, inject(gulp.src([paths.src.root + paths.dist.css + '/font*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'fa',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/main.css'], {
+    })))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/main.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'main',
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/colors.css'], {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/colors.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'colors',
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style.css'], {
+    .pipe(gulpif(othercolors, inject(gulp.src([paths.src.root + paths.dist.css + '/colors-*.css'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'style',
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style-*.css'], {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style-*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'style2',
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/*.css', '!' + paths.src.root + paths.dist.css + '/bootstrap*.css', '!' + paths.src.root + paths.dist.css + '/ui*.css', '!' + paths.src.root + paths.dist.css + '/ta*.css', '!' + paths.src.root + paths.dist.css + '/font*.css', '!' + paths.src.root + paths.dist.css + '/main*.css', '!' + paths.src.root + paths.dist.css + '/colors*.css', '!' + paths.src.root + paths.dist.css + '/style*.css'], {
+    .pipe(inject(gulp.src(paths.src.injectcss, {allowEmpty: true}, {
       read: false
     }), {
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/uikit.min.js', {
+    .pipe(gulpif(uk, inject(gulp.src([paths.src.root + paths.dist.js + '/uikit.min.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'uk',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/uikit-icons.min.js', {
+    })))
+    .pipe(gulpif(uk, inject(gulp.src([paths.src.root + paths.dist.js + '/uikit-icons.min.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'uk2',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/jquery.min.js', {
+    })))
+    .pipe(gulpif(jq, inject(gulp.src([paths.src.root + paths.dist.js + '/jquery.min.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'jq',
       relative: true,
       removeTags: true
-    }))
-    // .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/bootstrap*.js', {
-    //   //For bootstrap 4
-    //   read: false
-    // }), {
-    //   name: 'bs',
-    //   relative: true,
-    //   removeTags: true
-    // }))
-    .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/bootstrap*.js', {
+    })))
+    .pipe(gulpif(bs, inject(gulp.src([paths.src.root + paths.dist.js + '/bootstrap*.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'bs',
       relative: true,
-      removeTags: true,
-      transform: function(filepath) {
-        return '<script src="' + filepath + '" defer>' + '</script>';
-      }
-    }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/script.js'], {
+      removeTags: true
+    })))
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/script.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'head',
@@ -318,7 +401,7 @@ gulp.task('inject', function() {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/*.js', '!' + paths.src.root + paths.dist.js + '/script*.js', '!' + paths.src.root + paths.dist.js + '/jquery*.js', '!' + paths.src.root + paths.dist.js + '/bootstrap*.js', '!' + paths.src.root + paths.dist.js + '/ui*.js', '!' + paths.src.root + paths.dist.js + '/*-i.js'], {
+    .pipe(inject(gulp.src(paths.src.injectjs, {allowEmpty: true}, {
       read: false
     }), {
       relative: true,
@@ -330,111 +413,129 @@ gulp.task('inject', function() {
     .pipe(gulp.dest(paths.src.root))
   // .pipe(gulp.dest(paths.dist.root))
 });
+gulp.task('inject-color1', function() {
+  return gulp.src(paths.src.color1html)
+    .pipe(gulpif(color1, inject(gulp.src(paths.src.color1css, {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulp.dest(paths.src.root))
+});
+gulp.task('inject-color2', function() {
+  return gulp.src(paths.src.color2html)
+    .pipe(gulpif(color2, inject(gulp.src(paths.src.color2css, {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulp.dest(paths.src.root))
+});
 
 gulp.task('build-inject', function() {
   return gulp.src(paths.dist.html)
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/bootstrap*.css'], {
+    .pipe(gulpif(bs, inject(gulp.src([paths.dist.root + paths.dist.css + '/bootstrap*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'bs',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/uikit*.css'], {
+    })))
+    .pipe(gulpif(uk, inject(gulp.src([paths.dist.root + paths.dist.css + '/uikit*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'uk',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/tailwind*.css'], {
+    })))
+    .pipe(gulpif(tw, inject(gulp.src([paths.dist.root + paths.dist.css + '/tailwind*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'tw',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/font*.css'], {
+    })))
+    .pipe(gulpif(fa, inject(gulp.src([paths.dist.root + paths.dist.css + '/font*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'fa',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/main*.css'], {
+    })))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/main*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'main',
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/colors*.css'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/colors.min.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'colors',
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style.min.css'], {
+    .pipe(gulpif(othercolors, inject(gulp.src([paths.dist.root + paths.dist.css + '/colors-*.css'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style.min.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'style',
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style-*.css'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style-*.css'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'style2',
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/*.css', '!' + paths.dist.root + paths.dist.css + '/bootstrap*.css', '!' + paths.dist.root + paths.dist.css + '/ui*.css', '!' + paths.dist.root + paths.dist.css + '/ta*.css', '!' + paths.dist.root + paths.dist.css + '/font*.css', '!' + paths.dist.root + paths.dist.css + '/main*.css', '!' + paths.dist.root + paths.dist.css + '/colors*.css', '!' + paths.dist.root + paths.dist.css + '/style*.css'], {
+    .pipe(inject(gulp.src(paths.dist.injectcss, {allowEmpty: true}, {
       read: false
     }), {
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/uikit.min.js', {
+    .pipe(gulpif(uk, inject(gulp.src([paths.dist.root + paths.dist.js + '/uikit.min.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'uk',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/uikit-icons.min.js', {
+    })))
+    .pipe(gulpif(uk, inject(gulp.src([paths.dist.root + paths.dist.js + '/uikit-icons.min.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'uk2',
       relative: true,
       removeTags: true
-    }))
-    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/jquery.min.js', {
+    })))
+    .pipe(gulpif(jq, inject(gulp.src([paths.dist.root + paths.dist.js + '/jquery.min.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'jq',
       relative: true,
       removeTags: true
-    }))
-    // .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/bootstrap*.js', {
-    //   //For bootstrap 4
-    //   read: false
-    // }), {
-    //   name: 'bs',
-    //   relative: true,
-    //   removeTags: true
-    // }))
-    .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/bootstrap*.js', {
+    })))
+    .pipe(gulpif(bs, inject(gulp.src([paths.dist.root + paths.dist.js + '/bootstrap*.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'bs',
       relative: true,
-      removeTags: true,
-      transform: function(filepath) {
-        return '<script src="' + filepath + '" defer>' + '</script>';
-      }
-    }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/script*.js'], {
+      removeTags: true
+    })))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/script*.js'], {allowEmpty: true}, {
       read: false
     }), {
       name: 'head',
@@ -444,7 +545,7 @@ gulp.task('build-inject', function() {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js', '!' + paths.dist.root + paths.dist.js + '/script*.js', '!' + paths.dist.root + paths.dist.js + '/jquery*.js', '!' + paths.dist.root + paths.dist.js + '/bootstrap*.js', '!' + paths.dist.root + paths.dist.js + '/ui*.js', '!' + paths.dist.root + paths.dist.js + '/*-i.js'], {
+    .pipe(inject(gulp.src(paths.dist.injectjs, {allowEmpty: true}, {
       read: false
     }), {
       relative: true,
@@ -455,11 +556,33 @@ gulp.task('build-inject', function() {
     }))
     .pipe(gulp.dest(paths.dist.root))
 });
+gulp.task('build-inject-color1', function() {
+  return gulp.src(paths.dist.color1html)
+    .pipe(gulpif(color1, inject(gulp.src(paths.dist.color1css, {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulp.dest(paths.dist.root))
+});
+gulp.task('build-inject-color2', function() {
+  return gulp.src(paths.dist.color2html)
+    .pipe(gulpif(color2, inject(gulp.src(paths.dist.color2css, {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulp.dest(paths.dist.root))
+});
 
 
 // Compile SCSS
 gulp.task('sass', function() {
-  return gulp.src([paths.src.scss, '!' + paths.src.root + paths.dist.scss + '/*-i.scss', '!' + paths.src.root + paths.dist.scss + '/*-bak.scss'])
+  return gulp.src(paths.src.sasstoscss)
     // .pipe(sass({
     //   outputStyle: 'expanded'  //For old "gulp-sass"
     // }).on('error', sass.logError))
@@ -472,7 +595,7 @@ gulp.task('sass', function() {
 
 // Minify + Combine CSS
 gulp.task('css', function() {
-  return gulp.src([paths.src.css, '!' + paths.src.root + paths.dist.css + '/font*.css', '!' + paths.src.root + paths.dist.css + '/tail*.css', '!' + paths.src.root + paths.dist.css + '/ui*.css'])
+  return gulp.src(paths.src.minicss)
     .pipe(mode.development(
       postcss([
         atimport(),
@@ -498,11 +621,10 @@ gulp.task('css', function() {
     .pipe(mode.purge(
       postcss([
         atimport(),
-        purgecss({
+        purgecss({ // Using '@fullhuman/postcss-purgecss'
           content: [paths.src.html, paths.src.js],
-          // whitelist: ['opacity-100'],
-          defaultExtractor: content =>
-            content.match(/[\w-/:!@]+(?<!:)/g) || []
+          // 'defaultExtractor' Must be necessary here
+          defaultExtractor: content => content.match(/[\w-/:!@]+(?<!:)/g) || []
         }),
         autoprefixer()
       ])
@@ -538,10 +660,42 @@ gulp.task('css', function() {
     // }))
     .pipe(gulp.dest(paths.dist.root + paths.dist.css))
 });
+gulp.task('mincss', function() {
+  return gulp.src([paths.src.root + paths.dist.css + '/*.min.css'])
+    .pipe(mode.production(
+      postcss([
+        atimport(),
+        autoprefixer()
+      ])
+    ))
+    .pipe(mode.production(
+      cleanCSS({
+        compatibility: 'ie8'
+      })
+    ))
+    .pipe(mode.purge(
+      postcss([
+        atimport(),
+        purgecss({
+          content: [paths.src.html, paths.src.js],
+          // whitelist: ['opacity-100'],
+          defaultExtractor: content =>
+            content.match(/[\w-/:!@]+(?<!:)/g) || []
+        }),
+        autoprefixer()
+      ])
+    ))
+    .pipe(mode.purge(
+      cleanCSS({
+        compatibility: 'ie8'
+      })
+    ))
+    .pipe(gulp.dest(paths.dist.root + paths.dist.css))
+});
 
 // Minify + Combine JS
 gulp.task('js', function() {
-  return gulp.src([paths.src.js, '!' + paths.src.root + paths.dist.js + '/*.min.js', '!' + paths.src.root + paths.dist.js + '/*-i.js', '!' + paths.src.root + paths.dist.js + '/*-bak.js'])
+  return gulp.src(paths.src.minjs)
     // .pipe(mode.production(
     //   autopolyfiller('script_polyfill.js', {
     //     browsers: require('autoprefixer').default
@@ -570,23 +724,41 @@ gulp.task('js', function() {
     //   suffix: '.min'
     // }))
     // .pipe(gulp.dest(paths.dist.root + paths.dist.js))
-    .pipe(mode.development(gulp.dest(paths.src.root + paths.dist.js)))
     .pipe(mode.production(gulp.dest(paths.dist.root + paths.dist.js)))
     .pipe(mode.purge(gulp.dest(paths.dist.root + paths.dist.js)))
 
     .pipe(browserSync.stream());
 });
 
+//It seems not working
+// gulp.task('minjs', function() {
+//   return gulp.src([paths.src.root + paths.dist.js + '/*.min.js'])
+//     .pipe(mode.production(
+//       uglify()
+//     ))
+//     .pipe(mode.purge(
+//       uglify()
+//     ))
+//     .pipe(mode.production(gulp.dest(paths.dist.root + paths.dist.js)))
+//     .pipe(mode.purge(gulp.dest(paths.dist.root + paths.dist.js)))
+
+//     .pipe(browserSync.stream());
+// });
+
 // Compress (JPEG, PNG, GIF, SVG, JPG)
 gulp.task('img', function() {
   return gulp.src(paths.src.img)
-    .pipe(imageMin([
-      imageMin.gifsicle(),
-      imageMin.mozjpeg(),
-      imageMin.optipng(),
-      imageMin.svgo(),
-      pngQuint(),
-      jpgRecompress()
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      // imagemin.svgo got removing ',' prolblem in svg
+      // imagemin.svgo({
+      //     plugins: [
+      //         {removeViewBox: true},
+      //         {cleanupIDs: false}
+      //     ]
+      // })
     ]))
     .pipe(gulp.dest(paths.dist.root + paths.dist.img));
 });
@@ -602,6 +774,22 @@ gulp.task('dist', function() {
 // clean dist and keep the directory
 gulp.task('clean', function() {
   return del(['dist/**', '!dist']);
+});
+
+// clean css
+gulp.task('deletecss', function() {
+  return del([paths.src.root + paths.dist.css + '/*']);
+});
+
+// clean js
+gulp.task('deletejs', function() {
+  return gulpif(onlyscript, del(paths.src.deljs));
+  // return del([paths.src.root + paths.dist.js + '/*.js', paths.src.deljs]);
+  // if (onlyscript) {
+  //   return del([paths.src.root + paths.dist.js + '/*.js', '!src/js/script.js']);
+  // } else {
+  //   return del([paths.src.root + paths.dist.js + '/*.js', '!src/js/script.js', '!src/js/-bak*.js', '!src/js/-old*.js', '!src/js/-i*.js']);
+  // }
 });
 
 // Watch (SASS, CSS, JS, and HTML) reload browser on change
@@ -622,11 +810,13 @@ gulp.task('watch', function() {
 
 //------------------- First run 'gulp start' ---------------------------------------------------------
 //First Preset all files
-gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'fontawesome', 'copyfonts'));
-gulp.task('notw', gulp.series('copyjs', 'copycss', 'fontawesome', 'copyfonts'));
+// gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'facss', 'copyfonts'));
+// gulp.task('vendors', gulp.series('copyjs', 'copycss', 'facss', 'copyfonts'));
+gulp.task('vendors', gulp.series('ukjs', 'ukcss', 'bsscss', 'bscss', 'bsjs', 'bs3js', 'bs3css', 'bs3fonts', 'facss', 'fafonts', 'jqjs', 'vendorsjs', 'vendorscss'));
 
 //Compile Tailwind to CSS and minify css, using 'gulp tailwind' & 'gulp tailwind --production' to purge css on production
-gulp.task('tocss', gulp.series('tailwind', 'sass', 'css'));
+gulp.task('tocss', gulp.series('sass', 'css', 'mincss'));
+// gulp.task('tocss', gulp.series('tailwind', 'sass', 'css'));
 
 //Compile SCSS to CSS and purge & minify css, needed when modify scss
 gulp.task('scss', gulp.series('sass', 'css'));
@@ -636,21 +826,19 @@ gulp.task('scss', gulp.series('sass', 'css'));
 //Inject path manually in 'meta.hbs' files, no 'inject' task
 gulp.task('temp', gulp.series('templates'));
 //Inject path to all html files relative to /src and /dist [NO for different injection in html]
-gulp.task('html', gulp.series('delhtml', 'templates', 'sass', 'js', 'inject'));
+gulp.task('html', gulp.series('delhtml', 'templates', 'deletecss', 'sass', 'js', 'inject'));
 
 //0. Preset
-gulp.task('start', gulp.series('vendors', 'delhtml', 'templates', 'sass', 'js', 'inject'));
-gulp.task('startnotw', gulp.series('notw', 'delhtml', 'templates', 'sass', 'js', 'inject'));
+gulp.task('start', gulp.series('deletecss', 'deletejs', 'vendors', 'delhtml', 'templates', 'sass', 'js', 'inject'));
 
 //1. Preset then watch
-gulp.task('server', gulp.series('vendors', 'templates', 'sass', 'css', 'js', 'inject', 'watch'));
-gulp.task('servernotw', gulp.series('notw', 'templates', 'sass', 'css', 'js', 'inject', 'watch'));
+gulp.task('server', gulp.series('deletecss', 'deletejs', 'vendors', 'tailwind', 'delhtml', 'templates', 'sass', 'inject', 'inject-color1', 'inject-color2', 'watch'));
 
-//3. Prepare all assets for production, run: 'yarn build-nohtml' or 'yarn build'
-gulp.task('build-nohtml', gulp.series('vendors', 'tocss', 'js', 'img'));
-gulp.task('build-purge', gulp.series('dist', 'clean', 'vendors', 'delhtml', 'templates', 'tocss', 'js', 'img', 'build-inject'));
-gulp.task('build', gulp.series('dist', 'clean', 'vendors', 'delhtml', 'templates', 'tocss', 'js', 'img', 'inject', 'build-inject'));
-gulp.task('buildnotw', gulp.series('dist', 'clean', 'notw', 'delhtml', 'templates', 'tocss', 'js', 'img', 'inject', 'build-inject'));
+//2. Prepare all assets for production, run: 'yarn build-nohtml' or 'yarn build'
+gulp.task('build-nohtml', gulp.series('deletecss', 'deletejs', 'vendors', 'scss', 'js', 'img'));
+gulp.task('build-purge', gulp.series('dist', 'clean', 'deletecss', 'deletejs', 'delhtml', 'vendors', 'tailwind', 'templates', 'img', 'tailwind-purge', 'js', 'scss', 'inject', 'inject-color1', 'inject-color2', 'build-inject', 'build-inject-color1', 'build-inject-color2'));
+gulp.task('build', gulp.series('dist', 'clean', 'deletecss', 'deletejs', 'delhtml', 'vendors', 'tailwind', 'templates', 'img', 'tailwind-build', 'js', 'scss', 'inject', 'inject-color1', 'inject-color2', 'build-inject', 'build-inject-color1', 'build-inject-color2'));
+
 
 //--- 0.First run: 'gulp start'
 //--- 1.For development run: 'gulp server' or 'yarn server'

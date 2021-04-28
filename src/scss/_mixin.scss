@@ -472,7 +472,7 @@ $z-index:0 !default;
   @if $mask {
     padding-bottom: calc(25rem/16);
     &:after {
-      @include pseudo-content($display:block, $pos:absolute, $content:true, $background:true, $bg:$gradient-linear-white-transparent-top,$bg-txt:false, $l:0, $r:0, $b:0, $h:calc(45rem/16), $pointer-off:true);
+      @include pseudo-content($display:block, $pos:absolute, $content:true, $background:true, $bg:$gradient-linear-white-transparent-top,$bg-txt:false, $l:0, $r:0, $b:0, $h:1rem, $pointer-off:true);
     }
   }
 }

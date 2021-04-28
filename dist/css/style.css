@@ -1,0 +1,78 @@
+.logoimg > * {
+  max-height: 50px;
+  width: calc(1313px/141*50);
+}
+
+@media (min-width: 480px) {
+  .logoimg > * {
+    min-width: 400px;
+    width: auto;
+  }
+}
+
+/*---------- IE10+ ------------------------------*/
+
+.uk-heading-line > ::after, .uk-heading-line > ::before {
+  top: calc(50% - (2px/ 2));
+  border-bottom: calc(2px) dotted #2779bd;
+}
+
+.uk-input, .uk-select, .uk-textarea, .uk-button-default {
+  border-color: #d0d0d0;
+}
+
+.icon {
+  width: 65px;
+  margin: 2px 0;
+}
+
+body {
+  background-size: 100% 100%;
+  background-position: center top;
+}
+
+#footer,
+footer {
+  background: none;
+}
+
+#footer *,
+footer * {
+  color: #2e2e2e !important;
+}
+
+#banner {
+  background-image: url(../img/banner.jpg);
+  background-position: right bottom;
+}
+
+#offcanvas * {
+  color: white !important;
+}
+
+.heading_line > ::before, .heading_line > ::after, .uk-heading-line > ::before, .uk-heading-line > ::after {
+  top: calc(50% - (2px/ 2));
+  border-bottom: calc(2px) dotted #2779bd;
+}
+
+.irs--flat .irs-bar, .irs--flat .irs-single, .irs--flat .irs-handle > i:first-child, .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+  background: #2779bd;
+}
+
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
+  border-top-color: #2779bd;
+}
+
+/*---------- Only landscape in mobile ------------------------------*/
+
+/*---------- IE10+ ------------------------------*/
+
+/* ----------- iPhone ----------- */
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+}
+
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */
+}

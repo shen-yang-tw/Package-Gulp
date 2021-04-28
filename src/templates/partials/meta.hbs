@@ -1,4 +1,16 @@
-{{!-- {{> meta bootstrap='true' bootstrap4='true' headStyle='true' editor='true' moreStyle='true' jquery='true' navMenu='true' navMenuAccordion'true'}} --}}
+{{!-- {{> meta bootstrap=true bootstrap4=true headStyle=true editor=true moreStyle=true jquery=true navMenu=true navMenuAccordion'true'}} --}}
+{{#if bootstrap}}
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+<link rel="bookmark" href="img/favicon.png" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>{{title}}</title>
+<!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+{{else}}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -6,17 +18,33 @@
 <!-- Fix phone number style for MS Edge -->
 <meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
 <title>{{title}}</title>
+{{#if favicon}}
+<!-- favicon -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+<meta name="application-name" content="&nbsp;" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<!-- /favicon -->
+{{/if}}
+{{/if}}
 {{#if bootstrap}}
+<!-- tw:css -->
+<link rel="stylesheet" href="css/tailwind.css">
+<!-- endinject -->
 <!-- bs:css -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- endinject -->
-{{/if}}
+{{else}}
 <!-- uk:css -->
 <link rel="stylesheet" href="css/uikit.min.css">
 <!-- endinject -->
 <!-- tw:css -->
 <link rel="stylesheet" href="css/tailwind.css">
 <!-- endinject -->
+{{/if}}
 <!-- fa:css -->
 <link rel="stylesheet" href="css/fontawesome.min.css">
 <!-- endinject -->
@@ -27,12 +55,23 @@
 <!-- main:css -->
 <link rel="stylesheet" href="css/main.css">
 <!-- endinject -->
+{{#if colors}}
 <!-- colors:css -->
 <link rel="stylesheet" href="css/colors.css">
 <!-- endinject -->
+{{/if}}
+{{#if othercolors}}
+<!-- othercolors:css -->
+<link rel="stylesheet" href="css/colors-nthu.css">
+<!-- endinject -->
+{{/if}}
 <!-- style:css -->
 <link rel="stylesheet" href="css/style.css">
 <!-- endinject -->
+{{#if style2}}
+<!-- style2:css -->
+<!-- endinject -->
+{{/if}}
 {{#if editor}}
 <!-- inject:css -->
 <link rel="stylesheet" href="css/editor.css">
@@ -49,19 +88,21 @@
 <!-- uk2:js -->
 <script src="js/uikit-icons.min.js"></script>
 <!-- endinject -->
-{{#if jquery}}
-<!-- jq:js -->
-<script src="js/jquery.min.js"></script>
+{{#if jqueryHead}}
+<!-- jq-defer:js -->
+<script src="js/jquery.min.js" defer></script>
 <!-- endinject -->
 {{/if}}
-{{#if bootstrap}}
+{{#if bootstrapHead}}
 <!-- bs:js -->
-<script src="js/bootstrap.bundle.min.js"{{#if bootstrap4}}{{else}} defer{{/if}}></script>
+<script src="js/bootstrap.min.js" defer></script>
 <!-- endinject -->
 {{/if}}
+{{#if script}}
 <!-- head:js -->
 <script src="js/script.js" defer></script>
 <!-- endinject -->
+{{/if}}
 {{#if navMenu}}
 <!-- inject:js -->
 <script src="js/nav-menu.js" defer></script>

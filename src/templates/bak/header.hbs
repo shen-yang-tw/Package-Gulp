@@ -1,38 +1,38 @@
-{{!-- {{>header topNav='true' hrefForAA='true' 01active='true' borderHR='true'}} --}}
+{{!-- {{>header topNav=true hrefForAA=true 01active=true tw-borderHR=true}} --}}
 
 <!-- header -->
 <header class="">
 	{{#if topNav}}
-	<nav class="bg_primary py-1 text-center relative uk-visible@m" uk-margin>
-		<div class="px-4 py-1 uk-container">
-			<div class="sub_nav margin_x_child text-sm h-full uk-flex uk-flex-center uk-flex-middle" uk-margin>
+	<nav class="bg_primary tw-py-1 tw-text-center tw-relative uk-visible@m" uk-margin>
+		<div class="tw-px-4 tw-py-1 uk-container">
+			<div class="sub_nav margin_x_child tw-text-sm tw-h-full uk-flex uk-flex-center uk-flex-middle" uk-margin>
 				{{#if hrefForAA}}
-				<span class="uk-visible@m"><a class="px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U" style="padding-bottom: 3px;">:::</a></span>
+				<span class="uk-visible@m"><a class="tw-px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U" style="padding-bottom: 3px;">:::</a></span>
 				{{/if}}
-				<span><a class="px-2" href="index.html">回首頁</a></span>
-				<span><a class="px-2" href="#">常見問題</a></span>
-				<span><a class="px-2" href="#">聯絡我們</a></span>
+				<span><a class="tw-px-2" href="index.html">回首頁</a></span>
+				<span><a class="tw-px-2" href="#">常見問題</a></span>
+				<span><a class="tw-px-2" href="#">聯絡我們</a></span>
 			</div>
 		</div>
 	</nav>
 	{{/if}}
 	<div class="uk-sticky" uk-sticky="media: (max-width: 959px); cls-active: shadow-xl bg-white">
 		<nav>
-			<div class="relative">
-				{{!-- <div class="bg-white opacity-85 uk-position-cover"></div> --}}
-				<div class="px-4 py-1 uk-container">
+			<div class="tw-relative">
+				{{!-- <div class="bg-white tw-opacity-85 uk-position-cover"></div> --}}
+				<div class="tw-px-4 tw-py-1 uk-container">
 					<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
 						<div class="logo">
-							<h1 class="m-0 uk-flex uk-flex-middle">
+							<h1 class="tw-m-0 uk-flex uk-flex-middle">
 								<a class="logo" href="index.html" title="{{title}}">
 									<img class="uk-preserve" data-src="img/logo.svg" data-width data-height alt="{{title}}" uk-img uk-svg>
 								</a>
 							</h1>
 						</div>
-						<div class="m-0 relative uk-width-auto uk-visible@m">
-							<div class="sub_nav text-xs uk-flex uk-flex-middle">
+						<div class="tw-m-0 tw-relative uk-width-auto uk-visible@m">
+							<div class="sub_nav tw-text-xs uk-flex uk-flex-middle">
 								{{#if hrefForAA}}
-								<span class="uk-visible@m"><a class="text-base px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U" style="padding-bottom: 3px;">:::</a></span>
+								<span class="uk-visible@m"><a class="tw-text-base tw-px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U" style="padding-bottom: 3px;">:::</a></span>
 								{{/if}}
 								<div>
 									<span class="pseudo:line_v"><a href="index.html">回首頁</a></span>
@@ -41,35 +41,35 @@
 									<span class="pseudo:line_v"><a href="#">中研院圖書館</a></span>
 									<span class="pseudo:line_v"><a href="#">English</a></span>
 								</div>
-								{{!-- <span class="text-white">|</span> --}}
-								<span><button class="color_primary border-none l:pr-0 uk-button uk-button-default" type="button" title="註冊/登入/登出"><i class="-mb-1 fas fa-user-circle fa-lg"></i></button></span>
+								{{!-- <span class="tw-text-white">|</span> --}}
+								<span><button class="color_primary tw-border-none l:tw-pr-0 uk-button uk-button-default" type="button" title="註冊/登入/登出"><i class="-tw-mb-1 fas fa-user-circle fa-lg"></i></button></span>
 								<div class="min_width-50 uk-dropdown" uk-dropdown>
 									<ul class="uk-nav uk-dropdown-nav">
-										<li><a class="hover:underline py-2" href="00register.html">註冊</a></li>
-										<li><a class="hover:underline py-2" href="00login.html">登入</a></li>
-										<li><a class="hover:underline py-2" href="index.html">登出</a></li>
+										<li><a class="hover:underline tw-py-2" href="00register.html">註冊</a></li>
+										<li><a class="hover:underline tw-py-2" href="00login.html">登入</a></li>
+										<li><a class="hover:underline tw-py-2" href="index.html">登出</a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 						<div class="uk-flex-nowrap uk-width-auto uk-hidden@m">
 							<div class="uk-inline">
-								<button class="color_primary border-none h-full uk-button uk-button-default" type="button" title="註冊/登入/登出"><i class="-mb-1 fas fa-user-circle fa-lg"></i></button>
+								<button class="color_primary tw-border-none tw-h-full uk-button uk-button-default" type="button" title="註冊/登入/登出"><i class="-tw-mb-1 fas fa-user-circle fa-lg"></i></button>
 								<div class="min_width-50 uk-dropdown" uk-dropdown="pos: bottom-right">
 									<ul class="uk-nav uk-dropdown-nav">
-										<li><a class="hover:underline py-2" href="#register" uk-toggle>註冊</a></li>
-										<li><a class="hover:underline py-2" href="#login" uk-toggle>登入</a></li>
-										<li><a class="hover:underline py-2" href="index.html">登出</a></li>
+										<li><a class="hover:underline tw-py-2" href="#register" uk-toggle>註冊</a></li>
+										<li><a class="hover:underline tw-py-2" href="#login" uk-toggle>登入</a></li>
+										<li><a class="hover:underline tw-py-2" href="index.html">登出</a></li>
 									</ul>
 								</div>
 							</div>
-							<button class="min_width-30! color_primary px-0 uk-flex uk-flex-right uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas"><span class="sr-only">選單</span></button>
+							<button class="min_width-30! color_primary tw-px-0 uk-flex uk-flex-right uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas"><span class="sr-only">選單</span></button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="relative">
-				{{!-- <div class="bg_primary opacity-85 uk-position-cover"></div> --}}
+			<div class="tw-relative">
+				{{!-- <div class="bg_primary tw-opacity-85 uk-position-cover"></div> --}}
 				<div class="container_responsive@s uk-visible@m uk-container">
 					<div class="uk-flex uk-navbar" uk-navbar>
 						<div class="uk-navbar-center">
@@ -77,73 +77,73 @@
 								<li hidden></li>
 								{{#if 01active}}<li class="uk-active">{{else}}
 								<li>{{/if}}
-									<a class="text-base font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level1</a>
+									<a class="tw-text-base tw-font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level1</a>
 								</li>
 								{{#if 02active}}<li class="uk-active">{{else}}
 								<li>{{/if}}
-									<a class="text-base font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level2</a>
-									<div class="bg_white_opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 2">
+									<a class="tw-text-base tw-font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level2</a>
+									<div class="bg_white_tw-opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 2">
 										<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
 											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
+												<a class="hover:underline tw-text-base" href="#">Item</a>
 											</li>
 											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
+												<a class="hover:underline tw-text-base" href="#">Item</a>
 											</li>
 										</ul>
 									</div>
 								</li>
 								{{#if 03active}}<li class="uk-active">{{else}}
 								<li>{{/if}}
-									<a class="text-base font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level3</a>
-									<div class="bg_white_opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 2">
+									<a class="tw-text-base tw-font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level3</a>
+									<div class="bg_white_tw-opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 2">
 										<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
 											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
+												<a class="hover:underline tw-text-base" href="#">Item</a>
 												<ul class="hidden_ie uk-nav-sub">
-													<li><a class="hover:underline text-base" href="#">SubItem</a></li>
-													<li><a class="hover:underline text-base" href="#">SubItem</a></li>
+													<li><a class="hover:underline tw-text-base" href="#">SubItem</a></li>
+													<li><a class="hover:underline tw-text-base" href="#">SubItem</a></li>
 												</ul>
 											</li>
 											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
+												<a class="hover:underline tw-text-base" href="#">Item</a>
 												<ul class="hidden_ie uk-nav-sub">
-													<li><a class="hover:underline text-base" href="#">SubItem</a></li>
-													<li><a class="hover:underline text-base" href="#">SubItem</a></li>
+													<li><a class="hover:underline tw-text-base" href="#">SubItem</a></li>
+													<li><a class="hover:underline tw-text-base" href="#">SubItem</a></li>
 												</ul>
 											</li>
 											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
+												<a class="hover:underline tw-text-base" href="#">Item</a>
 											</li>
 											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
+												<a class="hover:underline tw-text-base" href="#">Item</a>
 											</li>
 										</ul>
 									</div>
 								</li>
 								{{#if 04active}}<li class="uk-active">{{else}}
 								<li>{{/if}}
-									<a class="text-base font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level1</a>
+									<a class="tw-text-base tw-font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level1</a>
 								</li>
 								{{#if 05active}}<li class="uk-active">{{else}}
 								<li>{{/if}}
-									<a class="text-base font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level1</a>
+									<a class="tw-text-base tw-font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Level1</a>
 								</li>
 								<li>
-									<a class="text-base font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')" target="_blank">Level1</a>
+									<a class="tw-text-base tw-font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')" target="_blank">Level1</a>
 								</li>
 								<li>
-									<a class="text-base font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')" target="_blank">Level1</a>
+									<a class="tw-text-base tw-font-bold color_black!" href="#" onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')" target="_blank">Level1</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<div class="bg-gradient-to-r from-transparent via-black to-transparent" style="height: 2px;"></div>
+					<div class="tw-bg-gradient-to-r from-transparent via-black to-transparent" style="height: 2px;"></div>
 				</div>
 			</div>
 		</nav>
-		{{#if borderHR}}
-		<hr class="border_black_opacity-20 m-0">
+		{{#if tw-borderHR}}
+		<hr class="tw-border-black tw-border-tw-opacity-25 tw-m-0">
 		{{/if}}
 	</div>
 	{{>offcanvas}}

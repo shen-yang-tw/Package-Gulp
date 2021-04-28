@@ -1,8 +1,9 @@
-{{!-- {{>pageContent containerXlarge='true' breadcrumbCurrent='查詢列表' BreadcrumbUserVisibleOnDesk='true' userOn='true' user='陳大天' linkLogout='index.html' hrefForAA='true' leftMenu='true' leftMenuTop='true' leftMenuTopStyle='margin-top:15px' leftMenuTab='true' leftMenuTitle='true' leftMenuTitleClasses='' leftMenuTitleName='' leftMenu1level='true' listMenuMaxHeight='true' pageTitle='查詢列表' h2linkBack='true' h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile='true' h2buttonName='次選單' h2buttonDropdown='true' content='searchlist' pageSelect='true' pageSum='2'}} --}}
+{{!-- {{>pageContent containerXlarge=true breadcrumb=true breadcrumbCurrent='查詢列表' BreadcrumbUserVisibleOnDesk=true userOn=true user='陳大天' linkLogout='index.html' hrefForAA=true leftMenu=true leftMenuTop=true leftMenuTopStyle='margin-top:15px' leftMenuTab=true leftMenuTitle=true leftMenuTitleClasses='' leftMenuTitleName='' leftMenu1level=true listMenuMaxHeight=true pageTitle='查詢列表' h2linkBack=true h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile=true h2buttonMobileClasses='btn_primary tw-mt-2 uk-button uk-button-small uk-button-primary' h2buttonName='次選單' h2buttonDropdown=true content='searchlist' pageSelect=true pageSum='2'}} --}}
 
 <!-- page main content -->
-<section class="p-0 m:py-2 relative" uk-height-viewport="expand: true">
-  <!-- <div class="bg_primary opacity10 uk-position-cover"></div> -->
+<section class="tw-p-0 m:tw-py-2 tw-relative" uk-height-viewport="expand: true">
+  {{!-- <div class="bg_primary opacity10 uk-position-cover"></div> --}}
+  <!-- container -->
   <div class="container_responsive@s uk-container{{#if containerXlarge}} uk-container-xlarge{{/if}}">
     {{!-- <div class="uk-clearfix">
       {{>breadcrumb}}
@@ -12,112 +13,133 @@
     </div> --}}
 
     <!-- Breadcrumb & User -->
-    <div class="px-2 mb-2 justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle{{#if BreadcrumbUserVisibleOnDesk}} uk-visible@m{{/if}}" uk-grid>
+    <div class="tw-px-2 tw-mb-2 tw-justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle{{#if BreadcrumbUserVisibleOnDesk}} uk-visible@m{{/if}}" uk-grid>
       {{!--
       <!-- Grid child <div> is the same Default to class="uk-width-auto" --> --}}
-      <div class="m-0">
+      {{#if breadcrumb}}
+      <div class="tw-m-0">
         {{>breadcrumb}}
       </div>
+      {{/if}}
       {{#if userOn}}
-      <div class="text-xs m:text-sm content-center m-0">
-        <span class="mr-2 uk-width-auto">帳號：{{user}}</span>
+      <div class="tw-text-xs m:tw-text-sm content-center tw-m-0">
+        <span class="tw-mr-2 uk-width-auto">帳號：{{user}}</span>
         <a class="color_primary-text! uk-width-auto" href="{{linkLogout}}">登出</a>
       </div>
       {{/if}}
     </div>
-    <!-- Breadcrumb & User -->
-
-    {{!-- <div class="s:mb-2 uk-card uk-card-small uk-card-default uk-card-body" uk-height-viewport="min-height: 200"> --}}
-      <div class="min_height-550 s:mb-2 uk-card uk-card-small uk-card-default uk-card-body">
-        {{#if hrefForAA}}
+    <!-- /Breadcrumb & User -->
+    {{#if hrefForAA}}
+    {{#if leftMenu}}
+    <!-- accesskey -->
+    <div class="position-relative">
+      <a class="tw-no-underline tw-px-1 uk-position-absolute uk-visible@l" href="#L" id="AL" name="L" title="左側選單" accesskey="L" style="left:-30px;top: -5px;">:::</a>
+    </div>
+    <!-- /accesskey -->
+    {{else}}
+    <!-- accesskey -->
+    <div class="position-relative">
+      <a class="tw-no-underline tw-px-1 uk-position-absolute uk-visible@l" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;top: -5px;">:::</a>
+    </div>
+    <!-- /accesskey -->
+    {{/if}}
+    {{/if}}
+    <!-- uk-card -->
+    <div class="min_height-550@m s:tw-mb-2 uk-card uk-card-small uk-card-default uk-card-body" {{!-- uk-height-viewport="min-height: 200" --}}>
+      <!-- uk-grid -->
+      <div class="tw-space-y-4 uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
         {{#if leftMenu}}
-        <a class="no-underline px-1 uk-position-absolute uk-visible@l" href="#L" id="AL" name="L" title="左側選單" accesskey="L" style="left:-30px;top: -5px;">:::</a>
-        {{else}}
-        <a class="no-underline px-1 uk-position-absolute uk-visible@l" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;top: -5px;">:::</a>
-        {{/if}}
-        {{/if}}
-        <div class="uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
-          {{#if leftMenu}}
-          <div class="uk-width-1-4@m uk-width-1-5@l">
-            {{#if leftMenuTop}}
-            <div class="uk-visible@m" style="{{leftMenuTopStyle}}"></div>
-            {{/if}}
-            {{#if leftMenuTab}}
-            <ul class="border2 border_primary-dark mb-3 uk-tab" uk-tab>
-              <li class="uk-active"><a href="#">依科部</a></li>
-              <li><a href="#">依病症</a></li>
-            </ul>
-            {{/if}}
-            {{#if leftMenuTitle}}
-            <p class="btm_line{{leftMenuTitleClasses}}">{{leftMenuTitleName}}</p>
-            {{/if}}
-            {{#if leftMenu1level}}
-            {{>listMenu 1level='true'}}
-            {{/if}}
-            {{#if leftMenu2level}}
-            {{>listMenu 2level='true'}}
-            {{/if}}
-            {{#if leftMenu3level}}
-            {{>listMenu 3level='true'}}
-            {{/if}}
-          </div>
+        <!-- left menu -->
+        <div class="uk-width-1-4@m uk-width-1-5@l">
+          {{#if leftMenuTop}}
+          <div class="uk-visible@m" style="{{leftMenuTopStyle}}"></div>
           {{/if}}
-          <div class="uk-width-expand@m">
-            {{#if hrefForAA}}
-            {{#if leftMenu}}
-            <a class="no-underline px-1 uk-position-absolute uk-visible@l" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;top: -5px;">:::</a>
-            {{/if}}
-            {{/if}}
-            <h2 class="btm_line text-base s:text-2xl mt-0">
-              <div class="justify-between uk-flex-middle uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand@m" uk-grid>
-                <div class="uk-width-expand@m">{{pageTitle}}</div>
-                {{#if h2linkBack}}
-                <div class="uk-width-auto"><small class="mt-2"><a class="no-underline" href="{{h2linkBackHref}}"><i class="mr-1 fas fa-angle-left"></i>{{h2linkBackTxt}}</a></small></div>
+          {{#if leftMenuTab}}
+          <ul class="tw-border2 tw-border_primary-dark tw-mb-3 uk-tab" uk-tab>
+            <li class="uk-active"><a href="#">依科部</a></li>
+            <li><a href="#">依病症</a></li>
+          </ul>
+          {{/if}}
+          {{#if leftMenuTitle}}
+          <p class="tw-border-solid tw-border-b{{leftMenuTitleClasses}}">{{leftMenuTitleName}}</p>
+          {{/if}}
+          {{#if leftMenu1level}}
+          {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true level1=true optionSum=true more=true mobileBtnName='次選單'}}
+          {{/if}}
+          {{#if leftMenu2level}}
+          {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true level2=true optionSum=true more=true mobileBtnName='次選單'}}
+          {{/if}}
+          {{#if leftMenu3level}}
+          {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true level3=true mobileBtnName='次選單'}}
+          {{/if}}
+        </div>
+        <!-- /left menu -->
+        {{/if}}
+        <!-- right column -->
+        <div class="uk-width-expand@m">
+          {{#if hrefForAA}}
+          {{#if leftMenu}}
+          <!-- accesskey -->
+          <div class="position-relative">
+            <a class="tw-no-underline tw-px-1 uk-position-absolute uk-visible@l" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px;top: -5px;">:::</a>
+          </div>
+          <!-- /accesskey -->
+          {{/if}}
+          {{/if}}
+          <h2 class="tw-border-solid tw-border-b tw-text-base s:tw-text-2xl tw-mt-0">
+            <div class="tw-justify-between uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand" uk-grid>
+              <div>{{pageTitle}}</div>
+              {{#if h2linkBack}}
+              <div class="uk-flex uk-width-auto"><small class="m:tw-mt-2"><a class="tw-no-underline" href="{{h2linkBackHref}}"><i class="tw-mr-1 fas fa-angle-left"></i>{{h2linkBackTxt}}</a></small></div>
+              {{/if}}
+              {{#if h2button}}
+              {{!-- h2buttonClasses='btn_primary tw-mt-2 uk-button uk-button-small uk-button-primary' --}}
+              {{!-- h2buttonFaiconClasses='far fa-envelope' --}}
+              <div class="uk-flex uk-width-auto"><a class="{{h2buttonClasses}}" href="{{h2buttonLink}}">{{#if h2buttonFaicon}}<i class="tw-mr-2 {{h2buttonFaiconClasses}}"></i>{{/if}}{{h2buttonName}}</a></div>
+              {{/if}}
+              {{#if h2buttonModal}}
+              <div class="uk-flex uk-width-auto"><a class="{{h2buttonModalClasses}}" href="#{{h2buttonModalID}}" uk-toggle>{{#if h2buttonModalFaicon}}<i class="tw-mr-2 {{h2buttonModalFaiconClasses}}"></i>{{/if}}{{h2buttonModalName}}</a></div>
+              {{/if}}
+              {{#if h2buttonMobile}}
+              <div class="uk-flex uk-width-auto uk-hidden@m">
+                <button class="{{h2buttonMobileClasses}}" type="button">{{#if h2buttonMobileFaicon}}<i class="tw-mr-2 {{h2buttonMobileFaiconClasses}}"></i>{{/if}}{{h2buttonMobileName}}</button>
+                {{#if h2buttonDropdown}}
+                {{>dropdown level1=true optionSum=''}}
                 {{/if}}
-                {{#if h2button}}
-                {{!-- h2buttonClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' --}}
-                {{!-- h2buttonFaiconClasses='far fa-envelope' --}}
-                <div class="uk-width-auto"><a class="{{h2buttonClasses}}" href="{{h2buttonLink}}">{{#if h2buttonFaicon}}<i class="mr-2 {{h2buttonFaiconClasses}}"></i>{{/if}}{{h2buttonName}}</a></div>
+                {{#if h2buttonDropdownSum}}
+                {{>dropdown level1=true optionSum=''}}
                 {{/if}}
-                {{#if h2buttonModal}}
-                <div class="uk-width-auto"><a class="{{h2buttonModalClasses}}" href="#{{h2buttonModalID}}" uk-toggle>{{#if h2buttonModalFaicon}}<i class="mr-2 {{h2buttonModalFaiconClasses}}"></i>{{/if}}{{h2buttonModalName}}</a></div>
-                {{/if}}
-                {{#if h2buttonMobile}}
-                <div class="uk-width-auto uk-hidden@m">
-                  <button class="{{h2buttonMobileClasses}}" type="button">{{#if h2buttonMobileFaicon}}<i class="mr-2 {{h2buttonMobileFaiconClasses}}"></i>{{/if}}{{h2buttonMobileName}}</button>
-                  {{#if h2buttonDropdown}}
-                  {{>dropdown}}
-                  {{/if}}
-                  {{#if h2buttonDropdownSum}}
-                  {{>dropdown optionSum='true'}}
-                  {{/if}}
-                  {{#if h2buttonDropdownCheckbox}}
-                  {{>dropdownCheckbox}}
-                  {{/if}}
-                </div>
+                {{#if h2buttonDropdownCheckbox}}
+                {{>dropdownCheckbox level1=true optionSum=true}}
                 {{/if}}
               </div>
-            </h2>
-            {{#if form}}
-            <div id="content">
-              <form onsubmit="return false;">
-                {{> (lookup . 'content') }}
-                {{!--
-                <!-- Look up partial:content='' --> --}}
-              </form>
+              {{/if}}
             </div>
-            {{else}}
-            <div id="content">
+          </h2>
+          <!-- content -->
+          {{#if form}}
+          <div id="content" class="tw-space-y-4">
+            <form onsubmit="return false;">
               {{> (lookup . 'content') }}
               {{!--
               <!-- Look up partial:content='' --> --}}
-            </div>
-            {{/if}}
-            <!-- End #content -->
+            </form>
           </div>
+          {{else}}
+          <div id="content" class="tw-space-y-4">
+            {{> (lookup . 'content') }}
+            {{!--
+            <!-- Look up partial:content='' --> --}}
+          </div>
+          {{/if}}
+          <!-- /content -->
         </div>
+        <!-- /right column -->
       </div>
-      <!-- End uk-card -->
+      <!-- /uk-grid -->
     </div>
+    <!-- /uk-card -->
+  </div>
+  <!-- /container -->
 </section>
-<!-- page main content -->
+<!-- /page main content -->

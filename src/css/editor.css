@@ -119,7 +119,7 @@
 .ckeditor .h4,
 .ckeditor .h5,
 .ckeditor .h6 {
-  color: #606f7b !important;
+  color: #2779bd !important;
   /* margin-top   : 40px; */
   /* margin-bottom: 20px; */
 }
@@ -160,7 +160,6 @@
   top: calc(50% - 24px/2);
   left: 0;
   -webkit-transform: scaleX(0.7) translate(-4px, 0);
-      -ms-transform: scaleX(0.7) translate(-4px, 0);
           transform: scaleX(0.7) translate(-4px, 0);
 }
 
@@ -268,7 +267,7 @@
 }
 
 .ckeditor .uk-subnav-pill > .uk-active > a {
-  background: #606f7b;
+  background: #2779bd;
   color: #fff !important;
 }
 

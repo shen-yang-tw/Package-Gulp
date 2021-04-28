@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html class="text-m" lang="zh-Hant">
+<html class="tw-text-m" lang="zh-Hant">
+	{{!-- First edit the title of the templateData in the gulp.task('templates') of gulpfile.js.
+	The title will be changed to {{title}} in all hbs --}}
+	<head>
+		{{>meta colors=true script=true}}
+		{{!-- {{>meta colors=true bootstrap=true editor=true }} --}}
+	</head>
 
-{{!-- First edit the title of the templateData in the gulp.task('templates') of gulpfile.js.
-The title will be changed to {{title}} in all hbs --}}
-<head>
-	{{!-- {{>meta bootstrap='true' bootstrap4='true' jquery='true' editor='true' }} --}}
-	{{>meta editor='true' }}
-</head>
+	<body id="top" class="{{#if bodyClass}}index{{/if}}{{#if bodyFocus}} focus{{/if}}">
+		{{>header hrefForAA=true logoRightNav=true mainMenu=true menuTitle1='' menuTitle2='' menuTitle3='' menuTitle4='' menuTitle5='' menuTitle6='' menuTitle6IsLink=true menuTitle6link='' banner=false}}
+		{{!-- {{>header bootstrap=true hrefForAA=true logoRightNav=true mainMenu=true menuTitle1='' menuTitle2='' menuTitle3='' menuTitle4='' menuTitle5='' menuTitle6='' menuTitle6IsLink=true menuTitle6link=''}} --}}
 
-<body id="top" class="index {{#if focus}}focus{{/if}}">
-	{{>header hrefForAA='true' shadow='true' logoRightNav='true' iconLogin='true' mainMenu='true'}}
+		{{>slideshow largeDotnav=true option='animation: fade; min-height: 200; max-height: 400'}}
+		{{!-- {{>slideshow largeDotnav=true option='autoplay: true; animation: fade; min-height: 300; max-height: 600'}} --}}
 
-	{{>indexContent hrefForAA='true'}}
+		{{>indexContent hrefForAA=true equal2cols=true 2and1of3cols=true 1col=true 1colFull=true h2color='color_black! ' h2fullBG=false h2fullBGshadow=false h2bg=false h2icon=true h2iconName='fas fa-square-full' h2more=true h2tabLinks=false tabLinks=true}}
+		{{!-- {{>indexContent hrefForAA=true equal2cols=true 2and1of3cols=true}} --}}
+		{{!-- {{>indexContent-bs hrefForAA=true 2and1of3cols=true}} --}}
 
-	{{>footer hrefForAA='true'}}
-</body>
+		{{>footer hrefForAA=true textCenter=true}}
+		{{!-- {{>footer bootstrap=true hrefForAA=true}} --}}
 
+		{{#if jqueryBody}}
+
+		<!-- jq:js -->
+		<script src="js/jquery.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+		{{#if bootstrapBody}}
+		<!-- bs:js -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+	</body>
 </html>

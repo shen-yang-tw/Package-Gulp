@@ -1,25 +1,184 @@
-{{!-- {{>dropdownCheckbox optionSum='true'}} --}}
+{{!-- {{>dropdownCheckbox optionSum=true}} --}}
 
 <!-- Dropdown Checkbox -->
-<div class="min_width-100" uk-dropdown>
-	<ul class="uk-nav uk-dropdown-nav uk-text-left">
-		<li class="m-0 uk-nav-header">
-			<label class="m-0 w-full"><input class="checkAll mr-1 uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck')">全選</label>
+{{#if bootstrap}}
+<div class="dropdown-menu border-0 py-0" aria-labelledby="{{labelledbyid}}">
+	<ul class="list-group">
+		{{#if level1}}
+		<li class="list-group-item p-0">
+			<div class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" value="option1">
+						Item</label>
+				</div>
+				{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}
+			</div>
 		</li>
-		<li class="m-0 uk-nav-header"><span>Type</span></li>
-		<li class="px-2 py-1">
-			<label class="m-0 w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</label>
+		{{/if}}
+		{{#if level2}}
+		<li class="list-group-item p-0">
+			<div class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" value="option1">
+						Item</label>
+				</div>
+				{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}
+			</div>
+			<ul class="rounded-0">
+				<li class="list-group-item p-0 border-0">
+					<div class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3">
+						<div class="form-check form-check-inline">
+							<label class="form-check-label"><input class="form-check-input" type="checkbox" value="option1">
+								Item</label>
+						</div>
+						{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}
+					</div>
+				</li>
+				<li class="list-group-item p-0 border-0">
+					<div class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3">
+						<div class="form-check form-check-inline">
+							<label class="form-check-label"><input class="form-check-input" type="checkbox" value="option1">
+								Item</label>
+						</div>
+						{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}
+					</div>
+				</li>
+			</ul>
 		</li>
-		<li class="px-2 py-1">
-			<label class="m-0 w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</label>
+		{{/if}}
+		{{#if level3}}
+		<li class="list-group-item p-0">
+			<div class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" value="option1">
+						Item</label>
+				</div>
+				{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}
+			</div>
+			<ul class="rounded-0">
+				<li class="list-group-item p-0 border-0">
+					<div class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3">
+						<div class="form-check form-check-inline">
+							<label class="form-check-label"><input class="form-check-input" type="checkbox" value="option1">
+								Item</label>
+						</div>
+						{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}
+					</div>
+					<ul class="rounded-0">
+						<li class="list-group-item p-0 border-0">
+							<div class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3">
+								<div class="form-check form-check-inline">
+									<label class="form-check-label"><input class="form-check-input" type="checkbox" value="option1">
+										Item</label>
+								</div>
+								{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}
+							</div>
+						</li>
+						<li class="list-group-item p-0 border-0">
+							<div class="list-group-item-action d-flex align-items-stretch justify-content-between align-items-center p-2 px-3">
+								<div class="form-check form-check-inline">
+									<label class="form-check-label"><input class="form-check-input" type="checkbox" value="option1">
+										Item</label>
+								</div>
+								{{#if optionSum}}<span class="badge badge-secondary align-self-start ml-2" style="margin-top: 3px;">14</span>{{/if}}
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
 		</li>
-		<li class="m-0 uk-nav-header"><span>Type</span></li>
-		<li class="px-2 py-1">
-			<label class="m-0 w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses text-xs">999</small>{{/if}}</label>
-		</li>
-		<li class="px-2 py-1">
-			<span class="w-full"><a class="btn_primary text-white w-full uk-button uk-button-small uk-dropdown-close" href="" role="button">套用篩選</a></span>
-		</li>
+		{{/if}}
 	</ul>
 </div>
+{{else}}
+<div class="min_width-100" uk-dropdown>
+	<ul class="uk-nav uk-dropdown-nav tw-text-left">
+		<li class="tw-m-0 uk-nav-header">
+			<label class="tw-m-0 tw-w-full"><input class="checkAll mr-1 uk-checkbox" type="checkbox">全選</label>
+		</li>
+		{{#if level1}}
+		{{#if header}}
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		{{/if}}
+		{{!-- <li class="uk-active"><a href="#">Active</a></li> --}}
+		<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+		<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+		{{#if divider}}
+		<li class="tw-m-0 uk-nav-divider"></li>
+		{{/if}}
+		<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+		{{/if}}
+		{{#if level2}}
+		{{#if header}}
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		{{/if}}
+		<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+		{{#if divider}}
+		<li class="tw-m-0 uk-nav-divider"></li>
+		{{/if}}
+		<li class="uk-parent">
+			<label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label>
+			<ul class="uk-nav-sub">
+				<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+				<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+			</ul>
+		</li>
+		{{/if}}
+		{{#if level3}}
+		{{#if header}}
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		{{/if}}
+		<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+		{{#if divider}}
+		<li class="tw-m-0 uk-nav-divider"></li>
+		{{/if}}
+		<li class="uk-parent">
+			<label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label>
+			<ul class="uk-nav-sub">
+				<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+				<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+			</ul>
+		</li>
+		{{#if divider}}
+		<li class="tw-m-0 uk-nav-divider"></li>
+		{{/if}}
+		<li class="uk-parent">
+			<label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label>
+			<ul class="uk-nav-sub">
+				<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+				<li class="tw-px-2 tw-py-1">
+					<label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label>
+					<ul>
+						<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+						<li class="tw-px-2 tw-py-1"><label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+		<li class="tw-px-2 tw-py-1">
+			<span class="w-full"><a class="btn_primary tw-text-white tw-w-full uk-button uk-button-small uk-dropdown-close" href="" role="button">套用篩選</a></span>
+		</li>
+
+
+		{{!-- <li class="tw-m-0 uk-nav-header">
+			<label class="tw-m-0 tw-w-full"><input class="checkAll mr-1 uk-checkbox" type="checkbox">全選</label>
+		</li>
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		<li class="tw-px-2 tw-py-1">
+			<label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</label>
+		</li>
+		<li class="tw-px-2 tw-py-1">
+			<label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</label>
+		</li>
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		<li class="tw-px-2 tw-py-1">
+			<label class="tw-m-0 tw-w-full"><input class="listCheck mr-1 uk-checkbox" type="checkbox">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</label>
+		</li>
+		<li class="tw-px-2 tw-py-1">
+			<span class="w-full"><a class="btn_primary tw-text-white tw-w-full uk-button uk-button-small uk-dropdown-close" href="" role="button">套用篩選</a></span>
+		</li> --}}
+	</ul>
+</div>
+{{/if}}
 <!-- Dropdown Checkbox -->
