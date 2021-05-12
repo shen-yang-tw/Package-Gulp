@@ -1,4 +1,4 @@
-{{!-- {{>pageContent containerXlarge=true breadcrumbCurrent='查詢列表' BreadcrumbUserVisibleOnDesk=true userOn=true user='陳大天' linkLogout='index.html' hrefForAA=true leftMenu=true leftMenuTop=true leftMenuTopStyle='margin-top:15px' leftMenuTab=true leftMenuTitle=true leftMenuTitleClasses='' leftMenuTitleName='' leftMenu1level=true listMenuMaxHeight=true pageTitle='查詢列表' h2linkBack=true h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile=true h2buttonMobileClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' h2buttonName='次選單' h2buttonDropdown=true content='searchlist' pageSelect=true pageSum='2'}} --}}
+{{!-- {{>pageContent containerXlarge=true breadcrumbCurrent='查詢列表' BreadcrumbUserVisibleOnDesk=true userOn=true user='陳大天' linkLogout='index.html' leftMenu=true leftMenuTop=true leftMenuTopStyle='margin-top:15px' leftMenuTab=true leftMenuTitle=true leftMenuTitleClasses='' leftMenuTitleName='' leftMenu1level=true listMenuMaxHeight=true pageTitle='查詢列表' h2linkBack=true h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile=true h2buttonMobileClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' h2buttonName='次選單' h2buttonDropdown=true content='searchlist' pageSelect=true pageSum='2'}} --}}
 
 <!-- page main content -->
 <section class="m:tw-py-2 tw-relative">
@@ -8,7 +8,7 @@
     <!-- Breadcrumb & User -->
     <div class="tw-gap-4 row align-items-center justify-content-between{{#if BreadcrumbUserVisibleOnDesk}} d-none d-lg-block{{/if}}">
       <div class="col">
-        {{>breadcrumb bootstrap=true}}
+        {{>breadcrumb}}
       </div>
       {{#if userOn}}
       <div class="tw-text-xs m:tw-text-sm align-items-center col-sm-auto">
@@ -61,13 +61,13 @@
             <p class="tw-border-solid tw-border-b{{leftMenuTitleClasses}}">{{leftMenuTitleName}}</p>
             {{/if}}
             {{#if leftMenu1level}}
-            {{>listMenu bootstrap=true listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 1level=true optionSum=true more=true}}
+            {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 1level=true optionSum=true more=true}}
             {{/if}}
             {{#if leftMenu2level}}
-            {{>listMenu bootstrap=true listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 2level=true optionSum=true more=true}}
+            {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 2level=true optionSum=true more=true}}
             {{/if}}
             {{#if leftMenu3level}}
-            {{>listMenu bootstrap=true listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 3level=true optionSum=true more=true}}
+            {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 3level=true optionSum=true more=true}}
             {{/if}}
           </div>
           <!-- /left menu -->
@@ -101,16 +101,16 @@
                 <div class="dropdown d-none d-lg-block">
                   <button id="{{labelledbyid}}" class="{{h2buttonMobileClasses}}btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">{{#if h2buttonMobileFaicon}}<i class="mr-2 {{h2buttonMobileFaiconClasses}}"></i>{{/if}}{{h2buttonMobileName}}</button>
                   {{#if h2buttonDropdown}}
-                  {{>dropdown bootstrap=true level1=true}}
+                  {{>dropdown level1=true}}
                   {{/if}}
                   {{#if h2buttonDropdownSum}}
-                  {{>dropdown bootstrap=true level1=true optionSum=true}}
+                  {{>dropdown level1=true optionSum=true}}
                   {{/if}}
                   {{#if h2buttonDropdownCheckbox}}
-                  {{>dropdownCheckbox bootstrap=true}}
+                  {{>dropdownCheckbox}}
                   {{/if}}
                   {{#if h2buttonDropdownCheckboxSum}}
-                  {{>dropdownCheckbox bootstrap=true optionSum=true}}
+                  {{>dropdownCheckbox optionSum=true}}
                   {{/if}}
                 </div>
                 {{/if}}

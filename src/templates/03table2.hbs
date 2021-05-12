@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html class="tw-text-m" lang="zh-Hant">
 	<head>
-		{{>meta colors=true editor=true script=true}}
-		{{!-- {{>meta bootstrap=true editor=true }} --}}
+		{{>meta}}
+		{{!-- {{>meta editor=true }} --}}
 	</head>
 
-	<body id="top" class="page">
+	<body id="top" class="page{{#if focusForAA}} focus{{/if}}">
 		{{>header logoRightNav=true mainMenu=true menuTitle1='關於本館' menuTitle2='館藏資訊' menuTitle3='電子資源' menuTitle4='館際合作' menuTitle5='其他資源' menuTitle6='個人資訊區' menuTitle7='試用資源區' menuTitle8='影音課程'}}
-		{{!-- {{>header bootstrap=true logoRightNav=true mainMenu=true menuTitle1='' menuTitle2='' menuTitle3='' menuTitle4='' menuTitle5='' menuTitle6='' menuTitle6IsLink=true menuTitle6link=''}} --}}
+		{{!-- {{>header logoRightNav=true mainMenu=true menuTitle1='' menuTitle2='' menuTitle3='' menuTitle4='' menuTitle5='' menuTitle6='' menuTitle6IsLink=true menuTitle6link=''}} --}}
 
 		{{>pageContent containerXlarge=true breadcrumb=true BreadcrumbUserVisibleOnDesk=true breadcrumb1=true breadcrumbLink1='#' breadcrumbTxt1='Link1' breadcrumbCurrent='Current' userOn=true user='陳大天' linkLogout='index.html' leftMenu=true leftMenu3level=true pageTitle='標題名稱' content='table2' tabSwitcher=true searchBox=true}}
 		{{!-- {{>pageContent-bs containerXlarge=true breadcrumb=true BreadcrumbUserVisibleOnDesk=true breadcrumb1=true breadcrumbLink1='#' breadcrumbTxt1='Link1' breadcrumbCurrent='Current' userOn=true user='陳大天' linkLogout='index.html' leftMenu=true leftMenu3level=true h2linkBack=true h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile=true h2buttonMobileClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' h2buttonMobileName='分類選單' h2buttonDropdown=true content='editor' pageTitle='標題名稱'}} --}}
 
 		{{>footer textCenter=true}}
-		{{!-- {{>footer bootstrap=true}} --}}
+		{{!-- {{>footer}} --}}
 
+		{{#if jqueryBody}}
+
+		<!-- jq:js -->
+		<script src="js/jquery.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+		{{#if bootstrapBody}}
+		<!-- bs:js -->
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
 	</body>
 </html>

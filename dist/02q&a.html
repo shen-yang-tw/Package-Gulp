@@ -2,42 +2,22 @@
 <html class="tw-text-m" lang="zh-Hant">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="format-detection" content="telephone=no">
 		<!-- Fix phone number style for MS Edge -->
 		<meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
-		<title>新光醫院圖書館</title>
-		<!-- uk:css -->
+		<title>測試網站</title>
 		<link rel="stylesheet" href="css/uikit.min.css">
-		<!-- endinject -->
-		<!-- tw:css -->
-		<link rel="stylesheet" href="css/tailwind.css">
-		<!-- endinject -->
-		<!-- fa:css -->
+		<link rel="stylesheet" href="css/tailwind.min.css">
 		<link rel="stylesheet" href="css/fontawesome.min.css">
-		<!-- endinject -->
-		<!-- main:css -->
-		<link rel="stylesheet" href="css/main.css">
-		<!-- endinject -->
-		<!-- colors:css -->
-		<link rel="stylesheet" href="css/colors.css">
-		<!-- endinject -->
-		<!-- style:css -->
-		<link rel="stylesheet" href="css/style.css">
-		<!-- endinject -->
-		<!-- inject:css -->
-		<link rel="stylesheet" href="css/editor.css">
-		<!-- endinject -->
-		<!-- uk:js -->
+		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/colors.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="stylesheet" href="css/editor.min.css">
 		<script src="js/uikit.min.js"></script>
-		<!-- endinject -->
-		<!-- uk2:js -->
 		<script src="js/uikit-icons.min.js"></script>
-		<!-- endinject -->
-		<!-- head:js -->
-		<script src="js/script.js" defer></script>
-		<!-- endinject -->
+		<script src="js/script.min.js" defer></script>
 	</head>
 
 	<body id="top" class="page">
@@ -52,8 +32,8 @@
 								<!-- logo -->
 								<div class="logo">
 									<h1 class="tw-m-0 uk-flex uk-flex-middle">
-										<a class="logoimg" href="index.html" title="新光醫院圖書館">
-											<img class="uk-preserve" data-src="img/logo.svg" data-width data-height alt="新光醫院圖書館" uk-img uk-svg>
+										<a class="logoimg" href="index.html" title="測試網站">
+											<img class="uk-preserve" data-src="img/logo.svg" data-width data-height alt="測試網站" uk-img uk-svg>
 										</a>
 									</h1>
 								</div>
@@ -166,7 +146,7 @@
 						<li class="tw-py-1 uk-parent">
 							<div class="tw-flex tw-justify-between">
 								<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level2</span></a>
-								<a class="tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a>
+								<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"></span></a>
 							</div>
 							<ul class="toggle tw-hidden tw-py-0 uk-nav-sub">
 								<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
@@ -178,7 +158,7 @@
 						<li class="tw-py-1 uk-parent">
 							<div class="tw-flex tw-justify-between">
 								<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level3</span></a>
-								<a class="tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a>
+								<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"></span></a>
 							</div>
 							<ul class="toggle tw-hidden tw-py-0 uk-nav-sub">
 								<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
@@ -234,9 +214,11 @@
 		    <!-- uk-card -->
 		    <div class="min_height-550@m s:tw-mb-2 uk-card uk-card-small uk-card-default uk-card-body" >
 		      <!-- uk-grid -->
-		      <div class="tw-space-y-4 uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
+		      <div class="tw-space-y-4 m:tw-space-y-0 uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
 		        <!-- left menu -->
 		        <div class="uk-width-1-4@m uk-width-1-5@l">
+		          <div class="tw-text-base m:tw-text-xl tw-font-bold tw-text-black tw-mb-2"><span class="color_primary">▍</span>選單標題</div>
+		          <p class="tw-border-solid tw-border-b"></p>
 		          
 		          <!-- listMenu -->
 		          <div class="listMenu_titlelink  uk-visible@m">
@@ -244,7 +226,7 @@
 		          		<li class="uk-nav-header">
 		          			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1</a>
 		          		</li>
-		          		<li class="uk-nav-header active">
+		          		<li class="uk-nav-header">
 		          			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1</a>
 		          		</li>
 		          		<li class="uk-nav-header uk-parent">
@@ -260,13 +242,13 @@
 		          		<li class="uk-nav-header uk-parent">
 		          			<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
 		          				<div class="uk-width-expand"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level3</a></div>
-		          				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a></div>
+		          				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle tw-hidden" uk-icon="icon: chevron-right"></span><span class="toggle" uk-icon="icon: chevron-down"></span></a></div>
 		          			</div>
-		          			<ul class="toggle tw-hidden tw-p-0 uk-nav-sub">
+		          			<ul class="toggle tw-p-0 uk-nav-sub">
 		          				<li>
 		          					<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Title</a>
 		          					<ul class="uk-nav-sub tw-p-0 tw-bg-white">
-		          						<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
+		          						<li class="active"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
 		          						<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
 		          					</ul>
 		          				</li>
@@ -317,116 +299,108 @@
 		          <div id="content" class="tw-space-y-4">
 		            <!-- Tab Switcher -->
 		            <div class="tabSwitcher">
-		            	<ul class="tab_btn tab_btn-noline tab_btn-active-white tab_btn-space-xs! tab_btn-space-s!@s tw-m-0 tw-border-0" uk-tab="connect: .uk-switcher">
+		            	<ul class="tab_btn tab_btn-noline tab_btn-active-white tab_btn-space-xs! tab_btn-space-s!@s tw-m-0 tw-border-0" uk-tab>
 		            		<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">全部</a></li>
 		            		<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">Tab2</a></li>
 		            		<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">Tab3</a></li>
 		            		
 		            	</ul>
-		            	<div class="tw-p-0 tw-pt-4 uk-card-body">
-		            		<ul class="m-0 shadow-md bg-white p-6 uk-switcher">
-		            			<li class="tw-space-y-4">
-		            				<!-- searchBox -->
-		            				<form onsubmit="return false;">
-		            					<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
-		            						<div class="min_width-3/4! uk-width-auto@s">
-		            							<div class="uk-flex uk-flex-middle">
-		            								<div class="tw-flex-auto"><input class="uk-input" type="text" placeholder="輸入關鍵字搜尋" title="輸入關鍵字搜尋"></div>
-		            							</div>
-		            						</div>
-		            						<div class="min_width-100! min_width-150!@l uk-width-expand@s tw-text-nowrap">
-		            							<a class="btn_primary tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-2 fas fa-search"></i>搜尋</a>
-		            						</div>
-		            					</div>
-		            				</form>
-		            				<!-- searchBox -->
-		            				<!-- pagination -->
-		            				<div class="pagination">
-		            					<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
-		            						<div>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i class="fas fa-angle-left fa-fw"></i>
-		            								<span class="sr-only">上一頁</span>
-		            							</a>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i class="fas fa-angle-left fa-fw"></i>
-		            								<span class="sr-only">上一頁</span>
-		            							</a>
-		            						</div>
-		            							<div>
-		            								<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
-		            									<label class="tw-flex tw-items-center">
-		            									<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value" title="頁碼選單">
-		            										<option value="#" selected>1</option>
-		            										<option value="#">2</option>
-		            									</select>
-		            									</label>
-		            									<span class="mx-1">&nbsp;/<span class="tw-pl-1" title="總頁數">2</span></span>
-		            								</div>
-		            							</div>
-		            						<div>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="下一頁">
-		            								<span class="sr-only">下一頁</span><i class="fas fa-angle-right fa-fw"></i>
-		            							</a>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden>
-		            								<span class="sr-only">下一頁</span><i class="fas fa-chevron-right fa-fw"></i>
-		            							</a>
-		            						</div>
+		            	<div class="tw-p-0 tw-pt-4 tw-space-y-4 uk-card-body">
+		            		<!-- searchBox -->
+		            		<form onsubmit="return false;">
+		            			<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
+		            				<div class="min_width-3/4! uk-width-auto@s">
+		            					<div class="uk-flex uk-flex-middle">
+		            						<div class="tw-flex-auto"><input class="uk-input" type="text" placeholder="輸入關鍵字搜尋" title="輸入關鍵字搜尋"></div>
 		            					</div>
 		            				</div>
-		            				<!-- pagination --><!-- uk-accordion -->
-		            				<ul class="tw-list-disc tw-pl-5 uk-accordion" uk-accordion="multiple: true">
-		            					<li class="uk-open">
-		            						<a class="tw-text-base tw-font-bold tw-pb-1 uk-accordion-title" href="#">的山有位轉有最片當我市檢，的樣地，保西步起不能府定同在開便直陽到心望心元基推他沒一界來市起是位取之土兒助認有要人人起母。人正候鄉去候員來</a>
-		            						<div class="tw-m-0 tw-pt-1 uk-accordion-content">
-		            							<p class="tw-m-0">成機期沒增、大濟冷好生，<strong class="color_primary">癌症</strong>山做府你說一如人可樣隊。交以要上做活哥是收這進難告水此而了路子這立室北什之：企長人：部的的臺研愛個意球在關在小卻，老陽重方自的送書眾不親論量，我油生，點的子聯</p>
-		            						</div>
-		            					</li>
-		            					<li>
-		            						<a class="tw-text-base tw-font-bold tw-pb-1 uk-accordion-title" href="#">的山有位轉有最片當我市檢，的樣地，保西步起不能府</a>
-		            						<div class="tw-m-0 tw-pt-1 uk-accordion-content">
-		            							<p class="tw-m-0">成機期沒增、大濟冷好生，<strong class="color_primary">癌症</strong>山做府你說一如人可樣隊。交以要上做活哥是收這進難告水此而了路子這立室北什之：企長人：部的的臺研愛個意球在關在小卻，老陽重方自的送書眾不親論量，我油生，點的子聯</p>
-		            						</div>
-		            					</li>
-		            				</ul>
-		            				<!-- uk-accordion -->
-		            				<!-- pagination -->
-		            				<div class="pagination">
-		            					<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
-		            						<div>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i class="fas fa-angle-left fa-fw"></i>
-		            								<span class="sr-only">上一頁</span>
-		            							</a>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i class="fas fa-angle-left fa-fw"></i>
-		            								<span class="sr-only">上一頁</span>
-		            							</a>
-		            						</div>
-		            							<div>
-		            								<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
-		            									<label class="tw-flex tw-items-center">
-		            									<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value" title="頁碼選單">
-		            										<option value="#" selected>1</option>
-		            										<option value="#">2</option>
-		            									</select>
-		            									</label>
-		            									<span class="mx-1">&nbsp;/<span class="tw-pl-1" title="總頁數">2</span></span>
-		            								</div>
-		            							</div>
-		            						<div>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="下一頁">
-		            								<span class="sr-only">下一頁</span><i class="fas fa-angle-right fa-fw"></i>
-		            							</a>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden>
-		            								<span class="sr-only">下一頁</span><i class="fas fa-chevron-right fa-fw"></i>
-		            							</a>
+		            				<div class="min_width-100! min_width-150!@l uk-width-expand@s tw-text-nowrap">
+		            					<a class="btn_primary tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-2 fas fa-search"></i>搜尋</a>
+		            				</div>
+		            			</div>
+		            		</form>
+		            		<!-- searchBox -->
+		            		<!-- pagination -->
+		            		<div class="pagination">
+		            			<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
+		            				<div>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i class="fas fa-angle-left fa-fw"></i>
+		            						<span class="sr-only">上一頁</span>
+		            					</a>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i class="fas fa-angle-left fa-fw"></i>
+		            						<span class="sr-only">上一頁</span>
+		            					</a>
+		            				</div>
+		            					<div>
+		            						<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+		            							<label class="tw-flex tw-items-center">
+		            							<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value" title="頁碼選單">
+		            								<option value="#" selected>1</option>
+		            								<option value="#">2</option>
+		            							</select>
+		            							</label>
+		            							<span class="mx-1">&nbsp;/<span class="tw-pl-1" title="總頁數">2</span></span>
 		            						</div>
 		            					</div>
+		            				<div>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="下一頁">
+		            						<span class="sr-only">下一頁</span><i class="fas fa-angle-right fa-fw"></i>
+		            					</a>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden>
+		            						<span class="sr-only">下一頁</span><i class="fas fa-chevron-right fa-fw"></i>
+		            					</a>
 		            				</div>
-		            				<!-- pagination -->			</li>
-		            			<li class="tw-space-y-4">
-		            				Text			</li>
-		            			<li class="tw-space-y-4">
-		            				Text			</li>
+		            			</div>
+		            		</div>
+		            		<!-- pagination --><!-- uk-accordion -->
+		            		<ul class="tw-list-disc tw-pl-5 uk-accordion" uk-accordion="multiple: true">
+		            			<li class="uk-open">
+		            				<a class="tw-text-base tw-font-bold tw-pb-1 uk-accordion-title" href="#">的山有位轉有最片當我市檢，的樣地，保西步起不能府定同在開便直陽到心望心元基推他沒一界來市起是位取之土兒助認有要人人起母。人正候鄉去候員來</a>
+		            				<div class="tw-m-0 tw-pt-1 uk-accordion-content">
+		            					<p class="tw-m-0">成機期沒增、大濟冷好生，<strong class="color_primary">癌症</strong>山做府你說一如人可樣隊。交以要上做活哥是收這進難告水此而了路子這立室北什之：企長人：部的的臺研愛個意球在關在小卻，老陽重方自的送書眾不親論量，我油生，點的子聯</p>
+		            				</div>
+		            			</li>
+		            			<li>
+		            				<a class="tw-text-base tw-font-bold tw-pb-1 uk-accordion-title" href="#">的山有位轉有最片當我市檢，的樣地，保西步起不能府</a>
+		            				<div class="tw-m-0 tw-pt-1 uk-accordion-content">
+		            					<p class="tw-m-0">成機期沒增、大濟冷好生，<strong class="color_primary">癌症</strong>山做府你說一如人可樣隊。交以要上做活哥是收這進難告水此而了路子這立室北什之：企長人：部的的臺研愛個意球在關在小卻，老陽重方自的送書眾不親論量，我油生，點的子聯</p>
+		            				</div>
+		            			</li>
 		            		</ul>
-		            	</div>
+		            		<!-- uk-accordion -->
+		            		<!-- pagination -->
+		            		<div class="pagination">
+		            			<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
+		            				<div>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i class="fas fa-angle-left fa-fw"></i>
+		            						<span class="sr-only">上一頁</span>
+		            					</a>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i class="fas fa-angle-left fa-fw"></i>
+		            						<span class="sr-only">上一頁</span>
+		            					</a>
+		            				</div>
+		            					<div>
+		            						<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+		            							<label class="tw-flex tw-items-center">
+		            							<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value" title="頁碼選單">
+		            								<option value="#" selected>1</option>
+		            								<option value="#">2</option>
+		            							</select>
+		            							</label>
+		            							<span class="mx-1">&nbsp;/<span class="tw-pl-1" title="總頁數">2</span></span>
+		            						</div>
+		            					</div>
+		            				<div>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="下一頁">
+		            						<span class="sr-only">下一頁</span><i class="fas fa-angle-right fa-fw"></i>
+		            					</a>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden>
+		            						<span class="sr-only">下一頁</span><i class="fas fa-chevron-right fa-fw"></i>
+		            					</a>
+		            				</div>
+		            			</div>
+		            		</div>
+		            		<!-- pagination -->	</div>
 		            </div>
 		            <!-- Tab Switcher -->          </div>
 		          <!-- /content -->

@@ -751,7 +751,7 @@ document.querySelectorAll('.some-class').forEach(item => {
 const allPresent = (el) => {
   // var exist = true
   // k = document.querySelectorAll(el)
-  $all(el).forEach(item => {
+  $$all(el).forEach(item => {
     if (item == null) {
       return false
     } else {
@@ -773,7 +773,7 @@ const allPresent = (el) => {
 const onePresent = (el) => {
   // var exist = true
   // k = document.querySelectorAll(el)
-  $all(el).forEach(item => {
+  $$all(el).forEach(item => {
     if (item != null) {
       return true
     } else {
@@ -791,7 +791,9 @@ const onePresent = (el) => {
 }
 
 /* https://jsfiddle.net/shen_yang_work/0489wdn7/ */
-const $all = (el) => document.querySelectorAll(el)
+const $$ = (el) => document.querySelector(el)
+const $$all = (el) => document.querySelectorAll(el)
+let count = 0
 
 /* https://gomakethings.com/how-to-get-all-of-an-elements-siblings-with-vanilla-js/ */
 const getSiblings = (el) => {
@@ -837,7 +839,7 @@ const accordion = (el) => {
   }
 }
 const eventToggleClasses = (eventTarget, event, selfToggleClassArray, accordionEl, eventTargetParent, parentToggleClassArray, inactiveParentSiblings, inactiveParentSiblingsChildern, toggleChild, childToggleClassArray) => {
-  $all(eventTarget).forEach(item => {
+  $$all(eventTarget).forEach(item => {
     if (event != '') {
       item.addEventListener(event, event => {
         if (eventTargetParent != '') {
@@ -849,9 +851,17 @@ const eventToggleClasses = (eventTarget, event, selfToggleClassArray, accordionE
             })
           }
 
+          //Toggle class('hidden') to all children in this tree
           item.closest(eventTargetParent).querySelectorAll(toggleChild).forEach(item => {
             toggleClasses(item, childToggleClassArray)
           })
+
+          // item.closest(eventTargetParent).querySelectorAll(toggleChild).forEach((item, index, object) => {
+          //   if (accordionEl != '' && item === accordionEl) {
+          //     object.splice(index, 1);
+          //   }
+          //   toggleClasses(item, childToggleClassArray)
+          // })
 
           if (accordionEl != '') {
             item.closest(eventTargetParent).querySelectorAll(accordionEl).forEach(item => {
@@ -859,12 +869,13 @@ const eventToggleClasses = (eventTarget, event, selfToggleClassArray, accordionE
             })
           }
 
+          //Toggle class('active') to parent
           if (parentToggleClassArray != '') {
             toggleClasses(item.closest(eventTargetParent), parentToggleClassArray)
           }
 
-          // If the arrow right is hidden when the menu is opened
           if (inactiveParentSiblings != '' && inactiveParentSiblingsChildern != '') {
+            // If the arrow right is hidden when the menu is opened
             if (item.firstElementChild.classList.contains(childToggleClassArray) == true) {
               // Add the calss 'active' to parent
               item.closest(eventTargetParent).classList.add(parentToggleClassArray)
@@ -878,9 +889,11 @@ const eventToggleClasses = (eventTarget, event, selfToggleClassArray, accordionE
                 // Hide Contents
                 item.lastElementChild.classList.add(childToggleClassArray)
               })
-            } else {
-              item.closest(eventTargetParent).classList.remove(parentToggleClassArray)
             }
+            // else {
+            //   //Remove class('active') to self parent
+            //   item.closest(eventTargetParent).classList.remove(parentToggleClassArray)
+            // }
           }
         } else {
           if (toggleChild != '') {
@@ -904,17 +917,17 @@ const eventToggleClasses = (eventTarget, event, selfToggleClassArray, accordionE
 }
 // eventToggleClasses('#offcanvas li>div>a:nth-child(2)', 'click', '', 'ul.toggle', 'li', '', '', '', '.toggle', ['tw-hidden']) // uk-offcanvas with accordion
 eventToggleClasses('#offcanvas li>div>a:nth-child(2)', 'click', '', '', 'li.uk-parent', ['active'], '#offcanvas>div>ul>li.uk-parent:not(.active)', 'div>a:last-child', '.toggle', ['tw-hidden']) // uk-offcanvas opeing in turn
-eventToggleClasses('.listMenu_titlelink li>div>div:nth-child(2)>a', 'click', '', '', 'li.uk-parent', ['active'], '.listMenu_titlelink>ul>li.uk-parent:not(.active)', 'div>div:last-child>a', '.toggle', ['tw-hidden']) // listMenu_titlelink opeing in turn
+eventToggleClasses('.listMenu_titlelink li>div>div:nth-child(2)>a', 'click', '', '', 'li.uk-parent', ['open'], '.listMenu_titlelink>ul>li.uk-parent:not(.open)', 'div>div:last-child>a', '.toggle', ['tw-hidden']) // listMenu_titlelink opeing in turn
 // eventToggleClasses('.listMenu_titlelink li a.listMore', 'click', '', '', 'ul', '', '', '', '.listMore', ['tw-hidden']) // .listMore
 // eventToggleClasses('li.listMore>a', 'click', '', '', 'li.listMore', ['hidden'], '', '', '', ''); // list click 'more' to show
 // eventToggleClasses('.list_accordion_bs .list-group-item-action', 'click', ['active'], 'ul.accordion', 'li', '', '', '.toggle', '', ['tw-hidden', 'active']);
 // eventToggleClasses('.list_accordion_titlelink .list-group-item>div>a:nth-child(2)', 'click', '', 'ul.accordion', 'li', ['active'], '', '', '.toggle', ['tw-hidden']);
 // eventToggleClasses('.list_accordion_bg .arrow', 'click', '', 'ul.accordion', 'li', '', '', '', '.toggle', ['tw-hidden']);
 
-// const $all = (el) => document.querySelectorAll(el)
+// const $$all = (el) => document.querySelectorAll(el)
 // const toggleClasses = (el, ...cls) => cls.map(cl => el.classList.toggle(cl)) // '...cls': Rest parameter must be last formal parameter
 // const eventToggleClasses = (eventTarget, event, eventTargetParent, toggleChild, ...cls) => {
-//   $all(eventTarget).forEach(item => {
+//   $$all(eventTarget).forEach(item => {
 //     item.addEventListener('click', event => {
 //       if (eventTargetParent != '') {
 //         item.closest(eventTargetParent).querySelectorAll(toggleChild).forEach(item => {
@@ -932,14 +945,14 @@ eventToggleClasses('.listMenu_titlelink li>div>div:nth-child(2)>a', 'click', '',
 // eventToggleClasses('.list_accordion .arrow', 'click', 'li.py-1', '.toggle', 'tw-hidden');
 
 const setMaxViewHeight = (el) => {
-  $all(el).forEach(item => {
+  $$all(el).forEach(item => {
     item.style.maxHeight = window.innerHeight - item.getBoundingClientRect().top + 'px'
   })
 }
 const eventMaxViewHeight = (event_el, event, height_el) => {
-  $all(event_el).forEach(item => {
+  $$all(event_el).forEach(item => {
     item.addEventListener(event, () => {
-      $all(height_el).forEach(item => {
+      $$all(height_el).forEach(item => {
         item.style.maxHeight = window.innerHeight - item.getBoundingClientRect().top + 'px'
       })
     })
@@ -983,7 +996,7 @@ const scrollToTop = (amount) => {
   })
 }
 const gotoTop = (el, addClassName, scollDownPX, scrollTopPX) => {
-  $all(el).forEach(item => {
+  $$all(el).forEach(item => {
     window.addEventListener('scroll', () => {
       if (document.body.scrollTop > scollDownPX || document.documentElement.scrollTop > scollDownPX) {
         item.classList.add(addClassName)
@@ -1019,7 +1032,7 @@ const setAttrs = (el, attrs) => {
 
 //<a class="uk-accordion-title" href="#" onclick="toggleAttr(event, '', 'title', '展開', '縮起')">
 const eventToggleAttr = (event_el, event, event_el_children, attr, val1, val2) => {
-  $all(event_el).forEach(item => {
+  $$all(event_el).forEach(item => {
     item.addEventListener(event, () => {
       let attrVal = item.getAttribute(attr)
       if (val1 != '' && val2 != '') {
@@ -1050,11 +1063,51 @@ setAttrs('.uk-accordion>li.uk-open>a', { 'title': '縮起' })
 eventToggleAttr('.uk-accordion>li>a', 'click', '', 'title', '展開', '縮起')
 eventToggleAttr('a.sort', 'click', '.icon', 'hidden', '', '')
 
+
+//------------- Clone ------------------------------------------------//
+const cloneToggleClass = () => {
+  // var = event_el_parent, clone_el, toggle_el, toggle_class, clone_destination, cloneMaxNumber, btnRemove, input
+  let event_el_parent = '.searchInput'
+  let clone_el = '.searchBox'
+  let toggle_el = '.btnRemove, .2ndSelect'
+  let toggle_class = 'tw-hidden'
+  let clone_destination = '.searchInput>div'
+  let cloneMaxNumber = '3'
+  let btnRemove = '.btnRemove>a'
+  let input = '.searchBox input'
+  let clone = document.querySelector(clone_el).cloneNode(true)
+  clone.classList.remove('uk-first-column')
+  clone.querySelectorAll(toggle_el).forEach(item => { // querySelectorAll() accepts full CSS selectors: querySelectorAll()
+    item.classList.toggle(toggle_class)
+  })
+  clone.querySelectorAll(input).forEach(item => {
+    item.value = ''
+  })
+  count++
+  if (count <= cloneMaxNumber) {
+    $$(event_el_parent).querySelector(clone_destination).appendChild(clone)
+    console.log(count)
+  }
+  $$all(btnRemove).forEach(item => {
+    item.addEventListener('click', () => {
+      item.closest(clone_el).remove()
+      count = count - 1 // count-- got error
+      if (count < 0) {
+        count = 0
+      }
+      console.log(count)
+    })
+  })
+}
+// $$all('#btnAdd').forEach(item => {
+//   item.addEventListener('click', cloneToggleClass)
+// })
+
 //------------- Form ------------------------------------------------//
 
 const toggleCheckAll = (checkAll, checkAllEvent, toggleCheckClass, inputCheck, inputCheckParent, ifAddClass) => {
   // ifAddClass is boolean
-  $all(checkAll).forEach(item => {
+  $$all(checkAll).forEach(item => {
     if (checkAllEvent != '') {
       item.addEventListener(checkAllEvent, event => {
         event.target.classList.toggle(toggleCheckClass)
@@ -1064,7 +1117,7 @@ const toggleCheckAll = (checkAll, checkAllEvent, toggleCheckClass, inputCheck, i
           if (ifAddClass == true) {
             event.target.classList.add(toggleCheckClass)
           }
-          $all(inputCheck).forEach(item => {
+          $$all(inputCheck).forEach(item => {
             item.checked = true
             if (ifAddClass == true) {
               item.closest(inputCheckParent).classList.add(toggleCheckClass)
@@ -1076,7 +1129,7 @@ const toggleCheckAll = (checkAll, checkAllEvent, toggleCheckClass, inputCheck, i
           if (ifAddClass == true) {
             event.target.classList.remove(toggleCheckClass)
           }
-          $all(inputCheck).forEach(item => {
+          $$all(inputCheck).forEach(item => {
             item.checked = false
             if (ifAddClass == true) {
               item.closest(inputCheckParent).classList.remove(toggleCheckClass)
@@ -1098,35 +1151,35 @@ const toggleCheckAllSum = (checkAllEl, checkAllEvent, toggleCheckClass, inputChe
   // var textSum = document.querySelectorAll(textSum)
   var sum = 0
 
-  // $all(textSum).forEach(item => {
+  // $$all(textSum).forEach(item => {
   //   item.innerHTML = sum
   // })
 
   const checkAll = () => {
-    $all(checkAllEl).forEach(item => {
+    $$all(checkAllEl).forEach(item => {
       item.classList.add('checked')
     })
-    $all(inputCheck).forEach(item => {
+    $$all(inputCheck).forEach(item => {
       item.checked = true
       if (ifAddClass == true) {
         item.closest(inputCheckParent).classList.add(toggleCheckClass)
       }
     })
     if (textSum != '') {
-      sum = $all(inputCheck).length
-      $all(textSum).forEach(item => {
+      sum = $$all(inputCheck).length
+      $$all(textSum).forEach(item => {
         item.innerHTML = sum
       })
     }
   }
   const unCheckAll = () => {
-    $all(checkAllEl).forEach(item => {
+    $$all(checkAllEl).forEach(item => {
       item.classList.remove('checked')
       if (item.getAttribute('type') == 'checkbox') {
         item.checked = false
       }
     })
-    $all(inputCheck).forEach(item => {
+    $$all(inputCheck).forEach(item => {
       item.checked = false
       if (ifAddClass == true) {
         item.closest(inputCheckParent).classList.remove(toggleCheckClass)
@@ -1134,13 +1187,13 @@ const toggleCheckAllSum = (checkAllEl, checkAllEvent, toggleCheckClass, inputChe
     })
     if (textSum != '') {
       sum = 0
-      $all(textSum).forEach(item => {
+      $$all(textSum).forEach(item => {
         item.innerHTML = sum
       })
     }
   }
 
-  $all(inputCheck).forEach(item => {
+  $$all(inputCheck).forEach(item => {
     if (inputCheckEvent != '') {
       item.addEventListener(inputCheckEvent, event => {
         if (event.target.checked) {
@@ -1149,7 +1202,7 @@ const toggleCheckAllSum = (checkAllEl, checkAllEvent, toggleCheckClass, inputChe
           }
           if (textSum != '') {
             sum = sum + 1
-            $all(textSum).forEach(item => {
+            $$all(textSum).forEach(item => {
               item.innerHTML = sum
             })
           }
@@ -1159,7 +1212,7 @@ const toggleCheckAllSum = (checkAllEl, checkAllEvent, toggleCheckClass, inputChe
           }
           if (textSum != '') {
             sum = sum - 1
-            $all(textSum).forEach(item => {
+            $$all(textSum).forEach(item => {
               item.innerHTML = sum
             })
           }
@@ -1168,20 +1221,20 @@ const toggleCheckAllSum = (checkAllEl, checkAllEvent, toggleCheckClass, inputChe
     }
   })
 
-  $all(checkAllEl).forEach(item => {
+  $$all(checkAllEl).forEach(item => {
     if (checkAllEvent != '') {
       item.addEventListener(checkAllEvent, event => {
         event.target.classList.toggle(toggleCheckClass)
         if (event.target.classList.contains(toggleCheckClass)) {
           if (event.target.getAttribute('type') == 'checkbox') {
-            $all(checkAllEl).forEach(item => {
+            $$all(checkAllEl).forEach(item => {
               item.checked = true
             })
           }
           checkAll()
         } else {
           if (event.target.getAttribute('type') == 'checkbox') {
-            $all(checkAllEl).forEach(item => {
+            $$all(checkAllEl).forEach(item => {
               item.checked = false
             })
           }
@@ -1192,7 +1245,7 @@ const toggleCheckAllSum = (checkAllEl, checkAllEvent, toggleCheckClass, inputChe
   })
 
   if (resetButton != '') {
-    $all(resetButton).forEach(item => {
+    $$all(resetButton).forEach(item => {
       item.addEventListener(resetButtonEvent, () => {
         unCheckAll()
       })

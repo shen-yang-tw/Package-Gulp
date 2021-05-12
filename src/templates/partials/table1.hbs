@@ -4,10 +4,9 @@
 {{#if tabSwitcher}}
 {{>tabSwitcher tab1name='全部' tabNoline=true tab2name='Tab2' tab3=true tab3name='Tab3' content1='table1TabContent' searchBox=true content2='blank' content3='blank'}}
 {{else}}
-{{#if searchBox}}
-{{>searchBox placeholder='輸入關鍵字搜尋' only1button=true 1stButtonName='搜尋'}}
-{{/if}}
-{{>pagination pageSelect=true pageSum='2'}}
+{{#if searchBox}}{{>searchBox placeholder='輸入關鍵字搜尋' searchButton=true searchButtonName='搜尋'}}{{/if}}
+{{#if searchBoxPlus}}{{>searchBoxPlus selectFirst=true selectOptionName='全部' searchButtonName='搜尋'}}{{/if}}
+{{#if pagination}}{{>pagination pageSelect=true pageSum='2'}}{{/if}}
 <!-- uk-overflow-auto -->
 <div class="uk-overflow-auto">
   <!-- uk-grid -->
@@ -170,5 +169,5 @@
   {{>modal-table id='modal-table' wide=true modal-title='標題' note='建立日期 2016/2/25 10:55，建立者: 黃舜煦' footerBtnRight=true}}
 </div>
 <!-- /uk-overflow-auto -->
-{{>pagination pageSelect=true pageSum='2'}}
+{{#if pagination}}{{>pagination pageSelect=true pageSum='2'}}{{/if}}
 {{/if}}

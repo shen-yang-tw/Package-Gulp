@@ -2,16 +2,16 @@
 // node.js Packages / Dependencies
 const gulp = require('gulp');
 const sass = require('gulp-dart-sass');
-// const uglify = require('gulp-uglify');
 const uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
-const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
-const pngQuint = require('imagemin-pngquant');
 const browserSync = require('browser-sync').create();
 const gulpautoprefixer = require('gulp-autoprefixer');
-const jpgRecompress = require('imagemin-jpeg-recompress');
+// const pngQuint = require('imagemin-pngquant');
+// const uglify = require('gulp-uglify');
+// const concat = require('gulp-concat');
+// const jpgRecompress = require('imagemin-jpeg-recompress');
 
 const inject = require('gulp-inject');
 const postcss = require('gulp-postcss');
@@ -21,9 +21,10 @@ const tailwindcss = require("tailwindcss");
 const atimport = require("postcss-import");
 const del = require("del");
 const replace = require('gulp-replace');
-var handlebars = require('gulp-compile-handlebars');
-var gulpif = require('gulp-if');
-var run = require('gulp-run');
+const handlebars = require('gulp-compile-handlebars');
+const gulpif = require('gulp-if');
+// const gulpIgnore = require('gulp-ignore');
+// const run = require('gulp-run');
 
 //Mode
 // const mode = require('gulp-mode')(); //last '()' means a function must be needed or get err
@@ -33,14 +34,36 @@ const mode = require('gulp-mode')({
   verbose: false
 });
 
-const uk = true, fa = true, tw = true, onlyscript = true, othercolors = false, color1 = false, color2 = false, vendorscss = false, vendorsjs = false, bs = false, bs3 = false, jq = false
+const uk = true, fonts = true, fa = true, tw = true, script = true, colors = true, editor = true, aa = false, favicon = false, fullcalendar = false
+const othercolors = false, separatecolors = false, vendorscss = false, vendorsjs = false, bs = false, bs3 = false, jq = false
 
-if (color1 == true) {
-  var color1val = 'ncu';
+var siteTitle = '測試網站'
+var scriptjs = 'script.js'
+var editorcss = 'editor*.css'
+var editorscss = 'editor.scss'
+var color1val = 'ncu', color2val = 'nthu', color3val = 'nycu'
+var othercolorscss = 'colors-*.css'
+var othercolorsscss = 'colors-*.scss'
+var vdjs = 'xx*.js'
+var vdcss = 'xx*.css'
+var vdminjs = 'xx*.min.js'
+var vdmincss = 'xx*.min.css'
+var fcjs = 'fullcalendar*.js'
+var fcminjs = 'fullcalendar*.min.js'
+var fccss =  'fullcalendar*.css'
+
+if (separatecolors == true) {
+  othercolors = false // othercolors set true will be all exist along with 'colors.css' or set false will be separate
 }
-if (color2 == true) {
-  var color2val = 'nthu';
+if (bs3 == true) {
+  jq = true
 }
+// if (script == false) {
+//   scriptjs = ''
+// }
+// if (fullcalendar == false) {
+//   fcjs = ''
+// }
 
 // Paths
 var paths = {
@@ -58,10 +81,13 @@ var paths = {
     bs3css: ['node_modules/bootstrap/dist/css/bootstrap.min.css'],
     bs3fonts: ['node_modules/bootstrap/dist/fonts/*'],
     jq: ['node_modules/jquery/dist/jquery.min.js'],
-    vendorscss: ['src/vendors/*.css'],
-    vendorsjs: ['src/vendors/*.js'],
-    // bodyjs: ['src/js/*.js'],
-    // fittext: ['node_modules/FitText-UMD/fittext.js'], //FitText
+    fullcalendarjs: ['node_modules/fullcalendar/main.min.js'],
+    fullcalendarlocales: ['node_modules/fullcalendar/locales-all.min.js'],
+    fullcalendarcss: ['node_modules/fullcalendar/main.min.css'],
+    fullcalendarjsi: ['src/vendors/' + fcjs],
+    vendorsjs: ['src/vendors/' + vdjs],
+    vendorscss: ['src/vendors/' + vdcss],
+    fonts: ['src/fonts/**/*.*'],
   },
   // template: '',
   src: {
@@ -73,19 +99,22 @@ var paths = {
     vendors: 'src/libs/**/*.*',
     img: 'src/img/**/*.+(png|jpg|gif|svg)',
     scss: 'src/scss/*.scss',
-    minjs: ['src/js/*.js', '!src/js/uikit*.js', '!src/js/*.min.js', '!src/js/*-i.js', '!src/js/*-bak.js', '!src/js/*-old.js',],
+    minjs: ['src/js/*.js', '!src/js/uikit*.js', '!src/js/*.min.js', '!src/js/*-i.js', '!src/js/*-bak.js', '!src/js/*-old.js', '!src/js/*複製.js', '!src/js/' + fcminjs, '!src/js/' + vdminjs],
     // excludeminjs: "'!src/js/*.min.js', '!src/js/*-i.js', '!src/js/*-bak.js', '!src/js/*-old.js'",
     // // [...] will get errors. The variable array cannot be included in a array of [paths.src.js, paths.src.excludeminjs]
-    deljs: ['src/js/*.js', '!src/js/script.js'],
-    injectjs: ['src/js/*.js', '!src/js/script*.js', '!src/js/jquery*.js', '!src/js/bootstrap*.js', '!src/js/ui*.js', '!src/js/*-i.js'],
-    injectcss: ['src/css/*.css', '!src/css/bootstrap*.css', '!src/css/ui*.css', '!src/css/ta*.css', '!src/css/font*.css', '!src/css/main*.css', '!src/css/colors*.css', '!src/css/style*.css'],
-    sasstoscss: ['src/scss/*.scss', '!src/scss/*-i.scss', '!src/scss/*-bak.scss', '!src/scss/*-full.scss'],
-    minicss: ['src/css/*.css', '!src/css/ui*.css', '!src/css/ta*.css', '!src/css/font*.css', '!src/css/bootstrap*.css'],
-    // minicss: ['src/css/*.css', '!src/css/ui*.css', '!src/css/ta*.css', '!src/css/font*.css', bs3 ? '' : '!src/css/bootstrap*.css'],
+    deljs: ['src/js/*.js', '!src/js/*-i.js', '!src/js/*-bak.js', '!src/js/*-old.js', '!src/js/*複製.js', script ? '!src/js/' + scriptjs : '-', vendorsjs ? '!src/js/' + vdjs : '-', fullcalendar ? '!src/js/' + fcjs : '-'],
+    delcss: ['src/css/*.css', vendorscss ? '!src/css/' + vdcss : '-', fullcalendar ? '!src/css/' + fccss : '-'],
+    injectjs: ['src/js/*.js', '!src/js/jquery*.js', '!src/js/bootstrap*.js', '!src/js/ui*.js', '!src/js/*-i.js', script ? '!src/js/' + scriptjs : '-', vendorsjs ? '!src/js/' + vdjs : '-', fullcalendar ? '!src/js/' + fcjs : '-'],
+    injectcss: ['src/css/*.css', '!src/css/bootstrap*.css', '!src/css/ui*.css', '!src/css/ta*.css', '!src/css/font*.css', '!src/css/main*.css', '!src/css/colors*.css', '!src/css/style*.css', vendorscss ? '!src/css/' + vdcss : '-', fullcalendar ? '!src/css/' + fccss : '-'],
+    sasstoscss: ['src/scss/*.scss', '!src/scss/*-full.scss', '!src/scss/*-i.scss', '!src/scss/*-bak.scss', '!src/scss/*複製.scss', editor ? '-' : '!src/scss/' + editorscss, othercolors ? '-' : '!src/scss/' + othercolorsscss],
+    minicss: ['src/css/*.css', '!src/css/ui*.css', '!src/css/ta*.css', '!src/css/font*.css', '!src/css/bootstrap*.css', vendorscss ? '!src/css/' + vdmincss : '-', fullcalendar ? '!src/css/' + fccss : '-'],
+    mincss: ['src/css/*.min.css'],
     color1html: 'src/' + color1val + '-*.html', // 'src/ncu-*.html'
     color2html: 'src/' + color2val + '-*.html', // 'src/nthu-*.html'
+    color3html: 'src/' + color3val + '-*.html', // 'src/nthu-*.html'
     color1css: ['src/css/colors-' + color1val + '*.css'], // 'src/css/colors-ncu*.css'
     color2css: ['src/css/colors-' + color2val + '*.css'], // 'src/css/colors-nthu*.css'
+    color3css: ['src/css/colors-' + color3val + '*.css'], // 'src/css/colors-nthu*.css'
   },
   dist: {
     root: './dist/',
@@ -95,17 +124,48 @@ var paths = {
     css: 'css',
     js: 'js',
     img: 'img',
+    fonts: 'fonts',
     fafonts: 'webfonts',
     bs3fonts: 'fonts',
     vendors: 'libs',
-    injectjs: ['dist/js/*.js', '!dist/js/script*.js', '!dist/js/jquery*.js', '!dist/js/bootstrap*.js', '!dist/js/ui*.js', '!dist/js/*-i.js'],
-    injectcss: ['dist/css/*.css', '!dist/css/bootstrap*.css', '!dist/css/ui*.css', '!dist/css/ta*.css', '!dist/css/font*.css', '!dist/css/main*.css', '!dist/css/colors*.css', '!dist/css/style*.css'],
+    injectjs: ['dist/js/*.js', '!dist/js/jquery*.js', '!dist/js/bootstrap*.js', '!dist/js/ui*.js', script ? '!dist/js/' + scriptjs : '-', vendorsjs ? '!dist/js/' + vdjs : '-', fullcalendar ? '!dist/js/' + fcjs : '-'],
+    injectcss: ['dist/css/*.css', '!dist/css/bootstrap*.css', '!dist/css/ui*.css', '!dist/css/ta*.css', '!dist/css/font*.css', '!dist/css/main*.css', '!dist/css/colors*.css', '!dist/css/style*.css', vendorscss ? '!dist/css/' + vdcss : '-', fullcalendar ? '!dist/css/' + fccss : '-'],
     color1html: 'dist/' + color1val + '-*.html',
     color2html: 'dist/' + color2val + '-*.html',
+    color3html: 'dist/' + color3val + '-*.html',
     color1css: ['dist/css/colors-' + color1val + '*.css'],
     color2css: ['dist/css/colors-' + color2val + '*.css'],
+    color3css: ['dist/css/colors-' + color3val + '*.css'],
   }
 }
+
+//Handlebars templates
+//gulp.task('templates', async function(){}): It must need the 'async' or get error 'Did you forget to signal async completion?'
+gulp.task('templates', async function() {
+  var templateData = {
+      favicon: favicon ? true : false,
+      script: script ? true : false,
+      colors: colors ? true : false,
+      title: siteTitle,
+      focusForAA: aa ? true : false,
+      hrefForAA: aa ? true : false,
+      bootstrap: bs ? true : false,
+      bootstrapBody: bs ? true : false,
+      jqueryBody: jq ? true : false,
+      fullcalendar: fullcalendar ?  true : false
+    },
+    options = {
+      batch: [paths.src.root + paths.dist.templates + '/partials'],
+    }
+  gulp.src([paths.src.templates, '!' + paths.src.root + paths.dist.templates + '/*-i.hbs'])
+    .pipe(handlebars(templateData, options))
+    // .pipe(rename('hello.html'))
+    .pipe(rename({
+      extname: ".html"
+    }))
+    .pipe(gulp.dest(paths.src.root))
+    .pipe(gulp.dest(paths.dist.root))
+});
 
 // Output tailwind css
 gulp.task('tailwind', function() {
@@ -187,6 +247,32 @@ gulp.task('ukcss', function() {
     .pipe(gulpif(uk, gulp.dest(paths.src.root + paths.dist.css)))
     .pipe(gulpif(uk, gulp.dest(paths.dist.root + paths.dist.css)))
 })
+gulp.task('fullcalendarjsi', function() {
+  return gulp.src(paths.vendors.fullcalendarjsi, {allowEmpty: true})
+    .pipe(gulpif(fullcalendar, gulp.dest(paths.src.root + paths.dist.js)))
+    .pipe(gulpif(fullcalendar, gulp.dest(paths.dist.root + paths.dist.js)))
+})
+gulp.task('fullcalendarjs', function() {
+  return gulp.src(paths.vendors.fullcalendarjs, {allowEmpty: true})
+    .pipe(gulpif(fullcalendar, rename("fullcalendar-main.min.js")))
+    .pipe(gulpif(fullcalendar, gulp.dest(paths.src.root + paths.dist.js)))
+    .pipe(gulpif(fullcalendar, gulp.dest(paths.dist.root + paths.dist.js)))
+})
+gulp.task('fullcalendarlocales', function() {
+    return gulp.src(paths.vendors.fullcalendarlocales, {allowEmpty: true})
+    .pipe(gulpif(fullcalendar, replace(/code:"zh-tw",buttonText:{prev:"上月",next:"下月"/g, function(match) {
+      return 'code:"zh-tw",buttonText:{prev:"上月",next:"下月",prevYear:"上一年",nextYear:"下一年"'
+    })))
+    .pipe(gulpif(fullcalendar, rename("fullcalendar-locales.min.js")))
+    .pipe(gulpif(fullcalendar, gulp.dest(paths.src.root + paths.dist.js)))
+    .pipe(gulpif(fullcalendar, gulp.dest(paths.dist.root + paths.dist.js)))
+})
+gulp.task('fullcalendarcss', function() {
+  return gulp.src(paths.vendors.fullcalendarcss, {allowEmpty: true})
+    .pipe(gulpif(fullcalendar, rename("fullcalendar-main.min.css")))
+    .pipe(gulpif(fullcalendar, gulp.dest(paths.src.root + paths.dist.css)))
+    .pipe(gulpif(fullcalendar, gulp.dest(paths.dist.root + paths.dist.css)))
+})
 gulp.task('vendorsjs', function() {
   return gulp.src(paths.vendors.vendorsjs, {allowEmpty: true})
     .pipe(gulpif(vendorsjs, gulp.dest(paths.src.root + paths.dist.js)))
@@ -197,6 +283,11 @@ gulp.task('vendorscss', function() {
   return gulp.src(paths.vendors.vendorscss, {allowEmpty: true})
     .pipe(gulpif(vendorscss, gulp.dest(paths.src.root + paths.dist.css)))
     .pipe(gulpif(vendorscss, gulp.dest(paths.dist.root + paths.dist.css)))
+})
+gulp.task('fonts', function() {
+  return gulp.src(paths.vendors.fonts, {allowEmpty: true})
+    .pipe(gulpif(fonts, gulp.dest(paths.src.root + paths.dist.fonts)))
+    .pipe(gulpif(fonts, gulp.dest(paths.dist.root + paths.dist.fonts)))
 })
 gulp.task('facss', function() {
   return gulp.src(paths.vendors.facss, {allowEmpty: true})
@@ -214,16 +305,16 @@ gulp.task('bsjs', function() {
     .pipe(gulpif(bs, gulp.dest(paths.src.root + paths.dist.js)))
     .pipe(gulpif(bs, gulp.dest(paths.dist.root + paths.dist.js)))
 })
-gulp.task('bsscss', function() {
-  // return gulp.src('bootstrap.scss')
-  return gulp.src(paths.vendors.bsscss)
-    // Or just run find 'enable-rounded:(\s+)true' & replace in VScode
-    // \s+ means one or more whitespaces, match.slice(15, -4): all spaces between words
-    .pipe(gulpif(bs, replace(/enable-rounded:(\s+)true/g, function(match) {
-      return "enable-rounded:" + match.slice(15, -4) + "false"
-    })))
-    .pipe(gulpif(bs, gulp.dest('node_modules/bootstrap/scss/')))
-})
+// gulp.task('bsscss', function() {
+//   // return gulp.src('node_modules/bootstrap/scss/_variables.scss')
+//   return gulp.src(paths.vendors.bsscss)
+//     // Or just run find 'enable-rounded:(\s+)true' & replace in VScode
+//     // \s+ means one or more whitespaces, match.slice(15, -4): all spaces between words
+//     .pipe(gulpif(bs, replace(/enable-rounded:(\s+)true/g, function(match) {
+//       return "enable-rounded:" + match.slice(15, -4) + "false"
+//     })))
+//     .pipe(gulpif(bs, gulp.dest('node_modules/bootstrap/scss/')))
+// })
 gulp.task('bscss', function() {
   return gulp.src('bootstrap.scss', {allowEmpty: true})
     .pipe(gulpif(bs, sass().on('error', sass.logError)))
@@ -263,29 +354,6 @@ gulp.task('jqjs', function() {
     // .pipe(mode.production(gulp.dest(paths.dist.vendors)))
 })
 
-//Handlebars templates
-//gulp.task('templates', async function(){}): It must need the 'async' or get error 'Did you forget to signal async completion?'
-gulp.task('templates', async function() {
-  var templateData = {
-      title: '新光醫院圖書館',
-      bodyClass: true,
-      bodyFocus: false,
-      jqueryBody: false,
-      bootstrapBody: false,
-    },
-    options = {
-      batch: [paths.src.root + paths.dist.templates + '/partials'],
-    }
-  gulp.src([paths.src.templates, '!' + paths.src.root + paths.dist.templates + '/*-i.hbs'])
-    .pipe(handlebars(templateData, options))
-    // .pipe(rename('hello.html'))
-    .pipe(rename({
-      extname: ".html"
-    }))
-    .pipe(gulp.dest(paths.src.root))
-    .pipe(gulp.dest(paths.dist.root))
-});
-
 // clean dist and keep the directory
 gulp.task('delhtml', function() {
   return del([paths.src.root + '*.html']);
@@ -293,7 +361,7 @@ gulp.task('delhtml', function() {
 
 // inject css & js to html - https://www.npmjs.com/package/gulp-inject#method-2-use-gulp-inject-s-name-option
 gulp.task('inject', function() {
-  return gulp.src(paths.src.html)
+  return gulp.src(paths.src.html, {allowEmpty: true})
     .pipe(gulpif(bs, inject(gulp.src([paths.src.root + paths.dist.css + '/bootstrap*.css'], {allowEmpty: true}, {
       read: false
     }), {
@@ -319,6 +387,20 @@ gulp.task('inject', function() {
       read: false
     }), {
       name: 'fa',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(vendorscss, inject(gulp.src([paths.src.root + paths.dist.css + '/' + vdcss], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'vendors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(fullcalendar, inject(gulp.src([paths.src.root + paths.dist.css + '/fullcalendar*.css'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'fullcalendar',
       relative: true,
       removeTags: true
     })))
@@ -391,6 +473,34 @@ gulp.task('inject', function() {
       relative: true,
       removeTags: true
     })))
+    .pipe(gulpif(vendorsjs, inject(gulp.src([paths.src.root + paths.dist.js + '/' + vdjs], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'vendors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(bs, inject(gulp.src([paths.src.root + paths.dist.js + '/fullcalendar.js'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'fullcalendar',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(bs, inject(gulp.src([paths.src.root + paths.dist.js + '/fullcalendar-main*.js'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'fullcalendar-main',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(bs, inject(gulp.src([paths.src.root + paths.dist.js + '/fullcalendar-locales*.js'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'fullcalendar-locales',
+      relative: true,
+      removeTags: true
+    })))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/script.js'], {allowEmpty: true}, {
       read: false
     }), {
@@ -414,8 +524,8 @@ gulp.task('inject', function() {
   // .pipe(gulp.dest(paths.dist.root))
 });
 gulp.task('inject-color1', function() {
-  return gulp.src(paths.src.color1html)
-    .pipe(gulpif(color1, inject(gulp.src(paths.src.color1css, {allowEmpty: true}, {
+  return gulp.src(paths.src.color1html, {allowEmpty: true})
+    .pipe(gulpif(separatecolors, inject(gulp.src(paths.src.color1css, {allowEmpty: true}, {
       read: false
     }), {
       name: 'othercolors',
@@ -425,8 +535,19 @@ gulp.task('inject-color1', function() {
     .pipe(gulp.dest(paths.src.root))
 });
 gulp.task('inject-color2', function() {
-  return gulp.src(paths.src.color2html)
-    .pipe(gulpif(color2, inject(gulp.src(paths.src.color2css, {allowEmpty: true}, {
+  return gulp.src(paths.src.color2html, {allowEmpty: true})
+    .pipe(gulpif(separatecolors, inject(gulp.src(paths.src.color2css, {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulp.dest(paths.src.root))
+});
+gulp.task('inject-color3', function() {
+  return gulp.src(paths.src.color3html, {allowEmpty: true})
+    .pipe(gulpif(separatecolors, inject(gulp.src(paths.src.color3css, {allowEmpty: true}, {
       read: false
     }), {
       name: 'othercolors',
@@ -437,7 +558,7 @@ gulp.task('inject-color2', function() {
 });
 
 gulp.task('build-inject', function() {
-  return gulp.src(paths.dist.html)
+  return gulp.src(paths.dist.html, {allowEmpty: true})
     .pipe(gulpif(bs, inject(gulp.src([paths.dist.root + paths.dist.css + '/bootstrap*.css'], {allowEmpty: true}, {
       read: false
     }), {
@@ -463,6 +584,20 @@ gulp.task('build-inject', function() {
       read: false
     }), {
       name: 'fa',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(vendorscss, inject(gulp.src([paths.dist.root + paths.dist.css + '/' + vdcss], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'vendors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(fullcalendar, inject(gulp.src([paths.dist.root + paths.dist.css + '/fullcalendar*.css'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'fullcalendar',
       relative: true,
       removeTags: true
     })))
@@ -535,6 +670,34 @@ gulp.task('build-inject', function() {
       relative: true,
       removeTags: true
     })))
+    .pipe(gulpif(vendorsjs, inject(gulp.src([paths.dist.root + paths.dist.js + '/' + vdjs], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'vendors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(fullcalendar, inject(gulp.src([paths.dist.root + paths.dist.js + '/fullcalendar.min.js'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'fullcalendar',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(fullcalendar, inject(gulp.src([paths.dist.root + paths.dist.js + '/fullcalendar-main*.js'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'fullcalendar-main',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulpif(fullcalendar, inject(gulp.src([paths.dist.root + paths.dist.js + '/fullcalendar-locales*.js'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'fullcalendar-locales',
+      relative: true,
+      removeTags: true
+    })))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/script*.js'], {allowEmpty: true}, {
       read: false
     }), {
@@ -557,8 +720,8 @@ gulp.task('build-inject', function() {
     .pipe(gulp.dest(paths.dist.root))
 });
 gulp.task('build-inject-color1', function() {
-  return gulp.src(paths.dist.color1html)
-    .pipe(gulpif(color1, inject(gulp.src(paths.dist.color1css, {allowEmpty: true}, {
+  return gulp.src(paths.dist.color1html, {allowEmpty: true})
+    .pipe(gulpif(separatecolors, inject(gulp.src(paths.dist.color1css, {allowEmpty: true}, {
       read: false
     }), {
       name: 'othercolors',
@@ -568,8 +731,19 @@ gulp.task('build-inject-color1', function() {
     .pipe(gulp.dest(paths.dist.root))
 });
 gulp.task('build-inject-color2', function() {
-  return gulp.src(paths.dist.color2html)
-    .pipe(gulpif(color2, inject(gulp.src(paths.dist.color2css, {allowEmpty: true}, {
+  return gulp.src(paths.dist.color2html, {allowEmpty: true})
+    .pipe(gulpif(separatecolors, inject(gulp.src(paths.dist.color2css, {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulp.dest(paths.dist.root))
+});
+gulp.task('build-inject-color3', function() {
+  return gulp.src(paths.dist.color3html, {allowEmpty: true})
+    .pipe(gulpif(separatecolors, inject(gulp.src(paths.dist.color3css, {allowEmpty: true}, {
       read: false
     }), {
       name: 'othercolors',
@@ -582,7 +756,7 @@ gulp.task('build-inject-color2', function() {
 
 // Compile SCSS
 gulp.task('sass', function() {
-  return gulp.src(paths.src.sasstoscss)
+  return gulp.src(paths.src.sasstoscss, {allowEmpty: true})
     // .pipe(sass({
     //   outputStyle: 'expanded'  //For old "gulp-sass"
     // }).on('error', sass.logError))
@@ -595,7 +769,7 @@ gulp.task('sass', function() {
 
 // Minify + Combine CSS
 gulp.task('css', function() {
-  return gulp.src(paths.src.minicss)
+  return gulp.src(paths.src.minicss, {allowEmpty: true})
     .pipe(mode.development(
       postcss([
         atimport(),
@@ -661,7 +835,7 @@ gulp.task('css', function() {
     .pipe(gulp.dest(paths.dist.root + paths.dist.css))
 });
 gulp.task('mincss', function() {
-  return gulp.src([paths.src.root + paths.dist.css + '/*.min.css'])
+  return gulp.src(paths.src.mincss, {allowEmpty: true})
     .pipe(mode.production(
       postcss([
         atimport(),
@@ -695,7 +869,7 @@ gulp.task('mincss', function() {
 
 // Minify + Combine JS
 gulp.task('js', function() {
-  return gulp.src(paths.src.minjs)
+  return gulp.src(paths.src.minjs, {allowEmpty: true})
     // .pipe(mode.production(
     //   autopolyfiller('script_polyfill.js', {
     //     browsers: require('autoprefixer').default
@@ -747,7 +921,7 @@ gulp.task('js', function() {
 
 // Compress (JPEG, PNG, GIF, SVG, JPG)
 gulp.task('img', function() {
-  return gulp.src(paths.src.img)
+  return gulp.src(paths.src.img, {allowEmpty: true})
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -778,18 +952,12 @@ gulp.task('clean', function() {
 
 // clean css
 gulp.task('deletecss', function() {
-  return del([paths.src.root + paths.dist.css + '/*']);
+  return del(paths.src.delcss, {allowEmpty: true});
 });
 
 // clean js
 gulp.task('deletejs', function() {
-  return gulpif(onlyscript, del(paths.src.deljs));
-  // return del([paths.src.root + paths.dist.js + '/*.js', paths.src.deljs]);
-  // if (onlyscript) {
-  //   return del([paths.src.root + paths.dist.js + '/*.js', '!src/js/script.js']);
-  // } else {
-  //   return del([paths.src.root + paths.dist.js + '/*.js', '!src/js/script.js', '!src/js/-bak*.js', '!src/js/-old*.js', '!src/js/-i*.js']);
-  // }
+  return del(paths.src.deljs, {allowEmpty: true});
 });
 
 // Watch (SASS, CSS, JS, and HTML) reload browser on change
@@ -812,7 +980,7 @@ gulp.task('watch', function() {
 //First Preset all files
 // gulp.task('vendors', gulp.series('tailwind', 'copyjs', 'copycss', 'facss', 'copyfonts'));
 // gulp.task('vendors', gulp.series('copyjs', 'copycss', 'facss', 'copyfonts'));
-gulp.task('vendors', gulp.series('ukjs', 'ukcss', 'bsscss', 'bscss', 'bsjs', 'bs3js', 'bs3css', 'bs3fonts', 'facss', 'fafonts', 'jqjs', 'vendorsjs', 'vendorscss'));
+gulp.task('vendors', gulp.series('ukjs', 'ukcss', 'bscss', 'bsjs', 'bs3js', 'bs3css', 'bs3fonts', 'fonts', 'facss', 'fafonts', 'jqjs', 'fullcalendarjsi', 'fullcalendarjs', 'fullcalendarlocales', 'fullcalendarcss', 'vendorsjs', 'vendorscss'));
 
 //Compile Tailwind to CSS and minify css, using 'gulp tailwind' & 'gulp tailwind --production' to purge css on production
 gulp.task('tocss', gulp.series('sass', 'css', 'mincss'));

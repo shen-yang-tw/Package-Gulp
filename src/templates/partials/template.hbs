@@ -103,12 +103,10 @@
 
 {{!--
 <!-- --------------------- Grid --------------------- --> --}}
-{{!--
-<!-- Wrap Auto & Expand grid child width --> --}}
+{{!-- <!-- Wrap Auto & Expand grid child width --> --}}
+{{!-- <!-- Grid child <div> Default effect same as class="uk-width-auto" --> --}}
 <!-- uk-grid -->
 <div class="uk-grid tw-text-center" uk-grid>
-	{{!--
-	<!-- Child <div> Default effect same as class="uk-width-auto" --> --}}
 	<div class="uk-width-auto">
 		<div class="uk-card uk-card-default uk-card-body">Auto</div>
 	</div>
@@ -456,7 +454,24 @@
 </div>
 
 
-
+{{!--
+<!-- --------------------- Table --------------------- --> --}}
+<div class="uk-overflow-auto">
+	<table class="uk-table uk-table-small uk-table-striped uk-table-responsive">
+		<thead>
+			<tr>
+				<th class="uk-table-shrink uk-text-nowrap">Heading1</th>
+				<th class="uk-table-shrink uk-text-nowrap">Heading2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Data</td>
+				<td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Data</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 
 <!-- --------------------- Bootstrap

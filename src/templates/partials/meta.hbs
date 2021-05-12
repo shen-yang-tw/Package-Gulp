@@ -1,4 +1,4 @@
-{{!-- {{> meta bootstrap=true bootstrap4=true headStyle=true editor=true moreStyle=true jquery=true navMenu=true navMenuAccordion'true'}} --}}
+{{!-- {{> meta bootstrap4=true vendorscss=true editor=true moreStyle=true jquery=true navMenu=true navMenuAccordion'true'}} --}}
 {{#if bootstrap}}
 <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
 <link rel="bookmark" href="img/favicon.png" />
@@ -12,8 +12,8 @@
 <![endif]-->
 {{else}}
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
 <!-- Fix phone number style for MS Edge -->
 <meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
@@ -48,8 +48,13 @@
 <!-- fa:css -->
 <link rel="stylesheet" href="css/fontawesome.min.css">
 <!-- endinject -->
-{{#if headStyle}}
-<!-- head:css -->
+{{#if fullcalendar}}
+<!-- fullcalendar:css -->
+<link rel="stylesheet" href="css/fullcalendar-main.min.css">
+<!-- endinject -->
+{{/if}}
+{{#if vendorscss}}
+<!-- vendors:css -->
 <!-- endinject -->
 {{/if}}
 <!-- main:css -->
@@ -96,6 +101,21 @@
 {{#if bootstrapHead}}
 <!-- bs:js -->
 <script src="js/bootstrap.min.js" defer></script>
+<!-- endinject -->
+{{/if}}
+{{#if fullcalendar}}
+<!-- fullcalendar-main:js -->
+<script src="js/fullcalendar-main.min.js"></script>
+<!-- endinject -->
+<!-- fullcalendar-locales:js -->
+<script src="js/fullcalendar-locales.min.js"></script>
+<!-- endinject -->
+<!-- fullcalendar:js -->
+<script src="js/fullcalendar.js"></script>
+<!-- endinject -->
+{{/if}}
+{{#if vendorsjs}}
+<!-- vendors:js -->
 <!-- endinject -->
 {{/if}}
 {{#if script}}

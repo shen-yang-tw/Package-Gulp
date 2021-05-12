@@ -1,4 +1,4 @@
-{{!-- {{>searchBox placeholder='輸入關鍵字搜尋' select=true select1=true select2=true select3=true select4=true select5=true only1button=true 1stButtonName='搜尋' btn_secondary='' bottomOption=true leftText=true leftTxt='縮小查詢範圍' checkbox=true keywords=true rightHref=true rightTxt='進階查詢'}} --}}
+{{!-- {{>searchBox placeholder='輸入關鍵字搜尋' select=true select1=true select2=true select3=true select4=true select5=true searchButton=true searchButtonName='搜尋' btn_secondary='' bottomOption=true leftText=true leftTxt='縮小查詢範圍' checkbox=true keywords=true rightHref=true rightTxt='進階查詢'}} --}}
 <!-- searchBox -->
 <form onsubmit="return false;">
 	<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
@@ -92,8 +92,8 @@
 			</select>
 		</div>
 		{{/if}}
-		<div class="{{#if only1button}}min_width-100! min_width-150!@l{{else}}min_width-100!{{/if}} uk-width-expand@s tw-text-nowrap">
-			<a class="{{#if btnSecondary}}btn_secondary {{else}}btn_primary {{/if}}tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-2 fas fa-search"></i>{{1stButtonName}}</a>
+		<div class="{{#if searchButton}}min_width-100! min_width-150!@l{{else}}min_width-100!{{/if}} uk-width-expand@s tw-text-nowrap">
+			<a class="{{#if btnSecondary}}btn_secondary {{else}}btn_primary {{/if}}tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-2 fas fa-search"></i>{{searchButtonName}}</a>
 		</div>
 		{{#if 2ndButton}}
 		<div class="min_width-100! uk-width-auto@s tw-text-nowrap">

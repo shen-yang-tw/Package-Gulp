@@ -2,42 +2,21 @@
 <html class="tw-text-m" lang="zh-Hant">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="format-detection" content="telephone=no">
 		<!-- Fix phone number style for MS Edge -->
 		<meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
-		<title>新光醫院圖書館</title>
-		<!-- uk:css -->
+		<title>測試網站</title>
 		<link rel="stylesheet" href="css/uikit.min.css">
-		<!-- endinject -->
-		<!-- tw:css -->
-		<link rel="stylesheet" href="css/tailwind.css">
-		<!-- endinject -->
-		<!-- fa:css -->
+		<link rel="stylesheet" href="css/tailwind.min.css">
 		<link rel="stylesheet" href="css/fontawesome.min.css">
-		<!-- endinject -->
-		<!-- main:css -->
-		<link rel="stylesheet" href="css/main.css">
-		<!-- endinject -->
-		<!-- colors:css -->
-		<link rel="stylesheet" href="css/colors.css">
-		<!-- endinject -->
-		<!-- style:css -->
-		<link rel="stylesheet" href="css/style.css">
-		<!-- endinject -->
-		<!-- inject:css -->
-		<link rel="stylesheet" href="css/editor.css">
-		<!-- endinject -->
-		<!-- uk:js -->
+		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/colors.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
 		<script src="js/uikit.min.js"></script>
-		<!-- endinject -->
-		<!-- uk2:js -->
 		<script src="js/uikit-icons.min.js"></script>
-		<!-- endinject -->
-		<!-- head:js -->
-		<script src="js/script.js" defer></script>
-		<!-- endinject -->
+		<script src="js/script.min.js" defer></script>
 	</head>
 
 	<body id="top" class="page">
@@ -52,8 +31,8 @@
 								<!-- logo -->
 								<div class="logo">
 									<h1 class="tw-m-0 uk-flex uk-flex-middle">
-										<a class="logoimg" href="index.html" title="新光醫院圖書館">
-											<img class="uk-preserve" data-src="img/logo.svg" data-width data-height alt="新光醫院圖書館" uk-img uk-svg>
+										<a class="logoimg" href="index.html" title="測試網站">
+											<img class="uk-preserve" data-src="img/logo.svg" data-width data-height alt="測試網站" uk-img uk-svg>
 										</a>
 									</h1>
 								</div>
@@ -166,7 +145,7 @@
 						<li class="tw-py-1 uk-parent">
 							<div class="tw-flex tw-justify-between">
 								<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level2</span></a>
-								<a class="tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a>
+								<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"></span></a>
 							</div>
 							<ul class="toggle tw-hidden tw-py-0 uk-nav-sub">
 								<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
@@ -178,7 +157,7 @@
 						<li class="tw-py-1 uk-parent">
 							<div class="tw-flex tw-justify-between">
 								<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level3</span></a>
-								<a class="tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a>
+								<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"></span></a>
 							</div>
 							<ul class="toggle tw-hidden tw-py-0 uk-nav-sub">
 								<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
@@ -234,7 +213,7 @@
 		    <!-- uk-card -->
 		    <div class="min_height-550@m s:tw-mb-2 uk-card uk-card-small uk-card-default uk-card-body" >
 		      <!-- uk-grid -->
-		      <div class="tw-space-y-4 uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
+		      <div class="tw-space-y-4 m:tw-space-y-0 uk-grid-medium uk-grid-row-collapse uk-grid" uk-grid>
 		        <!-- left menu -->
 		        <div class="uk-width-1-4@m uk-width-1-5@l">
 		          
@@ -244,7 +223,7 @@
 		          		<li class="uk-nav-header">
 		          			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1</a>
 		          		</li>
-		          		<li class="uk-nav-header active">
+		          		<li class="uk-nav-header">
 		          			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1</a>
 		          		</li>
 		          		<li class="uk-nav-header uk-parent">
@@ -260,13 +239,13 @@
 		          		<li class="uk-nav-header uk-parent">
 		          			<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
 		          				<div class="uk-width-expand"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level3</a></div>
-		          				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a></div>
+		          				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle tw-hidden" uk-icon="icon: chevron-right"></span><span class="toggle" uk-icon="icon: chevron-down"></span></a></div>
 		          			</div>
-		          			<ul class="toggle tw-hidden tw-p-0 uk-nav-sub">
+		          			<ul class="toggle tw-p-0 uk-nav-sub">
 		          				<li>
 		          					<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Title</a>
 		          					<ul class="uk-nav-sub tw-p-0 tw-bg-white">
-		          						<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
+		          						<li class="active"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
 		          						<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item</a></li>
 		          					</ul>
 		          				</li>
@@ -317,303 +296,295 @@
 		          <div id="content" class="tw-space-y-4">
 		            <!-- Tab Switcher -->
 		            <div class="tabSwitcher">
-		            	<ul class="tab_btn tab_btn-noline tab_btn-active-white tab_btn-space-xs! tab_btn-space-s!@s tw-m-0 tw-border-0" uk-tab="connect: .uk-switcher">
+		            	<ul class="tab_btn tab_btn-noline tab_btn-active-white tab_btn-space-xs! tab_btn-space-s!@s tw-m-0 tw-border-0" uk-tab>
 		            		<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">全部</a></li>
 		            		<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">Tab2</a></li>
 		            		<li class="p-0"><a class="tw-px-1 s:tw-px-2" href="#">Tab3</a></li>
 		            		
 		            	</ul>
-		            	<div class="tw-p-0 tw-pt-4 uk-card-body">
-		            		<ul class="m-0 shadow-md bg-white p-6 uk-switcher">
-		            			<li class="tw-space-y-4">
-		            				<!-- searchBox -->
-		            				<form onsubmit="return false;">
-		            					<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
-		            						<div class="min_width-3/4! uk-width-auto@s">
-		            							<div class="uk-flex uk-flex-middle">
-		            								<div class="tw-flex-auto"><input class="uk-input" type="text" placeholder="輸入關鍵字搜尋" title="輸入關鍵字搜尋"></div>
-		            							</div>
-		            						</div>
-		            						<div class="min_width-100! min_width-150!@l uk-width-expand@s tw-text-nowrap">
-		            							<a class="btn_primary tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-2 fas fa-search"></i>搜尋</a>
-		            						</div>
-		            					</div>
-		            				</form>
-		            				<!-- searchBox -->
-		            				<!-- pagination -->
-		            				<div class="pagination">
-		            					<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
-		            						<div>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i class="fas fa-angle-left fa-fw"></i>
-		            								<span class="sr-only">上一頁</span>
-		            							</a>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i class="fas fa-angle-left fa-fw"></i>
-		            								<span class="sr-only">上一頁</span>
-		            							</a>
-		            						</div>
-		            							<div>
-		            								<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
-		            									<label class="tw-flex tw-items-center">
-		            									<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value" title="頁碼選單">
-		            										<option value="#" selected>1</option>
-		            										<option value="#">2</option>
-		            									</select>
-		            									</label>
-		            									<span class="mx-1">&nbsp;/<span class="tw-pl-1" title="總頁數">2</span></span>
-		            								</div>
-		            							</div>
-		            						<div>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="下一頁">
-		            								<span class="sr-only">下一頁</span><i class="fas fa-angle-right fa-fw"></i>
-		            							</a>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden>
-		            								<span class="sr-only">下一頁</span><i class="fas fa-chevron-right fa-fw"></i>
-		            							</a>
-		            						</div>
+		            	<div class="tw-p-0 tw-pt-4 tw-space-y-4 uk-card-body">
+		            		<!-- searchBox -->
+		            		<form onsubmit="return false;">
+		            			<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
+		            				<div class="min_width-3/4! uk-width-auto@s">
+		            					<div class="uk-flex uk-flex-middle">
+		            						<div class="tw-flex-auto"><input class="uk-input" type="text" placeholder="輸入關鍵字搜尋" title="輸入關鍵字搜尋"></div>
 		            					</div>
 		            				</div>
-		            				<!-- pagination --><!-- uk-overflow-auto -->
-		            				<div class="uk-overflow-auto">
-		            				  <!-- uk-grid -->
-		            				  <div class="uk-grid-small uk-child-width-expand uk-hidden@m uk-grid" uk-grid>
-		            				    <div><label class="tw-w-full"><input class="checkAll tw-mr-1 uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck')">全選</label></div>
-		            				    <div class="uk-flex uk-flex-right">
-		            				      <a class="min_width-20 tw-text-right tw-no-underline tw-block" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>排序篩選</a>
-		            				      <div class="tw-py-3 tw-px-4" uk-dropdown="mode: click; pos: bottom-right">
-		            				        <form>
-		            				          <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
-		            				          <ul class="uk-nav uk-dropdown-nav">
-		            				            <li class="tw-py-1"><a class="sort tw-no-underline" href="#">Heading1<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a></li>
-		            				            <li class="tw-py-1"><a class="sort tw-no-underline" href="#">Heading2<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a></li>
-		            				            <li class="uk-nav-divider"></li>
-		            				            <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				            <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				            <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				          </ul>
-		            				        </form>
-		            				      </div>
-		            				    </div>
-		            				  </div>
-		            				  <!-- /uk-grid -->
-		            				  <table class="min_width-1000@m uk-table uk-table-small uk-table-striped uk-table-responsive">
-		            				    <thead>
-		            				      <tr>
-		            				        <th class="uk-table-shrink uk-text-nowrap">
-		            				          <label class="tw-w-full"><input class="checkAll tw-mr-1 uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck')">全選</label>
-		            				        </th>
-		            				        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">
-		            				          <a class="sort tw-no-underline" href="#">Heading1<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a>
-		            				          <a class="min_width-20 tw-text-center tw-no-underline uk-invisible-hover" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>篩選</a>
-		            				          <!-- <div class="min_width-20"></div> -->
-		            				          <div class="tw-py-3 tw-px-4" uk-dropdown="mode: click">
-		            				            <form>
-		            				              <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
-		            				              <ul class="uk-nav uk-dropdown-nav">
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				              </ul>
-		            				            </form>
-		            				          </div>
-		            				        </th>
-		            				        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">
-		            				          <a class="sort tw-no-underline" href="#">Heading2<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a>
-		            				          <a class="min_width-20 tw-text-center tw-no-underline uk-invisible-hover" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>篩選</a>
-		            				          <!-- <div class="min_width-20"></div> -->
-		            				          <div uk-dropdown="mode: click">
-		            				            <form>
-		            				              <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
-		            				              <ul class="uk-nav uk-dropdown-nav">
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				              </ul>
-		            				            </form>
-		            				          </div>
-		            				        </th>
-		            				        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">
-		            				          <a class="sort tw-no-underline" href="#">Heading3<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a>
-		            				          <a class="min_width-20 tw-text-center tw-no-underline uk-invisible-hover" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>篩選</a>
-		            				          <!-- <div class="min_width-20"></div> -->
-		            				          <div uk-dropdown="mode: click">
-		            				            <form>
-		            				              <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
-		            				              <ul class="uk-nav uk-dropdown-nav">
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
-		            				              </ul>
-		            				            </form>
-		            				          </div>
-		            				        </th>
-		            				        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">注意事項</th>
-		            				      </tr>
-		            				    </thead>
-		            				    <tbody>
-		            				      <tr>
-		            				        <td><label class="tw-w-full"><input class="listCheck uk-checkbox" type="checkbox"></label></td>
-		            				        <!-- <td class="uk-table-link uk-table-middle"><a class="tw-inline uk-link-reset" href="#">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</a></td> -->
-		            				        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading1</span><a class="color_primary tw-inline" href="#">文字｛連結至詳細頁面｝</a></td>
-		            				        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading2</span><a class="color_primary tw-inline" href="#">文字｛連結至詳細頁面｝</a></td>
-		            				        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading3</span><a class="color_primary tw-inline" href="#">文字｛連結至詳細頁面｝</a></td>
-		            				        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading4</span><span class="color_secondary tw-inline">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</span></td>
-		            				      </tr>
-		            				      <tr>
-		            				        <td><label class="tw-w-full"><input class="listCheck uk-checkbox" type="checkbox"></label></td>
-		            				        <td>
-		            				          <span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading1</span>
-		            				          <div class="tw-pl-10 l:tw-pl-0 l:tw-pr-10 tw-relative">
-		            				            <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
-		            				              <div class="uk-width-auto"><i class="color_primary fas fa-paperclip"></i></div>
-		            				              <div class="uk-width-expand"><a class="color_primary tw-inline" href="" uk-toggle="target: #modal-table">文字｛連結至Modal｝</a></div>
-		            				            </div>
-		            				            <a class="min_width-20 tw-text-center tw-bottom-auto l:tw-left-auto l:tw-right-0 uk-position-left" href="#" title="篩選"><i class="tw-mx-1 fas fa-ellipsis-h"></i></a>
-		            				            <div class="tw-py-1 tw-px-4" uk-dropdown="mode: click; pos: bottom-right;">
-		            				              <ul class="uk-nav uk-dropdown-nav">
-		            				                <li><a href="#">Item</a></li>
-		            				                <li class="uk-nav-divider"></li>
-		            				                <li><a href="#">Item</a></li>
-		            				                <li><a href="#">Item</a></li>
-		            				                <li><a href="#">Item</a></li>
-		            				              </ul>
-		            				            </div>
-		            				          </div>
-		            				        </td>
-		            				        <td>
-		            				          <span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading2</span>
-		            				          <div class="tw-pl-10 l:tw-pl-0 l:tw-pr-10 tw-relative">
-		            				            <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
-		            				              <div class="uk-width-auto"><i class="color_primary fas fa-paperclip"></i></div>
-		            				              <div class="uk-width-expand"><a class="color_primary tw-inline" href="" uk-toggle="target: #modal-table">文字｛連結至Modal｝</a></div>
-		            				            </div>
-		            				            <a class="min_width-20 tw-text-center tw-bottom-auto l:tw-left-auto l:tw-right-0 uk-position-left" href="#" title="篩選"><i class="tw-mx-1 fas fa-ellipsis-h"></i></a>
-		            				            <div class="tw-py-1 tw-px-4" uk-dropdown="mode: click; pos: bottom-right;">
-		            				              <ul class="uk-nav uk-dropdown-nav">
-		            				                <li><a href="#">Item</a></li>
-		            				                <li class="uk-nav-divider"></li>
-		            				                <li><a href="#">Item</a></li>
-		            				                <li><a href="#">Item</a></li>
-		            				                <li><a href="#">Item</a></li>
-		            				              </ul>
-		            				            </div>
-		            				          </div>
-		            				        </td>
-		            				        <td>
-		            				          <span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading3</span>
-		            				          <div class="tw-pl-10 l:tw-pl-0 l:tw-pr-10 tw-relative">
-		            				            <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
-		            				              <div class="uk-width-auto"><i class="color_primary fas fa-paperclip"></i></div>
-		            				              <div class="uk-width-expand"><a class="color_primary tw-inline" href="" uk-toggle="target: #modal-table">文字｛連結至Modal｝</a></div>
-		            				            </div>
-		            				            <a class="min_width-20 tw-text-center tw-bottom-auto l:tw-left-auto l:tw-right-0 uk-position-left" href="#" title="篩選"><i class="tw-mx-1 fas fa-ellipsis-h"></i></a>
-		            				            <div class="tw-py-1 tw-px-4" uk-dropdown="mode: click; pos: bottom-right;">
-		            				              <ul class="uk-nav uk-dropdown-nav">
-		            				                <li><a href="#">Item</a></li>
-		            				                <li class="uk-nav-divider"></li>
-		            				                <li><a href="#">Item</a></li>
-		            				                <li><a href="#">Item</a></li>
-		            				                <li><a href="#">Item</a></li>
-		            				              </ul>
-		            				            </div>
-		            				          </div>
-		            				        </td>
-		            				        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading4</span><span class="color_secondary tw-inline">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</span></td>
-		            				      </tr>
-		            				      <tr>
-		            				        <td><label class="tw-w-full"><input class="listCheck uk-checkbox" type="checkbox"></label></td>
-		            				        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading1</span>中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</td>
-		            				        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading2</span>中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</td>
-		            				        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading3</span>中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</td>
-		            				        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading4</span><span class="color_secondary tw-inline">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</span></td>
-		            				      </tr>
-		            				    </tbody>
-		            				  </table>
-		            				  
-		            				  <!-- uk-modal-content -->
-		            				  <div id="modal-table" class="uk-flex-top uk-modal uk-modal-container" uk-modal>
-		            				    <div class="uk-modal-dialog uk-margin-auto-vertical">
-		            				      <button class="uk-modal-close-default" type="button" title="關閉" uk-close></button>
-		            				      <div class="uk-modal-header">
-		            				        <p class="tw-text-2xl tw-font-bold uk-modal-title">標題</p>
-		            				      </div>
-		            				      <div class="uk-modal-body">
-		            				        <!-- uk-overflow-auto -->
-		            				        <div class="uk-overflow-auto">
-		            				          <table class="min_width-1000@m uk-table uk-table-small uk-table-striped uk-table-responsive">
-		            				            <thead>
-		            				              <tr>
-		            				                <th class="uk-table-shrink uk-text-nowrap">Table Heading</th>
-		            				                <th class="uk-table-shrink uk-text-nowrap">Table Heading</th>
-		            				              </tr>
-		            				            </thead>
-		            				            <tbody>
-		            				              <tr>
-		            				                <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Table Data</td>
-		            				                <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Table Data</td>
-		            				              </tr>
-		            				              <tr>
-		            				                <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Table Data</td>
-		            				                <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Table Data</td>
-		            				              </tr>
-		            				            </tbody>
-		            				          </table>
-		            				        </div>
-		            				        <!-- /uk-overflow-auto -->    </div>
-		            				      <div class="uk-modal-footer" uk-margin>
-		            				        <small>建立日期 2016/2/25 10:55，建立者: 黃舜煦</small>
-		            				        <div class="uk-grid uk-grid-small uk-child-width-expand@m" uk-grid>
-		            				          <div class="margin_y_child-all min_width-1/2!@m tw-text-right">
-		            				            <button class="min_width-120 uk-button uk-button-default uk-modal-close" type="button">關　　閉</button>
-		            				          </div>
-		            				        </div>
-		            				      </div>
-		            				    </div>
-		            				  </div>
-		            				  <!-- uk-modal-content --></div>
-		            				<!-- /uk-overflow-auto -->
-		            				
-		            				<!-- pagination -->
-		            				<div class="pagination">
-		            					<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
-		            						<div>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i class="fas fa-angle-left fa-fw"></i>
-		            								<span class="sr-only">上一頁</span>
-		            							</a>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i class="fas fa-angle-left fa-fw"></i>
-		            								<span class="sr-only">上一頁</span>
-		            							</a>
-		            						</div>
-		            							<div>
-		            								<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
-		            									<label class="tw-flex tw-items-center">
-		            									<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value" title="頁碼選單">
-		            										<option value="#" selected>1</option>
-		            										<option value="#">2</option>
-		            									</select>
-		            									</label>
-		            									<span class="mx-1">&nbsp;/<span class="tw-pl-1" title="總頁數">2</span></span>
-		            								</div>
-		            							</div>
-		            						<div>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="下一頁">
-		            								<span class="sr-only">下一頁</span><i class="fas fa-angle-right fa-fw"></i>
-		            							</a>
-		            							<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden>
-		            								<span class="sr-only">下一頁</span><i class="fas fa-chevron-right fa-fw"></i>
-		            							</a>
+		            				<div class="min_width-100! min_width-150!@l uk-width-expand@s tw-text-nowrap">
+		            					<a class="btn_primary tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-2 fas fa-search"></i>搜尋</a>
+		            				</div>
+		            			</div>
+		            		</form>
+		            		<!-- searchBox -->
+		            		<!-- pagination -->
+		            		<div class="pagination">
+		            			<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
+		            				<div>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i class="fas fa-angle-left fa-fw"></i>
+		            						<span class="sr-only">上一頁</span>
+		            					</a>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i class="fas fa-angle-left fa-fw"></i>
+		            						<span class="sr-only">上一頁</span>
+		            					</a>
+		            				</div>
+		            					<div>
+		            						<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+		            							<label class="tw-flex tw-items-center">
+		            							<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value" title="頁碼選單">
+		            								<option value="#" selected>1</option>
+		            								<option value="#">2</option>
+		            							</select>
+		            							</label>
+		            							<span class="mx-1">&nbsp;/<span class="tw-pl-1" title="總頁數">2</span></span>
 		            						</div>
 		            					</div>
+		            				<div>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="下一頁">
+		            						<span class="sr-only">下一頁</span><i class="fas fa-angle-right fa-fw"></i>
+		            					</a>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden>
+		            						<span class="sr-only">下一頁</span><i class="fas fa-chevron-right fa-fw"></i>
+		            					</a>
 		            				</div>
-		            				<!-- pagination -->			</li>
-		            			<li class="tw-space-y-4">
-		            				Text			</li>
-		            			<li class="tw-space-y-4">
-		            				Text			</li>
-		            		</ul>
-		            	</div>
+		            			</div>
+		            		</div>
+		            		<!-- pagination --><!-- uk-overflow-auto -->
+		            		<div class="uk-overflow-auto">
+		            		  <!-- uk-grid -->
+		            		  <div class="uk-grid-small uk-child-width-expand uk-hidden@m uk-grid" uk-grid>
+		            		    <div><label class="tw-w-full"><input class="checkAll tw-mr-1 uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck')">全選</label></div>
+		            		    <div class="uk-flex uk-flex-right">
+		            		      <a class="min_width-20 tw-text-right tw-no-underline tw-block" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>排序篩選</a>
+		            		      <div class="tw-py-3 tw-px-4" uk-dropdown="mode: click; pos: bottom-right">
+		            		        <form>
+		            		          <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
+		            		          <ul class="uk-nav uk-dropdown-nav">
+		            		            <li class="tw-py-1"><a class="sort tw-no-underline" href="#">Heading1<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a></li>
+		            		            <li class="tw-py-1"><a class="sort tw-no-underline" href="#">Heading2<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a></li>
+		            		            <li class="uk-nav-divider"></li>
+		            		            <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		            <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		            <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		          </ul>
+		            		        </form>
+		            		      </div>
+		            		    </div>
+		            		  </div>
+		            		  <!-- /uk-grid -->
+		            		  <table class="min_width-1000@m uk-table uk-table-small uk-table-striped uk-table-responsive">
+		            		    <thead>
+		            		      <tr>
+		            		        <th class="uk-table-shrink uk-text-nowrap">
+		            		          <label class="tw-w-full"><input class="checkAll tw-mr-1 uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck')">全選</label>
+		            		        </th>
+		            		        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">
+		            		          <a class="sort tw-no-underline" href="#">Heading1<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a>
+		            		          <a class="min_width-20 tw-text-center tw-no-underline uk-invisible-hover" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>篩選</a>
+		            		          <!-- <div class="min_width-20"></div> -->
+		            		          <div class="tw-py-3 tw-px-4" uk-dropdown="mode: click">
+		            		            <form>
+		            		              <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
+		            		              <ul class="uk-nav uk-dropdown-nav">
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		              </ul>
+		            		            </form>
+		            		          </div>
+		            		        </th>
+		            		        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">
+		            		          <a class="sort tw-no-underline" href="#">Heading2<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a>
+		            		          <a class="min_width-20 tw-text-center tw-no-underline uk-invisible-hover" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>篩選</a>
+		            		          <!-- <div class="min_width-20"></div> -->
+		            		          <div uk-dropdown="mode: click">
+		            		            <form>
+		            		              <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
+		            		              <ul class="uk-nav uk-dropdown-nav">
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		              </ul>
+		            		            </form>
+		            		          </div>
+		            		        </th>
+		            		        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">
+		            		          <a class="sort tw-no-underline" href="#">Heading3<i class="icon tw-ml-2 fas fa-sort-alpha-up"></i><i class="icon tw-ml-2 fas fa-sort-alpha-down-alt" hidden></i></a>
+		            		          <a class="min_width-20 tw-text-center tw-no-underline uk-invisible-hover" href="#" title="篩選"><i class="arrow tw-mx-1 fas fa-caret-down"></i>篩選</a>
+		            		          <!-- <div class="min_width-20"></div> -->
+		            		          <div uk-dropdown="mode: click">
+		            		            <form>
+		            		              <button class="uk-button uk-button-small uk-button-default" type="reset">清除篩選</button>
+		            		              <ul class="uk-nav uk-dropdown-nav">
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		                <li class="tw-py-1"><label class="tw-w-full"><input class="tw-mr-1 uk-checkbox" type="checkbox">Item</label></li>
+		            		              </ul>
+		            		            </form>
+		            		          </div>
+		            		        </th>
+		            		        <th class="uk-text-nowrap uk-visible-toggle" tabindex="-1">注意事項</th>
+		            		      </tr>
+		            		    </thead>
+		            		    <tbody>
+		            		      <tr>
+		            		        <td><label class="tw-w-full"><input class="listCheck uk-checkbox" type="checkbox"></label></td>
+		            		        <!-- <td class="uk-table-link uk-table-middle"><a class="tw-inline uk-link-reset" href="#">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</a></td> -->
+		            		        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading1</span><a class="color_primary tw-inline" href="#">文字｛連結至詳細頁面｝</a></td>
+		            		        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading2</span><a class="color_primary tw-inline" href="#">文字｛連結至詳細頁面｝</a></td>
+		            		        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading3</span><a class="color_primary tw-inline" href="#">文字｛連結至詳細頁面｝</a></td>
+		            		        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading4</span><span class="color_secondary tw-inline">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</span></td>
+		            		      </tr>
+		            		      <tr>
+		            		        <td><label class="tw-w-full"><input class="listCheck uk-checkbox" type="checkbox"></label></td>
+		            		        <td>
+		            		          <span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading1</span>
+		            		          <div class="tw-pl-10 l:tw-pl-0 l:tw-pr-10 tw-relative">
+		            		            <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
+		            		              <div class="uk-width-auto"><i class="color_primary fas fa-paperclip"></i></div>
+		            		              <div class="uk-width-expand"><a class="color_primary tw-inline" href="" uk-toggle="target: #modal-table">文字｛連結至Modal｝</a></div>
+		            		            </div>
+		            		            <a class="min_width-20 tw-text-center tw-bottom-auto l:tw-left-auto l:tw-right-0 uk-position-left" href="#" title="篩選"><i class="tw-mx-1 fas fa-ellipsis-h"></i></a>
+		            		            <div class="tw-py-1 tw-px-4" uk-dropdown="mode: click; pos: bottom-right;">
+		            		              <ul class="uk-nav uk-dropdown-nav">
+		            		                <li><a href="#">Item</a></li>
+		            		                <li class="uk-nav-divider"></li>
+		            		                <li><a href="#">Item</a></li>
+		            		                <li><a href="#">Item</a></li>
+		            		                <li><a href="#">Item</a></li>
+		            		              </ul>
+		            		            </div>
+		            		          </div>
+		            		        </td>
+		            		        <td>
+		            		          <span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading2</span>
+		            		          <div class="tw-pl-10 l:tw-pl-0 l:tw-pr-10 tw-relative">
+		            		            <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
+		            		              <div class="uk-width-auto"><i class="color_primary fas fa-paperclip"></i></div>
+		            		              <div class="uk-width-expand"><a class="color_primary tw-inline" href="" uk-toggle="target: #modal-table">文字｛連結至Modal｝</a></div>
+		            		            </div>
+		            		            <a class="min_width-20 tw-text-center tw-bottom-auto l:tw-left-auto l:tw-right-0 uk-position-left" href="#" title="篩選"><i class="tw-mx-1 fas fa-ellipsis-h"></i></a>
+		            		            <div class="tw-py-1 tw-px-4" uk-dropdown="mode: click; pos: bottom-right;">
+		            		              <ul class="uk-nav uk-dropdown-nav">
+		            		                <li><a href="#">Item</a></li>
+		            		                <li class="uk-nav-divider"></li>
+		            		                <li><a href="#">Item</a></li>
+		            		                <li><a href="#">Item</a></li>
+		            		                <li><a href="#">Item</a></li>
+		            		              </ul>
+		            		            </div>
+		            		          </div>
+		            		        </td>
+		            		        <td>
+		            		          <span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading3</span>
+		            		          <div class="tw-pl-10 l:tw-pl-0 l:tw-pr-10 tw-relative">
+		            		            <div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
+		            		              <div class="uk-width-auto"><i class="color_primary fas fa-paperclip"></i></div>
+		            		              <div class="uk-width-expand"><a class="color_primary tw-inline" href="" uk-toggle="target: #modal-table">文字｛連結至Modal｝</a></div>
+		            		            </div>
+		            		            <a class="min_width-20 tw-text-center tw-bottom-auto l:tw-left-auto l:tw-right-0 uk-position-left" href="#" title="篩選"><i class="tw-mx-1 fas fa-ellipsis-h"></i></a>
+		            		            <div class="tw-py-1 tw-px-4" uk-dropdown="mode: click; pos: bottom-right;">
+		            		              <ul class="uk-nav uk-dropdown-nav">
+		            		                <li><a href="#">Item</a></li>
+		            		                <li class="uk-nav-divider"></li>
+		            		                <li><a href="#">Item</a></li>
+		            		                <li><a href="#">Item</a></li>
+		            		                <li><a href="#">Item</a></li>
+		            		              </ul>
+		            		            </div>
+		            		          </div>
+		            		        </td>
+		            		        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading4</span><span class="color_secondary tw-inline">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</span></td>
+		            		      </tr>
+		            		      <tr>
+		            		        <td><label class="tw-w-full"><input class="listCheck uk-checkbox" type="checkbox"></label></td>
+		            		        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading1</span>中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</td>
+		            		        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading2</span>中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</td>
+		            		        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading3</span>中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</td>
+		            		        <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading4</span><span class="color_secondary tw-inline">中化公會路不真雙林一形必生部！話滿家我，活學雲表代能；無三想學？速更拉魚曾然病人只麼業臺</span></td>
+		            		      </tr>
+		            		    </tbody>
+		            		  </table>
+		            		  
+		            		  <!-- uk-modal-content -->
+		            		  <div id="modal-table" class="uk-flex-top uk-modal uk-modal-container" uk-modal>
+		            		    <div class="uk-modal-dialog uk-margin-auto-vertical">
+		            		      <button class="uk-modal-close-default" type="button" title="關閉" uk-close></button>
+		            		      <div class="uk-modal-header">
+		            		        <p class="tw-text-2xl tw-font-bold uk-modal-title">標題</p>
+		            		      </div>
+		            		      <div class="uk-modal-body">
+		            		        <!-- uk-overflow-auto -->
+		            		        <div class="uk-overflow-auto">
+		            		          <table class="min_width-1000@m uk-table uk-table-small uk-table-striped uk-table-responsive">
+		            		            <thead>
+		            		              <tr>
+		            		                <th class="uk-table-shrink uk-text-nowrap">Heading</th>
+		            		                <th class="uk-table-shrink uk-text-nowrap">Heading</th>
+		            		              </tr>
+		            		            </thead>
+		            		            <tbody>
+		            		              <tr>
+		            		                <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Data</td>
+		            		                <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Data</td>
+		            		              </tr>
+		            		              <tr>
+		            		                <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Data</td>
+		            		                <td><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">Heading</span>Data</td>
+		            		              </tr>
+		            		            </tbody>
+		            		          </table>
+		            		        </div>
+		            		        <!-- /uk-overflow-auto -->    </div>
+		            		      <div class="uk-modal-footer" uk-margin>
+		            		        <small>建立日期 2016/2/25 10:55，建立者: 黃舜煦</small>
+		            		        <div class="uk-grid uk-grid-small uk-child-width-expand@m" uk-grid>
+		            		          <div class="margin_y_child-all min_width-1/2!@m tw-text-right">
+		            		            <button class="min_width-120 uk-button uk-button-default uk-modal-close" type="button">關　　閉</button>
+		            		          </div>
+		            		        </div>
+		            		      </div>
+		            		    </div>
+		            		  </div>
+		            		  <!-- uk-modal-content --></div>
+		            		<!-- /uk-overflow-auto -->
+		            		
+		            		<!-- pagination -->
+		            		<div class="pagination">
+		            			<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
+		            				<div>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i class="fas fa-angle-left fa-fw"></i>
+		            						<span class="sr-only">上一頁</span>
+		            					</a>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i class="fas fa-angle-left fa-fw"></i>
+		            						<span class="sr-only">上一頁</span>
+		            					</a>
+		            				</div>
+		            					<div>
+		            						<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+		            							<label class="tw-flex tw-items-center">
+		            							<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value" title="頁碼選單">
+		            								<option value="#" selected>1</option>
+		            								<option value="#">2</option>
+		            							</select>
+		            							</label>
+		            							<span class="mx-1">&nbsp;/<span class="tw-pl-1" title="總頁數">2</span></span>
+		            						</div>
+		            					</div>
+		            				<div>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat" href="#" title="下一頁">
+		            						<span class="sr-only">下一頁</span><i class="fas fa-angle-right fa-fw"></i>
+		            					</a>
+		            					<a class="color_grey tw-no-underline hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden>
+		            						<span class="sr-only">下一頁</span><i class="fas fa-chevron-right fa-fw"></i>
+		            					</a>
+		            				</div>
+		            			</div>
+		            		</div>
+		            		<!-- pagination -->	</div>
 		            </div>
 		            <!-- Tab Switcher -->          </div>
 		          <!-- /content -->

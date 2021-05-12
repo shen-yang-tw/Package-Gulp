@@ -5,10 +5,10 @@
 <div class="listMenu_titlelink {{#if listMenuMaxHeight}}max_height-200 max_height-700@m uk-overflow-auto{{/if}}{{#if listMenuVisibleOnDesktop}} uk-visible@m{{/if}}">
 	<ul class="list_tabs uk-nav-default">
 		{{#if level1}}
-		<li class="uk-nav-header">
+		<li class="uk-nav-header{{#if level1active}} active{{/if}}">
 			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
 		</li>
-		<li class="uk-nav-header active">
+		<li class="uk-nav-header">
 			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
 		</li>
 		{{/if}}
@@ -16,36 +16,15 @@
 		<li class="uk-nav-header">
 			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
 		</li>
-		<li class="uk-nav-header active">
+		<li class="uk-nav-header">
 			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
 		</li>
 		<li class="uk-nav-header uk-parent">
 			<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
 				<div class="uk-width-expand"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></div>
-				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a></div>
+				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle{{#if level2active}} tw-hidden{{else}}{{/if}}" uk-icon="icon: chevron-right"></span><span class="toggle{{#if level2active}}{{else}} tw-hidden{{/if}}" uk-icon="icon: chevron-down"></span></a></div>
 			</div>
-			<ul class="toggle tw-hidden tw-p-0 uk-nav-sub">
-				<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
-				<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
-				{{#if more}}
-				<li>
-					<a class="listMore tw-pr-3 tw-no-underline tw-text-xs tw-text-right tw-block">More</a>
-				</li>
-				<li class="listMore tw-p-0 tw-hidden">
-					<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
-				</li>
-				<li class="listMore tw-p-0 tw-hidden">
-					<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
-				</li>
-				{{/if}}
-			</ul>
-		</li>
-		<li class="uk-nav-header uk-parent">
-			<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
-				<div class="uk-width-expand"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></div>
-				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a></div>
-			</div>
-			<ul class="toggle tw-hidden tw-p-0 uk-nav-sub">
+			<ul class="toggle{{#if level2active}}{{else}} tw-hidden{{/if}} tw-p-0 uk-nav-sub">
 				<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
 				<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
 				{{#if more}}
@@ -66,7 +45,7 @@
 		<li class="uk-nav-header">
 			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
 		</li>
-		<li class="uk-nav-header active">
+		<li class="uk-nav-header">
 			<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
 		</li>
 		<li class="uk-nav-header uk-parent">
@@ -93,13 +72,13 @@
 		<li class="uk-nav-header uk-parent">
 			<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
 				<div class="uk-width-expand"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Level3{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></div>
-				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down"></span></a></div>
+				<div class="uk-width-auto"><a class="tw-flex tw-h-full uk-flex-middle" href="" title="展開/收合選單"><span class="toggle{{#if level3active}} tw-hidden{{else}}{{/if}}" uk-icon="icon: chevron-right"></span><span class="toggle{{#if level3active}}{{else}} tw-hidden{{/if}}" uk-icon="icon: chevron-down"></span></a></div>
 			</div>
-			<ul class="toggle tw-hidden tw-p-0 uk-nav-sub">
+			<ul class="toggle{{#if level3active}}{{else}} tw-hidden{{/if}} tw-p-0 uk-nav-sub">
 				<li>
 					<a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Title{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
 					<ul class="uk-nav-sub tw-p-0 tw-bg-white">
-						<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						<li class="{{#if level3active}}active{{/if}}"><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
 						<li><a class="tw-no-underline tw-break-all tw-h-full tw-block" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
 						{{#if more}}
 						<li>

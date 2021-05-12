@@ -1,4 +1,4 @@
-{{!-- {{>header shadow=true hrefForAA=true topNav=true textSize=true logoRightNav=true mainMenu=true 01active=true tw-borderHR=true iconLogin=true modal=true}} --}}
+{{!-- {{>header shadow=true topNav=true textSize=true logoRightNav=true mainMenu=true 01active=true tw-borderHR=true iconLogin=true modal=true}} --}}
 
 <!-- header -->
 {{#if bootstrap}}
@@ -97,15 +97,15 @@
 						</li>
 						<li class="dropdown{{#if 02active}} active{{/if}}">
 							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" data-toggle="dropdown" href="{{#if menuTitle2IsLink}}{{menuTitle2link}}{{else}}#{{/if}}">{{menuTitle2}}</a>
-							{{>dropdown bootstrap=true level1=true optionSum=true}}
+							{{>dropdown level1=true optionSum=true}}
 						</li>
 						<li class="dropdown{{#if 03active}} active{{/if}}">
 							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" data-toggle="dropdown" href="{{#if menuTitle3IsLink}}{{menuTitle3link}}{{else}}#{{/if}}">{{menuTitle3}}</a>
-							{{>dropdown bootstrap=true level2=true optionSum=true}}
+							{{>dropdown level2=true optionSum=true}}
 						</li>
 						<li class="dropdown{{#if 04active}} active{{/if}}">
 							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" data-toggle="dropdown" href="{{#if menuTitle4IsLink}}{{menuTitle4link}}{{else}}#{{/if}}">{{menuTitle4}}</a>
-							{{>dropdown bootstrap=true level3=true optionSum=true}}
+							{{>dropdown level3=true optionSum=true}}
 						</li>
 						<li class="{{#if 05active}}active{{/if}}">
 							<a class="nav-link tw-text-gray-500 tw-border-black hover:tw-text-black hover:tw-border-b-4" href="{{#if menuTitle5IsLink}}{{menuTitle5link}}{{else}}#{{/if}}">{{menuTitle5}}</a>

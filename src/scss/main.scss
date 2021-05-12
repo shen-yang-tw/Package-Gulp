@@ -197,7 +197,6 @@ body {
   background-color:$color-body-bg;
   font-weight:$fontwight;
   * {
-    // font-family:$font-cht;
     font-family:$font-cht-hei;
     line-height:$line-height;
   }
@@ -328,51 +327,140 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 #{$divider-child}>:not(:last-child) {@include bordered($property:border-right)}
 
 /*---------- Space ------------------------------*/
+#{$margin-y-child-0}\!>* {margin-bottom: 0 !important;}
+#{$margin-x-child}>:not(:last-child) {@include space($property:margin-right, $size:$space)}
+#{$margin-x-child-m}>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
+#{$margin-x-child-l}>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
+#{$margin-y-child}>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
+#{$margin-y-child-m}>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
+#{$margin-y-child-l}>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
 #{$margin-y-all-child}>:not(#{$footer}) ,#{$margin-y-all-child-even}>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
 #{$margin-y-all-child-m}>:not(#{$footer}) ,#{$margin-y-all-child-even-m}>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
 #{$margin-y-all-child-l}>:not(#{$footer}) ,#{$margin-y-all-child-even-l}>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+#{$margin-x-child}\!>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+#{$margin-x-child-m}\!>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+#{$margin-x-child-l}\!>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+#{$margin-y-child}\!>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+#{$margin-y-child-m}\!>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+#{$margin-y-child-l}\!>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
 #{$margin-y-all-child}\!>:not(#{$footer}) ,#{$margin-y-all-child-even}\!>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
 #{$margin-y-all-child-m}\!>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
 #{$margin-y-all-child-l}\!>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\!>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+@include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left, $unit:true, $unit-val:px);
+@include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top, $unit:true, $unit-val:px);
+@include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right, $unit:true, $unit-val:px);
+@include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom, $unit:true, $unit-val:px);
 
 /*uk-@s*/
 @media (min-width:640px) {
+  #{$margin-y-child-0}\@s>* {margin-bottom: 0;}
+  #{$margin-y-child-0}\!\@s>* {margin-bottom: 0 !important;}
+  #{$margin-x-child}\@s>:not(:last-child) {@include space($property:margin-right, $size:$space)}
+  #{$margin-x-child-m}\@s>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
+  #{$margin-x-child-l}\@s>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
+  #{$margin-y-child}\@s>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\@s>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
+  #{$margin-y-child-m}\@s>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\@s>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
+  #{$margin-y-child-l}\@s>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\@s>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
   #{$margin-y-all-child}\@s>:not(#{$footer}) ,#{$margin-y-all-child-even}\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
   #{$margin-y-all-child-m}\@s>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
   #{$margin-y-all-child-l}\@s>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+  #{$margin-x-child}\!\@s>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+  #{$margin-x-child-m}\!\@s>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+  #{$margin-x-child-l}\!\@s>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+  #{$margin-y-child}\!\@s>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!\@s>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-child-m}\!\@s>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!\@s>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-child-l}\!\@s>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!\@s>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
   #{$margin-y-all-child}\!\@s>:not(#{$footer}) ,#{$margin-y-all-child-even}\!\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
   #{$margin-y-all-child-m}\!\@s>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
   #{$margin-y-all-child-l}\!\@s>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\!\@s>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+  @include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left, $unit:true, $unit-val:px, $media:\@s);
+  @include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top, $unit:true, $unit-val:px, $media:\@s);
+  @include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right, $unit:true, $unit-val:px, $media:\@s);
+  @include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom, $unit:true, $unit-val:px, $media:\@s);
 }
 
 /*uk-@m*/
 @media (min-width:960px) {
+  #{$margin-y-child-0}\@m>* {margin-bottom: 0;}
+  #{$margin-y-child-0}\!\@m>* {margin-bottom: 0 !important;}
+  #{$margin-x-child}\@m>:not(:last-child) {@include space($property:margin-right, $size:$space)}
+  #{$margin-x-child-m}\@m>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
+  #{$margin-x-child-l}\@m>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
+  #{$margin-y-child}\@m>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\@m>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
+  #{$margin-y-child-m}\@m>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\@m>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
+  #{$margin-y-child-l}\@m>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\@m>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
   #{$margin-y-all-child}\@m>:not(#{$footer}) ,#{$margin-y-all-child-even}\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
   #{$margin-y-all-child-m}\@m>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
   #{$margin-y-all-child-l}\@m>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+  #{$margin-x-child}\!\@m>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+  #{$margin-x-child-m}\!\@m>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+  #{$margin-x-child-l}\!\@m>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+  #{$margin-y-child}\!\@m>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!\@m>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-child-m}\!\@m>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!\@m>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-child-l}\!\@m>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!\@m>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
   #{$margin-y-all-child}\!\@m>:not(#{$footer}) ,#{$margin-y-all-child-even}\!\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
   #{$margin-y-all-child-m}\!\@m>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
   #{$margin-y-all-child-l}\!\@m>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\!\@m>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+  @include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left, $unit:true, $unit-val:px, $media:\@m);
+  @include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top, $unit:true, $unit-val:px, $media:\@m);
+  @include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right, $unit:true, $unit-val:px, $media:\@m);
+  @include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom, $unit:true, $unit-val:px, $media:\@m);
 }
 
 /*uk-@l*/
 @media (min-width:1200px) {
+  #{$margin-y-child-0}\@l>* {margin-bottom: 0;}
+  #{$margin-y-child-0}\!\@l>* {margin-bottom: 0 !important;}
+  #{$margin-x-child}\@l>:not(:last-child) {@include space($property:margin-right, $size:$space)}
+  #{$margin-x-child-m}\@l>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
+  #{$margin-x-child-l}\@l>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
+  #{$margin-y-child}\@l>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\@l>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
+  #{$margin-y-child-m}\@l>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\@l>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
+  #{$margin-y-child-l}\@l>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\@l>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
   #{$margin-y-all-child}\@l>:not(#{$footer}) ,#{$margin-y-all-child-even}\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
   #{$margin-y-all-child-m}\@l>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
   #{$margin-y-all-child-l}\@l>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+  #{$margin-x-child}\!\@l>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+  #{$margin-x-child-m}\!\@l>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+  #{$margin-x-child-l}\!\@l>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+  #{$margin-y-child}\!\@l>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!\@l>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-child-m}\!\@l>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!\@l>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-child-l}\!\@l>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!\@l>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
   #{$margin-y-all-child}\!\@l>:not(#{$footer}) ,#{$margin-y-all-child-even}\!\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
   #{$margin-y-all-child-m}\!\@l>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
   #{$margin-y-all-child-l}\!\@l>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\!\@l>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+  @include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left, $unit:true, $unit-val:px, $media:\@l);
+  @include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top, $unit:true, $unit-val:px, $media:\@l);
+  @include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right, $unit:true, $unit-val:px, $media:\@l);
+  @include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom, $unit:true, $unit-val:px, $media:\@l);
 }
 
 /*uk-@xl*/
 @media (min-width:1600px) {
+  #{$margin-y-child-0}\@xl>* {margin-bottom: 0;}
+  #{$margin-y-child-0}\!\@xl>* {margin-bottom: 0 !important;}
+  #{$margin-x-child}\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space)}
+  #{$margin-x-child-m}\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space-m)}
+  #{$margin-x-child-l}\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space-l)}
+  #{$margin-y-child}\@xl>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\@xl>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
+  #{$margin-y-child-m}\@xl>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\@xl>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
+  #{$margin-y-child-l}\@xl>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\@xl>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
   #{$margin-y-all-child}\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even}\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space)}
   #{$margin-y-all-child-m}\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m)}
   #{$margin-y-all-child-l}\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l)}
+  #{$margin-x-child}\!\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space, $important:$boolean)}
+  #{$margin-x-child-m}\!\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space-m, $important:$boolean)}
+  #{$margin-x-child-l}\!\@xl>:not(:last-child) {@include space($property:margin-right, $size:$space-l, $important:$boolean)}
+  #{$margin-y-child}\!\@xl>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even}\!\@xl>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
+  #{$margin-y-child-m}\!\@xl>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-m}\!\@xl>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
+  #{$margin-y-child-l}\!\@xl>:not(:last-child):not(#{$footer}) ,#{$margin-y-child-even-l}\!\@xl>:nth-child(even):not(:last-child):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
   #{$margin-y-all-child}\!\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even}\!\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space, $important:$boolean)}
   #{$margin-y-all-child-m}\!\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even-m}\!\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-m, $important:$boolean)}
   #{$margin-y-all-child-l}\@xl>:not(#{$footer}) ,#{$margin-y-all-child-even-l}\@xl>:nth-child(even):not(#{$footer}) {@include space($property:margin-bottom, $size:$space-l, $important:$boolean)}
+  @include min-max($selector:$left, $min:5, $max:50, $step:5, $property:true, $property-name:left, $unit:true, $unit-val:px, $media:\@xl);
+  @include min-max($selector:$top, $min:5, $max:50, $step:5, $property:true, $property-name:top, $unit:true, $unit-val:px, $media:\@xl);
+  @include min-max($selector:$right, $min:5, $max:50, $step:5, $property:true, $property-name:right, $unit:true, $unit-val:px, $media:\@xl);
+  @include min-max($selector:$bottom, $min:5, $max:50, $step:5, $property:true, $property-name:bottom, $unit:true, $unit-val:px, $media:\@xl);
 }
 
 /*---------- List ------------------------------*/
@@ -407,7 +495,7 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
   @include list-counter($reset:true);
   &>li:before {@include list-counter($display:inline-block);}
 }
-#{$list-decimal-ch} {list-style-type:cjk-ideographic; padding-left: 30px;}
+#{$list-decimal-ch} {list-style-type:cjk-ideographic; padding-left: 25px;}
 #{$list-decimal-row} {
   @include list-counter($reset:true); @include space($property:padding, $size:0);
   &>li:before {@include list-counter($display:block);}
@@ -1446,7 +1534,15 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 #{$uk-open}>#{$accordion-icon-r}#{$uk-accordion-title}::after {background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj4KICAgIDxyZWN0IGZpbGw9IiM2NjYiIHdpZHRoPSIxMyIgaGVpZ2h0PSIxIiB4PSIwIiB5PSI2Ij48L3JlY3Q+Cjwvc3ZnPg=="); background-repeat: no-repeat; background-position: 50% 50%;}
 #{$accordion-icon-r-arrow}#{$uk-accordion-title}::after {background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkYXRhLXN2Zz0iY2hldnJvbi1yaWdodCI+PHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjAzIiBwb2ludHM9IjcgNCAxMyAxMCA3IDE2Ij48L3BvbHlsaW5lPjwvc3ZnPg=="); margin-bottom: -1px;}
 #{$uk-open}>#{$accordion-icon-r-arrow}#{$uk-accordion-title}::after {background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkYXRhLXN2Zz0iY2hldnJvbi1kb3duIj48cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuMDMiIHBvaW50cz0iMTYgNyAxMCAxMyA0IDciPjwvcG9seWxpbmU+PC9zdmc+");}
-
+#{$uk-accordion-title} {
+  position: relative;
+  padding-right: 2.5rem;
+  &::before {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+}
 #{$uk-table} th {color: $color-text-dark; font-weight: 700;}
 @media (max-width: 1119px) {
 #{$uk-table-responsive}#{$table-responsive}\@l thead {display: none;}
@@ -1591,6 +1687,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 
 /*---------- Fullcalendar Style
 ---------------------------------------------------------------------------------- */
+.fc *:not([class*="fc-event"]) {border-style: solid;}
 .fc-event {border: none; padding: 0 5px !important;}
 .fc-scroller {height: auto !important;}
 .fc-unthemed td.fc-today {background: #eaeaea; font-weight: 900;}
